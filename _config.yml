@@ -16,6 +16,7 @@ baseurl:          /
 author:
   name:           'Luca Grella'
   linkedin:       https://www.linkedin.com/in/lucagrella
+  link:           https://github.com/luca-grella/
 
 paginate:         5
 
@@ -24,4 +25,3 @@ version:          2.1.0
 
 github:
   repo:           https://github.com/luca-grella/luca-grella.github.io
-  link:           https://github.com/luca-grella
