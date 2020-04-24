@@ -6,11 +6,11 @@
           {{ site.title }}
         </a>
       </h2>
-      <img src="assets/images/final.png" style="width:30%">
+      <img src="assets/images/final.png" style="width:40%">
       <p class="lead">{{ site.description }}</p>
     </div>
 
-    <nav class="sidebar-nav">
+    <!-- <nav class="sidebar-nav"> -->
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
@@ -30,7 +30,7 @@
       <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
       <a href="{{ site.author.link }}"><img src="assets/images/github.png" style="width:10%"><a href="{{ site.author.linkedin }}"><img src="assets/images/linkedin.png" style="width:10%"></a></a>       
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
-    </nav>
+<!--     </nav>     -->
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
