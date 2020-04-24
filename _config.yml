@@ -15,7 +15,7 @@ baseurl:          /
 
 author:
   name:           'Luca Grella'
-  url:            https://www.linkedin.com/in/lucagrella
+  linkedin:       https://www.linkedin.com/in/lucagrella
 
 paginate:         5
 
