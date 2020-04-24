@@ -1,11 +1,11 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>
+      <h2>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
         </a>
-      </h1>
+      </h2>
       <img src="final.png" style="width:30%">
       <p class="lead">{{ site.description }}</p>
     </div>
@@ -28,7 +28,7 @@
       {% endfor %}
 
       <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}" onclick="_gaq.push(['_trackEvent', 'Click', 'git Clicked']);" style="margin-right:14px;">
+      <a href="{{ site.github.link }}" onclick="_gaq.push(['_trackEvent', 'Click', 'git Clicked']);" style="margin-right:14px;">
                 <i class="fa fa-github" style="font-size:32px;"></i>
             </a>
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
