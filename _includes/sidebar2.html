@@ -1,0 +1,33 @@
+<div class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      <h2>
+      	<p style="color: #ffffff">{{ site.title }}</p>
+      </h2>
+      <img src="assets/images/final.png" style="width:50%"><br><br><br>
+      </div>
+
+    <nav class="sidebar-nav">
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <a class="sidebar-nav-item" href="{{ site.author.aboutme }}">About Me</a>
+      <a class="sidebar-nav-item" href="{{ site.author.sportsinterests }}">Sports \& Interests</a>
+
+      <a href="{{ site.author.github }}"><img src="assets/images/github.png" style="width:10%"></a> &ensp; <a href="{{ site.author.linkedin }}"><img src="assets/images/linkedin.png" style="width:10%"></a> &ensp; <a href="{{ site.author.googlescholar }}"><img src="assets/images/googlescholar.png" style="width:10%"></a>
+    </nav>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
+
+# Setup
+title:            Luca Grella
+tagline:          'Welcome!'
+description:      ' Prova <a href=" " target="_blank">Prova</a> Prova'
+url:              https://luca-grella.github.io
+baseurl:          /
+
+author:
+  name:           'Luca Grella'
+  aboutme:        https://luca-grella.github.io/aboutme/
+  sportsinterests: 
+  linkedin:       https://www.linkedin.com/in/lucagrella
+  github:         https://github.com/luca-grella/
+  googlescholar:  https://scholar.google.com/citations?user=TSDAR7sAAAAJ
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/luca-grella/luca-grella.github.io
