@@ -4,7 +4,7 @@
       <h2>
       	<p style="color: #ffffff">{{ site.title }}</p>
       </h2>
-      <img src="assets/images/final.png" style="width:50%"><br><br><br><br>
+      <img src="assets/images/final.png" style="width:50%"><br><br><br>
       </div>
 
     <nav class="sidebar-nav">
@@ -22,7 +22,7 @@
         {% endif %}
       {% endfor %}
 
-      <br><br><a href="{{ site.author.github }}"><img src="assets/images/github.png" style="width:10%"></a> &ensp; <a href="{{ site.author.linkedin }}"><img src="assets/images/linkedin.png" style="width:10%"></a> &ensp; <a href="{{ site.author.googlescholar }}"><img src="assets/images/googlescholar.png" style="width:10%"></a>
+      <a href="{{ site.author.github }}"><img src="assets/images/github.png" style="width:10%"></a> &ensp; <a href="{{ site.author.linkedin }}"><img src="assets/images/linkedin.png" style="width:10%"></a> &ensp; <a href="{{ site.author.googlescholar }}"><img src="assets/images/googlescholar.png" style="width:10%"></a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
