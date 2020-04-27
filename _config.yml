@@ -15,6 +15,8 @@ baseurl:          /
 
 author:
   name:           'Luca Grella'
+  aboutme:        https://luca-grella.github.io/aboutme/
+  sportsinterests: 
   linkedin:       https://www.linkedin.com/in/lucagrella
   github:         https://github.com/luca-grella/
   googlescholar:  https://scholar.google.com/citations?user=TSDAR7sAAAAJ
