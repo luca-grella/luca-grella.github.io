@@ -16,7 +16,8 @@ baseurl:          /
 author:
   name:           'Luca Grella'
   linkedin:       https://www.linkedin.com/in/lucagrella
-  link:           https://github.com/luca-grella/
+  github:         https://github.com/luca-grella/
+  googlescholar:  https://scholar.google.com/citations?user=TSDAR7sAAAAJ
 
 paginate:         5
 
