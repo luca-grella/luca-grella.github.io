@@ -29,29 +29,10 @@
 
         <p align="center"><a href="{{ site.githublink }}"><img src="/assets/img/github.png" style="width:10%"></a> &ensp; <a href="{{ site.linkedin }}"><img src="/assets/img/linkedin.png" style="width:10%"></a> &ensp; <a href="{{ site.google_scholar }}"><img src="/assets/img/googlescholar.png" style="width:10%"></a></p>
 
-        <p align="center"><a href="/aboutme.html">About Me</a>
-
-
-            <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if site.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
-      <a class="sidebar-nav-item{% if page.active %} active{% endif %}" href="/aboutme.html">About Me</a>
-      <a class="sidebar-nav-item active" href="/aboutme.html">About Me</a>
-
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == /aboutme.html %} active{% endif %}" href="/aboutme.html">About Me</a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-
-    </nav></p>
+        <nav class="sidebar-nav"><p align="center">
+          <a class="sidebar-nav-item{% if page.active %} active{% endif %}" href="/index.html">Home</a>
+          <a class="sidebar-nav-item{% if page.active %} active{% endif %}" href="/aboutme.html">About Me</a>
+        </p></nav>
 
 
 <!--
