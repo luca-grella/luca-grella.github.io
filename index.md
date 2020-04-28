@@ -1,5 +1,6 @@
 ---
 layout: default
+active: true
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
