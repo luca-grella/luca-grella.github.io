@@ -34,8 +34,8 @@
 
         	        <script>
 		// Add active class to the current button (highlight it)
-		var header = document.getElementsByClassName("navbar")[0];
-		var btns = header.getElementsByClassName("navbar_li")[0];
+		var header = document.getElementsByClassName("navbar");
+		var btns = header.getElementsByClassName("navbar_li");
 		for (var i = 0; i < btns.length; i++) {
 	    btns[i].addEventListener("click", function() {
 	    var current = document.getElementById("selected");
