@@ -32,14 +32,101 @@
         <p align="center"><a href="/aboutme.html">About Me</p>
 
         <ul class='navbar'>
-            <li class='navbar_li'><a href='index.html'>Home</a></li>
-            <li class='navbar_li'><a href='/aboutme.html'>About Me</a></li>
-            <li class='navbar_li'><a href='articles.html'>Articles</a></li>
-            <li class='navbar_li'><a href='index.html'>ASP XV</a></li>
-            <li class='navbar_li'><a href='projects.html'>Projects</a></li>            
-            <li class='navbar_li'><a href='notesPolimi.html'>Notes PoliMi</a></li>
-            <li class='navbar_li'><a href='index.html'>Other Notes</a></li>
+            <li class='navbar_li' id="selected"><a href='index.html'>Home</a></li>
+            <li class='navbar_li' id=" "><a href='aboutme.html'>About Me</a></li>
+            <li class='navbar_li' id=" "><a href='articles.html'>Articles</a></li>
+            <li class='navbar_li' id=" "><a href='index.html'>ASP XV</a></li>
+            <li class='navbar_li' id=" "><a href='projects.html'>Projects</a></li>            
+            <li class='navbar_li' id=" "><a href='notesPolimi.html'>Notes PoliMi</a></li>
+            <li class='navbar_li' id=" "><a href='index.html'>Other Notes</a></li>
         </ul></p>
+
+
+        <script>
+		// Add active class to the current button (highlight it)
+		var header = document.getElementsByClassName("navbar");
+		var btns = header.getElementsByClassName("navbar_li");
+		for (var i = 0; i < btns.length; i++) {
+	    btns[i].addEventListener("click", function() {
+	    var current = document.getElementById("selected");
+	    current[0].id = current[0].id.replace("selected", " ");
+	    this.id += "selected";
+	    });
+		}
+		</script>
+
+
+        <!--<script>
+		// Add active class to the current button (highlight it)
+		var header = document.getElementById("navbar");
+		var btns = header.getElementsByClassName("navbar_li");
+		for (var i = 0; i < btns.length; i++) {
+	    btns[i].addEventListener("click", function() {
+	    var current = document.getElementsByClassName("active");
+	    current[0].className = current[0].className.replace(" active", "");
+	    this.className += " active";
+	    });
+		}
+		</script>
+
+
+
+
+
+
+
+<style>
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Active Button</h1>
+<p>Highlight the active/current (pressed) button.</p>
+  
+<div id="myDIV">
+  <button class="btn">1</button>
+  <button class="btn active">2</button>
+  <button class="btn">3</button>
+  <button class="btn">4</button>
+  <button class="btn">5</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+		<header class="main-header">
+		        <nav><ul>
+		            <li class="active"><a href="#">Home</a></li>
+		            <li><a href="#">Portfolio</a></li>
+		            <li><a href="#">Blog</a></li>
+		            <li><a href="#">Contact</a></li>
+		        </ul></nav>
+		</header>
+
+-->
+
 
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
