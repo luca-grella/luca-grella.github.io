@@ -9,7 +9,7 @@ relative_permalinks: false
 # Setup
 title:            Luca Grella
 tagline:          'Welcome!'
-description:      ' Prova <a href=" " target="_blank">Prova</a> Prova'
+description:      '<a href=" " target="_blank">Prova</a> Prova'
 url:              https://luca-grella.github.io
 baseurl:          /
 
