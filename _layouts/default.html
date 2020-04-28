@@ -31,29 +31,32 @@
 
         <p align="center"><a href="/aboutme.html">About Me</p>
 
-        <ul class='navbar'>
-            <li class='navbar_li' id="selected"><a href='index.html'>Home</a></li>
-            <li class='navbar_li' id=" "><a href='aboutme.html'>About Me</a></li>
-            <li class='navbar_li' id=" "><a href='articles.html'>Articles</a></li>
-            <li class='navbar_li' id=" "><a href='index.html'>ASP XV</a></li>
-            <li class='navbar_li' id=" "><a href='projects.html'>Projects</a></li>            
-            <li class='navbar_li' id=" "><a href='notesPolimi.html'>Notes PoliMi</a></li>
-            <li class='navbar_li' id=" "><a href='index.html'>Other Notes</a></li>
-        </ul></p>
 
-
-        <script>
+        	        <script>
 		// Add active class to the current button (highlight it)
-		var header = document.getElementsByClassName("navbar")[0];
-		var btns = header.getElementsByClassName("navbar_li")[0];
+		var header = document.getElementsByClassName("navbar")[];
+		var btns = header.getElementsByClassName("navbar_li")[];
 		for (var i = 0; i < btns.length; i++) {
 	    btns[i].addEventListener("click", function() {
 	    var current = document.getElementById("selected");
-	    current[0].id = current[0].id.replace("selected", " ");
+	    current[0].id = current[0].id.replace("selected", "");
 	    this.id += "selected";
 	    });
 		}
 		</script>
+
+        <ul class='navbar'>
+            <li class='navbar_li' id="selected"><a href='index.html'>Home</a></li>
+            <li class='navbar_li' id=""><a href='aboutme.html'>About Me</a></li>
+            <li class='navbar_li' id=""><a href='articles.html'>Articles</a></li>
+            <li class='navbar_li' id=""><a href='index.html'>ASP XV</a></li>
+            <li class='navbar_li' id=""><a href='projects.html'>Projects</a></li>            
+            <li class='navbar_li' id=""><a href='notesPolimi.html'>Notes PoliMi</a></li>
+            <li class='navbar_li' id=""><a href='index.html'>Other Notes</a></li>
+        </ul></p>
+
+
+
 
 
         <!--<script>
