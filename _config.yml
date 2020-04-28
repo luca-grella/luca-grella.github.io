@@ -4,18 +4,22 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
+relative_permalinks: false
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            Luca Grella
+tagline:          'Welcome!'
+description:      ' Prova <a href=" " target="_blank">Prova</a> Prova'
+url:              https://luca-grella.github.io
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Luca Grella'
+  aboutme:        https://luca-grella.github.io/aboutme/
+  sportsinterests: 
+  linkedin:       https://www.linkedin.com/in/lucagrella
+  github:         https://github.com/luca-grella/
+  googlescholar:  https://scholar.google.com/citations?user=TSDAR7sAAAAJ
 
 paginate:         5
 
@@ -23,4 +27,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/luca-grella/luca-grella.github.io
