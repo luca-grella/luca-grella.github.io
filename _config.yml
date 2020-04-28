@@ -1,6 +1,9 @@
-title: Minimal theme
+title: Luca Grella
 logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
+description: Welcome to my Portfolio Website!
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
+github: /assets/img/github.png
+linkedin: /assets/img/linkedin.png
+google_scholar: /assets/img/googlescholar.png
