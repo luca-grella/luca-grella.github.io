@@ -34,9 +34,8 @@
 
         	        <script>
 		// Add active class to the current button (highlight it)
-		var n;
-		var header = document.getElementsByClassName("navbar")[n];
-		var btns = header.getElementsByClassName("navbar_li")[n];
+		var header = document.getElementsByClassName("navbar")[0];
+		var btns = header.getElementsByClassName("navbar_li")[3];
 		for (var i = 0; i < btns.length; i++) {
 	    btns[i].addEventListener("click", function() {
 	    var current = document.getElementById("selected");
@@ -49,9 +48,9 @@
         <ul class='navbar'>
             <li class='navbar_li' id="selected"><a href='index.html'>Home</a></li>
             <li class='navbar_li' id=""><a href='aboutme.html'>About Me</a></li>
-            <li class='navbar_li' id=""><a href='articles.html'>Articles</a></li>
-            <li class='navbar_li' id=""><a href='index.html'>ASP XV</a></li>
-            <li class='navbar_li' id=""><a href='projects.html'>Projects</a></li>            
+            <li class='navbar_li' id=""><a href='index.html'>Articles</a></li>
+            <li class='navbar_li' id=""><a href='aboutme.html'>ASP XV</a></li>
+            <li class='navbar_li' id=""><a href='index.html'>Projects</a></li>            
             <li class='navbar_li' id=""><a href='notesPolimi.html'>Notes PoliMi</a></li>
             <li class='navbar_li' id=""><a href='index.html'>Other Notes</a></li>
         </ul></p>
