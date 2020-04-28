@@ -86,7 +86,7 @@ table {
 }
 
 th, td {
-  text-align:center;
+  text-align:left;
   padding:5px 10px;
   border-bottom:1px solid #e5e5e5;
 }
@@ -106,7 +106,7 @@ img {
 
 header {
   width:270px;
-  float:left;
+  float:center;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
 }
@@ -123,7 +123,7 @@ ul.downloads {
 
 .downloads li {
   width:89px;
-  float:left;
+  float:center;
   border-right:1px solid #e0e0e0;
   height:40px;
 }
@@ -190,7 +190,7 @@ hr {
 
 footer {
   width:270px;
-  float:left;
+  float:center;
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
