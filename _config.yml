@@ -4,7 +4,7 @@ description: Welcome to my Portfolio Website!
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
-baseurl: /index.html
+baseurl: /
 aboutme: /aboutme.html
 githublink: https://github.com/luca-grella
 linkedin: https://www.linkedin.com/in/lucagrella/
