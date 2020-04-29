@@ -72,7 +72,7 @@ blockquote {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 10rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
@@ -80,10 +80,10 @@ blockquote {
   .sidebar {
     position: fixed;
     top: 0;
-    left: 10rem;
+    left: 0;
     bottom: 0;
     width: 30rem;  /*18*/
-    text-align: right;
+    text-align: center;
   }
 }
 
