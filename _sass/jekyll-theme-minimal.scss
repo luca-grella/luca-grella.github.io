@@ -89,7 +89,8 @@ blockquote {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color:#ffbb00;  /* 267CB9 */
+  text-decoration:none;
 }
 
 /* About section */
@@ -110,7 +111,9 @@ blockquote {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+  color:#a37800; /* 069 */
+  font-weight: bold;
+  text-decoration: none;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
