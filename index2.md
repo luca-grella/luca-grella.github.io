@@ -5,6 +5,6 @@ aboutme: true
 
 ## About Me
 
-_yayyyyyy_
+_yayyy_
 
 [back](./)
