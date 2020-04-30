@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Another Page
 anotherpage: true
 ---
 
