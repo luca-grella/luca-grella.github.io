@@ -31,8 +31,7 @@
  <div class="sidebar">
   <div class="container"> <!--<div class="container sidebar-sticky">-->
    <div class="sidebar-about">
-    <div class="wrapper">
-      <header>
+      <!--<header>-->
         <h1><p align="center">Luca Grella</p></h1>
         <!--<h1><p align="center"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></p></h1>-->
 
@@ -50,15 +49,17 @@
           <a class="sidebar-nav-item{% if page.anotherpage %} active{% endif %}" href="/another-page.html">Another Page</a>
         </p></nav>
 
-      </header>
+      <!--</header>
 
       <section>
 
       {{ content }}
 
-      </section>
-              </div></div></div> </div>
-              {{ content }}
+      </section>-->
+              </div></div></div> 
+    <div class="content container">
+      {{ content }}
+    </div>
       <footer>
       </footer>
 
