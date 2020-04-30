@@ -76,14 +76,14 @@ blockquote {
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
-@media (min-width: 48em) {
+@media (min-width: 18em) {
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 30rem;  /*18*/
-    text-align: right;
+    width: 24rem;  /*18*/
+    text-align: left;
   }
 }
 
