@@ -1,73 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html lang="en-us">
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  {% include head.html %}
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; Welcome! <!--{{ site.tagline }}-->
-    {% else %}
-      {{ site.title }} &middot; {{ page.title }}
-    {% endif %}
-  </title>
-
-    <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
-      <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/icon/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/assets/img/icon/favicon.ico">
-                                 
-
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-  </head>
   <body>
- <div class="sidebar">
-  <div class="container"> <!--<div class="container sidebar-sticky">-->
-   <div class="sidebar-about">
-      <!--<header>-->
-        <h1><p align="center">Luca Grella</p></h1>
-        <!--<h1><p align="center"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></p></h1>-->
 
-        
-        {% if site.logo %}
-          <p align="center"><img src="{{site.logo | relative_url}}" alt="Logo" style="width:75%"/></p>
-        {% endif %}
+    {% include sidebar.html %}
 
-        <p align="center">{{ site.description | default: site.github.project_tagline }}</p>
-
-        <p align="center"><a href="{{ site.githublink }}"><img src="/assets/img/github.png" style="width:10%"></a> &ensp; <a href="{{ site.linkedin }}"><img src="/assets/img/linkedin.png" style="width:10%"></a> &ensp; <a href="{{ site.google_scholar }}"><img src="/assets/img/googlescholar.png" style="width:10%"></a></p>
-</div>
-        <nav class="sidebar-nav"><p align="center">
-          <a class="sidebar-nav-item{% if page.aboutme %} active{% endif %}" href="/">About Me</a>
-          <a class="sidebar-nav-item{% if page.anotherpage %} active{% endif %}" href="/another-page.html">Another Page</a>
-        </p></nav>
-
-      <!--</header>
-
-      <section>
-
-      {{ content }}
-
-      </section>-->
-              </div></div> 
     <div class="content container">
       {{ content }}
     </div>
-      <footer>
-      </footer>
 
   </body>
 </html>
