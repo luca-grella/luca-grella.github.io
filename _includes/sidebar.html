@@ -1,34 +1,32 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
+  <div class="container"> <!--  <div class="container sidebar-sticky">-->
+    <!--<div class="sidebar-about">
       <h1>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
+    </div>-->
+    <div class="sidebar-about">
+      <!--<header>-->
+        <h1><p align="center">Luca Grella</p></h1>
+        <!--<h1><p align="center"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></p></h1>-->
+
+        
+        {% if site.logo %}
+          <p align="center"><img src="{{site.logo | relative_url}}" alt="Logo" style="width:75%"/></p>
+        {% endif %}
+
+        <p align="center">{{ site.description | default: site.github.project_tagline }}</p>
+
+        <p align="center"><a href="{{ site.githublink }}"><img src="/assets/img/github.png" style="width:10%"></a> &ensp; <a href="{{ site.linkedin }}"><img src="/assets/img/linkedin.png" style="width:10%"></a> &ensp; <a href="{{ site.google_scholar }}"><img src="/assets/img/googlescholar.png" style="width:10%"></a></p>
     </div>
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
-
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-      <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    <nav class="sidebar-nav"><p align="center">
+          <a class="sidebar-nav-item{% if page.aboutme %} active{% endif %}" href="index.html">About Me</a>
+          <a class="sidebar-nav-item{% if page.anotherpage %} active{% endif %}" href="index2.html">Another Page</a>
+        </p>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
