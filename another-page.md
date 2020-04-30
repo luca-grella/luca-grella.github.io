@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Another Page
-anotherpage: true
+title: "Another Page"
+permalink: another-page.md
 ---
 
 ## Welcome to another page
