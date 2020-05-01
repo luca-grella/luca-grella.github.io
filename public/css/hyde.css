@@ -41,7 +41,7 @@ html {
 }
 @media (min-width: 58em) {
   html {
-    font-size: 14px;    /* font-size: 20px; */
+    font-size: 20px;    /* font-size: 20px; */
   }
 }
 
@@ -72,15 +72,18 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color:#ffbb00;  /* 267CB9     #fff */
+  text-decoration:none;
 }
 
 /* About section */
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
-  font-size: 2.5rem; /*  font-size: 3.25rem;*/
+  /*font-family: "Abril Fatface", serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.1rem; /*  font-size: 3.25rem;*/
 }
 
 /* Sidebar nav */
@@ -93,10 +96,13 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
+  color:#a37800; /* 069 */
+  font-weight: bold;
   text-decoration: none; /*  text-decoration: underline;*/
 }
 .sidebar-nav-item.active {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Sticky sidebar
