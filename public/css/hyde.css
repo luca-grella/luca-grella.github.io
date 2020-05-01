@@ -36,7 +36,7 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 12px;      /* font-size: 12px; */
   }
 }
 @media (min-width: 58em) {
@@ -80,7 +80,7 @@ html {
   color: #fff;
   margin-top: 0;
   font-family: "Abril Fatface", serif;
-  font-size: 2rem; /*  font-size: 3.25rem;*/
+  font-size: 2.5rem; /*  font-size: 3.25rem;*/
 }
 
 /* Sidebar nav */
@@ -93,7 +93,7 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+  text-decoration: none; /*  text-decoration: underline;*/
 }
 .sidebar-nav-item.active {
   font-weight: bold;
