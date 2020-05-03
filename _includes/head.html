@@ -9,8 +9,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
 function myFunction() {
+  var x = window.innerWidth; 
   if (window.innerWidth < 600) {
-    return null;
+    document.write(x);
   } else {
     return '<p align="center"><img src="{{site.logo | relative_url}}" alt="Logo" style="width:50%"/>';
   }
