@@ -11,14 +11,10 @@
     <div class="sidebar-about">
       <!--<header>-->
         <h1><p align="center">Luca Grella</p></h1>
-        <!--<h1><p align="center"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></p></h1>-->
 
-
-        {% if $(window).width() < 600 %}
-          <p align="center"><img src="{{site.logo | relative_url}}" alt="Logo" style="width:50%"/></p>
-        {% endif %}
-
-       <!-- <p align="center">{{ site.description | default: site.github.project_tagline }}</p> -->
+<script>
+document.write myFunction();
+</script>
 
         <!-- &ensp; -->
         <p align="center"><a href="{{ site.githublink }}"><img src="/assets/img/github.png" style="width:10%"></a> &thinsp; <a href="{{ site.linkedin }}"><img src="/assets/img/linkedin.png" style="width:10%"></a> &thinsp; <a href="{{ site.google_scholar }}"><img src="/assets/img/googlescholar.png" style="width:10%"></a></p>
