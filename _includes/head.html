@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+function myFunction() {
+  if (window.innerWidth < 600) {
+    return null;
+  } else {
+    return '<p align="center"><img src="{{site.logo | relative_url}}" alt="Logo" style="width:50%"/>';
+  }
+}
+</script>
 
   <title>
     {% if page.title == "Home" %}
