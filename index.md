@@ -6,6 +6,9 @@ aboutme: true
 
 ## About Me
 
-_yayyyyyy_
+* [Lanyon](http://lanyon.getpoole.com)
 
-[back](./)
+* Data Engineer @ lastminute.com
+* Computer Science Engineer @ Politecnico di Milano
+* DJ & Producer
+* Milano, 18/10/1994
