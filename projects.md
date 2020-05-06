@@ -11,7 +11,8 @@ projects: true
 
 LaTeX paper supporting my thesis on the present development of "invisibility factors" illustrated by the philosopher James H. Moor.
 
-* [Link to the project](https://github.com/luca-grella/TheNewInvisibilityFactors "_blank")
+* <a href="https://github.com/luca-grella/TheNewInvisibilityFactors" target="_blank">Link to the project</a> 
+[//]: # ([Link to the project](https://github.com/luca-grella/TheNewInvisibilityFactors))
 
 ##### LabVIEW Acquisition Data Program
 <span class="post-date">Mar 2019 – Jun 2019</span>
