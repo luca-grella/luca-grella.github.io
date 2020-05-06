@@ -6,14 +6,14 @@ projects: true
 
 ## Projects
 
-### I nuovi fattori di invisibilità
+#### I nuovi fattori di invisibilità
 <span class="post-date">Mar 2019 – Jun 2019</span>
 
 LaTeX paper supporting my thesis on the present development of "invisibility factors" illustrated by the philosopher James H. Moor.
 
 * [Link to the project](https://github.com/luca-grella/TheNewInvisibilityFactors "_blank")
 
-### LabVIEW Acquisition Data Program
+##### LabVIEW Acquisition Data Program
 <span class="post-date">Mar 2019 – Jun 2019</span>
 
 LabVIEW program that allows the acquisition of data from the DHT22 temperature and humidity sensor.
