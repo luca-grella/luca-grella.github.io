@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Sports & Interests
 sports: true
 ---
 
