@@ -8,15 +8,9 @@ djteck: true
 
 ##### Find out my tracks and Dj sets:
 
-<a href="https://open.spotify.com/artist/7zD0ULnp6PqhVHqsfJFsIv" target="_blank"><img src="/assets/img/spotify1.png" style="width:10%"></a><br>
-My <a href="https://open.spotify.com/artist/7zD0ULnp6PqhVHqsfJFsIv" target="_blank"><span style="color:green">Spotify</span></a> profile
-
-<a href="https://soundcloud.com/djteck" target="_blank"><img src="/assets/img/soundcloud1.png" style="width:10%"></a><br>
-My <a href="https://soundcloud.com/djteck"  target="_blank"><span style="color:orange">Soundcloud</span></a> profile
-
-<a href="https://www.mixcloud.com/TeckDj" target="_blank"><img src="/assets/img/mixcloud.png" style="width:10%"></a><br>
-My <a href="https://www.mixcloud.com/TeckDj"  target="_blank"><span style="color:black">Mixcloud</span></a> profile
-
+<table>
+<tr><td><a href="https://open.spotify.com/artist/7zD0ULnp6PqhVHqsfJFsIv" target="_blank"><img src="/assets/img/spotify1.png" style="width:10%"><br><span style="color:green">Spotify</span></a></td><td><a href="https://soundcloud.com/djteck" target="_blank"><img src="/assets/img/soundcloud1.png" style="width:10%"><br><span style="color:orange">Soundcloud</span></a></td><td><a href="https://www.mixcloud.com/TeckDj" target="_blank"><img src="/assets/img/mixcloud.png" style="width:10%"><br><span style="color:black">Mixcloud</span></a></td></tr>
+</table>
 
 ##### Here you can find my interview on Radio Cantù (F.M. 89.600):
 
