@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: nocss
 title: Ti Amo
 ---
 
