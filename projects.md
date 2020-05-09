@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Projects
+title: My Projects
 projects: true
 ---
 
-## Projects
+## My Projects
 
 ##### I nuovi fattori di invisibilità
 <span class="post-date">Mar 2019 – Jun 2019</span>
