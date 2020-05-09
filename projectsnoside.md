@@ -1,5 +1,5 @@
 ---
-layout: noside
+layout: nohead
 title: My Projects
 projects: true
 ---
