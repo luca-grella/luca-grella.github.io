@@ -4,11 +4,71 @@
 .immagine2 {
       display: none;
 }
+.immagine3 {
+      display: block;
+}
+.immagine4 {
+      display: none;
+}
+.immagine5 {
+      display: block;
+}
+.immagine6 {
+      display: none;
+}
+.immagine7 {
+      display: block;
+}
+.immagine8 {
+      display: none;
+}
+.immagine9 {
+      display: block;
+}
+.immagine10 {
+      display: none;
+}
+.immagine11 {
+      display: block;
+}
+.immagine12 {
+      display: none;
+}
 #cambioimmagine {
 }
 #cambioimmagine:hover .immagine1 {
      display: none;
 }
 #cambioimmagine:hover .immagine2 {
+     display: block;
+}
+#cambioimmagine:hover .immagine3 {
+     display: none;
+}
+#cambioimmagine:hover .immagine4 {
+     display: block;
+}
+#cambioimmagine:hover .immagine5 {
+     display: none;
+}
+#cambioimmagine:hover .immagine6 {
+     display: block;
+}
+#cambioimmagine:hover .immagine7 {
+     display: none;
+}
+#cambioimmagine:hover .immagine8 {
+     display: block;
+}
+#cambioimmagine:hover .immagine9 {
+     display: none;
+}
+#cambioimmagine:hover .immagine10 {
+     display: block;
+}
+#cambioimmagine:hover .immagine11 {
+     display: none;
+}
+#cambioimmagine:hover .immagine12 {
      display: block;
 }
