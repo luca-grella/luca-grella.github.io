@@ -1,7 +1,7 @@
-.immagine1 .immagine3 .immagine5 .immagine7 .immagine9 .immagine11 {
+.immagine1 {
       display: block;
 }
-.immagine2 .immagine4 .immagine6 .immagine8 .immagine10 .immagine12 {
+.immagine2 {
       display: none;
 }
 #cambioimmagine {
@@ -10,35 +10,5 @@
      display: none;
 }
 #cambioimmagine:hover .immagine2 {
-     display: block;
-}
-#cambioimmagine2:hover .immagine3 {
-     display: none;
-}
-#cambioimmagine2:hover .immagine4 {
-     display: block;
-}
-#cambioimmagine3:hover .immagine5 {
-     display: none;
-}
-#cambioimmagine3:hover .immagine6 {
-     display: block;
-}
-#cambioimmagine4:hover .immagine7 {
-     display: none;
-}
-#cambioimmagine4:hover .immagine8 {
-     display: block;
-}
-#cambioimmagine5:hover .immagine9 {
-     display: none;
-}
-#cambioimmagine5:hover .immagine10 {
-     display: block;
-}
-#cambioimmagine6:hover .immagine11 {
-     display: none;
-}
-#cambioimmagine6:hover .immagine12 {
      display: block;
 }
