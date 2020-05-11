@@ -19,6 +19,19 @@ function myFunction() {
 }
 </script>
 
+ <script>
+function myDjteck() {
+  var x = window.innerWidth; 
+  if (window.innerWidth < 768) {
+    document.write(x);
+    return '<img src="/assets/img/djteck.png" style="width:50%">';
+  } else {
+    document.write(x);
+    return '<img src="/assets/img/djteck.png">';
+  }
+}
+</script>
+
   <title>
     {% if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
