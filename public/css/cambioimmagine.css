@@ -1,37 +1,7 @@
-.immagine1 {
+.immagine1 .immagine3 .immagine5 .immagine7 .immagine9 .immagine11 {
       display: block;
 }
-.immagine2 {
-      display: none;
-}
-.immagine3 {
-      display: block;
-}
-.immagine4 {
-      display: none;
-}
-.immagine5 {
-      display: block;
-}
-.immagine6 {
-      display: none;
-}
-.immagine7 {
-      display: block;
-}
-.immagine8 {
-      display: none;
-}
-.immagine9 {
-      display: block;
-}
-.immagine10 {
-      display: none;
-}
-.immagine11 {
-      display: block;
-}
-.immagine12 {
+.immagine2 .immagine4 .immagine6 .immagine8 .immagine10 .immagine12 {
       display: none;
 }
 #cambioimmagine {
