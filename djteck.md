@@ -10,6 +10,7 @@ djteck: true
 
 <table>
 <tr><td><p align="center"><br><a href="https://open.spotify.com/artist/7zD0ULnp6PqhVHqsfJFsIv" target="_blank"><img src="/assets/img/spotify1.png" style="width:60%"><br><span style="color:green">Spotify</span></a></p></td><td><br><p align="center"><a href="https://soundcloud.com/djteck" target="_blank"><img src="/assets/img/soundcloud1.png" style="width:60%"><br><span style="color:orange">Soundcloud</span></a></p></td><td><br><p align="center"><a href="https://www.mixcloud.com/TeckDj" target="_blank"><img src="/assets/img/mixcloud.png" style="width:60%"><br><span style="color:black">Mixcloud</span></a></p></td></tr>
+ciao
 </table>
 
 ##### Here you can find my interview on Radio Cantù (F.M. 89.600):
