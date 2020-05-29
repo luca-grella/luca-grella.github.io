@@ -165,7 +165,8 @@ hr {
 }
 
 .tm-timeline-item-inner {
-    display: flex;
+    display: inline;
+    /*display: flex;*/
     align-items: center;
 }
 
