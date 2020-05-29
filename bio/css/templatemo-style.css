@@ -158,8 +158,8 @@ hr {
 }
 
 .tm-timeline-item {
-    margin-left: 70px;
-    align-content: center;
+    margin-left: auto; /*    margin-left: 70px;*/
+    margin-right: auto;
 }
 
 .tm-timeline-item-inner {
