@@ -290,6 +290,7 @@ p {
     }
     .tm-container-2 {
         max-width: 1170px;
+        position: center;
     }
 }
 
