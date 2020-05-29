@@ -158,6 +158,7 @@ hr {
 }
 
 .tm-timeline-item {
+    display: block;
     margin-left: auto; /*    margin-left: 70px;*/
     margin-right: auto;
 }
