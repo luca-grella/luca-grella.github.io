@@ -103,8 +103,8 @@ h3 {
     font-size: 2.2rem;
 }
 
-.tm-font-400 {
-    font-weight: 400;
+.tm-font-300 {
+    font-weight: 300;
 }
 
 .tm-text-light-gray {
@@ -206,7 +206,7 @@ hr {
     padding-right: 12px;
     padding-bottom: 12px;
     padding-left: 12px;
-    width: 400px;
+    width: 300px;
     max-width: 712px;
     /*max-width: 712px;*/
 }
