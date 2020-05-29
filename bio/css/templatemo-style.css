@@ -198,7 +198,7 @@ hr {
 }
 
 .tm-timeline-description {
-    display: block;
+    display: inline;
     /*display: inline-block;*/
     vertical-align: middle;
     border-radius: 20px;
