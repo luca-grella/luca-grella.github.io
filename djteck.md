@@ -9,7 +9,7 @@ djteck: true
 ##### Find out my tracks and Dj sets:
 
 <table>
-<tr><td><p align="center"><br><a href="https://open.spotify.com/artist/7zD0ULnp6PqhVHqsfJFsIv" target="_blank"><img src="/assets/img/spotify1.png" style="width:60%"><br><span style="color:green">Spotify</span></a></p></td><td><br><p align="center"><a href="https://soundcloud.com/djteck" target="_blank"><img src="/assets/img/soundcloud1.png" style="width:60%"><br><span style="color:orange">Soundcloud</span></a></p></td><td><br><p align="center"><a href="https://www.mixcloud.com/TeckDj" target="_blank"><img src="/assets/img/mixcloud.png" style="width:60%"><br><span style="color:black">Mixcloud</span></a></p></td></tr>
+<tr><td><p align="center"><br><a href="https://www.facebook.com/LucaTeckDj" target="_blank"><img src="/assets/img/facebook4.png" style="width:60%"><br><span style="color:blue">Fan Page</span></a></p></td><td><p align="center"><br><a href="https://open.spotify.com/artist/7zD0ULnp6PqhVHqsfJFsIv" target="_blank"><img src="/assets/img/spotify1.png" style="width:60%"><br><span style="color:green">Spotify</span></a></p></td><td><br><p align="center"><a href="https://soundcloud.com/djteck" target="_blank"><img src="/assets/img/soundcloud1.png" style="width:60%"><br><span style="color:orange">Soundcloud</span></a></p></td><td><br><p align="center"><a href="https://www.mixcloud.com/TeckDj" target="_blank"><img src="/assets/img/mixcloud.png" style="width:60%"><br><span style="color:black">Mixcloud</span></a></p></td></tr>
 </table>
 <p style="font-size:12px"><i>On Spotify and Soundcloud you will find my prods, remixes and mashups, while on Mixcloud you will find my dj sets (as well as the reloads of my radio broadcasts).</i></p>
 
