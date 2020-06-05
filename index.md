@@ -12,8 +12,3 @@ Furthermore, in the left sidebar, you can view the section you are viewing and c
 Under my profile photo there are also button links to all my social pages and more.
 The left sidebar will be present in every point of the site.<br>
 Happy surfing!
-
-<br><br><script>
-document.write('<br>H'+window.innerHeight);
-document.write('<br>W'+window.innerWidth);
-</script>
