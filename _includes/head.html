@@ -22,7 +22,7 @@ function myFunction() {
  <script>
 function myDjteck() {
   var x = window.innerWidth; 
-  if (screen.width < 500) {
+  if (screen.width < 500 || (screen.width < 1025 && screen.height < 700)) {
     /*document.write(x);*/
     return '<img src="/assets/img/djteck.png" style="width:60%">';
   } else {
