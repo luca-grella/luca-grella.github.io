@@ -304,6 +304,11 @@ input, select, textarea {
 		width: 6750px;
 	}
 
+	.orangebg {
+		background: url(images/circle.png);
+		background-size: cover;
+	}
+
 /* Overlay */
 
 	@-moz-keyframes overlay {
