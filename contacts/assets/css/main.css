@@ -592,6 +592,11 @@ input, select, textarea {
 				width: 5.35em;
 			}
 
+			.orangebg {
+			background: url(images/circle.png);
+			background-size: cover;
+			}
+
 				#header nav li:nth-child(1) {
 					-moz-animation-delay: 2.5s;
 					-webkit-animation-delay: 2.5s;
