@@ -558,12 +558,11 @@ input, select, textarea {
 			font-weight: 900;
 			letter-spacing: -0.035em;
 			line-height: 0.5em;
-			padding-top: 100;
 		}
 
 		#header p {
-			font-size: 9pt;
-			margin: 0.75em 0 -1em 0;
+			font-size: 4pt;
+			margin: 0.5em 0 -0.4em 0;
 			opacity: 0.75;
 		}
 
