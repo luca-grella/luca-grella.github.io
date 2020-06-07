@@ -74,6 +74,8 @@ input, select, textarea {
 
 /* Basic */
 
+	span {font-size: 9pt;}
+
 	html {
 		box-sizing: border-box;
 	}
@@ -551,23 +553,25 @@ input, select, textarea {
 		top: -1em;
 		vertical-align: middle;
 		width: 90%;
+		margin: 3em 0 0em 0;
 	}
 
 		#header h1 {
-			font-size: 4.35em;
+			font-size: 30pt;
 			font-weight: 900;
 			letter-spacing: -0.035em;
-			line-height: 1em;
+			line-height: 0.5em;
 		}
 
 		#header p {
-			font-size: 1.25em;
-			margin: 0.75em 0 0.25em 0;
+			font-size: 9pt;
+			line-height: 1.5em;
+			margin: 0.4em 0 -0.9em 0;
 			opacity: 0.75;
 		}
 
 		#header nav {
-			margin: 1.5em 0 0 0;
+			margin: -0.3em 0 0 0;
 		}
 
 			#header nav li {
@@ -584,12 +588,12 @@ input, select, textarea {
 				-ms-transform: translate3d(0,0,0);
 				transform: translate3d(0,0,0);
 				display: inline-block;
-				height: 5.35em;
+				height: 4.1em;
 				line-height: 5.885em;
 				opacity: 0;
 				position: relative;
 				top: 0;
-				width: 5.35em;
+				width: 4.1em;
 			}
 
 			.orangebg {
@@ -666,6 +670,10 @@ input, select, textarea {
 					-ms-animation-delay: 4.75s;
 					animation-delay: 4.75s;
 				}
+
+   			#header a {
+				font-size: 9pt;
+			}
 
 			#header nav a {
 				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
