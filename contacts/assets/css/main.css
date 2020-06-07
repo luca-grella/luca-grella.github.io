@@ -84,7 +84,7 @@ input, select, textarea {
 
 	body {
 		background: #fff;
-		overflow: auto; /*		overflow: hidden;   */
+		overflow: hidden;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -711,6 +711,10 @@ input, select, textarea {
 					}
 
 				#header nav a span {
+					display: none;
+				}
+
+				#header nav div {
 					display: none;
 				}
 
