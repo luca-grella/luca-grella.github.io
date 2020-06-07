@@ -562,9 +562,8 @@ input, select, textarea {
 		}
 
 		#header p {
-			font-size: 4pt;
+			font-size: 9pt;
 			margin: 0.75em 0 -1em 0;
-			line-height: -1em;
 			opacity: 0.75;
 		}
 
