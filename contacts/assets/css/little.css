@@ -74,6 +74,8 @@ input, select, textarea {
 
 /* Basic */
 
+	span {font-size: 9pt;}
+
 	html {
 		box-sizing: border-box;
 	}
@@ -551,6 +553,7 @@ input, select, textarea {
 		top: -1em;
 		vertical-align: middle;
 		width: 90%;
+		margin: 2.3em 0 0em 0;
 	}
 
 		#header h1 {
@@ -561,13 +564,13 @@ input, select, textarea {
 		}
 
 		#header p {
-			font-size: 4pt;
-			margin: 0.5em 0 -0.4em 0;
+			font-size: 9pt;
+			margin: 0.4em 0 -0.9em 0;
 			opacity: 0.75;
 		}
 
 		#header nav {
-			margin: 0em 0 0 0;
+			margin: -1em 0 0 0;
 		}
 
 			#header nav li {
