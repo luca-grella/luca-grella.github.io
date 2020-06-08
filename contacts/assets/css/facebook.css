@@ -309,11 +309,6 @@ input, select, textarea {
 		background-size: cover;
 	}
 
-	.orangebgr {
-		background: url(images/label.png);
-		background-size: cover;
-	}
-
 /* Overlay */
 
 	@-moz-keyframes overlay {
