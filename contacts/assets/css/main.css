@@ -592,6 +592,8 @@ input, select, textarea {
 				width: 5.35em;
 			}
 
+			#header a img { width:1.2em;}
+
 			.orangebg {
 			background: url(images/circle.png);
 			background-size: cover;
