@@ -592,7 +592,7 @@ input, select, textarea {
 				width: 5.35em;
 			}
 
-			#header a img { width:1.2em;}
+			#header a img { width:0.2em;}
 
 			.orangebg {
 			background: url(images/circle.png);
