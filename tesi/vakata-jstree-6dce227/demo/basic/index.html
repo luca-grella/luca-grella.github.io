@@ -196,7 +196,7 @@ function encode( s ) {
 }
 
 var savejson = document.getElementById( 'savejson' );
-button.addEventListener( 'click', function() {
+savejson.addEventListener( 'click', function() {
     
     var data = encode( JSON.stringify(v, null, 4) );
 
