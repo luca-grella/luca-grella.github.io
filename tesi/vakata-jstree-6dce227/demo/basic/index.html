@@ -43,6 +43,7 @@
 	<button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
 	<div id="evts" class="demo"></div>
 
+	<button onclick="myFunction()">Click me</button>
 	<h1>Callback function data demo</h1>
 	<div id="jstree_demo" class="demo"></div>
 
@@ -178,6 +179,14 @@
     "state", "types", "wholerow"
   ]
 });
+
+function myFunction() {
+var v = $('#jstree_demo').jstree(true).get_json('#', {flat:true})
+var mytext = JSON.stringify(v);
+fs.writeFileSync('root.json', data);
+};
+
+
 	</script>
 </body>
 </html>
