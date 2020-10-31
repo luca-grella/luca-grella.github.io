@@ -133,12 +133,10 @@
 		.jstree({
 			'core' : {
 				'multiple' : false,
-				'data' : [
-					{ "text" : "Root node", "children" : [
-							{ "text" : "Child node 1", "id" : 1 },
-							{ "text" : "Child node 2" }
-					]}
-				]
+				'data' : {
+				"url" : "./root.json",
+				"dataType" : "json" // needed only if you do not supply JSON headers
+			}
 			}
 		});
 	</script>
