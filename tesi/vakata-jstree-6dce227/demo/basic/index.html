@@ -42,9 +42,10 @@
 	<h1>Interaction and events demo</h1>
 	<button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
 	<div id="evts" class="demo"></div>
-
-	<button onclick="myFunction()">Click me</button>
+	
 	<h1>Callback function data demo</h1>
+	<button onclick="myFunction()">Click me</button>
+	<p id="speriamo"></p>
 	<div id="jstree_demo" class="demo"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -183,7 +184,8 @@
 function myFunction() {
 var v = $('#jstree_demo').jstree(true).get_json('#', {flat:true})
 var mytext = JSON.stringify(v);
-fs.writeFileSync('root.json', data);
+document.getElementById("speriamo").innerHTML = mytext;
+/*fs.writeFileSync('root.json', data);*/
 };
 
 
