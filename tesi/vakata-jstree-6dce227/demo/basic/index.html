@@ -43,6 +43,9 @@
 	<button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
 	<div id="evts" class="demo"></div>
 
+	<h1>Callback function data demo</h1>
+	<div id="jstree_demo" class="demo"></div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./../../dist/jstree.min.js"></script>
 	
@@ -139,6 +142,42 @@
 			}
 			}
 		});
+
+
+	// interaction and events
+	$('#jstree_demo').jstree({
+  "core" : {
+    "animation" : 0,
+    "check_callback" : true,
+    "themes" : { "stripes" : true },
+    'data' : {
+				"url" : "./root.json",
+				"dataType" : "json" // needed only if you do not supply JSON headers
+			}
+  },
+  "types" : {
+    "#" : {
+      "max_children" : 1,
+      "max_depth" : 4,
+      "valid_children" : ["root"]
+    },
+    "root" : {
+      "icon" : "/static/3.3.10/assets/images/tree_icon.png",
+      "valid_children" : ["default"]
+    },
+    "default" : {
+      "valid_children" : ["default","file"]
+    },
+    "file" : {
+      "icon" : "glyphicon glyphicon-file",
+      "valid_children" : []
+    }
+  },
+  "plugins" : [
+    "contextmenu", "dnd", "search",
+    "state", "types", "wholerow"
+  ]
+});
 	</script>
 </body>
 </html>
