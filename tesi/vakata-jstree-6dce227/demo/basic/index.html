@@ -43,9 +43,10 @@
 	<button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
 	<div id="evts" class="demo"></div>
 	
-	<h1>Callback function data demo</h1>
-	<button onclick="myFunction()">Click me</button><button id="savejson">Save JSON</button>
-	<p id="jsonstringify"></p>
+	<h1>Test Try DEMO</h1>
+	<!--<button onclick="myFunction()">Click me</button>
+	<p id="jsonstringify"></p>-->
+	<button id="savejson">Save JSON</button>
 	<div id="jstree_demo" class="demo"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -181,11 +182,10 @@
   ]
 });
 
-function myFunction() {
+/*function myFunction() {
 var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
 document.getElementById("jsonstringify").innerHTML = JSON.stringify(v);
-/*fs.writeFileSync('root.json', data);*/
-};
+};*/
 
 function encode( s ) {
     var out = [];
