@@ -198,6 +198,8 @@ function encode( s ) {
 var savejson = document.getElementById( 'savejson' );
 savejson.addEventListener( 'click', function() {
     
+	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+
     var data = encode( JSON.stringify(v, null, 4) );
 
     var blob = new Blob( [ data ], {
