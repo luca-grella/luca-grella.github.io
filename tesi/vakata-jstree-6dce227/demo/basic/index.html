@@ -184,7 +184,7 @@
 function myFunction() {
 var v = $('#jstree_demo').jstree(true).get_json('#', {flat:true})
 var mytext = JSON.stringify(v);
-document.getElementById("speriamo").innerHTML = mytext;
+document.getElementById("speriamo").innerHTML = v;
 /*fs.writeFileSync('root.json', data);*/
 };
 
