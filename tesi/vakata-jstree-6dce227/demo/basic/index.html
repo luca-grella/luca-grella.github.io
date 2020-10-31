@@ -182,7 +182,7 @@
 });
 
 function myFunction() {
-var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:true, no_li_attr:true, no_a_attr:true})
+var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
 document.getElementById("speriamo").innerHTML = JSON.stringify(v);
 /*fs.writeFileSync('root.json', data);*/
 };
