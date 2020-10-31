@@ -44,8 +44,8 @@
 	<div id="evts" class="demo"></div>
 	
 	<h1>Callback function data demo</h1>
-	<button onclick="myFunction()">Click me</button>
-	<p id="speriamo"></p>
+	<button onclick="myFunction()">Click me</button><button id="savejson">Save JSON</button>
+	<p id="jsonstringify"></p>
 	<div id="jstree_demo" class="demo"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -183,9 +183,36 @@
 
 function myFunction() {
 var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-document.getElementById("speriamo").innerHTML = JSON.stringify(v);
+document.getElementById("jsonstringify").innerHTML = JSON.stringify(v);
 /*fs.writeFileSync('root.json', data);*/
 };
+
+function encode( s ) {
+    var out = [];
+    for ( var i = 0; i < s.length; i++ ) {
+        out[i] = s.charCodeAt(i);
+    }
+    return new Uint8Array( out );
+}
+
+var savejson = document.getElementById( 'savejson' );
+button.addEventListener( 'click', function() {
+    
+    var data = encode( JSON.stringify(v, null, 4) );
+
+    var blob = new Blob( [ data ], {
+        type: 'application/octet-stream'
+    });
+    
+    url = URL.createObjectURL( blob );
+    var link = document.createElement( 'a' );
+    link.setAttribute( 'href', url );
+    link.setAttribute( 'download', 'root.json' );
+    
+    var event = document.createEvent( 'MouseEvents' );
+    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+    link.dispatchEvent( event );
+});
 
 
 	</script>
