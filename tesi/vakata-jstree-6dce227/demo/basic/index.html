@@ -233,7 +233,7 @@ req.onreadystatechange = () => {
 
 req.open("PUT", "https://api.jsonbin.io/b/5f9ed3c147077d298f5b4ac2", true);
 req.setRequestHeader("Content-Type", "application/json");
-req.send(JSON.stringify(v));
+req.send('{"Sample": "Hello World"}');
 
 });
 
