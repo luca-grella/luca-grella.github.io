@@ -46,7 +46,7 @@
 	<h1>Test Try DEMO</h1>
 	<!--<button onclick="myFunction()">Click me</button>
 	<p id="jsonstringify"></p>-->
-	<button id="savejson">Save JSON</button><br>
+	<button id="savejson">Save JSON</button><button id="provaapi">Prova API</button><br>
 	<div id="jstree_demo" class="demo"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -215,6 +215,31 @@ savejson.addEventListener( 'click', function() {
     event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
     link.dispatchEvent( event );
 });
+
+
+
+var provaapi = document.getElementById( 'provaapi' );
+provaapi.addEventListener( 'click', function() {
+
+	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+    
+let req = new XMLHttpRequest();
+
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+    console.log(req.responseText);
+  }
+};
+
+req.open("PUT", "https://api.jsonbin.io/b/5f9ed3c147077d298f5b4ac2", true);
+req.setRequestHeader("Content-Type", "application/json");
+req.send(JSON.stringify(v));
+
+});
+
+
+
+
 
 
 	</script>
