@@ -46,7 +46,7 @@
 	<h1>Test Try DEMO</h1>
 	<!--<button onclick="myFunction()">Click me</button>
 	<p id="jsonstringify"></p>-->
-	<button id="savejson">Save JSON</button><button id="provaapi">Prova API</button><br>
+	<button id="savejson">Save JSON</button><button id="provaapi">PAPI</button><br>
 	<div id="jstree_demo" class="demo"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -221,7 +221,7 @@ savejson.addEventListener( 'click', function() {
 var provaapi = document.getElementById( 'provaapi' );
 provaapi.addEventListener( 'click', function() {
 
-	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+	/*var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
     
 let req = new XMLHttpRequest();
 
@@ -233,6 +233,22 @@ req.onreadystatechange = () => {
 
 req.open("PUT", "https://api.jsonbin.io/b/5f9ed3c147077d298f5b4ac2", true);
 req.setRequestHeader("Content-Type", "application/json");
+req.send('{"Sample": "Hello World"}');*/
+
+
+
+
+let req = new XMLHttpRequest();
+
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+    console.log(req.responseText);
+  }
+};
+
+req.open("POST", "https://api.jsonbin.io/b", true);
+req.setRequestHeader("Content-Type", "application/json");
+req.setRequestHeader("secret-key", "$2b$10$z7HKKK9Flo2OmbyzNg6kPOR22bwU6vVxkH1qtBmq5YhvbG6oArwK2");
 req.send('{"Sample": "Hello World"}');
 
 });
