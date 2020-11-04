@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jstree basic demos</title>
+	<style>
+	html { margin:0; padding:0; font-size:62.5%; }
+	body { max-width:800px; min-width:300px; margin:0 auto; padding:20px 10px; font-size:14px; font-size:1.4em; }
+	h1 { font-size:1.8em; }
+	.demo { overflow:auto; border:1px solid silver; min-height:100px; }
+	</style>
+	<link rel="stylesheet" href="./../../dist/themes/default/style.min.css" />
+</head>
+<body>
+	<h1>HTML demo</h1>
+	<div id="html" class="demo">
+		<ul>
+			<li data-jstree='{ "opened" : true }'>Root node
+				<ul>
+					<li data-jstree='{ "selected" : true }'>Child node 1</li>
+					<li>Child node 2</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<h1>Inline data demo</h1>
+	<div id="data" class="demo"></div>
+
+	<h1>Data format demo</h1>
+	<div id="frmt" class="demo"></div>
+
+	<h1>AJAX demo</h1>
+	<div id="ajax" class="demo"></div>
+
+	<h1>Lazy loading demo</h1>
+	<div id="lazy" class="demo"></div>
+
+	<h1>Callback function data demo</h1>
+	<div id="clbk" class="demo"></div>
+
+	<h1>Interaction and events demo</h1>
+	<button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
+	<div id="evts" class="demo"></div>
+	
+	<h1>Test Try DEMO</h1>
+	<button id="savejson">Save JSON</button>
+	<!--<button id="provaapi">Prova API</button>--><br>
+	<div id="jstree_demo" class="demo"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./../../dist/jstree.min.js"></script>
+	
+	<script>
+	// html demo
+	$('#html').jstree();
+
+	// inline data demo
+	$('#data').jstree({
+		'core' : {
+			'data' : [
+				{ "text" : "Root node", "children" : [
+						{ "text" : "Child node 1" },
+						{ "text" : "Child node 2" }
+				]}
+			]
+		}
+	});
+
+	// data format demo
+	$('#frmt').jstree({
+		'core' : {
+			'data' : [
+				{
+					"text" : "Root node",
+					"state" : { "opened" : true },
+					"children" : [
+						{
+							"text" : "Child node 1",
+							"state" : { "selected" : true },
+							"icon" : "jstree-file"
+						},
+						{ "text" : "Child node 2", "state" : { "disabled" : true } }
+					]
+				}
+			]
+		}
+	});
+
+	// ajax demo
+	$('#ajax').jstree({
+		'core' : {
+			'data' : {
+				"url" : "./root.json",
+				"dataType" : "json" // needed only if you do not supply JSON headers
+			}
+		}
+	});
+
+	// lazy demo
+	$('#lazy').jstree({
+		'core' : {
+			'data' : {
+				"url" : "//www.jstree.com/fiddle/?lazy",
+				"data" : function (node) {
+					return { "id" : node.id };
+				}
+			}
+		}
+	});
+
+	// data from callback
+	$('#clbk').jstree({
+		'core' : {
+			'data' : function (node, cb) {
+				if(node.id === "#") {
+					cb([{"text" : "Root", "id" : "1", "children" : true}]);
+				}
+				else {
+					cb(["Child"]);
+				}
+			}
+		}
+	});
+
+	// interaction and events
+	$('#evts_button').on("click", function () {
+		var instance = $('#evts').jstree(true);
+		instance.deselect_all();
+		instance.select_node('1');
+	});
+	$('#evts')
+		.on("changed.jstree", function (e, data) {
+			if(data.selected.length) {
+				alert('The selected node is: ' + data.instance.get_node(data.selected[0]).text);
+			}
+		})
+		.jstree({
+			'core' : {
+				'multiple' : false,
+				'data' : {
+				"url" : "./root.json",
+				"dataType" : "json" // needed only if you do not supply JSON headers
+			}
+			}
+		});
+
+
+	// interaction and events
+	$('#jstree_demo').jstree({
+  "core" : {
+    "animation" : 0,
+    "check_callback" : true,
+    "themes" : { "stripes" : true },
+    'data' : {
+				"url" : "./root.json",
+				"dataType" : "json" // needed only if you do not supply JSON headers
+			}
+  },
+  "types" : {
+    "#" : {
+      "max_children" : 1,
+      "max_depth" : 4,
+      "valid_children" : ["root"]
+    },
+    "root" : {
+      "icon" : "/static/3.3.10/assets/images/tree_icon.png",
+      "valid_children" : ["default"]
+    },
+    "default" : {
+      "valid_children" : ["default","file"]
+    },
+    "file" : {
+      "icon" : "glyphicon glyphicon-file",
+      "valid_children" : []
+    }
+  },
+  "plugins" : [
+    "contextmenu", "dnd", "search",
+    "state", "types", "wholerow"
+  ]
+});
+
+
+function encode( s ) {
+    var out = [];
+    for ( var i = 0; i < s.length; i++ ) {
+        out[i] = s.charCodeAt(i);
+    }
+    return new Uint8Array( out );
+}
+
+var savejson = document.getElementById( 'savejson' );
+savejson.addEventListener( 'click', function() {
+    
+	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+
+    var data = encode( JSON.stringify(v, null, 4) );
+
+    var blob = new Blob( [ data ], {
+        type: 'application/octet-stream'
+    });
+    
+    url = URL.createObjectURL( blob );
+    var link = document.createElement( 'a' );
+    link.setAttribute( 'href', url );
+    link.setAttribute( 'download', 'root.json' );
+    
+    var event = document.createEvent( 'MouseEvents' );
+    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+    link.dispatchEvent( event );
+});
+
+/*
+
+var provaapi = document.getElementById( 'provaapi' );
+provaapi.addEventListener( 'click', function() {
+
+	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+    
+let req = new XMLHttpRequest();
+
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+    console.log(req.responseText);
+  }
+};
+
+req.open("PUT", "https://api.jsonbin.io/b/5f9ed3c147077d298f5b4ac2", true);
+req.setRequestHeader("Content-Type", "application/json");
+req.send('{"Sample": "Hello World"}');*/
+
+
+
+
+/*let req = new XMLHttpRequest();
+
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+    console.log(req.responseText);
+  }
+};
+
+req.open("POST", "https://api.jsonbin.io/b", true);
+req.setRequestHeader("Content-Type", "application/json");
+req.setRequestHeader("secret-key", "$2b$10$z7HKKK9Flo2OmbyzNg6kPOR22bwU6vVxkH1qtBmq5YhvbG6oArwK2");
+req.send('{"Sample": "Hello World"}');
+
+
+const fs = require("fs");
+const { gitCommitPush } = require("../lib/git-commit-push-via-github-api");
+process.on("unhandledRejection", console.dir);
+if (!process.env.GITHUB_API_TOKEN) {
+    throw new Error("GITHUB_API_TOKEN=xxx node example.js");
+}
+gitCommitPush({
+    owner: "azu",
+    repo: "commit-to-github-test",
+    files: [
+        { path: "README.md", content: fs.readFileSync(__dirname + "/README.md", "utf-8") }
+    ],
+    fullyQualifiedRef: "heads/master",
+    forceUpdate: false, //optional default = false
+    commitMessage: "HELLO" //option default = "AutoCommit - " + new Date().getTime().toString();
+})
+    .then(res => {
+        console.log("success", res);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+});*/
+
+
+
+
+
+
+	</script>
+</body>
+</html>
