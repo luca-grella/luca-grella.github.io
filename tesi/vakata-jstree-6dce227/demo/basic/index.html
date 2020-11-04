@@ -44,9 +44,8 @@
 	<div id="evts" class="demo"></div>
 	
 	<h1>Test Try DEMO</h1>
-	<!--<button onclick="myFunction()">Click me</button>
-	<p id="jsonstringify"></p>-->
-	<button id="savejson">Save JSON</button><button id="provaapi">PAPI</button><br>
+	<button id="savejson">Save JSON</button>
+	<!--<button id="provaapi">Prova API</button>--><br>
 	<div id="jstree_demo" class="demo"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -182,10 +181,6 @@
   ]
 });
 
-/*function myFunction() {
-var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-document.getElementById("jsonstringify").innerHTML = JSON.stringify(v);
-};*/
 
 function encode( s ) {
     var out = [];
@@ -216,12 +211,12 @@ savejson.addEventListener( 'click', function() {
     link.dispatchEvent( event );
 });
 
-
+/*
 
 var provaapi = document.getElementById( 'provaapi' );
 provaapi.addEventListener( 'click', function() {
 
-	/*var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
     
 let req = new XMLHttpRequest();
 
@@ -238,7 +233,7 @@ req.send('{"Sample": "Hello World"}');*/
 
 
 
-let req = new XMLHttpRequest();
+/*let req = new XMLHttpRequest();
 
 req.onreadystatechange = () => {
   if (req.readyState == XMLHttpRequest.DONE) {
@@ -251,7 +246,31 @@ req.setRequestHeader("Content-Type", "application/json");
 req.setRequestHeader("secret-key", "$2b$10$z7HKKK9Flo2OmbyzNg6kPOR22bwU6vVxkH1qtBmq5YhvbG6oArwK2");
 req.send('{"Sample": "Hello World"}');
 
-});
+
+const fs = require("fs");
+const { gitCommitPush } = require("../lib/git-commit-push-via-github-api");
+process.on("unhandledRejection", console.dir);
+if (!process.env.GITHUB_API_TOKEN) {
+    throw new Error("GITHUB_API_TOKEN=xxx node example.js");
+}
+gitCommitPush({
+    owner: "azu",
+    repo: "commit-to-github-test",
+    files: [
+        { path: "README.md", content: fs.readFileSync(__dirname + "/README.md", "utf-8") }
+    ],
+    fullyQualifiedRef: "heads/master",
+    forceUpdate: false, //optional default = false
+    commitMessage: "HELLO" //option default = "AutoCommit - " + new Date().getTime().toString();
+})
+    .then(res => {
+        console.log("success", res);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+});*/
 
 
 
