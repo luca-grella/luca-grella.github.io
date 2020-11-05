@@ -23,8 +23,8 @@
   <button id="deletenode">Delete Node</button>
   <br>
 	<div id="jstree_demo" class="demo"></div><br>
-  <em>INAIL-RECKON Project. Curated by Luca Grella</em><br>
-  <button id="savejson">Save JSON</button>
+  <button id="savejson">Save JSON</button><br><br>
+  <em>INAIL-RECKON Project<br>Curated by Luca Grella</em>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./../dist/jstree.min.js"></script>
@@ -68,7 +68,7 @@
   "plugins" : [
     "contextmenu", "dnd", "search",
     "state", "types", "wholerow"
-  ]
+  ], "contextmenu": {"items": "Create"}
 });
 
 //GENERAZIONE FILE JSON + DOWNLOAD IN LOCALE
