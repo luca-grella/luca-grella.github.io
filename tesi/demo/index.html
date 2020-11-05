@@ -131,10 +131,10 @@ createattribute.addEventListener( 'click', function() {
               var i;
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
-			  sel = ref.create_node(sela, {"type":"attribute"});
-              /*if(sel) {
-                ref.edit(sel);
-              }*/
+			  asd = ref.create_node(sela, {"type":"attribute"});
+              if(asd) {
+                ref.edit(asd);
+              }
 			  }
             });
 
