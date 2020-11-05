@@ -20,8 +20,8 @@
   <button id="createdimension">Create Dimension</button>
   <button id="createconcept">Create Concept</button>
   <button id="createattribute">Create Attribute</button>
-  <button id="rename">Rename Node</button>
-  <button id="delete">Delete Node</button>
+  <button id="renamenode">Rename Node</button>
+  <button id="deletenode">Delete Node</button>
   <br>
 	<div id="jstree_demo" class="demo"></div><br>
   <em>Example...</em>
@@ -154,8 +154,8 @@ createroot.addEventListener( 'click', function() {
               }
             });
 
-var rename = document.getElementById( 'rename' );
-rename.addEventListener( 'click', function() {
+var renamenode = document.getElementById( 'renamenode' );
+renamenode.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree(true),
                 sel = ref.get_selected();
@@ -164,8 +164,8 @@ rename.addEventListener( 'click', function() {
               ref.edit(sel);
             });
 
-/*var delete = document.getElementById( 'delete' );
-delete.addEventListener( 'click', function() {
+var deletenode = document.getElementById( 'deletenode' );
+deletenode.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree(true),
                 sel = ref.get_selected();
