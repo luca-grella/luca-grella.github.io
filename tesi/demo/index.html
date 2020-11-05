@@ -60,20 +60,24 @@
   },
   "types" : {
     "#" : {
-      "max_children" : 1,
-      "max_depth" : 4,
+      "max_children" : 512,
+      "max_depth" : 512,
       "valid_children" : ["root"]
     },
     "root" : {
-      "icon" : "./a.png",
-      "valid_children" : ["default"]
+      "icon" : "./icons/root.png",
+      "valid_children" : ["dimension"]
     },
-    "default" : {
-      "icon" : "jstree-default",
-      "valid_children" : ["default","file"]
+    "dimension" : {
+      "icon" : "./icons/dimension.png",
+      "valid_children" : ["concept","attribute"]
     },
-    "file" : {
-      "icon" : "./a.png",
+    "concept" : {
+      "icon" : "./icons/concept.png",
+      "valid_children" : ["dimension","attribute"]
+    },
+    "attribute" : {
+      "icon" : "./icons/attribute.png",
       "valid_children" : []
     }
   },

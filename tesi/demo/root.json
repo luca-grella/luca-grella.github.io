@@ -17,7 +17,7 @@
                         "icon": true,
                         "data": {},
                         "children": [],
-                        "type": "default"
+                        "type": "concept"
                     },
                     {
                         "id": "j8_7",
@@ -25,7 +25,7 @@
                         "icon": true,
                         "data": {},
                         "children": [],
-                        "type": "root"
+                        "type": "concept"
                     },
                     {
                         "id": "j8_8",
@@ -33,7 +33,7 @@
                         "icon": true,
                         "data": {},
                         "children": [],
-                        "type": "default"
+                        "type": "concept"
                     },
                     {
                         "id": "j8_9",
@@ -41,10 +41,10 @@
                         "icon": true,
                         "data": {},
                         "children": [],
-                        "type": "default"
+                        "type": "concept"
                     }
                 ],
-                "type": "default"
+                "type": "dimension"
             },
             {
                 "id": "3",
@@ -52,7 +52,7 @@
                 "icon": true,
                 "data": {},
                 "children": [],
-                "type": "default"
+                "type": "dimension"
             },
             {
                 "id": "4",
@@ -60,7 +60,7 @@
                 "icon": true,
                 "data": {},
                 "children": [],
-                "type": "default"
+                "type": "dimension"
             }
         ],
         "type": "root"
