@@ -29,7 +29,8 @@
 	$('#evts_button').on("click", function () {
 		var instance = $('#evts').jstree(true);
 		instance.deselect_all();
-		instance.select_node('1');
+		instance.select_node('1')
+    instance.create_node ([par:instance.get_selected ([false]), node: 'prova']);
 	});
 	$('#evts')
 		.on("changed.jstree", function (e, data) {
