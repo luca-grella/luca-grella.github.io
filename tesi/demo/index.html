@@ -22,8 +22,11 @@
   <button id="renamenode">Rename Node</button>
   <button id="deletenode">Delete Node</button>
   <div class="col-md-2 col-sm-4 col-xs-4" style="text-align:right;">
-            <input type="text" value="" style="box-shadow:inset 0 0 4px #eee; width:120px; margin:0; padding:6px 12px; border-radius:4px; border:1px solid silver; font-size:1.1em;" id="searchnode" placeholder="Search" />
+            <input type="text" value="" style="box-shadow:inset 0 0 4px #eee; width:120px; margin:0; padding:6px 12px; border-radius:4px; border:1px solid silver; font-size:1.1em;" id="demo_q" placeholder="Search" />
           </div>
+  <!--<div class="col-md-2 col-sm-4 col-xs-4" style="text-align:right;">
+            <input type="text" value="" style="box-shadow:inset 0 0 4px #eee; width:120px; margin:0; padding:6px 12px; border-radius:4px; border:1px solid silver; font-size:1.1em;" id="searchnode" placeholder="Search" />
+          </div>-->
   <br>
 	<div id="jstree_demo" class="demo"></div><br>
   <button id="savejson">Save JSON</button><br><br>
@@ -33,6 +36,18 @@
 	<script src="./../dist/jstree.min.js"></script>
 	
 	<script>
+
+//////////////////////////////////////////////////
+    $(function () {
+              var to = false;
+              $('#demo_q').keyup(function () {
+                if(to) { clearTimeout(to); }
+                to = setTimeout(function () {
+                  var v = $('#demo_q').val();
+                  $('#jstree_demo').jstree(true).search(v);
+                }, 250);
+              });
+////////////////////////////////////////////////
 	
 	// POPOLAZIONE DEL CDT
 	$('#jstree_demo').jstree({
@@ -73,6 +88,10 @@
     "state", "types", "wholerow"
   ]
 });
+
+  //////
+  });
+  /////
 
 //GENERAZIONE FILE JSON + DOWNLOAD IN LOCALE
 function encode( s ) {
@@ -176,8 +195,8 @@ deletenode.addEventListener( 'click', function() {
               ref.delete_node(sel);
             });
 
-var searchnode = document.getElementById( 'searchnode' );
-searchnode.addEventListener( 'search', function() {
+/*var searchnode = document.getElementById( 'searchnode' );
+searchnode.addEventListener( 'input', function() {
 
               var to = false;
               $('#demo_q').keyup(function () {
@@ -187,7 +206,7 @@ searchnode.addEventListener( 'search', function() {
                   $('#jstree_demo').jstree(true).search(v);
                 }, 250);
               });
-            });
+            });*/
 
 	</script>
 </body>
