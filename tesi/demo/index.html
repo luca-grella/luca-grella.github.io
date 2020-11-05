@@ -129,11 +129,14 @@ createattribute.addEventListener( 'click', function() {
               var ref = $('#jstree_demo').jstree(true),
                 sel = ref.get_selected();
               if(!sel.length) { return false; }
-              /*sel = sel[0];*/
-              sel = ref.create_node(sel, {"type":"attribute"});
+              var i;
+			  for (i = 0; i < sel.length; i++) { 
+			  sel = sel[i];
+			  sel = ref.create_node(sel, {"type":"attribute"});
               if(sel) {
                 ref.edit(sel);
               }
+			  }
             });
 
 var createconcept = document.getElementById( 'createconcept' );
