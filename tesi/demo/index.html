@@ -14,7 +14,7 @@
 <body>
 	<h1>Test Try DEMO</h1>
 	<button id="savejson">Save JSON</button>
-  <button type="button" class="btn btn-success btn-sm" onclick="demo_create();"><i class="glyphicon glyphicon-asterisk"></i> Create</button>
+  <button id="democreate">Create</button>
 	<!--<button id="provaapi">Prova API</button>--><br>
 	<div id="jstree_demo" class="demo"></div>
 
@@ -117,7 +117,9 @@ savejson.addEventListener( 'click', function() {
     link.dispatchEvent( event );
 });
 
-function demo_create() {
+var democreate = document.getElementById( 'democreate' );
+democreate.addEventListener( 'click', function() {
+
               var ref = $('#jstree_demo').jstree(true),
                 sel = ref.get_selected();
               if(!sel.length) { return false; }
@@ -126,7 +128,7 @@ function demo_create() {
               if(sel) {
                 ref.edit(sel);
               }
-            };
+            });
 
 	</script>
 </body>
