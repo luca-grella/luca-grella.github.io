@@ -2,45 +2,81 @@
     {
         "id": "1",
         "text": "Infortunio",
-        "icon": true,
+        "icon": "./icons/root.png",
         "data": {},
         "children": [
             {
                 "id": "2",
                 "text": "Data",
-                "icon": true,
+                "icon": "./icons/dimension.png",
                 "data": {},
                 "children": [
                     {
                         "id": "j8_5",
                         "text": "Anno",
-                        "icon": true,
+                        "icon": "./icons/concept.png",
                         "data": {},
-                        "children": [],
+                        "children": [
+                            {
+                                "id": "j1_11",
+                                "text": "$Anno",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
                         "type": "concept"
                     },
                     {
                         "id": "j8_7",
                         "text": "Mese",
-                        "icon": true,
+                        "icon": "./icons/concept.png",
                         "data": {},
-                        "children": [],
+                        "children": [
+                            {
+                                "id": "j1_9",
+                                "text": "$Mese",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
                         "type": "concept"
                     },
                     {
                         "id": "j8_8",
                         "text": "Giorno",
-                        "icon": true,
+                        "icon": "./icons/concept.png",
                         "data": {},
-                        "children": [],
+                        "children": [
+                            {
+                                "id": "j1_13",
+                                "text": "$Giorno",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
                         "type": "concept"
                     },
                     {
                         "id": "j8_9",
                         "text": "Ora",
-                        "icon": true,
+                        "icon": "./icons/concept.png",
                         "data": {},
-                        "children": [],
+                        "children": [
+                            {
+                                "id": "j1_14",
+                                "text": "$Ora",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
                         "type": "concept"
                     }
                 ],
@@ -49,7 +85,7 @@
             {
                 "id": "3",
                 "text": "Luogo",
-                "icon": true,
+                "icon": "./icons/dimension.png",
                 "data": {},
                 "children": [],
                 "type": "dimension"
@@ -57,7 +93,7 @@
             {
                 "id": "4",
                 "text": "Azienda",
-                "icon": true,
+                "icon": "./icons/dimension.png",
                 "data": {},
                 "children": [],
                 "type": "dimension"
