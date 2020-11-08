@@ -30,6 +30,10 @@
   <button id="savejson">Save JSON</button><br><br>
   <em>INAIL-RECKON Project<br>Curated by Luca Grella</em><br>
 
+  <p id="demoprova"></p>
+
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./../dist/jstree.min.js"></script>
 	
@@ -132,12 +136,14 @@ createattribute.addEventListener( 'click', function() {
 
 
               var ref = $('#jstree_demo').jstree(true),
-              sel = ref.get_selected(1);
+              sel = ref.get_selected();
               if(!sel.length) { return false; }
               var i;
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
         var v = $('#jstree_demo').jstree(true).get_json(sel);
+
+        document.getElementById("demoprova").innerHTML = v[1];
 
         var j;
         var checkchild = false;
