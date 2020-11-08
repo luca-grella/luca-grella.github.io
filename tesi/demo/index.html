@@ -133,7 +133,7 @@ createattribute.addEventListener( 'click', function() {
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
         var v = $('#jstree_demo').jstree(true).get_json(sel);
-        document.getElementById("backupv").innerHTML = JSON.stringify(v.children);
+        document.getElementById("backupv").innerHTML = 'a' /*JSON.stringify(v.children);*/
 
         if (v.children.hasOwnProperty('type')) {
           if (v.children[0].type == 'concept' || v.children[0].type == 'dimension') {//non fare nulla
