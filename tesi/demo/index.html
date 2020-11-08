@@ -125,18 +125,19 @@ savejson.addEventListener( 'click', function() {
 var createattribute = document.getElementById( 'createattribute' );
 createattribute.addEventListener( 'click', function() {
 
+/*var k;
+              for (k = 0; k < v.length; k++){
+              v=v[k]
+              }*/
+
+
               var ref = $('#jstree_demo').jstree(true),
-                sel = ref.get_selected();
+              sel = ref.get_selected();
               if(!sel.length) { return false; }
               var i;
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
-        var v = $('#jstree_demo').jstree(true).get_json(sel);
-
-        var k;
-        for (k = 0; k < v.length; k++){
-          v=v[k]
-        }
+        var v = $('#jstree_demo').jstree(true).get_json(sel[1]);
 
         var j;
         var checkchild = false;
