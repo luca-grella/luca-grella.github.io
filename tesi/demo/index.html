@@ -132,16 +132,24 @@ createattribute.addEventListener( 'click', function() {
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
         var v = $('#jstree_demo').jstree(true).get_json(sel);
-        if (v.children[0].type == "concept" || v.children[0].type == "dimension") {
-  //  block of code to be executed if the condition is true
-} else {
-  asd = ref.create_node(sela, {"type":"attribute"});
+
+        if (v.children[0].type != "undefined") {
+          if (v.children[0].type == "concept" || v.children[0].type == "dimension") {//non fare nulla
+          }
+          else {
+              asd = ref.create_node(sela, {"type":"attribute"});
               if(asd) {
-                ref.edit(asd);
+              ef.edit(asd);
               }
-}
-			  
-			  }
+                }
+        }
+        else {
+              asd = ref.create_node(sela, {"type":"attribute"});
+              if(asd) {
+              ef.edit(asd);
+              }
+                }
+			                           }
             });
 
 var createconcept = document.getElementById( 'createconcept' );
