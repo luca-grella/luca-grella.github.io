@@ -132,7 +132,7 @@ createattribute.addEventListener( 'click', function() {
 
 
               var ref = $('#jstree_demo').jstree(true),
-              sel = ref.get_selected();
+              sel = ref.get_selected(1);
               if(!sel.length) { return false; }
               var i;
 			  for (i = 0; i < sel.length; i++) { 
