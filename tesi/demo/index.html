@@ -143,7 +143,7 @@ createattribute.addEventListener( 'click', function() {
 			  sela = sel[i];
         var v = $('#jstree_demo').jstree(true).get_json(sel);
 
-        document.getElementById("demoprova").innerHTML = JSON.stringify(v);
+        document.getElementById("demoprova").innerHTML = JSON.stringify(v[1].get_json());
 
         var j;
         var checkchild = false;
