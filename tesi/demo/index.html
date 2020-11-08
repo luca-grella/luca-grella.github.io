@@ -29,9 +29,11 @@
   </div><br>
   <button id="savejson">Save JSON</button><br><br>
   <em>INAIL-RECKON Project<br>Curated by Luca Grella</em><br>
-  <script>
-document.write(5 + 6);
-</script>
+<p id="backupv"></p>
+
+
+
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./../dist/jstree.min.js"></script>
@@ -135,7 +137,7 @@ createattribute.addEventListener( 'click', function() {
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
         var v = $('#jstree_demo').jstree(true).get_json(sel);
-        document.getElementById("backupv").innerHTML = 'a' /*JSON.stringify(v.children);*/
+        document.getElementById("backupv").innerHTML = 5 + 6;
 
         if (v.children.hasOwnProperty('type')) {
           if (v.children[0].type == 'concept' || v.children[0].type == 'dimension') {//non fare nulla
