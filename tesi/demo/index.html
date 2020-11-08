@@ -131,7 +131,7 @@ createattribute.addEventListener( 'click', function() {
               var i;
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
-        var v = $('#jstree_demo').jstree(true).get_json(sela);
+        var v = $('#jstree_demo').jstree(true).get_json(sel);
         if (JSON.parse(v).children[0].type == "concept" || JSON.parse(v).children[0].type == "dimension") {
   //  block of code to be executed if the condition is true
 } else {
