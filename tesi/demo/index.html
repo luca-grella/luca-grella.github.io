@@ -136,14 +136,14 @@ createattribute.addEventListener( 'click', function() {
 
 
               var ref = $('#jstree_demo').jstree(true),
-              sel = ref.get_selected();
+              sel = ref.get_selected(true)[1];
               if(!sel.length) { return false; }
               var i;
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
         var v = $('#jstree_demo').jstree(true).get_json(sel);
 
-        document.getElementById("demoprova").innerHTML = JSON.stringify(v[1]);
+        document.getElementById("demoprova").innerHTML = JSON.stringify(v);
 
         var j;
         var checkchild = false;
