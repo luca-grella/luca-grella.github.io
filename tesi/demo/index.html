@@ -133,10 +133,15 @@ createattribute.addEventListener( 'click', function() {
 			  sela = sel[i];
         var v = $('#jstree_demo').jstree(true).get_json(sel);
 
+        var j;
+        var checkchild = false;
+        for (j = 0; j < v.children.length; j++){
+          checkchild = checkchild || v.children[j].type == 'concept' || v.children[j].type == 'dimension'
+        }
+
         if (JSON.stringify(v.children) != '[]') {
-          var j;
-          for (j = 0; j < v.children.length; j++){
-          if (v.children[j].type == 'concept' || v.children[j].type == 'dimension') {//Do Nothing
+          
+          if (checkchild) {//Do Nothing
           }
           else {
               asd = ref.create_node(sela, {"type":"attribute"});
@@ -144,7 +149,7 @@ createattribute.addEventListener( 'click', function() {
               ref.edit(asd);
               }
                 }
-              }
+
         }
         else {
               asd = ref.create_node(sela, {"type":"attribute"});
