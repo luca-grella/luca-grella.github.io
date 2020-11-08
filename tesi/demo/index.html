@@ -134,7 +134,7 @@ createattribute.addEventListener( 'click', function() {
         var v = $('#jstree_demo').jstree(true).get_json(sel);
 
         if (v.children.hasOwnProperty('type')) {
-          if (v.children.type == "concept" || v.children.type == "dimension") {//non fare nulla
+          if (v.children[0].type == 'concept' || v.children[0].type == 'dimension') {//non fare nulla
           }
           else {
               asd = ref.create_node(sela, {"type":"attribute"});
