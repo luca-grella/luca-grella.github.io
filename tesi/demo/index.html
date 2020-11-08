@@ -131,10 +131,17 @@ createattribute.addEventListener( 'click', function() {
               var i;
 			  for (i = 0; i < sel.length; i++) { 
 			  sela = sel[i];
-			  asd = ref.create_node(sela, {"type":"attribute"});
+        var v = $('#jstree_demo').jstree(true).get_json(sela);
+        var data = encode( JSON.stringify(v, null, 4) );
+        if (JSON.parse(data).children[0].type == "concept" || JSON.parse(data).children[0].type == "dimension") {
+  //  block of code to be executed if the condition is true
+} else {
+  asd = ref.create_node(sela, {"type":"attribute"});
               if(asd) {
                 ref.edit(asd);
               }
+}
+			  
 			  }
             });
 
