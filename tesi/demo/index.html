@@ -136,7 +136,7 @@ createattribute.addEventListener( 'click', function() {
         if (v.children.hasOwnProperty('type')) {
           if (v.children[0].type == 'concept' || v.children[0].type == 'dimension') {//non fare nulla
           }
-          else {
+          else {document.write(v.children[0].type);
               asd = ref.create_node(sela, {"type":"attribute"});
               if(asd) {
               ref.edit(asd);
