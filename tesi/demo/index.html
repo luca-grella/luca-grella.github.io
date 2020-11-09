@@ -11,7 +11,7 @@
 	</style>
 	<link rel="stylesheet" href="./../dist/themes/default/style.min.css" />
 </head>
-<body>
+<body onload="hideRootNode()">
 
 	<h1>CDT Infortuni</h1>
   <button id="duplicateroot">OOOOOO</button>
@@ -86,15 +86,17 @@
     "contextmenu", "dnd", "search",
     "state", "types", "wholerow"
   ]
-}).get_node('1');
+});
 
-$("#jstree_demo").jstree(true).hide_node(ahahahahah);
-
-
-
-  //FINE FUNZIONE SEARCH////
+//FINE FUNZIONE SEARCH////
   });
-  //////////////////////////
+//////////////////////////
+
+//HIDE ROOT NODE FUNCTION
+function hideRootNode() {
+  var node_to_hide = $("#jstree_demo").jstree().get_node('1');   
+hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
+}
 
 //GENERAZIONE FILE JSON + DOWNLOAD IN LOCALE
 function encode( s ) {
@@ -260,9 +262,6 @@ duplicateroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree('copy', '1');
               ref = $('#jstree_demo').jstree('paste', '#', 'last');
-
-var ahahahahah = $("#jstree_demo").jstree().get_node('1');   
-letto = $("#jstree_demo").jstree(true).hide_node(ahahahahah);
             });
 
 /*var duplicateroot = document.getElementById( 'duplicateroot' );
