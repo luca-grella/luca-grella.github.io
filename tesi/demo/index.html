@@ -86,51 +86,11 @@
     "contextmenu", "dnd", "search",
     "state", "types", "wholerow"
   ]
-});
+}).hide_node(1);
 
   //FINE FUNZIONE SEARCH////
   });
   //////////////////////////
-
-
-$('#jstree_demo2').jstree({
-  "core" : {
-    "animation" : 0,
-    "check_callback" : true,
-    "themes" : { "stripes" : true },
-    'data' : {
-        "url" : "./root.json",
-        "dataType" : "json" 
-      }
-  },
-  "types" : {
-    "#" : {
-      "max_children" : 512,
-      "max_depth" : 512,
-      "valid_children" : ["root"]
-    },
-    "root" : {
-      "icon" : "./icons/root.png",
-      "valid_children" : ["dimension"]
-    },
-    "dimension" : {
-      "icon" : "./icons/dimension.png",
-      "valid_children" : ["concept","attribute"]
-    },
-    "concept" : {
-      "icon" : "./icons/concept.png",
-      "valid_children" : ["dimension","attribute"]
-    },
-    "attribute" : {
-      "icon" : "./icons/attribute.png",
-      "valid_children" : []
-    }
-  },
-  "plugins" : [
-    "contextmenu", "dnd", "search",
-    "state", "types", "wholerow"
-  ]
-});
 
 //GENERAZIONE FILE JSON + DOWNLOAD IN LOCALE
 function encode( s ) {
@@ -294,7 +254,8 @@ createroot.addEventListener( 'click', function() {
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
-              var ref = $('#jstree_demo').jstree('create_node', '#', '1');
+              var ref = $('#jstree_demo').jstree('copy', '1');
+              ref = $('#jstree_demo').jstree('paste', '#', 'last');
             });
 
 /*var duplicateroot = document.getElementById( 'duplicateroot' );
