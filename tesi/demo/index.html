@@ -11,7 +11,7 @@
 	</style>
 	<link rel="stylesheet" href="./../dist/themes/default/style.min.css" />
 </head>
-<body onLoad="setTimeout(codeAddress, 50)">
+<body onLoad="setTimeout(codeAddress, 100)">
 
 	<h1>CDT Infortuni</h1>
   <button id="duplicateroot">OOOOOO</button>
@@ -254,22 +254,24 @@ createroot.addEventListener( 'click', function() {
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
-var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
-	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
+              var ref = $('#jstree_demo').jstree('copy', '1');
+              ref = $('#jstree_demo').jstree('paste', '#', 'last');
             });
 
-/*var duplicateroot = document.getElementById( 'duplicateroot' );
-duplicateroot.addEventListener( 'click', function() {
+/*var copynode = document.getElementById( 'copynode' );
+copynode.addEventListener( 'click', function() {
 
-              var ref = $('#jstree_demo').jstree('copy', '1');
-              ref = $('#jstree_demo').jstree('paste', '#', 'last');
+		 	var ref = $('#jstree_demo').jstree(true),
+        	sel = ref.get_selected();
+              var cop = $('#jstree_demo').jstree('copy', sel);
             });*/
 
-/*var duplicateroot = document.getElementById( 'duplicateroot' );
-duplicateroot.addEventListener( 'click', function() {
+/*var pastenode = document.getElementById( 'pastenode' );
+pastenode.addEventListener( 'click', function() {
 
-              var ref = $('#jstree_demo').jstree('copy', '1');
-              ref = $('#jstree_demo').jstree('paste', '#', 'last');
+		 	var ref = $('#jstree_demo').jstree(true),
+        	sel = ref.get_selected();
+              var pas = $('#jstree_demo').jstree('paste', sel, 'last');
             });*/
 
 var renamenode = document.getElementById( 'renamenode' );
@@ -300,11 +302,13 @@ openallnodes.addEventListener( 'click', function() {
 var closeallnodes = document.getElementById( 'closeallnodes' );
 closeallnodes.addEventListener( 'click', function() {
 
-              $('#jstree_demo').jstree('close_all')
+	var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
+	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
+              $('#jstree_demo').jstree('close_all');
             });
 
 function codeAddress() {
-  duplicateroot.click();
+  closeallnodes.click();
 };
 
 
