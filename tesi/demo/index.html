@@ -255,7 +255,7 @@ var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree(true),
-              sel = ref.create_node("#", JSON.stringify(ref));
+              sel = ref.create_node("#", ref);
               /*if(sel) {
                 ref.edit(sel);
               }*/
