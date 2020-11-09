@@ -310,7 +310,7 @@ closeallnodes.addEventListener( 'click', function() {
 function hideRootNode() {
 	var ref = $('#jstree_demo').jstree('copy', '1');
     ref = $('#jstree_demo').jstree('paste', '#', 'last');
-  	var node_to_hide = $("#jstree_demo").jstree().get_node('1');   
+  	var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
 	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
 }
 
