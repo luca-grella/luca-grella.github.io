@@ -254,11 +254,12 @@ createroot.addEventListener( 'click', function() {
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
+              var ciao = $('#jstree_demo').jstree(true);
               var ref = $('#jstree_demo').jstree(true),
-              sel = ref.create_node("#", ref);
-              /*if(sel) {
+              sel = ref.create_node("#", ciao);
+              if(sel) {
                 ref.edit(sel);
-              }*/
+              }
             });
 
 var renamenode = document.getElementById( 'renamenode' );
