@@ -11,7 +11,7 @@
 	</style>
 	<link rel="stylesheet" href="./../dist/themes/default/style.min.css" />
 </head>
-<body>
+<body onLoad="setTimeout(codeAddress, 5000)">
 
 	<h1>CDT Infortuni</h1>
   <button id="duplicateroot">OOOOOO</button>
@@ -303,7 +303,7 @@ closeallnodes.addEventListener( 'click', function() {
               $('#jstree_demo').jstree('close_all')
             });
 
-window.onload = function() {
+function codeAddress() {
   duplicateroot.click();
 };
 
