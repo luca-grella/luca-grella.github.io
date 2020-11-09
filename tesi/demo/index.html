@@ -48,6 +48,8 @@
               });
 ////////////////////////////////////////////////
 	
+var ahahahahah = $("#jstree_demo").jstree().get_node('1'); 
+
 	// POPOLAZIONE DEL CDT
 	$('#jstree_demo').jstree({
   "core" : {
@@ -86,11 +88,9 @@
     "contextmenu", "dnd", "search",
     "state", "types", "wholerow"
   ]
-}).get_node('1');
+}).hide_node(ahahahahah);
 
-letto = $("#jstree_demo").jstree(true).hide_node(ahahahahah);
 
-	
 
   //FINE FUNZIONE SEARCH////
   });
