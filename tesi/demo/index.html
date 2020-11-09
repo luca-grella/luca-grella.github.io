@@ -88,9 +88,6 @@
   ]
 });
 
-var ahahahahah = $("#jstree_demo").jstree().get_node('1');   
-letto = $("#jstree_demo").jstree(true).hide_node(ahahahahah);
-
   //FINE FUNZIONE SEARCH////
   });
   //////////////////////////
@@ -259,6 +256,9 @@ duplicateroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree('copy', '1');
               ref = $('#jstree_demo').jstree('paste', '#', 'last');
+              
+var ahahahahah = $("#jstree_demo").jstree().get_node('1');   
+letto = $("#jstree_demo").jstree(true).hide_node(ahahahahah);
             });
 
 /*var duplicateroot = document.getElementById( 'duplicateroot' );
