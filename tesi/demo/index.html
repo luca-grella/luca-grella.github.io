@@ -14,7 +14,7 @@
 <body onLoad="setTimeout(codeAddress, 100)">
 
 	<h1>CDT Infortuni</h1>
-  <button id="duplicateroot">OOOOOO</button>
+  <button id="duplicateroot">+ Infortunio</button>
   <button id="openallnodes">Open All</button>
   <button id="closeallnodes">Close All</button>
   <button id="createroot">Create Root</button>
@@ -22,6 +22,8 @@
   <button id="createconcept">Create Concept</button>
   <button id="createattribute">Create Attribute</button>
   <button id="renamenode">Rename Node</button>
+  <button id="copynode">Copy Node</button>
+  <button id="pastenode">Paste Node</button>
   <button id="deletenode">Delete Node</button>
   <br>
 	<div id="jstree_demo" class="demo"></div><br>
@@ -258,21 +260,21 @@ duplicateroot.addEventListener( 'click', function() {
               ref = $('#jstree_demo').jstree('paste', '#', 'last');
             });
 
-/*var copynode = document.getElementById( 'copynode' );
+var copynode = document.getElementById( 'copynode' );
 copynode.addEventListener( 'click', function() {
 
 		 	var ref = $('#jstree_demo').jstree(true),
         	sel = ref.get_selected();
               var cop = $('#jstree_demo').jstree('copy', sel);
-            });*/
+            });
 
-/*var pastenode = document.getElementById( 'pastenode' );
+var pastenode = document.getElementById( 'pastenode' );
 pastenode.addEventListener( 'click', function() {
 
 		 	var ref = $('#jstree_demo').jstree(true),
         	sel = ref.get_selected();
               var pas = $('#jstree_demo').jstree('paste', sel, 'last');
-            });*/
+            });
 
 var renamenode = document.getElementById( 'renamenode' );
 renamenode.addEventListener( 'click', function() {
