@@ -254,9 +254,9 @@ createroot.addEventListener( 'click', function() {
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
-              var ciao = $('#jstree_demo').jstree(true);
+              var ciao = $('#jstree_demo').jstree(true).copy('#');
               var ref = $('#jstree_demo').jstree(true),
-              sel = ref.create_node("#", ciao);
+              sel = ref.paste("#");
               if(sel) {
                 ref.edit(sel);
               }
