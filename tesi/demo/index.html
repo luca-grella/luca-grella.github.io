@@ -294,8 +294,7 @@ createroot.addEventListener( 'click', function() {
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
-              var ref = $('#jstree_demo2').jstree('copy', '1');
-              ref = $('#jstree_demo').jstree('paste', '#', 'last');
+              var ref = $('#jstree_demo').jstree('create_node', '#', '1');
             });
 
 /*var duplicateroot = document.getElementById( 'duplicateroot' );
