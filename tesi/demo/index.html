@@ -254,9 +254,8 @@ createroot.addEventListener( 'click', function() {
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
-              var duplicatedjson = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-              var ref = $('#jstree_demo').jstree(true),
-              sel = ref.create_node("#", JSON.stringify(duplicatedjson));
+              var ref = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true}),
+              sel = ref.create_node("#", JSON.stringify(ref));
               /*if(sel) {
                 ref.edit(sel);
               }*/
