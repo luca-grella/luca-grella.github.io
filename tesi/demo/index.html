@@ -251,8 +251,7 @@ createroot.addEventListener( 'click', function() {
               }
             });
 
-var jsonprova = [
-    {
+var jsonprova = {
         "id": "1",
         "text": "Infortunio",
         "icon": "./icons/root.png",
@@ -354,16 +353,16 @@ var jsonprova = [
         ],
         "type": "root"
     }
-];
+;
 
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree(true),
               sel = ref.create_node("#", jsonprova);
-              if(sel) {
+              /*if(sel) {
                 ref.edit(sel);
-              }
+              }*/
             });
 
 var renamenode = document.getElementById( 'renamenode' );
