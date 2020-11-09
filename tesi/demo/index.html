@@ -358,11 +358,8 @@ var jsonprova = {
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
-              var ref = $('#jstree_demo').jstree(true),
-              sel = ref.create_node("#", jsonprova);
-              if(sel) {
-                ref.edit(sel);
-              }
+              var ref = $('#jstree_demo').jstree('copy', '1');
+              ref = $('#jstree_demo').jstree('paste', '#');
             });
 
 var renamenode = document.getElementById( 'renamenode' );
