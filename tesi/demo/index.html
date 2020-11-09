@@ -48,8 +48,6 @@
               });
 ////////////////////////////////////////////////
 	
-var ahahahahah = $("#jstree_demo").jstree().get_node('1'); 
-
 	// POPOLAZIONE DEL CDT
 	$('#jstree_demo').jstree({
   "core" : {
@@ -88,7 +86,9 @@ var ahahahahah = $("#jstree_demo").jstree().get_node('1');
     "contextmenu", "dnd", "search",
     "state", "types", "wholerow"
   ]
-}).hide_node(ahahahahah);
+}).get_node('1');
+
+$("#jstree_demo").jstree(true).hide_node(ahahahahah);
 
 
 
