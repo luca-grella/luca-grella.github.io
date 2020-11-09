@@ -86,7 +86,17 @@
     "contextmenu", "dnd", "search",
     "state", "types", "wholerow"
   ]
-}).hide_node(1);
+});
+
+$("#jstree_demo")
+    .jstree('get_json', '#', {
+        flat: true
+    })
+    .forEach(function(node) {
+    $("#jstree_demo").jstree('get_node', '1').state.hidden = true;
+    });
+
+$('#jstree_demo').jstree('redraw', true);
 
   //FINE FUNZIONE SEARCH////
   });
