@@ -251,115 +251,11 @@ createroot.addEventListener( 'click', function() {
               }
             });
 
-var jsonprova = {
-        "id": "1",
-        "text": "Infortunio",
-        "icon": "./icons/root.png",
-        "data": {},
-        "children": [
-            {
-                "id": "2",
-                "text": "Data",
-                "icon": "./icons/dimension.png",
-                "data": {},
-                "children": [
-                    {
-                        "id": "j8_5",
-                        "text": "Anno",
-                        "icon": "./icons/concept.png",
-                        "data": {},
-                        "children": [
-                            {
-                                "id": "j1_11",
-                                "text": "$Anno",
-                                "icon": "./icons/attribute.png",
-                                "data": {},
-                                "children": [],
-                                "type": "attribute"
-                            }
-                        ],
-                        "type": "concept"
-                    },
-                    {
-                        "id": "j8_7",
-                        "text": "Mese",
-                        "icon": "./icons/concept.png",
-                        "data": {},
-                        "children": [
-                            {
-                                "id": "j1_9",
-                                "text": "$Mese",
-                                "icon": "./icons/attribute.png",
-                                "data": {},
-                                "children": [],
-                                "type": "attribute"
-                            }
-                        ],
-                        "type": "concept"
-                    },
-                    {
-                        "id": "j8_8",
-                        "text": "Giorno",
-                        "icon": "./icons/concept.png",
-                        "data": {},
-                        "children": [
-                            {
-                                "id": "j1_13",
-                                "text": "$Giorno",
-                                "icon": "./icons/attribute.png",
-                                "data": {},
-                                "children": [],
-                                "type": "attribute"
-                            }
-                        ],
-                        "type": "concept"
-                    },
-                    {
-                        "id": "j8_9",
-                        "text": "Ora",
-                        "icon": "./icons/concept.png",
-                        "data": {},
-                        "children": [
-                            {
-                                "id": "j1_14",
-                                "text": "$Ora",
-                                "icon": "./icons/attribute.png",
-                                "data": {},
-                                "children": [],
-                                "type": "attribute"
-                            }
-                        ],
-                        "type": "concept"
-                    }
-                ],
-                "type": "dimension"
-            },
-            {
-                "id": "3",
-                "text": "Luogo",
-                "icon": "./icons/dimension.png",
-                "data": {},
-                "children": [],
-                "type": "dimension"
-            },
-            {
-                "id": "4",
-                "text": "Azienda",
-                "icon": "./icons/dimension.png",
-                "data": {},
-                "children": [],
-                "type": "dimension"
-            }
-        ],
-        "type": "root"
-    }
-;
-
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree('copy', '1');
-              ref = $('#jstree_demo').jstree('paste', '#');
+              ref = $('#jstree_demo').jstree('paste', '#', 'last');
             });
 
 var renamenode = document.getElementById( 'renamenode' );
