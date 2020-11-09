@@ -251,13 +251,11 @@ createroot.addEventListener( 'click', function() {
               }
             });
 
-var duplicateroot = document.getElementById( 'jstree_demo' );
-duplicateroot.addEventListener( 'load', function() {
+var duplicateroot = document.getElementById( 'duplicateroot' );
+duplicateroot.addEventListener( 'click', function() {
 
-              /*var ref = $('#jstree_demo').jstree('copy', '1');
-              ref = $('#jstree_demo').jstree('paste', '#', 'last');*/
-              var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
-	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
+              var ref = $('#jstree_demo').jstree('copy', '1');
+              ref = $('#jstree_demo').jstree('paste', '#', 'last');
             });
 
 /*var duplicateroot = document.getElementById( 'duplicateroot' );
@@ -305,6 +303,9 @@ document.addEventListener("DOMContentLoaded", function() {
   	var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
 	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
 });*/
+
+document.body.onload = function(){var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
+	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);};
 
 	</script>
 </body>
