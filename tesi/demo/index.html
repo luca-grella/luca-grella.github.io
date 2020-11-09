@@ -89,9 +89,12 @@
     "state", "types", "wholerow"
   ],
   "contextmenu" : {
-    "items" : {
-        "create" : false
-    }
+    "items" : function(node) {
+            var items = $.jstree.defaults.contextmenu.items();
+            items.create = false;
+
+            return items;
+        }
   }
 });
 
