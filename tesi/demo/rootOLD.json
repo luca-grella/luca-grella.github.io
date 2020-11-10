@@ -100,5 +100,107 @@
             }
         ],
         "type": "root"
+    },
+    {
+        "id": "j1_17",
+        "text": "Infortunio",
+        "icon": "./icons/root.png",
+        "data": {},
+        "children": [
+            {
+                "id": "j1_18",
+                "text": "Data",
+                "icon": "./icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_19",
+                        "text": "Anno",
+                        "icon": "./icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_20",
+                                "text": "$Anno",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_21",
+                        "text": "Mese",
+                        "icon": "./icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_22",
+                                "text": "$Mese",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_23",
+                        "text": "Giorno",
+                        "icon": "./icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_24",
+                                "text": "$Giorno",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_25",
+                        "text": "Ora",
+                        "icon": "./icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_26",
+                                "text": "$Ora",
+                                "icon": "./icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_27",
+                "text": "Luogo",
+                "icon": "./icons/dimension.png",
+                "data": {},
+                "children": [],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_28",
+                "text": "Azienda",
+                "icon": "./icons/dimension.png",
+                "data": {},
+                "children": [],
+                "type": "dimension"
+            }
+        ],
+        "type": "root"
     }
 ]
