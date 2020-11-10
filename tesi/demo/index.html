@@ -11,20 +11,20 @@
 	</style>
 	<link rel="stylesheet" href="./../dist/themes/default/style.min.css" />
 </head>
-<body onLoad="setTimeout(codeAddress, 200)"> <!-- 200 -->
+<body onLoad="setTimeout(codeAddress, 500)"> <!-- 200 -->
 
-	<h1>CDT Infortuni</h1>
+	<h1>CDT Infortunio</h1>
   <button id="duplicateroot">+ Infortunio</button>
-  <button id="openallnodes">Open All</button>
-  <button id="closeallnodes">Close All</button>
   <button id="createroot">Create Root</button>
   <button id="createdimension">Create Dimension</button>
   <button id="createconcept">Create Concept</button>
-  <button id="createattribute">Create Attribute</button>
+  <button id="createattribute">Create Attribute</button><br>
   <button id="renamenode">Rename Node</button>
   <button id="copynode">Copy Node</button>
   <button id="pastenode">Paste Node</button>
-  <button id="deletenode">Delete Node</button>
+  <button id="deletenode">Delete Node</button><br>
+  <button id="openallnodes">Open All</button>
+  <button id="closeallnodes">Close All</button>
   <br>
 	<div id="jstree_demo" class="demo"></div><br>
   <div class="col-md-2 col-sm-4 col-xs-4" style="text-align:right;">
@@ -38,7 +38,7 @@
 	
 	<script>
 
-/////FUNZIONE SEARCH//////////////////////////////
+/////SEARCH FUNCTION/////////////////////////////
     $(function () {
               var to = false;
               $('#demo_q').keyup(function () {
@@ -50,7 +50,7 @@
               });
 ////////////////////////////////////////////////
 	
-	// POPOLAZIONE DEL CDT
+	//CDT POPULATION
 	$('#jstree_demo').jstree({
   "core" : {
     "animation" : 0,
@@ -98,11 +98,11 @@
   }
 });
 
-//FINE FUNZIONE SEARCH////
+//END OF SEARCH FUNCTION////
   });
-//////////////////////////
+////////////////////////////
 
-//GENERAZIONE FILE JSON + DOWNLOAD IN LOCALE
+//FILE JSON GENERATION + DOWNLOAD IN LOCAL
 function encode( s ) {
     var out = [];
     for ( var i = 0; i < s.length; i++ ) {
@@ -132,7 +132,9 @@ savejson.addEventListener( 'click', function() {
     link.dispatchEvent( event );
 });
 
-//FUNZIONI PER BUTTONS: CREATION, RENAME, DELETE, OPEN E CLOSE ALL NODES
+//BUTTONS FUNCTION: ALL NODE CREATION FUNCTION ACT ON THE SELECTED NODE
+
+//ATTRIBUTE CREATION
 var createattribute = document.getElementById( 'createattribute' );
 createattribute.addEventListener( 'click', function() {
 
@@ -173,6 +175,7 @@ createattribute.addEventListener( 'click', function() {
 			                           }
             });
 
+//CONCEPT CREATION
 var createconcept = document.getElementById( 'createconcept' );
 createconcept.addEventListener( 'click', function() {
 
@@ -212,6 +215,7 @@ createconcept.addEventListener( 'click', function() {
                                  }
             });
 
+//DIMENSION CREATION
 var createdimension = document.getElementById( 'createdimension' );
 createdimension.addEventListener( 'click', function() {
 
@@ -251,6 +255,7 @@ createdimension.addEventListener( 'click', function() {
                                  }
             });
 
+//ROOT CREATION
 var createroot = document.getElementById( 'createroot' );
 createroot.addEventListener( 'click', function() {
 
@@ -261,6 +266,7 @@ createroot.addEventListener( 'click', function() {
               }
             });
 
+//INFORTUNIO NODE DUPLICATION
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
@@ -268,6 +274,7 @@ duplicateroot.addEventListener( 'click', function() {
               ref = $('#jstree_demo').jstree('paste', '#', 'last');
             });
 
+//COPY SELECTED NODE FUNCTION
 var copynode = document.getElementById( 'copynode' );
 copynode.addEventListener( 'click', function() {
 
@@ -276,6 +283,7 @@ copynode.addEventListener( 'click', function() {
               var cop = $('#jstree_demo').jstree('copy', sel);
             });
 
+//PASTE IN SELECTED NODE FUNCTION
 var pastenode = document.getElementById( 'pastenode' );
 pastenode.addEventListener( 'click', function() {
 
@@ -284,6 +292,7 @@ pastenode.addEventListener( 'click', function() {
               var pas = $('#jstree_demo').jstree('paste', sel, 'last');
             });
 
+//RENAME SELECTED NODE FUNCTION
 var renamenode = document.getElementById( 'renamenode' );
 renamenode.addEventListener( 'click', function() {
 
@@ -294,6 +303,7 @@ renamenode.addEventListener( 'click', function() {
               ref.edit(sel);
             });
 
+//DELETE SELECTED NODE FUNCTION
 var deletenode = document.getElementById( 'deletenode' );
 deletenode.addEventListener( 'click', function() {
 
@@ -303,12 +313,14 @@ deletenode.addEventListener( 'click', function() {
               ref.delete_node(sel);
             });
 
+//EXPAND TREE
 var openallnodes = document.getElementById( 'openallnodes' );
 openallnodes.addEventListener( 'click', function() {
 
               $('#jstree_demo').jstree('open_all')
             });
 
+//REDUCE TREE
 var closeallnodes = document.getElementById( 'closeallnodes' );
 closeallnodes.addEventListener( 'click', function() {
 
@@ -317,10 +329,10 @@ closeallnodes.addEventListener( 'click', function() {
               $('#jstree_demo').jstree('close_all');
             });
 
+//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
 function codeAddress() {
   closeallnodes.click();
 };
-
 
 	</script>
 </body>
