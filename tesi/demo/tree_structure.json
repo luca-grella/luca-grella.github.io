@@ -156,7 +156,7 @@
                         "children": [
                             {
                                 "id": "j1_36",
-                                "text": "ID Settore Attivit�",
+                                "text": "ID Settore Attivita'",
                                 "icon": "./icons/attribute.png",
                                 "data": {},
                                 "children": [],
@@ -222,13 +222,13 @@
                                 "children": [
                                     {
                                         "id": "j1_82",
-                                        "text": "Et�",
+                                        "text": "Eta'",
                                         "icon": "./icons/concept.png",
                                         "data": {},
                                         "children": [
                                             {
                                                 "id": "j1_86",
-                                                "text": "$Et�",
+                                                "text": "$Eta'",
                                                 "icon": "./icons/attribute.png",
                                                 "data": {},
                                                 "children": [],
@@ -336,7 +336,7 @@
                             },
                             {
                                 "id": "j1_95",
-                                "text": "Attivit� Durante Infortunio",
+                                "text": "Attivita' Durante Infortunio",
                                 "icon": "./icons/dimension.png",
                                 "data": {},
                                 "children": [
@@ -413,7 +413,7 @@
                             },
                             {
                                 "id": "j1_98",
-                                "text": "Gravit� Infortunio",
+                                "text": "Gravita' Infortunio",
                                 "icon": "./icons/dimension.png",
                                 "data": {},
                                 "children": [
@@ -627,7 +627,7 @@
                             },
                             {
                                 "id": "j1_128",
-                                "text": "Altre Attivit� Terzi",
+                                "text": "Altre Attivita' Terzi",
                                 "icon": "./icons/dimension.png",
                                 "data": {},
                                 "children": [
@@ -706,7 +706,7 @@
                     },
                     {
                         "id": "j1_50",
-                        "text": "Luminosit�",
+                        "text": "Luminosita'",
                         "icon": "./icons/concept.png",
                         "data": {},
                         "children": [
