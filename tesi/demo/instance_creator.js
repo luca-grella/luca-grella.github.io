@@ -55,7 +55,7 @@
             return items;
         }
   }
-}).provaHide();
+});
 
 //END OF SEARCH FUNCTION////
   });
@@ -181,3 +181,5 @@ function provaHide() {
   var node_to_hide = $("#jstree_instances").jstree(true).get_node('1');   
 	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
 };
+provaHide();
+/*setInterval(funceveryminut, seconds*1000);*/
