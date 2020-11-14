@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
 
 	<meta charset="UTF-8">
@@ -14,7 +14,301 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./../dist/jstree.min.js"></script>
-	<script src="./cdt_creator.js"></script>
+	<script>/////SEARCH FUNCTION/////////////////////////////
+    $(function () {
+              var to = false;
+              $('#demo_q').keyup(function () {
+                if(to) { clearTimeout(to); }
+                to = setTimeout(function () {
+                  var v = $('#demo_q').val();
+                  $('#jstree_demo').jstree(true).search(v);
+                }, 250);
+              });
+////////////////////////////////////////////////
+	
+	//CDT POPULATION
+	$('#jstree_demo').jstree({
+  "core" : {
+    "animation" : 0,
+    "check_callback" : true,
+    "themes" : { "stripes" : true },
+    'data' : {
+				"url" : "./root.json",
+				"dataType" : "json" 
+			}
+  },
+  "types" : {
+    "#" : {
+      "max_children" : 512,
+      "max_depth" : 512,
+      "valid_children" : ["root"]
+    },
+    "root" : {
+      "icon" : "./icons/root.png",
+      "valid_children" : ["dimension"]
+    },
+    "dimension" : {
+      "icon" : "./icons/dimension.png",
+      "valid_children" : ["concept","attribute"]
+    },
+    "concept" : {
+      "icon" : "./icons/concept.png",
+      "valid_children" : ["dimension","attribute"]
+    },
+    "attribute" : {
+      "icon" : "./icons/attribute.png",
+      "valid_children" : []
+    }
+  },
+  "plugins" : [
+    "contextmenu", "dnd", "search",
+    "state", "types", "wholerow"
+  ],
+  "contextmenu" : {
+    "items" : function(node) {
+            var items = $.jstree.defaults.contextmenu.items();
+            items.create = false;
+
+            return items;
+        }
+  }
+});
+
+//END OF SEARCH FUNCTION////
+  });
+////////////////////////////
+
+//FILE JSON GENERATION + DOWNLOAD IN LOCAL
+function encode( s ) {
+    var out = [];
+    for ( var i = 0; i < s.length; i++ ) {
+        out[i] = s.charCodeAt(i);
+    }
+    return new Uint8Array( out );
+}
+
+var savejson = document.getElementById( 'savejson' );
+savejson.addEventListener( 'click', function() {
+    
+	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+
+    var data = encode( JSON.stringify(v, null, 4) );
+
+    var blob = new Blob( [ data ], {
+        type: 'application/octet-stream'
+    });
+    
+    url = URL.createObjectURL( blob );
+    var link = document.createElement( 'a' );
+    link.setAttribute( 'href', url );
+    link.setAttribute( 'download', 'root.json' );
+    
+    var event = document.createEvent( 'MouseEvents' );
+    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+    link.dispatchEvent( event );
+});
+
+//BUTTONS FUNCTION: ALL NODE CREATION FUNCTION ACT ON THE SELECTED NODE
+
+//ATTRIBUTE CREATION
+var createattribute = document.getElementById( 'createattribute' );
+createattribute.addEventListener( 'click', function() {
+
+        var ref = $('#jstree_demo').jstree(true),
+        sel = ref.get_selected();
+        if(!sel.length) { return false; }
+        var i;
+			  for (i = 0; i < sel.length; i++) { 
+			  sel_id = sel[i];
+        var v = $('#jstree_demo').jstree(true).get_json(sel_id);
+
+        var j;
+        var checkchild = false;
+        for (j = 0; j < v.children.length; j++){
+            checkchild = checkchild || 
+            v.children[j].type == 'concept' || 
+            v.children[j].type == 'dimension'
+        }
+
+        if (JSON.stringify(v.children) != '[]') {
+          
+          if (checkchild) {//Do Nothing
+          }
+          else {
+              asd = ref.create_node(sel_id, {"type":"attribute"});
+              if(asd) {
+              ref.edit(asd);
+              }
+                }
+
+        }
+        else {
+              asd = ref.create_node(sel_id, {"type":"attribute"});
+              if(asd) {
+              ref.edit(asd);
+              }
+                }
+			                           }
+            });
+
+//CONCEPT CREATION
+var createconcept = document.getElementById( 'createconcept' );
+createconcept.addEventListener( 'click', function() {
+
+        var ref = $('#jstree_demo').jstree(true),
+        sel = ref.get_selected();
+        if(!sel.length) { return false; }
+        var i;
+        for (i = 0; i < sel.length; i++) { 
+        sel_id = sel[i];
+        var v = $('#jstree_demo').jstree(true).get_json(sel_id);
+
+        var j;
+        var checkchild = false;
+        for (j = 0; j < v.children.length; j++){
+            checkchild = checkchild || 
+            v.children[j].type == 'attribute'
+        }
+
+        if (JSON.stringify(v.children) != '[]') {
+          
+          if (checkchild) {//Do Nothing
+          }
+          else {
+              asd = ref.create_node(sel_id, {"type":"concept"});
+              if(asd) {
+              ref.edit(asd);
+              }
+                }
+
+        }
+        else {
+              asd = ref.create_node(sel_id, {"type":"concept"});
+              if(asd) {
+              ref.edit(asd);
+              }
+                }
+                                 }
+            });
+
+//DIMENSION CREATION
+var createdimension = document.getElementById( 'createdimension' );
+createdimension.addEventListener( 'click', function() {
+
+        var ref = $('#jstree_demo').jstree(true),
+        sel = ref.get_selected();
+        if(!sel.length) { return false; }
+        var i;
+        for (i = 0; i < sel.length; i++) { 
+        sel_id = sel[i];
+        var v = $('#jstree_demo').jstree(true).get_json(sel_id);
+
+        var j;
+        var checkchild = false;
+        for (j = 0; j < v.children.length; j++){
+            checkchild = checkchild || 
+            v.children[j].type == 'attribute'
+        }
+
+        if (JSON.stringify(v.children) != '[]') {
+          
+          if (checkchild) {//Do Nothing
+          }
+          else {
+              asd = ref.create_node(sel_id, {"type":"dimension"});
+              if(asd) {
+              ref.edit(asd);
+              }
+                }
+
+        }
+        else {
+              asd = ref.create_node(sel_id, {"type":"dimension"});
+              if(asd) {
+              ref.edit(asd);
+              }
+                }
+                                 }
+            });
+
+//ROOT CREATION
+var createroot = document.getElementById( 'createroot' );
+createroot.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_demo').jstree(true),
+              sel = ref.create_node("#", {"type":"root"});
+              if(sel) {
+                ref.edit(sel);
+              }
+            });
+
+//INFORTUNIO NODE DUPLICATION
+var duplicateroot = document.getElementById( 'duplicateroot' );
+duplicateroot.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_demo').jstree('copy', '1');
+              ref = $('#jstree_demo').jstree('paste', '#', 'last');
+            });
+
+//COPY SELECTED NODE FUNCTION
+var copynode = document.getElementById( 'copynode' );
+copynode.addEventListener( 'click', function() {
+
+		 	var ref = $('#jstree_demo').jstree(true),
+        	sel = ref.get_selected();
+              var cop = $('#jstree_demo').jstree('copy', sel);
+            });
+
+//PASTE IN SELECTED NODE FUNCTION
+var pastenode = document.getElementById( 'pastenode' );
+pastenode.addEventListener( 'click', function() {
+
+		 	var ref = $('#jstree_demo').jstree(true),
+        	sel = ref.get_selected();
+              var pas = $('#jstree_demo').jstree('paste', sel, 'last');
+            });
+
+//RENAME SELECTED NODE FUNCTION
+var renamenode = document.getElementById( 'renamenode' );
+renamenode.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_demo').jstree(true),
+                sel = ref.get_selected();
+              if(!sel.length) { return false; }
+              sel = sel[0];
+              ref.edit(sel);
+            });
+
+//DELETE SELECTED NODE FUNCTION
+var deletenode = document.getElementById( 'deletenode' );
+deletenode.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_demo').jstree(true),
+                sel = ref.get_selected();
+              if(!sel.length) { return false; }
+              ref.delete_node(sel);
+            });
+
+//EXPAND TREE
+var openallnodes = document.getElementById( 'openallnodes' );
+openallnodes.addEventListener( 'click', function() {
+
+              $('#jstree_demo').jstree('open_all')
+            });
+
+//REDUCE TREE
+var closeallnodes = document.getElementById( 'closeallnodes' );
+closeallnodes.addEventListener( 'click', function() {
+
+	var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
+	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
+              $('#jstree_demo').jstree('close_all');
+            });
+
+//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
+function codeAddress() {
+  closeallnodes.click();
+};</script>
 
 	<h1>CDT Infortunio</h1>
   <button id="duplicateroot">+</button>
