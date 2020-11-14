@@ -17,7 +17,7 @@
     "check_callback" : true,
     "themes" : { "stripes" : true },
     'data' : {
-				"url" : "./root.json",
+				"url" : "./tree_structure.json",
 				"dataType" : "json" 
 			}
   },
@@ -84,7 +84,7 @@ savejson.addEventListener( 'click', function() {
     url = URL.createObjectURL( blob );
     var link = document.createElement( 'a' );
     link.setAttribute( 'href', url );
-    link.setAttribute( 'download', 'root.json' );
+    link.setAttribute( 'download', 'tree_structure.json' );
     
     var event = document.createEvent( 'MouseEvents' );
     event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
@@ -257,7 +257,5 @@ openallnodes.addEventListener( 'click', function() {
 var closeallnodes = document.getElementById( 'closeallnodes' );
 closeallnodes.addEventListener( 'click', function() {
 
-	var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
-	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
               $('#jstree_demo').jstree('close_all');
             });
