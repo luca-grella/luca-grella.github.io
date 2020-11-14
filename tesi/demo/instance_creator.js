@@ -55,7 +55,7 @@
             return items;
         }
   }
-});
+}).provaHide();
 
 //END OF SEARCH FUNCTION////
   });
@@ -171,7 +171,13 @@ closeallnodes.addEventListener( 'click', function() {
               $('#jstree_instances').jstree('close_all');
             });
 
-//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
+/*//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
 function codeAddress() {
   closeallnodes.click();
+};*/
+
+//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
+function provaHide() {
+  var node_to_hide = $("#jstree_instances").jstree(true).get_node('1');   
+	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
 };
