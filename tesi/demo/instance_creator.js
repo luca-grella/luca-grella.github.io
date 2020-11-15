@@ -1,7 +1,7 @@
 var jsonprova = [
   {
       "id": "1",
-      "text": "Folle",
+      "text": "Infortunio",
       "icon": "./icons/root.png",
       "data": {},
       "children": [
@@ -985,7 +985,7 @@ var jsonprova = [
     "animation" : 0,
     "check_callback" : true,
     "themes" : { "stripes" : true },
-    'data' : jsonprova
+    'data' : resultsjson
   },
   "types" : {
     "#" : {
@@ -1133,21 +1133,49 @@ openallnodes.addEventListener( 'click', function() {
 var closeallnodes = document.getElementById( 'closeallnodes2' );
 closeallnodes.addEventListener( 'click', function() {
 
-	var node_to_hide = $("#jstree_instances").jstree(true).get_node('1');   
-	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
               $('#jstree_instances').jstree('close_all');
             });
 
-/*//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
-function codeAddress() {
-  closeallnodes.click();
-};*/
-
-//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
+//NODE1 HIDING
 function provaHide() {
   var node_to_hide = $("#jstree_instances").jstree(true).get_node('1');   
 	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
 };
- 
-/*window.onload = provaHide();*/
+
 setInterval(provaHide, 1);
+
+
+
+//////////UPLOAD BUTTON
+
+
+var fileInput = $('#files');
+var uploadButton = $('#upload');
+
+uploadButton.on('click', function() {
+    if (!window.FileReader) {
+        alert('Your browser is not supported');
+        return false;
+    }
+    var input = fileInput.get(0);
+
+    // Create a reader object
+    var reader = new FileReader();
+    if (input.files.length) {
+        var textFile = input.files[0];
+        // Read the file
+        reader.readAsText(textFile);
+        // When it's loaded, process it
+        $(reader).on('load', processFile);
+    } else {
+        alert('Please upload a file before continuing')
+    } 
+});
+
+function processFile(e) {
+    var file = e.target.result,
+        results;
+    if (file && file.length) {
+        resultsjson = file;
+    }
+};
