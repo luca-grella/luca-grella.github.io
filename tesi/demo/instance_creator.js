@@ -1,4 +1,4 @@
-var resultsjson = JSON.stringify([{"id": "empty"}]);
+var resultsjson = [{"id": "empty"}];
 
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
@@ -14,7 +14,7 @@ document.getElementById('import').onclick = function() {
     var result = JSON.parse(e.target.result);
     resultsjson = JSON.stringify(result, null, 2);
     document.getElementById('result').value = resultsjson;
-    $('#jstree_instances').jstree.redraw();
+    $('#jstree_instances').jstree.redraw(true);
   }
   
   fr.readAsText(files.item(0));
