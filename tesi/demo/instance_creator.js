@@ -67,6 +67,7 @@ document.getElementById('import').onclick = function() {
             }
       }
     });
+    $('#jstree_instances').jstree.refresh();
   }
   
   fr.readAsText(files.item(0));
