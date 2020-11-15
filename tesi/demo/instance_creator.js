@@ -1,7 +1,7 @@
 var jsonprova = [
   {
       "id": "1",
-      "text": "Infortunio",
+      "text": "Folle",
       "icon": "./icons/root.png",
       "data": {},
       "children": [
