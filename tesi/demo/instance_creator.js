@@ -181,6 +181,6 @@ function provaHide() {
   var node_to_hide = $("#jstree_instances").jstree(true).get_node('1');   
 	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
 };
-
+ 
 window.onload = provaHide();
 /*setInterval(provaHide, 1000);*/
