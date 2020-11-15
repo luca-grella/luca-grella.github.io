@@ -13,13 +13,12 @@ document.getElementById('import').onclick = function() {
   console.log(e);
     var result = JSON.parse(e.target.result);
     resultsjson = JSON.stringify(result, null, 2);
-		document.getElementById('result').value = resultsjson;
-
-
-if(resultsjson != JSON.stringify([{"id": "empty"}])){
-
-
-
+    document.getElementById('result').value = resultsjson;
+    $('#jstree_instances').jstree.redraw();
+  }
+  
+  fr.readAsText(files.item(0));
+};
 
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
@@ -197,15 +196,3 @@ function provaHide() {
 };
 
 setInterval(provaHide, 1);
-
-}
-else
-{
-  //Do Nothing
-}
-
-
-}
-  
-fr.readAsText(files.item(0));
-};
