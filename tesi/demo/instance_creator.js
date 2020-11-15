@@ -21,7 +21,7 @@ document.getElementById('import').onclick = function() {
   fr.onload = function(e) { 
   console.log(e);
     var result = JSON.parse(e.target.result);
-    resultsjson = result/*JSON.stringify(result, null, 2)*/;
+    resultsjson = "a" /*result JSON.stringify(result, null, 2)*/;
     document.getElementById('result').value = resultsjson;
     /*$('#jstree_instances').jstree.destroy();*/
     $('#jstree_instances').jstree("refresh");
