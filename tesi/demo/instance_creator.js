@@ -1,15 +1,13 @@
-var resultsjson/* = [
+var resultsjson = [
   {
       "id": "1",
-      "text": "Infortunio",
+      "text": "Load JSON and refresh tree",
       "icon": "./icons/root.png",
       "data": {},
       "children": [],
       "type": "root"
   }
-]*/;
-var resultjsonflag = false;
-
+];
 
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
@@ -28,7 +26,6 @@ document.getElementById('import').onclick = function() {
   }
   
   fr.readAsText(files.item(0));
-  resultjsonflag = true;
 }
 
 /////SEARCH FUNCTION/////////////////////////////
@@ -47,9 +44,7 @@ document.getElementById('import').onclick = function() {
 	$('#jstree_instances').jstree({
   "core" : {
     "animation" : 0,
-    "check_callback" : function () {
-      while(!resultjsonflag){} return true;
-  },
+    "check_callback" : true,
     "themes" : { "stripes" : true },
     'data' : resultsjson
   },
@@ -208,11 +203,18 @@ function provaHide() {
 	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
 };
 
+//REFRESH TREE
+var refreshtree = document.getElementById( 'refreshtree' );
+refreshtree.addEventListener( 'click', function() {
+
+              $('#jstree_instances').jstree('refresh');
+            });
+
 //TEST
 var test1 = document.getElementById( 'test1' );
 test1.addEventListener( 'click', function() {
 
-  document.getElementById("demoi").innerHTML = resultsjson;
+  document.getElementById("demoi").innerHTML = JSON.stringify(resultsjson);
             });
 
 setInterval(provaHide, 1);
