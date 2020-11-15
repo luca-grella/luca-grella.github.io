@@ -1,4 +1,4 @@
-/*var resultsjson = JSON.stringify([]);*/
+var resultsjson = JSON.stringify([{"id": "empty"}]);
 
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
@@ -19,6 +19,11 @@ document.getElementById('import').onclick = function() {
   fr.readAsText(files.item(0));
 };
 
+if(resultsjson != JSON.stringify([{"id": "empty"}])){
+
+
+
+
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
               var to = false;
@@ -30,68 +35,7 @@ document.getElementById('import').onclick = function() {
                 }, 250);
               });
 ////////////////////////////////////////////////
-$.when( document.getElementById('import').onclick = function() {
-	var files = document.getElementById('selectFiles').files;
-  console.log(files);
-  if (files.length <= 0) {
-    return false;
-  }
-  
-  var fr = new FileReader();
-  
-  fr.onload = function(e) { 
-  console.log(e);
-    var result = JSON.parse(e.target.result);
-    var resultsjson = JSON.stringify(result, null, 2);
-		document.getElementById('result').value = resultsjson;
-  }
-  
-  fr.readAsText(files.item(0));
-} ).done(function() {
-  $('#jstree_instances').jstree({
-    "core" : {
-      "animation" : 0,
-      "check_callback" : true,
-      "themes" : { "stripes" : true },
-      'data' : resultsjson
-    },
-    "types" : {
-      "#" : {
-        "valid_children" : ["root"]
-      },
-      "root" : {
-        "icon" : "./icons/root.png",
-        "valid_children" : ["dimension"]
-      },
-      "dimension" : {
-        "icon" : "./icons/dimension.png",
-        "valid_children" : ["concept","attribute"]
-      },
-      "concept" : {
-        "icon" : "./icons/concept.png",
-        "valid_children" : ["dimension","attribute"]
-      },
-      "attribute" : {
-        "icon" : "./icons/attribute.png",
-        "valid_children" : []
-      }
-    },
-    "plugins" : [
-      "contextmenu", "search",
-      "state", "types", "wholerow"
-    ],
-    "contextmenu" : {
-      "items" : function(node) {
-              var items = $.jstree.defaults.contextmenu.items();
-              items.create = false;
-              items.ccp = false;
-              items.remove = false;
-  
-              return items;
-          }
-    }
-  })
-});
+	
 	//CDT POPULATION
 	$('#jstree_instances').jstree({
   "core" : {
@@ -256,3 +200,9 @@ function provaHide() {
 };
 
 setInterval(provaHide, 1);
+
+}
+else
+{
+  //Do Nothing
+}
