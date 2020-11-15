@@ -1,4 +1,4 @@
-var resultsjson = [{"id": "empty"}];
+var resultsjson = [];
 
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
