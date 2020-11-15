@@ -24,50 +24,7 @@ document.getElementById('import').onclick = function() {
     resultsjson = result/*JSON.stringify(result, null, 2)*/;
     document.getElementById('result').value = resultsjson;
     /*$('#jstree_instances').jstree.destroy();*/
-    $('#jstree_instances').jstree({
-      "core" : {
-        "animation" : 0,
-        "check_callback" : true,
-        "themes" : { "stripes" : true },
-        'data' : resultsjson
-      },
-      "types" : {
-        "#" : {
-          "valid_children" : ["root"]
-        },
-        "root" : {
-          "icon" : "./icons/root.png",
-          "valid_children" : ["dimension"]
-        },
-        "dimension" : {
-          "icon" : "./icons/dimension.png",
-          "valid_children" : ["concept","attribute"]
-        },
-        "concept" : {
-          "icon" : "./icons/concept.png",
-          "valid_children" : ["dimension","attribute"]
-        },
-        "attribute" : {
-          "icon" : "./icons/attribute.png",
-          "valid_children" : []
-        }
-      },
-      "plugins" : [
-        "contextmenu", "search",
-        "state", "types", "wholerow"
-      ],
-      "contextmenu" : {
-        "items" : function(node) {
-                var items = $.jstree.defaults.contextmenu.items();
-                items.create = false;
-                items.ccp = false;
-                items.remove = false;
-    
-                return items;
-            }
-      }
-    });
-    $('#jstree_instances').jstree.refresh();
+    $('#jstree_instances').jstree("refresh");
   }
   
   fr.readAsText(files.item(0));
