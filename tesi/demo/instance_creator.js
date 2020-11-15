@@ -1,4 +1,13 @@
-var resultsjson = [];
+var resultsjson = [
+  {
+      "id": "1",
+      "text": "Infortunio",
+      "icon": "./icons/root.png",
+      "data": {},
+      "children": [],
+      "type": "root"
+  }
+];
 
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
