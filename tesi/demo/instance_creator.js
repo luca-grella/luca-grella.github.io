@@ -14,7 +14,7 @@ document.getElementById('import').onclick = function() {
     var result = JSON.parse(e.target.result);
     resultsjson = JSON.stringify(result, null, 2);
     document.getElementById('result').value = resultsjson;
-    $('#jstree_instances').jstree.redraw(true);
+    $('#jstree_instances').jstree.refresh();
   }
   
   fr.readAsText(files.item(0));
