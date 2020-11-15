@@ -51,7 +51,7 @@
             var items = $.jstree.defaults.contextmenu.items();
             items.create = false;
             items.ccp = false;
-            items.delete = false;
+            items.remove = false;
 
             return items;
         }
