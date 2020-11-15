@@ -183,4 +183,4 @@ function provaHide() {
 };
  
 /*window.onload = provaHide();*/
-setInterval(provaHide, 1000);
+setInterval(provaHide, 1);
