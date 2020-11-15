@@ -1,6 +1,6 @@
 //////////UPLOAD BUTTON
 
-var resultsjson = [];
+var resultsjson = "[]";
 var fileInput = $('#files');
 var uploadButton = $('#upload');
 
