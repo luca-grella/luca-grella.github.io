@@ -207,7 +207,7 @@ function provaHide() {
 var refreshtree = document.getElementById( 'refreshtree' );
 refreshtree.addEventListener( 'click', function() {
 
-              $('#jstree_instances').jstree('redraw');
+              $('#jstree_instances').jstree(true).redraw(true);
             });
 
 //TEST
