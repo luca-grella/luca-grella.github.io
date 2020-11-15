@@ -23,7 +23,8 @@ document.getElementById('import').onclick = function() {
     var result = JSON.parse(e.target.result);
     resultsjson = result/*JSON.stringify(result, null, 2)*/;
     document.getElementById('result').value = resultsjson;
-    $('#jstree_instances').jstree.refresh();
+    $('#jstree_instances').jstree.destroy();
+    /*$('#treeId').data('jstree', false).empty().jstree(json);*/
   }
   
   fr.readAsText(files.item(0));
