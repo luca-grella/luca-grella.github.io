@@ -1,4 +1,4 @@
-var resultsjson = [
+var resultsjson/* = [
   {
       "id": "1",
       "text": "Infortunio",
@@ -7,7 +7,7 @@ var resultsjson = [
       "children": [],
       "type": "root"
   }
-];
+]*/;
 var resultjsonflag = false;
 
 
