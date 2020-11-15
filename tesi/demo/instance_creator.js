@@ -204,7 +204,8 @@ closeallnodes.addEventListener( 'click', function() {
 //NODE1 HIDING
 function provaHide() {
   var node_to_hide = $("#jstree_instances").jstree(true).get_node('1');   
-	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
+  hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
+  $('#jstree_instances').jstree("refresh");
 };
 
 //TEST
