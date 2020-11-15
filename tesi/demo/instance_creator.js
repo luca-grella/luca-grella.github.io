@@ -14,10 +14,7 @@ document.getElementById('import').onclick = function() {
     var result = JSON.parse(e.target.result);
     var resultsjson = JSON.stringify(result, null, 2);
 		document.getElementById('result').value = resultsjson;
-  }
-  
-  fr.readAsText(files.item(0));
-};
+
 
 if(resultsjson != JSON.stringify([{"id": "empty"}])){
 
@@ -206,3 +203,9 @@ else
 {
   //Do Nothing
 }
+
+
+}
+  
+fr.readAsText(files.item(0));
+};
