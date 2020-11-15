@@ -1148,7 +1148,7 @@ setInterval(provaHide, 1);
 
 //////////UPLOAD BUTTON
 
-
+var resultsjson = [];
 var fileInput = $('#files');
 var uploadButton = $('#upload');
 
