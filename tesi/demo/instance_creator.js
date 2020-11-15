@@ -9,7 +9,7 @@ var resultsjson = [
   }
 ];
 
-requestjsondata = function requestJsonData() {
+
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
   console.log(files);
@@ -27,10 +27,9 @@ document.getElementById('import').onclick = function() {
   }
   
   fr.readAsText(files.item(0));
-};
-};
+}
 
-requestjsondata.complete(function() {
+setTimeout(
 
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
@@ -90,10 +89,10 @@ requestjsondata.complete(function() {
 });
 
 //END OF SEARCH FUNCTION////
-  });
+  })
 ////////////////////////////
 
-});
+, 13000);
 
 //FILE JSON GENERATION + DOWNLOAD IN LOCAL
 function encode( s ) {
