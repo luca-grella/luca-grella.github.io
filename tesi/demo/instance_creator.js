@@ -24,11 +24,11 @@ document.getElementById('import').onclick = function() {
   console.log(e);
     var result = JSON.parse(e.target.result);
     resultsjson = result;
-    resultjsonflag = true;
     document.getElementById('result').value = resultsjson;
   }
   
   fr.readAsText(files.item(0));
+  resultjsonflag = true;
 }
 
 /////SEARCH FUNCTION/////////////////////////////
