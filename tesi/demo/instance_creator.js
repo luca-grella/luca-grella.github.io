@@ -8,6 +8,7 @@ var resultsjson = [
       "type": "root"
   }
 ];
+var resultjsonflag = false;
 
 
 document.getElementById('import').onclick = function() {
@@ -23,13 +24,12 @@ document.getElementById('import').onclick = function() {
   console.log(e);
     var result = JSON.parse(e.target.result);
     resultsjson = result;
+    resultjsonflag = true;
     document.getElementById('result').value = resultsjson;
   }
   
   fr.readAsText(files.item(0));
 }
-
-setTimeout(
 
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
@@ -47,7 +47,7 @@ setTimeout(
 	$('#jstree_instances').jstree({
   "core" : {
     "animation" : 0,
-    "check_callback" : true,
+    "check_callback" : resultjsonflag,
     "themes" : { "stripes" : true },
     'data' : resultsjson
   },
@@ -89,10 +89,8 @@ setTimeout(
 });
 
 //END OF SEARCH FUNCTION////
-  })
+  });
 ////////////////////////////
-
-, 13000);
 
 //FILE JSON GENERATION + DOWNLOAD IN LOCAL
 function encode( s ) {
