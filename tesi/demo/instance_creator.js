@@ -28,7 +28,7 @@ document.getElementById('import').onclick = function() {
   
   fr.readAsText(files.item(0));
 };
-}
+};
 
 requestjsondata.complete(function() {
 
