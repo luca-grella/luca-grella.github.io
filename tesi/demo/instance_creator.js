@@ -204,4 +204,11 @@ function provaHide() {
 	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
 };
 
+//TEST
+var test1 = document.getElementById( 'test1' );
+test1.addEventListener( 'click', function() {
+
+  document.getElementById("demoi").innerHTML = resultsjson;
+            });
+
 setInterval(provaHide, 1);
