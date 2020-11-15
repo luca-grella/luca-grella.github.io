@@ -51,6 +51,7 @@
             var items = $.jstree.defaults.contextmenu.items();
             items.create = false;
             items.ccp = false;
+            items.delete = false;
 
             return items;
         }
@@ -130,28 +131,28 @@ renamenode.addEventListener( 'click', function() {
             });
 
 //DELETE SELECTED NODE FUNCTION
-var deletenode = document.getElementById( 'deletenode2' );
-deletenode.addEventListener( 'click', function() {
+var deleteinstance = document.getElementById( 'deleteinstance' );
+deleteinstance.addEventListener( 'click', function() {
 
               var ref = $('#jstree_instances').jstree(true),
               sel = ref.get_selected();
-              var no_delete = false;
+              var instance_delete = false;
               for (i = 0; i < sel.length; i++) 
               { 
                 sel_id = sel[i];
                 if($('#jstree_instances').jstree(true).get_json(sel_id).type == 'root')
                 {
-                  no_delete = true
+                  instance_delete = true
                 }
               }
               if(!sel.length) { return false; }
-              if(no_delete)
+              if(instance_delete)
               {
-                //Do Nothing
+                ref.delete_node(sel);
               }
               else 
               {
-                ref.delete_node(sel);
+                //Do Nothing
               }
             });
 
