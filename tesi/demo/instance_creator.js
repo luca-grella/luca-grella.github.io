@@ -1,4 +1,4 @@
-var resultsjson = JSON.stringify([]);
+/*var resultsjson = JSON.stringify([]);*/
 
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
@@ -12,12 +12,12 @@ document.getElementById('import').onclick = function() {
   fr.onload = function(e) { 
   console.log(e);
     var result = JSON.parse(e.target.result);
-    resultsjson = JSON.stringify(result, null, 2);
+    var resultsjson = JSON.stringify(result, null, 2);
 		document.getElementById('result').value = resultsjson;
   }
   
   fr.readAsText(files.item(0));
-};
+
 
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
@@ -79,6 +79,8 @@ document.getElementById('import').onclick = function() {
 //END OF SEARCH FUNCTION////
   });
 ////////////////////////////
+
+};
 
 //FILE JSON GENERATION + DOWNLOAD IN LOCAL
 function encode( s ) {
