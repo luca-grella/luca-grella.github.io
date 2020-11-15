@@ -13,7 +13,56 @@ document.getElementById('import').onclick = function() {
   console.log(e);
     var result = JSON.parse(e.target.result);
     var resultsjson = JSON.stringify(result, null, 2);
-		
+///////////////////////////////////////
+$('#jstree_instances').jstree({
+  "core" : {
+    "animation" : 0,
+    "check_callback" : true,
+    "themes" : { "stripes" : true },
+    'data' : resultsjson
+  },
+  "types" : {
+    "#" : {
+      "valid_children" : ["root"]
+    },
+    "root" : {
+      "icon" : "./icons/root.png",
+      "valid_children" : ["dimension"]
+    },
+    "dimension" : {
+      "icon" : "./icons/dimension.png",
+      "valid_children" : ["concept","attribute"]
+    },
+    "concept" : {
+      "icon" : "./icons/concept.png",
+      "valid_children" : ["dimension","attribute"]
+    },
+    "attribute" : {
+      "icon" : "./icons/attribute.png",
+      "valid_children" : []
+    }
+  },
+  "plugins" : [
+    "contextmenu", "search",
+    "state", "types", "wholerow"
+  ],
+  "contextmenu" : {
+    "items" : function(node) {
+            var items = $.jstree.defaults.contextmenu.items();
+            items.create = false;
+            items.ccp = false;
+            items.remove = false;
+
+            return items;
+        }
+  }
+});
+//////////////////////////////////////
+		document.getElementById('result').value = resultsjson;
+  }
+  
+  fr.readAsText(files.item(0));
+};
 
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
@@ -75,12 +124,6 @@ document.getElementById('import').onclick = function() {
 //END OF SEARCH FUNCTION////
   });
 ////////////////////////////
-
-document.getElementById('result').value = resultsjson;
-  }
-  
-  fr.readAsText(files.item(0));
-};
 
 //FILE JSON GENERATION + DOWNLOAD IN LOCAL
 function encode( s ) {
