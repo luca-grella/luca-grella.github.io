@@ -9,8 +9,28 @@ var resultsjson = [
   }
 ];
 
+requestjsondata = function requestJsonData() {
+document.getElementById('import').onclick = function() {
+	var files = document.getElementById('selectFiles').files;
+  console.log(files);
+  if (files.length <= 0) {
+    return false;
+  }
+  
+  var fr = new FileReader();
+  
+  fr.onload = function(e) { 
+  console.log(e);
+    var result = JSON.parse(e.target.result);
+    resultsjson = result;
+    document.getElementById('result').value = resultsjson;
+  }
+  
+  fr.readAsText(files.item(0));
+};
+}
 
-
+requestjsondata.complete(function() {
 
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
@@ -30,27 +50,7 @@ var resultsjson = [
     "animation" : 0,
     "check_callback" : true,
     "themes" : { "stripes" : true },
-    'data' : function () {
-      document.getElementById('import').onclick = function() {
-        var files = document.getElementById('selectFiles').files;
-        console.log(files);
-        if (files.length <= 0) {
-          return false;
-        }
-        
-        var fr = new FileReader();
-        
-        fr.onload = function(e) { 
-        console.log(e);
-          var result = JSON.parse(e.target.result);
-          resultsjson = result;
-          document.getElementById('result').value = resultsjson;
-        }
-        
-        fr.readAsText(files.item(0));
-      }
-      return resultsjson;
-      }
+    'data' : resultsjson
   },
   "types" : {
     "#" : {
@@ -92,6 +92,8 @@ var resultsjson = [
 //END OF SEARCH FUNCTION////
   });
 ////////////////////////////
+
+});
 
 //FILE JSON GENERATION + DOWNLOAD IN LOCAL
 function encode( s ) {
@@ -204,8 +206,7 @@ closeallnodes.addEventListener( 'click', function() {
 //NODE1 HIDING
 function provaHide() {
   var node_to_hide = $("#jstree_instances").jstree(true).get_node('1');   
-  hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
-  $('#jstree_instances').jstree("refresh");
+	hiding = $("#jstree_instances").jstree(true).hide_node(node_to_hide);
 };
 
 //TEST
