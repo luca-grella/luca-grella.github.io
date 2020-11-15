@@ -13,11 +13,7 @@ document.getElementById('import').onclick = function() {
   console.log(e);
     var result = JSON.parse(e.target.result);
     var resultsjson = JSON.stringify(result, null, 2);
-		document.getElementById('result').value = resultsjson;
-  }
-  
-  fr.readAsText(files.item(0));
-
+		
 
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
@@ -80,6 +76,10 @@ document.getElementById('import').onclick = function() {
   });
 ////////////////////////////
 
+document.getElementById('result').value = resultsjson;
+  }
+  
+  fr.readAsText(files.item(0));
 };
 
 //FILE JSON GENERATION + DOWNLOAD IN LOCAL
