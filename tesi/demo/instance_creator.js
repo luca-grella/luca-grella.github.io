@@ -47,7 +47,9 @@ document.getElementById('import').onclick = function() {
 	$('#jstree_instances').jstree({
   "core" : {
     "animation" : 0,
-    "check_callback" : resultjsonflag,
+    "check_callback" : function () {
+      while(!resultjsonflag){} return true;
+  },
     "themes" : { "stripes" : true },
     'data' : resultsjson
   },
