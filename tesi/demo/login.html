@@ -13,28 +13,13 @@
 <body> 
   
   <script language="JavaScript">
-    function AreaProtetta() {
+    function ProtectedArea() {
       location.href = document.getElementById('segreto').value + ".html";
     }
     </script>
-    <p>Username:</p>
+    <p>Inserisci la password:</p>
     <input type="password" id="segreto";>
-    <input type="submit" onclick="AreaProtetta()"><br><br><!--value="Entra!" -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
-
-<form>
-    <input type="password" id="pwd" name="password" />
-    <input onclick="mySubmit(this)" type="submit">
-</form><br><br>
-
-<script>function mySubmit(obj) {
-  var pwdObj = document.getElementById('pwd');
-  var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
-  hashObj.update(pwdObj.value);
-  var hash = hashObj.getHash("HEX");
-  pwdObj.value = hash;
-}</script>
+    <input type="submit" value="Entra!" onclick=ProtectedArea();>
 
   <em>INAIL-RECKON Project<br>Curated by Luca Grella</em>
 
