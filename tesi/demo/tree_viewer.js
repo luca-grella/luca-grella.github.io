@@ -1,30 +1,56 @@
+var resultsjson = [
+  {
+      "id": "1",
+      "text": "Load JSON and refresh tree",
+      "icon": "./icons/root.png",
+      "data": {},
+      "children": [],
+      "type": "root"
+  }
+];
+
+document.getElementById('import2').onclick = function() {
+	var files = document.getElementById('selectFiles2').files;
+  console.log(files);
+  if (files.length <= 0) {
+    return false;
+  }
+  
+  var fr = new FileReader();
+  
+  fr.onload = function(e) { 
+  console.log(e);
+    var result = JSON.parse(e.target.result);
+    resultsjson = result;
+    document.getElementById('result').value = resultsjson;
+  }
+  
+  fr.readAsText(files.item(0));
+}
+
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
               var to = false;
-              $('#demo_q').keyup(function () {
+              $('#demo_q3').keyup(function () {
                 if(to) { clearTimeout(to); }
                 to = setTimeout(function () {
-                  var v = $('#demo_q').val();
-                  $('#jstree_demo').jstree(true).search(v);
+                  var v = $('#demo_q3').val();
+                  $('#jstree_viewer').jstree(true).search(v);
                 }, 250);
               });
 ////////////////////////////////////////////////
 	
 	//CDT POPULATION
-	$('#jstree_demo').jstree({
+	$('#jstree_viewer').jstree({
   "core" : {
     "animation" : 0,
     "check_callback" : true,
     "themes" : { "stripes" : true },
-    'data' : {
-				"url" : "./root.json",
-				"dataType" : "json" 
-			}
+    'data' : resultsjson
   },
   "types" : {
     "#" : {
-      "max_children" : 512,
-      "max_depth" : 512,
+      /*"max_children" : 1,*/
       "valid_children" : ["root"]
     },
     "root" : {
@@ -45,251 +71,42 @@
     }
   },
   "plugins" : [
-    "contextmenu", "dnd", "search",
+    "search",
     "state", "types", "wholerow"
-  ],
-  "contextmenu" : {
-    "items" : function(node) {
-            var items = $.jstree.defaults.contextmenu.items();
-            items.create = false;
-
-            return items;
-        }
-  }
+  ]
 });
 
 //END OF SEARCH FUNCTION////
   });
 ////////////////////////////
 
-//FILE JSON GENERATION + DOWNLOAD IN LOCAL
-function encode( s ) {
-    var out = [];
-    for ( var i = 0; i < s.length; i++ ) {
-        out[i] = s.charCodeAt(i);
-    }
-    return new Uint8Array( out );
-}
-
-var savejson = document.getElementById( 'savejson' );
-savejson.addEventListener( 'click', function() {
-    
-	var v = $('#jstree_demo').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-
-    var data = encode( JSON.stringify(v, null, 4) );
-
-    var blob = new Blob( [ data ], {
-        type: 'application/octet-stream'
-    });
-    
-    url = URL.createObjectURL( blob );
-    var link = document.createElement( 'a' );
-    link.setAttribute( 'href', url );
-    link.setAttribute( 'download', 'root.json' );
-    
-    var event = document.createEvent( 'MouseEvents' );
-    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
-    link.dispatchEvent( event );
-});
-
-//BUTTONS FUNCTION: ALL NODE CREATION FUNCTION ACT ON THE SELECTED NODE
-
-//ATTRIBUTE CREATION
-var createattribute = document.getElementById( 'createattribute' );
-createattribute.addEventListener( 'click', function() {
-
-        var ref = $('#jstree_demo').jstree(true),
-        sel = ref.get_selected();
-        if(!sel.length) { return false; }
-        var i;
-			  for (i = 0; i < sel.length; i++) { 
-			  sel_id = sel[i];
-        var v = $('#jstree_demo').jstree(true).get_json(sel_id);
-
-        var j;
-        var checkchild = false;
-        for (j = 0; j < v.children.length; j++){
-            checkchild = checkchild || 
-            v.children[j].type == 'concept' || 
-            v.children[j].type == 'dimension'
-        }
-
-        if (JSON.stringify(v.children) != '[]') {
-          
-          if (checkchild) {//Do Nothing
-          }
-          else {
-              asd = ref.create_node(sel_id, {"type":"attribute"});
-              if(asd) {
-              ref.edit(asd);
-              }
-                }
-
-        }
-        else {
-              asd = ref.create_node(sel_id, {"type":"attribute"});
-              if(asd) {
-              ref.edit(asd);
-              }
-                }
-			                           }
-            });
-
-//CONCEPT CREATION
-var createconcept = document.getElementById( 'createconcept' );
-createconcept.addEventListener( 'click', function() {
-
-        var ref = $('#jstree_demo').jstree(true),
-        sel = ref.get_selected();
-        if(!sel.length) { return false; }
-        var i;
-        for (i = 0; i < sel.length; i++) { 
-        sel_id = sel[i];
-        var v = $('#jstree_demo').jstree(true).get_json(sel_id);
-
-        var j;
-        var checkchild = false;
-        for (j = 0; j < v.children.length; j++){
-            checkchild = checkchild || 
-            v.children[j].type == 'attribute'
-        }
-
-        if (JSON.stringify(v.children) != '[]') {
-          
-          if (checkchild) {//Do Nothing
-          }
-          else {
-              asd = ref.create_node(sel_id, {"type":"concept"});
-              if(asd) {
-              ref.edit(asd);
-              }
-                }
-
-        }
-        else {
-              asd = ref.create_node(sel_id, {"type":"concept"});
-              if(asd) {
-              ref.edit(asd);
-              }
-                }
-                                 }
-            });
-
-//DIMENSION CREATION
-var createdimension = document.getElementById( 'createdimension' );
-createdimension.addEventListener( 'click', function() {
-
-        var ref = $('#jstree_demo').jstree(true),
-        sel = ref.get_selected();
-        if(!sel.length) { return false; }
-        var i;
-        for (i = 0; i < sel.length; i++) { 
-        sel_id = sel[i];
-        var v = $('#jstree_demo').jstree(true).get_json(sel_id);
-
-        var j;
-        var checkchild = false;
-        for (j = 0; j < v.children.length; j++){
-            checkchild = checkchild || 
-            v.children[j].type == 'attribute'
-        }
-
-        if (JSON.stringify(v.children) != '[]') {
-          
-          if (checkchild) {//Do Nothing
-          }
-          else {
-              asd = ref.create_node(sel_id, {"type":"dimension"});
-              if(asd) {
-              ref.edit(asd);
-              }
-                }
-
-        }
-        else {
-              asd = ref.create_node(sel_id, {"type":"dimension"});
-              if(asd) {
-              ref.edit(asd);
-              }
-                }
-                                 }
-            });
-
-//ROOT CREATION
-var createroot = document.getElementById( 'createroot' );
-createroot.addEventListener( 'click', function() {
-
-              var ref = $('#jstree_demo').jstree(true),
-              sel = ref.create_node("#", {"type":"root"});
-              if(sel) {
-                ref.edit(sel);
-              }
-            });
-
-//INFORTUNIO NODE DUPLICATION
-var duplicateroot = document.getElementById( 'duplicateroot' );
-duplicateroot.addEventListener( 'click', function() {
-
-              var ref = $('#jstree_demo').jstree('copy', '1');
-              ref = $('#jstree_demo').jstree('paste', '#', 'last');
-            });
-
-//COPY SELECTED NODE FUNCTION
-var copynode = document.getElementById( 'copynode' );
-copynode.addEventListener( 'click', function() {
-
-		 	var ref = $('#jstree_demo').jstree(true),
-        	sel = ref.get_selected();
-              var cop = $('#jstree_demo').jstree('copy', sel);
-            });
-
-//PASTE IN SELECTED NODE FUNCTION
-var pastenode = document.getElementById( 'pastenode' );
-pastenode.addEventListener( 'click', function() {
-
-		 	var ref = $('#jstree_demo').jstree(true),
-        	sel = ref.get_selected();
-              var pas = $('#jstree_demo').jstree('paste', sel, 'last');
-            });
-
-//RENAME SELECTED NODE FUNCTION
-var renamenode = document.getElementById( 'renamenode' );
-renamenode.addEventListener( 'click', function() {
-
-              var ref = $('#jstree_demo').jstree(true),
-                sel = ref.get_selected();
-              if(!sel.length) { return false; }
-              sel = sel[0];
-              ref.edit(sel);
-            });
-
-//DELETE SELECTED NODE FUNCTION
-var deletenode = document.getElementById( 'deletenode' );
-deletenode.addEventListener( 'click', function() {
-
-              var ref = $('#jstree_demo').jstree(true),
-                sel = ref.get_selected();
-              if(!sel.length) { return false; }
-              ref.delete_node(sel);
-            });
 
 //EXPAND TREE
-var openallnodes = document.getElementById( 'openallnodes' );
+var openallnodes = document.getElementById( 'openallnodes3' );
 openallnodes.addEventListener( 'click', function() {
 
-              $('#jstree_demo').jstree('open_all')
+              $('#jstree_viewer').jstree('open_all')
             });
 
 //REDUCE TREE
-var closeallnodes = document.getElementById( 'closeallnodes' );
+var closeallnodes = document.getElementById( 'closeallnodes3' );
 closeallnodes.addEventListener( 'click', function() {
 
-	var node_to_hide = $("#jstree_demo").jstree(true).get_node('1');   
-	hiding = $("#jstree_demo").jstree(true).hide_node(node_to_hide);
-              $('#jstree_demo').jstree('close_all');
+              $('#jstree_viewer').jstree('close_all');
             });
 
-//TRIGGERING NODE1 HIDING (FOR "INFORTUNIO" DUPLICATION) AND COMPACT VIEW ON OPEN
-function codeAddress() {
-  closeallnodes.click();
+//NODE1 HIDING
+function provaHide() {
+  var node_to_hide = $("#jstree_viewer").jstree(true).get_node('1');   
+	hiding = $("#jstree_viewer").jstree(true).hide_node(node_to_hide);
 };
+
+//REFRESH TREE
+var refreshtree = document.getElementById( 'refreshtree2' );
+refreshtree.addEventListener( 'click', function() {
+
+              $('#jstree_viewer').jstree(true).settings.core.data = resultsjson;
+              $('#jstree_viewer').jstree(true).refresh();
+            });
+
+setInterval(provaHide, 1);
