@@ -50,6 +50,7 @@ document.getElementById('import').onclick = function() {
   },
   "types" : {
     "#" : {
+      /*"max_children" : 1,*/
       "valid_children" : ["root"]
     },
     "root" : {
@@ -209,13 +210,6 @@ refreshtree.addEventListener( 'click', function() {
 
               $('#jstree_instances').jstree(true).settings.core.data = resultsjson;
               $('#jstree_instances').jstree(true).refresh();
-            });
-
-//TEST
-var test1 = document.getElementById( 'test1' );
-test1.addEventListener( 'click', function() {
-
-  document.getElementById("demoi").innerHTML = JSON.stringify(resultsjson);
             });
 
 setInterval(provaHide, 1);
