@@ -110,6 +110,32 @@ savejson.addEventListener( 'click', function() {
     link.dispatchEvent( event );
 });
 
+//JSON GENERATION (APPEND TO DATABASE)
+var appenddbandsave = document.getElementById( 'appenddbandsave' );
+appenddbandsave.addEventListener( 'click', function() {
+    
+	var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+
+    var data = encode( JSON.stringify(v, null, 4) );
+    var new_data = require('./instances.json');
+    new_data = encode( JSON.stringify(new_data, null, 4) );
+    data = data.concat(new_data);
+    data = data.replace("][", ",");
+  
+    var blob = new Blob( [ data ], {
+        type: 'application/octet-stream'
+    });
+    
+    url = URL.createObjectURL( blob );
+    var link = document.createElement( 'a' );
+    link.setAttribute( 'href', url );
+    link.setAttribute( 'download', 'instances.json' );
+    
+    var event = document.createEvent( 'MouseEvents' );
+    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+    link.dispatchEvent( event );
+});
+
 //INFORTUNIO NODE DUPLICATION
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
