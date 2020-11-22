@@ -50,7 +50,6 @@ document.getElementById('import').onclick = function() {
   },
   "types" : {
     "#" : {
-      /*"max_children" : 1,*/
       "valid_children" : ["root"]
     },
     "root" : {
