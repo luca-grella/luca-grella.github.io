@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+
+	<meta charset="UTF-8">
+  <title>Luca Grella | Tesi</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./../dist/themes/default/style.min.css" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/img/icon/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="../../assets/img/icon/favicon.ico">
+  
+</head>
+
+<body>
+
+  <h1>Tree Structure Creator</h1>
+  <input type="file" id="selectFiles" value="Import" /><br>
+  <button id="import">Import</button><br><br>
+  <button id="refreshtree">Refresh Tree</button>
+  <button id="createroot">Create Root</button>
+  <button id="createdimension">Create Dimension</button>
+  <button id="createconcept">Create Concept</button>
+  <button id="createattribute">Create Attribute</button>
+  <button id="renamenode">Rename Node</button>
+  <button id="deletenode">Delete Node</button>
+  <button id="openallnodes">Open All</button>
+  <button id="closeallnodes">Close All</button>
+  <br>
+	<div id="jstree_demo" class="demo"></div><br>
+  <div class="col-md-2 col-sm-4 col-xs-4" style="text-align:right;">
+    <input type="text" value="" style="box-shadow:inset 0 0 4px #eee; width:120px; margin:0; padding:6px 12px; border-radius:4px; border:1px solid silver; font-size:1.1em;" id="demo_q" placeholder="Search" />
+  </div><br>
+  <button id="savejson">Save JSON</button><br><br>
+
+  <em>INAIL-RECKON Project<br>Curated by Luca Grella</em>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./../dist/jstree.min.js"></script>
+  <script src="./js/tree_structure_creator.js"></script>
+
+</body>
+
+</html>

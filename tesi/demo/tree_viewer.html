@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+
+	<meta charset="UTF-8">
+  <title>Luca Grella | Tesi</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./../dist/themes/default/style.min.css" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/img/icon/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="../../assets/img/icon/favicon.ico">
+  
+</head>
+
+<body>
+
+  <h1>Tree Viewer</h1>
+  <input type="file" id="selectFiles3" value="Import" /><br>
+  <button id="import3">Import</button><br><br>
+  <button id="refreshtree3">Refresh Tree</button>
+  <button id="openallnodes3">Open All</button>
+  <button id="closeallnodes3">Close All</button>
+  <br>
+	<div id="jstree_viewer" class="demo"></div><br>
+  <div class="col-md-2 col-sm-4 col-xs-4" style="text-align:right;">
+    <input type="text" value="" style="box-shadow:inset 0 0 4px #eee; width:120px; margin:0; padding:6px 12px; border-radius:4px; border:1px solid silver; font-size:1.1em;" id="demo_q3" placeholder="Search" />
+  </div><br><br>
+
+  <em>INAIL-RECKON Project<br>Curated by Luca Grella</em>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./../dist/jstree.min.js"></script>
+  <script src="./js/tree_viewer.js"></script>
+
+</body>
+
+</html>
