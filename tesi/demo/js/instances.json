@@ -967,7 +967,7 @@
     },
     {
         "id": "j1_169",
-        "text": "Ciao1",
+        "text": "PROVA 1",
         "icon": "./styles/icons/root.png",
         "data": {},
         "children": [
@@ -1916,6 +1916,972 @@
                             },
                             {
                                 "id": "j1_281",
+                                "text": "On/Off",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            }
+        ],
+        "type": "root"
+    },
+    {
+        "id": "j1_282",
+        "text": "PROVA 2",
+        "icon": "./styles/icons/root.png",
+        "data": {},
+        "children": [
+            {
+                "id": "j1_283",
+                "text": "Data",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_284",
+                        "text": "Anno",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_285",
+                                "text": "$Anno",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_286",
+                        "text": "Mese",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_287",
+                                "text": "$Mese",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_288",
+                        "text": "Giorno",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_289",
+                                "text": "$Giorno",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_290",
+                        "text": "Ora",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_291",
+                                "text": "$Ora",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_292",
+                "text": "Luogo",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_293",
+                        "text": "Provincia",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_294",
+                                "text": "$Provincia",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_295",
+                        "text": "Regione",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_296",
+                                "text": "$Regione",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_297",
+                "text": "Azienda",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_298",
+                        "text": "Dimensione",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_299",
+                                "text": "Numero addetti",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_300",
+                        "text": "Settore",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_301",
+                                "text": "ID Settore Attivita'",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_302",
+                "text": "Presso Altra Azienda",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_303",
+                        "text": "Si/No",
+                        "icon": "./styles/icons/attribute.png",
+                        "data": {},
+                        "children": [],
+                        "type": "attribute"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_304",
+                "text": "Infortunio Collettivo",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_305",
+                        "text": "Num. Infortunati",
+                        "icon": "./styles/icons/attribute.png",
+                        "data": {},
+                        "children": [],
+                        "type": "attribute"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_306",
+                "text": "Infortunato",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_307",
+                        "text": "Infortunato_i",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_308",
+                                "text": "Esperienza",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_309",
+                                        "text": "Eta'",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_310",
+                                                "text": "$Eta'",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_311",
+                                        "text": "Data Assunzione",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_312",
+                                                "text": "$Data",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_313",
+                                        "text": "Studente",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_314",
+                                                "text": "Si/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_315",
+                                "text": "Orario Lavorativo",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_316",
+                                        "text": "Ora Cardinale Lavorata",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_317",
+                                                "text": "$OraCard",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_318",
+                                        "text": "Turno Notturno",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_319",
+                                                "text": "Si/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_320",
+                                        "text": "Giorno Festivo",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_321",
+                                                "text": "Si/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_322",
+                                "text": "Attivita' Durante Infortunio",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_323",
+                                        "text": "Lavoro Consueto",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_324",
+                                                "text": "Si/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_325",
+                                        "text": "Azione Particolare",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_326",
+                                                "text": "Tipo",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_327",
+                                "text": "Imprevisto",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_328",
+                                        "text": "Tipo",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_329",
+                                "text": "Conseguenza",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_330",
+                                        "text": "Tipo",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_331",
+                                "text": "Gravita' Infortunio",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_332",
+                                        "text": "Abbandono Lavoro",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_333",
+                                                "text": "Si/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_334",
+                                        "text": "Certificato Medico",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_335",
+                                                "text": "Num. Giorni",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "j1_336",
+                                                "text": "Prognosi",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_337",
+                                        "text": "Decesso",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_338",
+                                                "text": "Si/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_339",
+                                "text": "Posizione",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_340",
+                                        "text": "Quota",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_341",
+                                                "text": "$MetriQuota",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_342",
+                                        "text": "Distanza dal Target",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_343",
+                                                "text": "$MetriDist",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_344",
+                                "text": "Dispositivi Protezione Individuale (DPI)",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_345",
+                                        "text": "DPI_i",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_346",
+                                                "text": "Tipo",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "j1_347",
+                                                "text": "On/Off",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_348",
+                                "text": "Lesione",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_349",
+                                        "text": "Lesione_i",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_350",
+                                                "text": "Natura",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "j1_351",
+                                                "text": "Sede",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_352",
+                "text": "Terzo",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_353",
+                        "text": "Terzo_i",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_354",
+                                "text": "Conducente Mezzi di Lavoro",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_355",
+                                        "text": "Si/No",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "j1_356",
+                                "text": "Altre Attivita' Terzi",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_357",
+                                        "text": "Tipo",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_358",
+                "text": "Ambiente Lavorativo",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_359",
+                        "text": "Aperto",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_360",
+                        "text": "Chiuso",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_361",
+                        "text": "Confinato",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_362",
+                "text": "Parametri Ambientali",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_363",
+                        "text": "Temperatura",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_364",
+                                "text": "$Temp",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_365",
+                        "text": "Luminosita'",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_366",
+                                "text": "$Lum",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_367",
+                        "text": "Pressione",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_368",
+                                "text": "$Press",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_369",
+                        "text": "Sostanze Tossiche",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_370",
+                                "text": "Si/No",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            },
+                            {
+                                "id": "j1_371",
+                                "text": "Tipo",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_372",
+                "text": "Lavorazione",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_373",
+                        "text": "Tipo",
+                        "icon": "./styles/icons/attribute.png",
+                        "data": {},
+                        "children": [],
+                        "type": "attribute"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_374",
+                "text": "Materiale Lavorato",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_375",
+                        "text": "Stato",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_376",
+                                "text": "ID Stato",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_377",
+                        "text": "Materiale",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_378",
+                                "text": "ID Materiale",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_379",
+                "text": "Strumento",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_380",
+                        "text": "Utensile",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "j1_381",
+                        "text": "Macchinario",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_382",
+                                "text": "Tipologia",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "j1_383",
+                                        "text": "Macchina Utensile",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_384",
+                                                "text": "Tipo",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "j1_385",
+                                        "text": "Macchina Mobile",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "j1_386",
+                                                "text": "Max Est. Z",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "j1_387",
+                                                "text": "Max Est. X",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "j1_388",
+                                                "text": "Max Est. Y",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_389",
+                "text": "Condizioni Sicurezza Macchina",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_390",
+                        "text": "On/Off",
+                        "icon": "./styles/icons/attribute.png",
+                        "data": {},
+                        "children": [],
+                        "type": "attribute"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "j1_391",
+                "text": "Dispositivi Protezione Collettiva (DPC)",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "j1_392",
+                        "text": "DPC_i",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "j1_393",
+                                "text": "Tipo",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            },
+                            {
+                                "id": "j1_394",
                                 "text": "On/Off",
                                 "icon": "./styles/icons/attribute.png",
                                 "data": {},
