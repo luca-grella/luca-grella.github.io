@@ -11,20 +11,18 @@
 </head>
 
 <body> 
-  
-  <script language="JavaScript">
-    function ProtectedArea() {
-      location.href = document.getElementById('segreto').value + ".html";
-    }
-    </script>
-    <p>Inserisci la password:</p>
-    <input type="password" id="segreto" onclick=ProtectedArea();>
-    <input type="button" value="Enter" onclick=ProtectedArea();>
 
-  <em>INAIL-RECKON Project<br>Curated by Luca Grella</em>
+  <h1>INAIL-RECKON Project</h1>
+  
+  <p>Enter password to access your private area:</p>
+  <input type="password" id="secret";>
+  <button id="EnterButton" onclick=AreaProtetta();>Enter</button><br><br>
+
+  <em>Curated by Luca Grella</em>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="./../dist/jstree.min.js"></script>
+  <script src="./../dist/jstree.min.js"></script>
+  <script src="./js/login.js"></script>
 
 </body>
 
