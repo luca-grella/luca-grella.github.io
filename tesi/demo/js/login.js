@@ -8,5 +8,13 @@ input.addEventListener("keyup", function(event){
     });
 
 function ProtectedArea() {
-location.href = document.getElementById('secret').value + ".html";
+  if(document.getElementById('secret').value == "tree_structure_creator" ||
+     document.getElementById('secret').value == "instance_creator" ||
+     document.getElementById('secret').value == "tree_viewer"){
+      location.href = document.getElementById('secret').value + ".html"
+     }
+  else 
+  {
+      document.getElementById("pswerror").innerHTML = "Password Error!"
+  }
     };
