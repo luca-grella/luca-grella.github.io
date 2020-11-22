@@ -1,4 +1,4 @@
-var resultsjson = [];
+var resultsjson;
 
 document.getElementById('import').onclick = function() {
 	var files = document.getElementById('selectFiles').files;
@@ -285,7 +285,7 @@ closeallnodes.addEventListener( 'click', function() {
 var refreshtree = document.getElementById( 'refreshtree' );
 refreshtree.addEventListener( 'click', function() {
 
-              if (resultsjson != '[]')
+              if (resultsjson != 'undefined')
               {
                 $('#jstree_demo').jstree(true).settings.core.data = resultsjson;
               }

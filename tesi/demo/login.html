@@ -17,9 +17,24 @@
       location.href = document.getElementById('segreto').value + ".html";
     }
     </script>
-    <p>Inserisci la password:</p>
+    <p>Username:</p>
     <input type="password" id="segreto";>
-    <input type="button" value="Entra!" onclick=AreaProtetta();>
+    <input type="button" value="Entra!" onclick=AreaProtetta();><br><br>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+
+<form>
+    <input type="password" id="pwd" name="password" />
+    <input onclick="mySubmit(this)" type="submit">
+</form><br><br>
+
+<script>function mySubmit(obj) {
+  var pwdObj = document.getElementById('pwd');
+  var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
+  hashObj.update(pwdObj.value);
+  var hash = hashObj.getHash("HEX");
+  pwdObj.value = hash;
+}</script>
 
   <em>INAIL-RECKON Project<br>Curated by Luca Grella</em>
 
