@@ -1,13 +1,4 @@
-var resultsjson = [];/*
-  {
-      "id": "1",
-      "text": "Load JSON and refresh tree",
-      "icon": "./icons/root.png",
-      "data": {},
-      "children": [],
-      "type": "root"
-  }
-];*/
+var resultsjson = [];
 
 document.getElementById('import2').onclick = function() {
 	var files = document.getElementById('selectFiles2').files;
@@ -50,23 +41,22 @@ document.getElementById('import2').onclick = function() {
   },
   "types" : {
     "#" : {
-      /*"max_children" : 1,*/
       "valid_children" : ["root"]
     },
     "root" : {
-      "icon" : "./icons/root.png",
+      "icon" : "./styles/icons/root.png",
       "valid_children" : ["dimension"]
     },
     "dimension" : {
-      "icon" : "./icons/dimension.png",
+      "icon" : "./styles/icons/dimension.png",
       "valid_children" : ["concept","attribute"]
     },
     "concept" : {
-      "icon" : "./icons/concept.png",
+      "icon" : "./styles/icons/concept.png",
       "valid_children" : ["dimension","attribute"]
     },
     "attribute" : {
-      "icon" : "./icons/attribute.png",
+      "icon" : "./styles/icons/attribute.png",
       "valid_children" : []
     }
   },

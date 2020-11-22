@@ -45,19 +45,19 @@ document.getElementById('import3').onclick = function() {
       "valid_children" : ["root"]
     },
     "root" : {
-      "icon" : "./icons/root.png",
+      "icon" : "./styles/icons/root.png",
       "valid_children" : ["dimension"]
     },
     "dimension" : {
-      "icon" : "./icons/dimension.png",
+      "icon" : "./styles/icons/dimension.png",
       "valid_children" : ["concept","attribute"]
     },
     "concept" : {
-      "icon" : "./icons/concept.png",
+      "icon" : "./styles/icons/concept.png",
       "valid_children" : ["dimension","attribute"]
     },
     "attribute" : {
-      "icon" : "./icons/attribute.png",
+      "icon" : "./styles/icons/attribute.png",
       "valid_children" : []
     }
   },
