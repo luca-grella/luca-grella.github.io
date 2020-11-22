@@ -285,7 +285,7 @@ closeallnodes.addEventListener( 'click', function() {
 var refreshtree = document.getElementById( 'refreshtree' );
 refreshtree.addEventListener( 'click', function() {
 
-              if (resultsjson != 'undefined')
+              if (resultsjson != '[]')
               {
                 $('#jstree_demo').jstree(true).settings.core.data = resultsjson;
               }
