@@ -1,3 +1,24 @@
+var resultsjson = [];
+
+document.getElementById('import').onclick = function() {
+	var files = document.getElementById('selectFiles').files;
+  console.log(files);
+  if (files.length <= 0) {
+    return false;
+  }
+  
+  var fr = new FileReader();
+  
+  fr.onload = function(e) { 
+  console.log(e);
+    var result = JSON.parse(e.target.result);
+    resultsjson = result;
+    document.getElementById('result').value = resultsjson;
+  }
+  
+  fr.readAsText(files.item(0));
+}
+
 /////SEARCH FUNCTION/////////////////////////////
     $(function () {
               var to = false;
@@ -258,4 +279,12 @@ var closeallnodes = document.getElementById( 'closeallnodes' );
 closeallnodes.addEventListener( 'click', function() {
 
               $('#jstree_demo').jstree('close_all');
+            });
+
+//REFRESH TREE
+var refreshtree = document.getElementById( 'refreshtree' );
+refreshtree.addEventListener( 'click', function() {
+
+              $('#jstree_instances').jstree(true).settings.core.data = resultsjson;
+              $('#jstree_instances').jstree(true).refresh();
             });

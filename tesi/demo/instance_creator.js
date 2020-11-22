@@ -1,4 +1,4 @@
-var resultsjson = [
+var resultsjson = [];/*
   {
       "id": "1",
       "text": "Load JSON and refresh tree",
@@ -7,10 +7,10 @@ var resultsjson = [
       "children": [],
       "type": "root"
   }
-];
+];*/
 
-document.getElementById('import').onclick = function() {
-	var files = document.getElementById('selectFiles').files;
+document.getElementById('import2').onclick = function() {
+	var files = document.getElementById('selectFiles2').files;
   console.log(files);
   if (files.length <= 0) {
     return false;
@@ -205,7 +205,7 @@ function provaHide() {
 };
 
 //REFRESH TREE
-var refreshtree = document.getElementById( 'refreshtree' );
+var refreshtree = document.getElementById( 'refreshtree2' );
 refreshtree.addEventListener( 'click', function() {
 
               $('#jstree_instances').jstree(true).settings.core.data = resultsjson;

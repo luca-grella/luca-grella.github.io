@@ -1,16 +1,7 @@
-var resultsjson = [
-  {
-      "id": "1",
-      "text": "Load JSON and refresh tree",
-      "icon": "./icons/root.png",
-      "data": {},
-      "children": [],
-      "type": "root"
-  }
-];
+var resultsjson = [];
 
-document.getElementById('import2').onclick = function() {
-	var files = document.getElementById('selectFiles2').files;
+document.getElementById('import3').onclick = function() {
+	var files = document.getElementById('selectFiles3').files;
   console.log(files);
   if (files.length <= 0) {
     return false;
@@ -102,7 +93,7 @@ function provaHide() {
 };
 
 //REFRESH TREE
-var refreshtree = document.getElementById( 'refreshtree2' );
+var refreshtree = document.getElementById( 'refreshtree3' );
 refreshtree.addEventListener( 'click', function() {
 
               $('#jstree_viewer').jstree(true).settings.core.data = resultsjson;
