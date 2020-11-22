@@ -285,6 +285,9 @@ closeallnodes.addEventListener( 'click', function() {
 var refreshtree = document.getElementById( 'refreshtree' );
 refreshtree.addEventListener( 'click', function() {
 
-              $('#jstree_demo').jstree(true).settings.core.data = resultsjson;
+              if (resultsjson != 'undefined')
+              {
+                $('#jstree_demo').jstree(true).settings.core.data = resultsjson;
+              }
               $('#jstree_demo').jstree(true).refresh();
             });
