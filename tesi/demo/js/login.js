@@ -7,6 +7,6 @@ input.addEventListener("keyup", function(event){
       }
     });
 
-function AreaProtetta() {
+function ProtectedArea() {
 location.href = document.getElementById('secret').value + ".html";
     };
