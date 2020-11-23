@@ -118,26 +118,23 @@ appenddbandsave.addEventListener( 'click', function() {
 
     var data = encode( JSON.stringify(v, null, 4) );
     
-    var prova = function loadJSON(callback) {   
-
-      var xobj = new XMLHttpRequest();
-          xobj.overrideMimeType("application/json");
-      xobj.open('GET', './instances.json', true); // Replace 'my_data' with the path to your file
-      xobj.onreadystatechange = function () {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', './instances.json', true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
             if (xobj.readyState == 4 && xobj.status == "200") {
               // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
               callback(xobj.responseText);
             }
       };
-      xobj.send(null);  
-   }
+    xobj.send(null);  
     
     /*var new_data;
     var new_data_string = encode( JSON.stringify(new_data, null, 4) );
     var data_new = data + new_data_string;
     var data_final = data_new.replace("][", ",");*/
   
-    var blob = new Blob( [ prova ], {
+    var blob = new Blob( [ xobj ], {
         type: 'application/octet-stream'
     });
     
