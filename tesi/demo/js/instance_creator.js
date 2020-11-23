@@ -149,8 +149,9 @@ duplicateroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_instances').jstree('copy', '1');
               ref = $('#jstree_instances').jstree('paste', '#', 'last');
-              var node_to_re_id = $("#jstree_instances").jstree(true).get_node(ref[1]);  
-              ref.set_id(node_to_re_id, Date.now());
+              ref[0].id = "bubba";
+              /*var node_to_re_id = $("#jstree_instances").jstree(true).get_node(ref[1]);  
+              ref.set_id(node_to_re_id, Date.now());*/
             });
 
 //RENAME SELECTED NODE FUNCTION
