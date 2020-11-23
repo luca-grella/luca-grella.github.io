@@ -105,7 +105,7 @@ savejson.addEventListener( 'click', function() {
   {
     for(i=2; i<v.length; i++)
     {
-      u = u.concat(v[i]);
+      u = JSON.parse(u).concat(v[i]);
     }
   }
     var data = encode( JSON.stringify(u, null, 4) );
