@@ -100,8 +100,12 @@ var savejson = document.getElementById( 'savejson2' );
 savejson.addEventListener( 'click', function() {
     
 	var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-
-    var data = encode( JSON.stringify(v, null, 4) );
+  var u = v[1];
+    for(i=2; i<v.length; i++)
+    {
+      u = u.concat(v[i]);
+    }
+    var data = encode( JSON.stringify(u, null, 4) );
 
     var blob = new Blob( [ data ], {
         type: 'application/octet-stream'
