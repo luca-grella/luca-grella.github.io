@@ -149,12 +149,12 @@ duplicateroot.addEventListener( 'click', function() {
 
               $('#jstree_instances').jstree('copy', '1');
               $('#jstree_instances').jstree('paste', '#', 'last');
-              var ref = $("#jstree_instances").jstree(true);
+              /*var ref = $("#jstree_instances").jstree(true);
               ref = ref.get_json('#', { flat: true });
               for(i=0; i<ref.length; i++)
               {
                 $("#jstree_instances").jstree(true).set_id(ref[i], Date.now());
-              }
+              }*/
             });
 
 //RENAME SELECTED NODE FUNCTION
