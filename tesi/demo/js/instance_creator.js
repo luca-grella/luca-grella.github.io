@@ -118,7 +118,14 @@ appenddbandsave.addEventListener( 'click', function() {
 
     var data = encode( JSON.stringify(v, null, 4) );
     /*var new_data = loadJSON('./instances.json');*/
-    var new_data = JSON.parse('./instances.json');
+    //
+    var request = new XMLHttpRequest();
+    request.open("GET", "./instances.json", false);
+    request.send(null)
+    var new_data = JSON.parse(request.responseText);
+    //alert (my_JSON_object.result[0]);
+    //
+    //var new_data = JSON.parse('./instances.json');
     /*var provaprovaprova = JSON.parse(new_data);*/
     var new_data_string = encode( JSON.stringify(new_data, null, 4) );
     var data_new = data + new_data_string;
