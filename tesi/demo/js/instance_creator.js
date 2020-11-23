@@ -107,7 +107,7 @@ savejson.addEventListener( 'click', function() {
     {
       u = u+v[i];
     }
-    u = JSON.parse(u);
+    u = JSON.stringify(u);
   }
     var data = encode( JSON.stringify(u, null, 4) );
 
