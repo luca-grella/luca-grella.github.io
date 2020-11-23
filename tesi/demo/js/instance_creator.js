@@ -128,13 +128,13 @@ appenddbandsave.addEventListener( 'click', function() {
             }
       };
     xobj.send(null);  
-    
+    var new_data_string = encode( JSON.stringify(xobj, null, 4) );
     /*var new_data;
-    var new_data_string = encode( JSON.stringify(new_data, null, 4) );
+    
     var data_new = data + new_data_string;
     var data_final = data_new.replace("][", ",");*/
   
-    var blob = new Blob( [ xobj ], {
+    var blob = new Blob( [ new_data_string ], {
         type: 'application/octet-stream'
     });
     
