@@ -162,8 +162,6 @@ duplicateroot.addEventListener( 'click', function() {
               }
             });
 
-            ref = ref.get_json('#', { flat: true });
-
 //RENAME SELECTED NODE FUNCTION
 var renamenode = document.getElementById( 'renamenode2' );
 renamenode.addEventListener( 'click', function() {
