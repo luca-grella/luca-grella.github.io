@@ -129,7 +129,7 @@ appenddbandsave.addEventListener( 'click', function() {
     var new_data_string = encode( JSON.stringify(new_data, null, 4) );
     var data_new = data + new_data_string;
     var data_final = data_new.replace("][", ",");
-    var provanuova = v.push(new_data);
+    var provanuova = v.concat(new_data);
   
     var blob = new Blob( [ provanuova ], {
         type: 'application/octet-stream'
