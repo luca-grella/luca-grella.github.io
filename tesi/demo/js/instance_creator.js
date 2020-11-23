@@ -117,9 +117,9 @@ appenddbandsave.addEventListener( 'click', function() {
 	var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
 
     var data = encode( JSON.stringify(v, null, 4) );
-    var new_data = fetch('./instances.json')
+    var new_data = fetch('./instances.json');/*
     .then(response => response.json())
-    .then(jsonResponse => console.log(jsonResponse))
+    .then(jsonResponse => console.log(jsonResponse))*/
     new_data = encode( JSON.stringify(new_data, null, 4) );
     data = data.concat(new_data);
     data = data.replace("][", ",");
