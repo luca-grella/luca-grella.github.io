@@ -149,13 +149,20 @@ duplicateroot.addEventListener( 'click', function() {
 
               $('#jstree_instances').jstree('copy', '1');
               $('#jstree_instances').jstree('paste', '#', 'last');
-              /*var ref = $("#jstree_instances").jstree(true);
-              ref = ref.get_json('#', { flat: true });
+              var ref = $("#jstree_instances").jstree(true);
+              ref = ref.get_json('#');
+              var new_id = Date.now();
+              $("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], new_id);
+              var new_root = $("#jstree_instances").jstree(true).get_json(new_id, { flat: true });
               for(i=0; i<ref.length; i++)
               {
-                $("#jstree_instances").jstree(true).set_id(ref[i], Date.now());
-              }*/
+                var timestamp_new = Date.now();
+                timestamp_new = timestamp_new + 1;
+                $("#jstree_instances").jstree(true).set_id(new_root[i], timestamp_new);
+              }
             });
+
+            ref = ref.get_json('#', { flat: true });
 
 //RENAME SELECTED NODE FUNCTION
 var renamenode = document.getElementById( 'renamenode2' );
