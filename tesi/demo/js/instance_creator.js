@@ -148,7 +148,8 @@ var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_instances').jstree('copy', '1');
-              ref = $('#jstree_instances').jstree('paste', '#', 'last');
+              var sel = $('#jstree_instances').jstree('paste', '#', 'last');
+              ref.set_id(sel, Date.now());
             });
 
 //RENAME SELECTED NODE FUNCTION
