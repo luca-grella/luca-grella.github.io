@@ -250,7 +250,7 @@ createroot.addEventListener( 'click', function() {
               if(sel) {
                 ref.edit(sel);
               }
-              ref.set_id(sel, Date.now());
+              ref.set_id(sel, "1");
             });
 
 //RENAME SELECTED NODE FUNCTION
