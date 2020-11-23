@@ -122,7 +122,7 @@ appenddbandsave.addEventListener( 'click', function() {
     data_new = data + new_data_string;
     data_final = data_new.replace("][", ",");
   
-    var blob = new Blob( [ new_data_string ], {
+    var blob = new Blob( [ new_data ], {
         type: 'application/octet-stream'
     });
     
