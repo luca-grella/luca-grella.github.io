@@ -121,7 +121,7 @@ appenddbandsave.addEventListener( 'click', function() {
     //
     var request = new XMLHttpRequest();
     request.open("GET", "./instances.json", false);
-    request.send(null)
+    //request.send(null)
     var new_data = JSON.parse(request);
     //alert (my_JSON_object.result[0]);
     //
