@@ -131,10 +131,15 @@ var appenddbandsave = document.getElementById( 'appenddbandsave' );
 appenddbandsave.addEventListener( 'click', function() {
     
     var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-    var u = v[1];
-    for(i=2; i<v.length; i++)
+    var q = JSON.stringify(v[1]);
+    var u = "[" + q + "]"
+    u = JSON.parse(u);
+    if(v.length >= 3)
     {
-      u = u.concat(v[i]);
+      for(i=2; i<v.length; i++)
+      {
+        u = u.concat(v[i]);
+      }
     }
     var data_url = "https://luca-grella.github.io/tesi/demo/js/database.json";
     var new_data = JSON.parse(get_data_from_url(data_url));
