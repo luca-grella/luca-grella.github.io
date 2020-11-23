@@ -126,7 +126,7 @@ appenddbandsave.addEventListener( 'click', function() {
     var new_data = JSON.parse(get_data_from_url(data_url));
     var appenddb = new_data.concat(v);
     var appenddb_string = encode( JSON.stringify(appenddb, null, 4) );
-    var appenddb_final = appenddb_string.replace("][", ",");
+    /*var appenddb_final = appenddb_string.replace("][", ",");*/
     
   
     var blob = new Blob( [ appenddb_string ], {
