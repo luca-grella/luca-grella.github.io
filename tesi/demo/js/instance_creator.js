@@ -121,11 +121,12 @@ savejson.addEventListener( 'click', function() {
 var appenddbandsave = document.getElementById( 'appenddbandsave' );
 appenddbandsave.addEventListener( 'click', function() {
     
+    var node_to_delete = $("#jstree_instances").jstree(true).get_node('1');   
+	  deleted_node = $("#jstree_instances").jstree(true).delete_node(node_to_delete);
 	  var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
     var data_url = "https://luca-grella.github.io/tesi/demo/js/instances.json";
     var new_data = JSON.parse(get_data_from_url(data_url));
-    delete v[0];
-    delete new_data[0];
+    //delete new_data[0];
     var appenddb = new_data.concat(v);
     var appenddb_string = encode( JSON.stringify(appenddb, null, 4) );
     /*var appenddb_final = appenddb_string.replace("][", ",");*/
