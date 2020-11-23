@@ -120,10 +120,10 @@ appenddbandsave.addEventListener( 'click', function() {
     var new_data = $.getJSON("./instances.json", function(json) {
       console.log(json); // this will show the info it in firebug console
   });
-    var provaprovaprova = JSON.parse(new_data);
+    /*var provaprovaprova = JSON.parse(new_data);*/
     var new_data_string = encode( JSON.stringify(new_data, null, 4) );
-    data_new = data + new_data_string;
-    data_final = data_new.replace("][", ",");
+    var data_new = data + new_data_string;
+    var data_final = data_new.replace("][", ",");
   
     var blob = new Blob( [ new_data ], {
         type: 'application/octet-stream'
