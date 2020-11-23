@@ -122,16 +122,14 @@ var appenddbandsave = document.getElementById( 'appenddbandsave' );
 appenddbandsave.addEventListener( 'click', function() {
     
 	  var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-
-    var data = encode( JSON.stringify(v, null, 4) );
     var data_url = "https://luca-grella.github.io/tesi/demo/js/instances.json";
     var new_data = JSON.parse(get_data_from_url(data_url));
-    var new_data_string = encode( JSON.stringify(new_data, null, 4) );
-    var data_new = data + new_data_string;
-    var data_final = data_new.replace("][", ",");
-    var provanuova = v.concat(new_data);
+    var appenddb = new_data.concat(v);
+    var appenddb_string = encode( JSON.stringify(appenddb, null, 4) );
+    var appenddb_final = appenddb_string.replace("][", ",");
+    
   
-    var blob = new Blob( [ provanuova ], {
+    var blob = new Blob( [ appenddb_string ], {
         type: 'application/octet-stream'
     });
     
