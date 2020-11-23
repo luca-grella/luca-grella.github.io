@@ -154,7 +154,7 @@ duplicateroot.addEventListener( 'click', function() {
               var new_id = Date.now();
               $("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], new_id);
               var new_root = $("#jstree_instances").jstree(true).get_json(new_id, { flat: true });
-              for(i=0; i<ref.length; i++)
+              for(i=0; i<new_root.length; i++)
               {
                 var timestamp_new = Date.now();
                 timestamp_new = timestamp_new + 1;
