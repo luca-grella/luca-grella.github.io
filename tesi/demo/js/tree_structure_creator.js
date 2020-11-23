@@ -143,6 +143,7 @@ createattribute.addEventListener( 'click', function() {
               if(asd) {
               ref.edit(asd);
               }
+              ref.set_id(asd, Date.now());
                 }
 
         }
@@ -151,6 +152,7 @@ createattribute.addEventListener( 'click', function() {
               if(asd) {
               ref.edit(asd);
               }
+              ref.set_id(asd, Date.now());
                 }
 			                           }
             });
@@ -183,6 +185,7 @@ createconcept.addEventListener( 'click', function() {
               if(asd) {
               ref.edit(asd);
               }
+              ref.set_id(asd, Date.now());
                 }
 
         }
@@ -191,6 +194,7 @@ createconcept.addEventListener( 'click', function() {
               if(asd) {
               ref.edit(asd);
               }
+              ref.set_id(asd, Date.now());
                 }
                                  }
             });
@@ -223,6 +227,7 @@ createdimension.addEventListener( 'click', function() {
               if(asd) {
               ref.edit(asd);
               }
+              ref.set_id(asd, Date.now());
                 }
 
         }
@@ -231,6 +236,7 @@ createdimension.addEventListener( 'click', function() {
               if(asd) {
               ref.edit(asd);
               }
+              ref.set_id(asd, Date.now());
                 }
                                  }
             });
