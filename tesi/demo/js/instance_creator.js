@@ -125,7 +125,7 @@ appenddbandsave.addEventListener( 'click', function() {
 
     var data = encode( JSON.stringify(v, null, 4) );
       
-    var data_url = "./instances.json";
+    var data_url = "https://luca-grella.github.io/tesi/demo/js/instances.json";
     var new_data = JSON.parse(get_data_from_url(data_url));
     
     /*var new_data_string = encode( JSON.stringify(new_data, null, 4) );
