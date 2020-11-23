@@ -241,6 +241,7 @@ createroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree(true),
               sel = ref.create_node("#", {"type":"root"});
+              sel.id = "bubba";
               if(sel) {
                 ref.edit(sel);
               }
