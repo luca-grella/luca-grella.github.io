@@ -121,7 +121,7 @@ appenddbandsave.addEventListener( 'click', function() {
     .then(response => response.json())
     .then(jsonResponse => console.log(jsonResponse))*/
     new_data = encode( JSON.stringify(new_data, null, 4) );
-    data = data.concat(new_data);
+    data = data + new_data;
     data = data.replace("][", ",");
   
     var blob = new Blob( [ data ], {
