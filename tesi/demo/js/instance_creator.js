@@ -148,8 +148,10 @@ var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
               $('#jstree_instances').jstree('copy', '1');
-              var sel = $('#jstree_instances').jstree('paste', '#', 'last');
-              $("#jstree_instances").jstree(true).set_id(sel[0], Date.now());
+              $('#jstree_instances').jstree('paste', '#', 'last');
+              var ref = $("#jstree_instances").jstree(true);
+              ref = ref.get_node(ref[0]);
+              $("#jstree_instances").jstree(true).set_id(ref, Date.now());
               /*var node_to_re_id = $("#jstree_instances").jstree(true).get_node(ref.length - 1);  
               ref.set_id(node_to_re_id, Date.now());*/
             });
