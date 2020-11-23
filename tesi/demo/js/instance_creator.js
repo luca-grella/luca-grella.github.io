@@ -118,11 +118,12 @@ appenddbandsave.addEventListener( 'click', function() {
 
     var data = encode( JSON.stringify(v, null, 4) );
     var new_data = fetch('./instances.json');
+    var provaprovaprova = JSON.parse(new_data);
     var new_data_string = encode( JSON.stringify(new_data, null, 4) );
     data_new = data + new_data_string;
     data_final = data_new.replace("][", ",");
   
-    var blob = new Blob( [ new_data ], {
+    var blob = new Blob( [ provaprovaprova ], {
         type: 'application/octet-stream'
     });
     
