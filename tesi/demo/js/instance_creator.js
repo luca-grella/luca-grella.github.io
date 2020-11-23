@@ -151,7 +151,7 @@ duplicateroot.addEventListener( 'click', function() {
               $('#jstree_instances').jstree('paste', '#', 'last');
               var ref = $("#jstree_instances").jstree(true);
               ref = ref.get_json('#');
-              $("#jstree_instances").jstree(true).set_id(ref[ref.length], Date.now());
+              $("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], Date.now());
               /*var node_to_re_id = $("#jstree_instances").jstree(true).get_node(ref.length - 1);  
               ref.set_id(node_to_re_id, Date.now());*/
             });
