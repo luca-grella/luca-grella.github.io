@@ -100,10 +100,12 @@ var savejson = document.getElementById( 'savejson2' );
 savejson.addEventListener( 'click', function() {
     
 	var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
-  var u;
-  if(v.length >= 2)
+  var q = JSON.stringify(v[1]);
+  var u = "[" + q + "]"
+  u = JSON.parse(u);
+  if(v.length >= 3)
   {
-    for(i=1; i<v.length; i++)
+    for(i=2; i<v.length; i++)
     {
       u = u.concat(v[i]);
     }
