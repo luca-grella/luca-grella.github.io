@@ -179,7 +179,7 @@ duplicateroot.addEventListener( 'click', function() {
               }
             });
 
-//RENAME SELECTED NODE FUNCTION
+/*RENAME SELECTED NODE FUNCTION
 var renamenode = document.getElementById( 'renamenode2' );
 renamenode.addEventListener( 'click', function() {
 
@@ -207,7 +207,7 @@ renamenode.addEventListener( 'click', function() {
               {
                 //Do Nothing
               }              
-            });
+            });*/
 
 //DELETE SELECTED NODE FUNCTION
 var deleteinstance = document.getElementById( 'deleteinstance' );
