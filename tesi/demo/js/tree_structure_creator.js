@@ -241,10 +241,10 @@ createroot.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree(true),
               sel = ref.create_node("#", {"type":"root"});
-              ref.set_id(sel, Date.now());
               if(sel) {
                 ref.edit(sel);
               }
+              ref.set_id(sel, Date.now());
             });
 
 //RENAME SELECTED NODE FUNCTION
