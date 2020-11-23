@@ -121,13 +121,15 @@ savejson.addEventListener( 'click', function() {
 var appenddbandsave = document.getElementById( 'appenddbandsave' );
 appenddbandsave.addEventListener( 'click', function() {
     
-    var node_to_delete = $("#jstree_instances").jstree(true).get_node('1');  
-    $('#jstree_instances').jstree('copy', '1');
-	  deleted_node = $("#jstree_instances").jstree(true).delete_node(node_to_delete);
-	  var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+    var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+    var u = v[1];
+    for(i=2; i<v.length; i++)
+    {
+      u = u.concat(v[i]);
+    }
     var data_url = "https://luca-grella.github.io/tesi/demo/js/instances.json";
     var new_data = JSON.parse(get_data_from_url(data_url));
-    var appenddb = new_data.concat(v);
+    var appenddb = new_data.concat(u);
     var appenddb_string = encode( JSON.stringify(appenddb, null, 4) );
   
     var blob = new Blob( [ appenddb_string ], {
@@ -142,7 +144,6 @@ appenddbandsave.addEventListener( 'click', function() {
     var event = document.createEvent( 'MouseEvents' );
     event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
     link.dispatchEvent( event );
-    $('#jstree_instances').jstree('paste', '#', 'first'); 
 });
 
 //INFORTUNIO NODE DUPLICATION
