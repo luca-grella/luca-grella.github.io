@@ -81,6 +81,13 @@ document.getElementById('import2').onclick = function() {
 ////////////////////////////
 
 //FILE JSON GENERATION + DOWNLOAD IN LOCAL
+function get_data_from_url(url){
+  var http_req = new XMLHttpRequest();
+  http_req.open("GET",url,false);
+  http_req.send(null);
+  return http_req.responseText;          
+}
+
 function encode( s ) {
     var out = [];
     for ( var i = 0; i < s.length; i++ ) {
@@ -117,24 +124,15 @@ appenddbandsave.addEventListener( 'click', function() {
 	var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
 
     var data = encode( JSON.stringify(v, null, 4) );
+      
+    var data_url = "./instances.json";
+    var new_data = JSON.parse(get_data_from_url(data_url));
     
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', './instances.json', true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-            if (xobj.readyState == 4 && xobj.status == "200") {
-              // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-              callback(xobj.responseText);
-            }
-      };
-    xobj.send(null);  
-    var new_data_string = encode( JSON.stringify(xobj, null, 4) );
-    /*var new_data;
-    
+    /*var new_data_string = encode( JSON.stringify(new_data, null, 4) );
     var data_new = data + new_data_string;
     var data_final = data_new.replace("][", ",");*/
   
-    var blob = new Blob( [ new_data_string ], {
+    var blob = new Blob( [ new_data ], {
         type: 'application/octet-stream'
     });
     
