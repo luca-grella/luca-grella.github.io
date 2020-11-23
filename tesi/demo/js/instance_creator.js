@@ -150,10 +150,12 @@ duplicateroot.addEventListener( 'click', function() {
               $('#jstree_instances').jstree('copy', '1');
               $('#jstree_instances').jstree('paste', '#', 'last');
               var ref = $("#jstree_instances").jstree(true);
-              ref = ref.get_json('#');
-              $("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], Date.now());
-              /*var node_to_re_id = $("#jstree_instances").jstree(true).get_node(ref.length - 1);  
-              ref.set_id(node_to_re_id, Date.now());*/
+              // ref = ref.get_json('#');
+              ref = ref.get_json(node , li_attr , a_attr);
+              for(i=0; i<ref.length; i++)
+              {
+                $("#jstree_instances").jstree(true).set_id(ref[i], Date.now());
+              }
             });
 
 //RENAME SELECTED NODE FUNCTION
