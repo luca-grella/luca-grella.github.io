@@ -179,7 +179,7 @@ duplicateroot.addEventListener( 'click', function() {
               }
             });
 
-/*RENAME SELECTED NODE FUNCTION
+/*RENAME ATTIBUTE
 var renamenode = document.getElementById( 'renamenode2' );
 renamenode.addEventListener( 'click', function() {
 
@@ -208,6 +208,16 @@ renamenode.addEventListener( 'click', function() {
                 //Do Nothing
               }              
             });*/
+//RENAME SELECTED NODE FUNCTION
+var renamenode = document.getElementById( 'renamenode2' );
+renamenode.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_instances').jstree(true),
+                sel = ref.get_selected();
+              if(!sel.length) { return false; }
+              sel = sel[0];
+              ref.edit(sel);
+            });
 
 //DELETE SELECTED NODE FUNCTION
 var deleteinstance = document.getElementById( 'deleteinstance' );
