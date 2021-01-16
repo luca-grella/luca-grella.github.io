@@ -160,7 +160,7 @@ appenddbandsave.addEventListener( 'click', function() {
     link.dispatchEvent( event );
 });
 
-//INFORTUNIO NODE DUPLICATION
+//ROOT INSTANCE DUPLICATION
 var duplicateroot = document.getElementById( 'duplicateroot' );
 duplicateroot.addEventListener( 'click', function() {
 
@@ -179,7 +179,7 @@ duplicateroot.addEventListener( 'click', function() {
               }
             });
 
-/*RENAME ATTIBUTE
+//RENAME ATTIBUTE
 var renamenode = document.getElementById( 'renamenode2' );
 renamenode.addEventListener( 'click', function() {
 
@@ -207,8 +207,9 @@ renamenode.addEventListener( 'click', function() {
               {
                 //Do Nothing
               }              
-            });*/
-//RENAME SELECTED NODE FUNCTION
+            });
+
+/*RENAME SELECTED NODE FUNCTION
 var renamenode = document.getElementById( 'renamenode2' );
 renamenode.addEventListener( 'click', function() {
 
@@ -217,9 +218,9 @@ renamenode.addEventListener( 'click', function() {
               if(!sel.length) { return false; }
               sel = sel[0];
               ref.edit(sel);
-            });
+            });*/
 
-//DELETE SELECTED NODE FUNCTION
+//DELETE SELECTED INSTANCE FUNCTION
 var deleteinstance = document.getElementById( 'deleteinstance' );
 deleteinstance.addEventListener( 'click', function() {
 
@@ -243,6 +244,46 @@ deleteinstance.addEventListener( 'click', function() {
               {
                 //Do Nothing
               }
+            });
+
+  //DELETE SELECTED NODE FUNCTION
+var deletenode2 = document.getElementById( 'deletenode2' );
+deletenode2.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_instances').jstree(true),
+                sel = ref.get_selected();
+              if(!sel.length) { return false; }
+              ref.delete_node(sel);
+            });
+
+//CONCEPT N DUPLICATION
+var duplicateconcept_n = document.getElementById( 'duplicateconcept_n' );
+duplicateconcept_n.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_instances').jstree(true),
+                sel = ref.get_selected();
+              if(!sel.length) { return false; }
+
+              if($('#jstree_instances').jstree(true).get_json(sel[0]).type == 'concept_n')
+              {
+                var concept_n_parent = ref.get_parent(sel[0]);
+                $('#jstree_instances').jstree('copy', sel[0]);
+                $('#jstree_instances').jstree('paste', concept_n_parent, 'last');
+              }
+
+              /*
+              
+              var ref = $("#jstree_instances").jstree(true);
+              ref = ref.get_json('#');
+              var new_id = Date.now();
+              $("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], new_id);
+              var new_root = $("#jstree_instances").jstree(true).get_json(new_id, { flat: true });
+              var timestamp_new = Date.now();
+              for(i=0; i<new_root.length; i++)
+              {
+                timestamp_new = timestamp_new + 1;
+                $("#jstree_instances").jstree(true).set_id(new_root[i], timestamp_new);
+              }*/
             });
 
 //EXPAND TREE
