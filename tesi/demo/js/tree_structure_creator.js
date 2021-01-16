@@ -53,14 +53,10 @@ document.getElementById('import').onclick = function() {
     },
     "dimension" : {
       "icon" : "./styles/icons/dimension.png",
-      "valid_children" : ["concept","concept_n","attribute"]
+      "valid_children" : ["concept","attribute"]
     },
     "concept" : {
       "icon" : "./styles/icons/concept.png",
-      "valid_children" : ["dimension","attribute"]
-    },
-    "concept_n" : {
-      "icon" : "./styles/icons/concept_n.png",
       "valid_children" : ["dimension","attribute"]
     },
     "attribute" : {
@@ -135,7 +131,6 @@ createattribute.addEventListener( 'click', function() {
         for (j = 0; j < v.children.length; j++){
             checkchild = checkchild || 
             v.children[j].type == 'concept' || 
-            v.children[j].type == 'concept_n' ||
             v.children[j].type == 'dimension'
         }
 
@@ -178,7 +173,6 @@ createconcept.addEventListener( 'click', function() {
         var checkchild = false;
         for (j = 0; j < v.children.length; j++){
             checkchild = checkchild || 
-            v.children[j].type == 'concept_n' ||
             v.children[j].type == 'attribute'
         }
 
@@ -197,50 +191,6 @@ createconcept.addEventListener( 'click', function() {
         }
         else {
               asd = ref.create_node(sel_id, {"type":"concept"});
-              if(asd) {
-              ref.edit(asd);
-              }
-              ref.set_id(asd, Date.now());
-                }
-                                 }
-            });
-
-//CONCEPT_N CREATION
-var createconcept_n = document.getElementById( 'createconcept_n' );
-createconcept_n.addEventListener( 'click', function() {
-
-        var ref = $('#jstree_demo').jstree(true),
-        sel = ref.get_selected();
-        if(!sel.length) { return false; }
-        var i;
-        for (i = 0; i < sel.length; i++) { 
-        sel_id = sel[i];
-        var v = $('#jstree_demo').jstree(true).get_json(sel_id);
-
-        var j;
-        var checkchild = false;
-        for (j = 0; j < v.children.length; j++){
-            checkchild = checkchild || 
-            v.children[j].type == 'concept' ||
-            v.children[j].type == 'concept_n' ||
-            v.children[j].type == 'attribute'
-        }
-
-        if (JSON.stringify(v.children) != '[]') {
-          
-          if (checkchild) {//Do Nothing
-          }
-          else {
-              asd = ref.create_node(sel_id, {"type":"concept_n"});
-              if(asd) {
-              ref.edit(asd);
-              }
-              ref.set_id(asd, Date.now());
-                }
-
-        }
-        else {
-              asd = ref.create_node(sel_id, {"type":"concept_n"});
               if(asd) {
               ref.edit(asd);
               }
