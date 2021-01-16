@@ -240,11 +240,15 @@ createconcept_n.addEventListener( 'click', function() {
 
         }
         else {
+          if (checkchild) {//Do Nothing
+          }
+          else {
               asd = ref.create_node(sel_id, {"type":"concept_n"});
               if(asd) {
               ref.edit(asd);
               }
               ref.set_id(asd, Date.now());
+              }
                 }
                                  }
             });
