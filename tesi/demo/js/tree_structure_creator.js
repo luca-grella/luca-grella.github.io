@@ -222,7 +222,7 @@ createconcept_n.addEventListener( 'click', function() {
         for (j = 0; j < v.children.length; j++){
             checkchild = checkchild || 
             v.children[j].type == 'concept' ||
-            v.children[j+1].type == 'concept_n' ||
+            /*v.children[j+1].type == 'concept_n' ||*/
             v.children[j].type == 'attribute'
         }
 
