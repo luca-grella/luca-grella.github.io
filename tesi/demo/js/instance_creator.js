@@ -265,7 +265,8 @@ var duplicateconcept_n = document.getElementById( 'duplicateconcept_n' );
 duplicateconcept_n.addEventListener( 'click', function() {
 
               var ref = $('#jstree_instances').jstree(true),
-                sel = ref.get_selected();
+                sel1 = ref.get_selected();
+                var sel = sel1[0];
                 par_sel = ref.get_parent(sel);
               $('#jstree_instances').jstree('copy', sel);
               $('#jstree_instances').jstree('paste', par_sel, 'last');
