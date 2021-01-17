@@ -50,10 +50,14 @@ document.getElementById('import3').onclick = function() {
     },
     "dimension" : {
       "icon" : "./styles/icons/dimension.png",
-      "valid_children" : ["concept","attribute"]
+      "valid_children" : ["concept","concept_n","attribute"]
     },
     "concept" : {
       "icon" : "./styles/icons/concept.png",
+      "valid_children" : ["dimension","attribute"]
+    },
+    "concept_n" : {
+      "icon" : "./styles/icons/concept_n.png",
       "valid_children" : ["dimension","attribute"]
     },
     "attribute" : {
