@@ -267,19 +267,26 @@ duplicateconcept_n.addEventListener( 'click', function() {
               var ref = $('#jstree_instances').jstree(true),
                 sel1 = ref.get_selected();
                 var sel = sel1[0];
-                par_sel = ref.get_parent(sel);
-              $('#jstree_instances').jstree('copy', sel);
-              $('#jstree_instances').jstree('paste', par_sel, 'last');
-              var par_node = $('#jstree_instances').jstree(true).get_node(par_sel);
-              var childrens = $("#jstree_instances").jstree("get_children_dom",par_node);
-              var new_id = Date.now();
-              $("#jstree_instances").jstree(true).set_id(childrens[childrens.length - 1], new_id);
-              var new_concept_n = $("#jstree_instances").jstree(true).get_json(new_id, { flat: true });
-              var timestamp_new = Date.now();
-              for(i=0; i<new_concept_n.length; i++)
+              if($('#jstree_instances').jstree(true).get_json(sel).type == 'concept_n')
               {
-                timestamp_new = timestamp_new + 1;
-                $("#jstree_instances").jstree(true).set_id(new_concept_n[i], timestamp_new);
+                par_sel = ref.get_parent(sel);
+                $('#jstree_instances').jstree('copy', sel);
+                $('#jstree_instances').jstree('paste', par_sel, 'last');
+                var par_node = $('#jstree_instances').jstree(true).get_node(par_sel);
+                var childrens = $("#jstree_instances").jstree("get_children_dom",par_node);
+                var new_id = Date.now();
+                $("#jstree_instances").jstree(true).set_id(childrens[childrens.length - 1], new_id);
+                var new_concept_n = $("#jstree_instances").jstree(true).get_json(new_id, { flat: true });
+                var timestamp_new = Date.now();
+                for(i=0; i<new_concept_n.length; i++)
+                {
+                  timestamp_new = timestamp_new + 1;
+                  $("#jstree_instances").jstree(true).set_id(new_concept_n[i], timestamp_new);
+                }
+              }
+              else 
+              {
+                //Do Nothing
               }
             });
 
