@@ -73,6 +73,7 @@ document.getElementById('import2').onclick = function() {
             var items = $.jstree.defaults.contextmenu.items();
             items.create = false;
             items.ccp = false;
+            items.rename = false;
             //items.remove = false;
 
             return items;
