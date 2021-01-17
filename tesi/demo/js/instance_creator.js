@@ -260,18 +260,25 @@ deletenode2.addEventListener( 'click', function() {
 var duplicateconcept_n = document.getElementById( 'duplicateconcept_n' );
 duplicateconcept_n.addEventListener( 'click', function() {
 
+              /*var ref = $('#jstree_instances').jstree(true),
+                sel = ref.get_selected();
+              if(!sel.length) { return false; }*/
+
               var ref = $('#jstree_instances').jstree(true),
                 sel = ref.get_selected();
-              if(!sel.length) { return false; }
+                par_sel = ref.get_parent(sel);
+              var cop = $('#jstree_instances').jstree('copy', sel);
+              var pas = $('#jstree_demo').jstree('paste', par_sel, 'last');
 
-              if($('#jstree_instances').jstree(true).get_json(sel[0]).type == 'concept_n')
-              {
+              /*if($('#jstree_instances').jstree(true).get_json(sel[0]).type == 'concept_n')
+              { 
                 var concept_n_parent = ref.get_parent(sel[0]);
                 ref.copy(sel);
-                /*ref.paste()
-                $('#jstree_instances').jstree('copy', sel[0]);*/
+
+                ref.paste()
+                $('#jstree_instances').jstree('copy', sel[0]);
                 $('#jstree_instances').jstree('paste', concept_n_parent, 'last');
-              }
+              }/*
 
               /*
               
