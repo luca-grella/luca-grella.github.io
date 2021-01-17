@@ -69,7 +69,7 @@ document.getElementById('import').onclick = function() {
     }
   },
   "plugins" : [
-    "contextmenu", "dnd", "search",
+    "contextmenu", /*"dnd",*/ "search",
     "state", "types", "wholerow"
   ],
   "contextmenu" : {
