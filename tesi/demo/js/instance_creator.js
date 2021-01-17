@@ -73,7 +73,7 @@ document.getElementById('import2').onclick = function() {
             var items = $.jstree.defaults.contextmenu.items();
             items.create = false;
             items.ccp = false;
-            items.remove = false;
+            //items.remove = false;
 
             return items;
         }
@@ -264,52 +264,22 @@ deletenode2.addEventListener( 'click', function() {
 var duplicateconcept_n = document.getElementById( 'duplicateconcept_n' );
 duplicateconcept_n.addEventListener( 'click', function() {
 
-              /*var ref = $('#jstree_instances').jstree(true),
-                sel = ref.get_selected();
-              if(!sel.length) { return false; }*/
-
               var ref = $('#jstree_instances').jstree(true),
                 sel = ref.get_selected();
                 par_sel = ref.get_parent(sel);
               $('#jstree_instances').jstree('copy', sel);
               $('#jstree_instances').jstree('paste', par_sel, 'last');
               var par_node = $('#jstree_instances').jstree(true).get_node(par_sel);
-
               var childrens = $("#jstree_instances").jstree("get_children_dom",par_node);
-
               var new_id = Date.now();
               $("#jstree_instances").jstree(true).set_id(childrens[childrens.length - 1], new_id);
-
-
-              //$("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], new_id);
-
-              
-              
-                
-
-              /*if($('#jstree_instances').jstree(true).get_json(sel[0]).type == 'concept_n')
-              { 
-                var concept_n_parent = ref.get_parent(sel[0]);
-                ref.copy(sel);
-
-                ref.paste()
-                $('#jstree_instances').jstree('copy', sel[0]);
-                $('#jstree_instances').jstree('paste', concept_n_parent, 'last');
-              }/*
-
-              /*
-              
-              var ref = $("#jstree_instances").jstree(true);
-              ref = ref.get_json('#');
-              var new_id = Date.now();
-              $("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], new_id);
-              var new_root = $("#jstree_instances").jstree(true).get_json(new_id, { flat: true });
+              var new_concept_n = $("#jstree_instances").jstree(true).get_json(new_id, { flat: true });
               var timestamp_new = Date.now();
-              for(i=0; i<new_root.length; i++)
+              for(i=0; i<new_concept_n.length; i++)
               {
                 timestamp_new = timestamp_new + 1;
-                $("#jstree_instances").jstree(true).set_id(new_root[i], timestamp_new);
-              }*/
+                $("#jstree_instances").jstree(true).set_id(new_concept_n[i], timestamp_new);
+              }
             });
 
 //EXPAND TREE
