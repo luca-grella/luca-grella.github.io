@@ -135,6 +135,7 @@ createattribute.addEventListener( 'click', function() {
         var checkchild = false;
         for (j = 0; j < v.children.length; j++){
             checkchild = checkchild || 
+            v.children[j].type == 'attribute' ||
             v.children[j].type == 'concept' || 
             v.children[j].type == 'concept_n' ||
             v.children[j].type == 'dimension'
