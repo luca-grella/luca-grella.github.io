@@ -1,7 +1,7 @@
 [
     {
         "id": "1606173633792",
-        "text": "Infortunio 1",
+        "text": "OLD CDT 1",
         "icon": "./styles/icons/root.png",
         "data": {},
         "children": [
@@ -967,7 +967,7 @@
     },
     {
         "id": "1606173635698",
-        "text": "Infortunio 2",
+        "text": "OLD CDT 2",
         "icon": "./styles/icons/root.png",
         "data": {},
         "children": [
@@ -1933,7 +1933,7 @@
     },
     {
         "id": "1606176075156",
-        "text": "Infortunio 3",
+        "text": "OLD CDT 3",
         "icon": "./styles/icons/root.png",
         "data": {},
         "children": [
@@ -2899,7 +2899,7 @@
     },
     {
         "id": "1606176079151",
-        "text": "Infortunio 4",
+        "text": "OLD CDT 4",
         "icon": "./styles/icons/root.png",
         "data": {},
         "children": [
@@ -3853,6 +3853,3578 @@
                                 "data": {},
                                 "children": [],
                                 "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            }
+        ],
+        "type": "root"
+    },
+    {
+        "id": "1610906100456",
+        "text": "NEW CDT 1",
+        "icon": "./styles/icons/root.png",
+        "data": {},
+        "children": [
+            {
+                "id": "1610906100457",
+                "text": "Day",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906100458",
+                        "text": "Weekdays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100459",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906100460",
+                        "text": "Public Holidays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100461",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906100462",
+                "text": "Time",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906100463",
+                        "text": "Daytime",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100464",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906100465",
+                        "text": "Night",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100466",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906100467",
+                "text": "Worker",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906100468",
+                        "text": "Worker",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100469",
+                                "text": "Outside Worker",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100470",
+                                        "text": "Yes/no",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100471",
+                                "text": "Personal Data",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100472",
+                                        "text": "Worker_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100473",
+                                "text": "Role",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100474",
+                                        "text": "Role_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100475",
+                                "text": "Board",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100476",
+                                        "text": "Board_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100477",
+                                "text": "Number Of Worked Hours",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100478",
+                                        "text": "$NumberOfHours",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100479",
+                                "text": "Altitude",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100480",
+                                        "text": "$Meters_Altitude",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100481",
+                                "text": "Relative Position",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100482",
+                                        "text": "RelPos",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100483",
+                                                "text": "Target_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906100484",
+                                                "text": "Distance",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100485",
+                                "text": "Machine",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100486",
+                                        "text": "Machine",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100487",
+                                                "text": "Safety Condition",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906100488",
+                                                        "text": "Incorrect Use",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906100489",
+                                                        "text": "Circumvention Of Security Measures",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906100490",
+                                                        "text": "Malfunction",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906100491",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906100492",
+                                                        "text": "Machine Tool",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906100493",
+                                                        "text": "Mobile Machine",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [
+                                                            {
+                                                                "id": "1610906100494",
+                                                                "text": "Max Extension Z",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906100495",
+                                                                "text": "Max Extension X",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906100496",
+                                                                "text": "Max Extension Y",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            }
+                                                        ],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100497",
+                                "text": "Tool",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100498",
+                                        "text": "Tool",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100499",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100500",
+                                "text": "Processed Material",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100501",
+                                        "text": "Material",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100502",
+                                                "text": "State",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906100503",
+                                                "text": "Material_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100504",
+                                "text": "Processing",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100505",
+                                        "text": "Type",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100506",
+                                "text": "Activity Carried Out",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100507",
+                                        "text": "Customary Work",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100508",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100509",
+                                                "text": "Particular Action",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100510",
+                                "text": "Personal Protective Equipment",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100511",
+                                        "text": "PPE",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100512",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906100513",
+                                                "text": "Yes/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100514",
+                                "text": "Condition",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100515",
+                                        "text": "Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100516",
+                                                "text": "Unforseen",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906100517",
+                                                        "text": "Description",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906100518",
+                                                "text": "Collective Injury",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906100519",
+                                                        "text": "Yes/No",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906100520",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906100521",
+                                                        "text": "Type Of Accident",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100522",
+                                        "text": "At Risk Of Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100523",
+                                                "text": "Risk Level",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906100524",
+                                                        "text": "Value",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906100525",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906100526",
+                                                        "text": "Risk Type",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100527",
+                                        "text": "No Risk",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100528",
+                                "text": "Third Person",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100529",
+                                        "text": "Particular_Action_Description",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906100530",
+                "text": "Collective Protective Equipment",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906100531",
+                        "text": "CPE",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100532",
+                                "text": "Type",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            },
+                            {
+                                "id": "1610906100533",
+                                "text": "On/Off",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906100534",
+                "text": "Work Place",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906100535",
+                        "text": "Outdoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100536",
+                                "text": "Yes/No",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906100537",
+                        "text": "Indoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906100538",
+                                "text": "Noise",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100539",
+                                        "text": "$dB",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100540",
+                                "text": "Crowding Level",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100541",
+                                        "text": "Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100542",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100543",
+                                        "text": "High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100544",
+                                "text": "Temperature",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100545",
+                                        "text": "Too Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100546",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100547",
+                                        "text": "Too High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100548",
+                                "text": "Lighting",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100549",
+                                        "text": "Insufficient",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100550",
+                                        "text": "Poor",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100551",
+                                        "text": "Good",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100552",
+                                "text": "Toxic Substances",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100553",
+                                        "text": "Substance",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906100554",
+                                                "text": "Substance_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906100555",
+                                                "text": "Value",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100556",
+                                "text": "Type",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100557",
+                                        "text": "Confined Environment",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906100558",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906100559",
+                                "text": "Department",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906100560",
+                                        "text": "Department_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            }
+        ],
+        "type": "root"
+    },
+    {
+        "id": "1610906104050",
+        "text": "NEW CDT 2",
+        "icon": "./styles/icons/root.png",
+        "data": {},
+        "children": [
+            {
+                "id": "1610906104051",
+                "text": "Day",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104052",
+                        "text": "Weekdays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104053",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104054",
+                        "text": "Public Holidays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104055",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104056",
+                "text": "Time",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104057",
+                        "text": "Daytime",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104058",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104059",
+                        "text": "Night",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104060",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104061",
+                "text": "Worker",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104062",
+                        "text": "Worker",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104063",
+                                "text": "Outside Worker",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104064",
+                                        "text": "Yes/no",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104065",
+                                "text": "Personal Data",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104066",
+                                        "text": "Worker_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104067",
+                                "text": "Role",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104068",
+                                        "text": "Role_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104069",
+                                "text": "Board",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104070",
+                                        "text": "Board_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104071",
+                                "text": "Number Of Worked Hours",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104072",
+                                        "text": "$NumberOfHours",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104073",
+                                "text": "Altitude",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104074",
+                                        "text": "$Meters_Altitude",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104075",
+                                "text": "Relative Position",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104076",
+                                        "text": "RelPos",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104077",
+                                                "text": "Target_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104078",
+                                                "text": "Distance",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104079",
+                                "text": "Machine",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104080",
+                                        "text": "Machine",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104081",
+                                                "text": "Safety Condition",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104082",
+                                                        "text": "Incorrect Use",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104083",
+                                                        "text": "Circumvention Of Security Measures",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104084",
+                                                        "text": "Malfunction",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104085",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104086",
+                                                        "text": "Machine Tool",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104087",
+                                                        "text": "Mobile Machine",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [
+                                                            {
+                                                                "id": "1610906104088",
+                                                                "text": "Max Extension Z",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906104089",
+                                                                "text": "Max Extension X",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906104090",
+                                                                "text": "Max Extension Y",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            }
+                                                        ],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104091",
+                                "text": "Tool",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104092",
+                                        "text": "Tool",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104093",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104094",
+                                "text": "Processed Material",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104095",
+                                        "text": "Material",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104096",
+                                                "text": "State",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104097",
+                                                "text": "Material_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104098",
+                                "text": "Processing",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104099",
+                                        "text": "Type",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104100",
+                                "text": "Activity Carried Out",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104101",
+                                        "text": "Customary Work",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104102",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104103",
+                                                "text": "Particular Action",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104104",
+                                "text": "Personal Protective Equipment",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104105",
+                                        "text": "PPE",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104106",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104107",
+                                                "text": "Yes/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104108",
+                                "text": "Condition",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104109",
+                                        "text": "Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104110",
+                                                "text": "Unforseen",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104111",
+                                                        "text": "Description",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104112",
+                                                "text": "Collective Injury",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104113",
+                                                        "text": "Yes/No",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104114",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104115",
+                                                        "text": "Type Of Accident",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104116",
+                                        "text": "At Risk Of Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104117",
+                                                "text": "Risk Level",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104118",
+                                                        "text": "Value",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104119",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104120",
+                                                        "text": "Risk Type",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104121",
+                                        "text": "No Risk",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104122",
+                                "text": "Third Person",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104123",
+                                        "text": "Particular_Action_Description",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104124",
+                "text": "Collective Protective Equipment",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104125",
+                        "text": "CPE",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104126",
+                                "text": "Type",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            },
+                            {
+                                "id": "1610906104127",
+                                "text": "On/Off",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104128",
+                "text": "Work Place",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104129",
+                        "text": "Outdoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104130",
+                                "text": "Yes/No",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104131",
+                        "text": "Indoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104132",
+                                "text": "Noise",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104133",
+                                        "text": "$dB",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104134",
+                                "text": "Crowding Level",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104135",
+                                        "text": "Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104136",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104137",
+                                        "text": "High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104138",
+                                "text": "Temperature",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104139",
+                                        "text": "Too Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104140",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104141",
+                                        "text": "Too High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104142",
+                                "text": "Lighting",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104143",
+                                        "text": "Insufficient",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104144",
+                                        "text": "Poor",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104145",
+                                        "text": "Good",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104146",
+                                "text": "Toxic Substances",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104147",
+                                        "text": "Substance",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104148",
+                                                "text": "Substance_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104149",
+                                                "text": "Value",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104150",
+                                "text": "Type",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104151",
+                                        "text": "Confined Environment",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104152",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104153",
+                                "text": "Department",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104154",
+                                        "text": "Department_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            }
+        ],
+        "type": "root"
+    },
+    {
+        "id": "1610906104240",
+        "text": "NEW CDT 3",
+        "icon": "./styles/icons/root.png",
+        "data": {},
+        "children": [
+            {
+                "id": "1610906104241",
+                "text": "Day",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104242",
+                        "text": "Weekdays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104243",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104244",
+                        "text": "Public Holidays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104245",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104246",
+                "text": "Time",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104247",
+                        "text": "Daytime",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104248",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104249",
+                        "text": "Night",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104250",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104251",
+                "text": "Worker",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104252",
+                        "text": "Worker",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104253",
+                                "text": "Outside Worker",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104254",
+                                        "text": "Yes/no",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104255",
+                                "text": "Personal Data",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104256",
+                                        "text": "Worker_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104257",
+                                "text": "Role",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104258",
+                                        "text": "Role_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104259",
+                                "text": "Board",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104260",
+                                        "text": "Board_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104261",
+                                "text": "Number Of Worked Hours",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104262",
+                                        "text": "$NumberOfHours",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104263",
+                                "text": "Altitude",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104264",
+                                        "text": "$Meters_Altitude",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104265",
+                                "text": "Relative Position",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104266",
+                                        "text": "RelPos",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104267",
+                                                "text": "Target_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104268",
+                                                "text": "Distance",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104269",
+                                "text": "Machine",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104270",
+                                        "text": "Machine",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104271",
+                                                "text": "Safety Condition",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104272",
+                                                        "text": "Incorrect Use",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104273",
+                                                        "text": "Circumvention Of Security Measures",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104274",
+                                                        "text": "Malfunction",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104275",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104276",
+                                                        "text": "Machine Tool",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104277",
+                                                        "text": "Mobile Machine",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [
+                                                            {
+                                                                "id": "1610906104278",
+                                                                "text": "Max Extension Z",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906104279",
+                                                                "text": "Max Extension X",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906104280",
+                                                                "text": "Max Extension Y",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            }
+                                                        ],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104281",
+                                "text": "Tool",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104282",
+                                        "text": "Tool",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104283",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104284",
+                                "text": "Processed Material",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104285",
+                                        "text": "Material",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104286",
+                                                "text": "State",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104287",
+                                                "text": "Material_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104288",
+                                "text": "Processing",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104289",
+                                        "text": "Type",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104290",
+                                "text": "Activity Carried Out",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104291",
+                                        "text": "Customary Work",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104292",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104293",
+                                                "text": "Particular Action",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104294",
+                                "text": "Personal Protective Equipment",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104295",
+                                        "text": "PPE",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104296",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104297",
+                                                "text": "Yes/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104298",
+                                "text": "Condition",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104299",
+                                        "text": "Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104300",
+                                                "text": "Unforseen",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104301",
+                                                        "text": "Description",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104302",
+                                                "text": "Collective Injury",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104303",
+                                                        "text": "Yes/No",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104304",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104305",
+                                                        "text": "Type Of Accident",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104306",
+                                        "text": "At Risk Of Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104307",
+                                                "text": "Risk Level",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104308",
+                                                        "text": "Value",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104309",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104310",
+                                                        "text": "Risk Type",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104311",
+                                        "text": "No Risk",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104312",
+                                "text": "Third Person",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104313",
+                                        "text": "Particular_Action_Description",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104314",
+                "text": "Collective Protective Equipment",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104315",
+                        "text": "CPE",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104316",
+                                "text": "Type",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            },
+                            {
+                                "id": "1610906104317",
+                                "text": "On/Off",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104318",
+                "text": "Work Place",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104319",
+                        "text": "Outdoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104320",
+                                "text": "Yes/No",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104321",
+                        "text": "Indoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104322",
+                                "text": "Noise",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104323",
+                                        "text": "$dB",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104324",
+                                "text": "Crowding Level",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104325",
+                                        "text": "Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104326",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104327",
+                                        "text": "High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104328",
+                                "text": "Temperature",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104329",
+                                        "text": "Too Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104330",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104331",
+                                        "text": "Too High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104332",
+                                "text": "Lighting",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104333",
+                                        "text": "Insufficient",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104334",
+                                        "text": "Poor",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104335",
+                                        "text": "Good",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104336",
+                                "text": "Toxic Substances",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104337",
+                                        "text": "Substance",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104338",
+                                                "text": "Substance_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104339",
+                                                "text": "Value",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104340",
+                                "text": "Type",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104341",
+                                        "text": "Confined Environment",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104342",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104343",
+                                "text": "Department",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104344",
+                                        "text": "Department_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            }
+        ],
+        "type": "root"
+    },
+    {
+        "id": "1610906104819",
+        "text": "NEW CDT 4",
+        "icon": "./styles/icons/root.png",
+        "data": {},
+        "children": [
+            {
+                "id": "1610906104820",
+                "text": "Day",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104821",
+                        "text": "Weekdays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104822",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104823",
+                        "text": "Public Holidays",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104824",
+                                "text": "$Date",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104825",
+                "text": "Time",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104826",
+                        "text": "Daytime",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104827",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104828",
+                        "text": "Night",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104829",
+                                "text": "$Time",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104830",
+                "text": "Worker",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104831",
+                        "text": "Worker",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104832",
+                                "text": "Outside Worker",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104833",
+                                        "text": "Yes/no",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104834",
+                                "text": "Personal Data",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104835",
+                                        "text": "Worker_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104836",
+                                "text": "Role",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104837",
+                                        "text": "Role_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104838",
+                                "text": "Board",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104839",
+                                        "text": "Board_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104840",
+                                "text": "Number Of Worked Hours",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104841",
+                                        "text": "$NumberOfHours",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104842",
+                                "text": "Altitude",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104843",
+                                        "text": "$Meters_Altitude",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104844",
+                                "text": "Relative Position",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104845",
+                                        "text": "RelPos",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104846",
+                                                "text": "Target_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104847",
+                                                "text": "Distance",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104848",
+                                "text": "Machine",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104849",
+                                        "text": "Machine",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104850",
+                                                "text": "Safety Condition",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104851",
+                                                        "text": "Incorrect Use",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104852",
+                                                        "text": "Circumvention Of Security Measures",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104853",
+                                                        "text": "Malfunction",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104854",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104855",
+                                                        "text": "Machine Tool",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "concept"
+                                                    },
+                                                    {
+                                                        "id": "1610906104856",
+                                                        "text": "Mobile Machine",
+                                                        "icon": "./styles/icons/concept.png",
+                                                        "data": {},
+                                                        "children": [
+                                                            {
+                                                                "id": "1610906104857",
+                                                                "text": "Max Extension Z",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906104858",
+                                                                "text": "Max Extension X",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            },
+                                                            {
+                                                                "id": "1610906104859",
+                                                                "text": "Max Extension Y",
+                                                                "icon": "./styles/icons/attribute.png",
+                                                                "data": {},
+                                                                "children": [],
+                                                                "type": "attribute"
+                                                            }
+                                                        ],
+                                                        "type": "concept"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104860",
+                                "text": "Tool",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104861",
+                                        "text": "Tool",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104862",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104863",
+                                "text": "Processed Material",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104864",
+                                        "text": "Material",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104865",
+                                                "text": "State",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104866",
+                                                "text": "Material_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104867",
+                                "text": "Processing",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104868",
+                                        "text": "Type",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104869",
+                                "text": "Activity Carried Out",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104870",
+                                        "text": "Customary Work",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104871",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104872",
+                                                "text": "Particular Action",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104873",
+                                "text": "Personal Protective Equipment",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104874",
+                                        "text": "PPE",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104875",
+                                                "text": "Type",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104876",
+                                                "text": "Yes/No",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104877",
+                                "text": "Condition",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104878",
+                                        "text": "Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104879",
+                                                "text": "Unforseen",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104880",
+                                                        "text": "Description",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104881",
+                                                "text": "Collective Injury",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104882",
+                                                        "text": "Yes/No",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104883",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104884",
+                                                        "text": "Type Of Accident",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104885",
+                                        "text": "At Risk Of Injury",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104886",
+                                                "text": "Risk Level",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104887",
+                                                        "text": "Value",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            },
+                                            {
+                                                "id": "1610906104888",
+                                                "text": "Category",
+                                                "icon": "./styles/icons/dimension.png",
+                                                "data": {},
+                                                "children": [
+                                                    {
+                                                        "id": "1610906104889",
+                                                        "text": "Risk Type",
+                                                        "icon": "./styles/icons/attribute.png",
+                                                        "data": {},
+                                                        "children": [],
+                                                        "type": "attribute"
+                                                    }
+                                                ],
+                                                "type": "dimension"
+                                            }
+                                        ],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104890",
+                                        "text": "No Risk",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104891",
+                                "text": "Third Person",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104892",
+                                        "text": "Particular_Action_Description",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104893",
+                "text": "Collective Protective Equipment",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104894",
+                        "text": "CPE",
+                        "icon": "./styles/icons/concept_n.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104895",
+                                "text": "Type",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            },
+                            {
+                                "id": "1610906104896",
+                                "text": "On/Off",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept_n"
+                    }
+                ],
+                "type": "dimension"
+            },
+            {
+                "id": "1610906104897",
+                "text": "Work Place",
+                "icon": "./styles/icons/dimension.png",
+                "data": {},
+                "children": [
+                    {
+                        "id": "1610906104898",
+                        "text": "Outdoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104899",
+                                "text": "Yes/No",
+                                "icon": "./styles/icons/attribute.png",
+                                "data": {},
+                                "children": [],
+                                "type": "attribute"
+                            }
+                        ],
+                        "type": "concept"
+                    },
+                    {
+                        "id": "1610906104900",
+                        "text": "Indoor",
+                        "icon": "./styles/icons/concept.png",
+                        "data": {},
+                        "children": [
+                            {
+                                "id": "1610906104901",
+                                "text": "Noise",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104902",
+                                        "text": "$dB",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104903",
+                                "text": "Crowding Level",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104904",
+                                        "text": "Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104905",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104906",
+                                        "text": "High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104907",
+                                "text": "Temperature",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104908",
+                                        "text": "Too Low",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104909",
+                                        "text": "Medium",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104910",
+                                        "text": "Too High",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104911",
+                                "text": "Lighting",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104912",
+                                        "text": "Insufficient",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104913",
+                                        "text": "Poor",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104914",
+                                        "text": "Good",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104915",
+                                "text": "Toxic Substances",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104916",
+                                        "text": "Substance",
+                                        "icon": "./styles/icons/concept_n.png",
+                                        "data": {},
+                                        "children": [
+                                            {
+                                                "id": "1610906104917",
+                                                "text": "Substance_ID",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            },
+                                            {
+                                                "id": "1610906104918",
+                                                "text": "Value",
+                                                "icon": "./styles/icons/attribute.png",
+                                                "data": {},
+                                                "children": [],
+                                                "type": "attribute"
+                                            }
+                                        ],
+                                        "type": "concept_n"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104919",
+                                "text": "Type",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104920",
+                                        "text": "Confined Environment",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    },
+                                    {
+                                        "id": "1610906104921",
+                                        "text": "Other",
+                                        "icon": "./styles/icons/concept.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "concept"
+                                    }
+                                ],
+                                "type": "dimension"
+                            },
+                            {
+                                "id": "1610906104922",
+                                "text": "Department",
+                                "icon": "./styles/icons/dimension.png",
+                                "data": {},
+                                "children": [
+                                    {
+                                        "id": "1610906104923",
+                                        "text": "Department_ID",
+                                        "icon": "./styles/icons/attribute.png",
+                                        "data": {},
+                                        "children": [],
+                                        "type": "attribute"
+                                    }
+                                ],
+                                "type": "dimension"
                             }
                         ],
                         "type": "concept"
