@@ -273,7 +273,14 @@ duplicateconcept_n.addEventListener( 'click', function() {
                 par_sel = ref.get_parent(sel);
               $('#jstree_instances').jstree('copy', sel);
               var pas = $('#jstree_instances').jstree('paste', par_sel, 'last');
-              $("#jstree_instances").jstree(true).set_id(pas, Date.now());
+              var pas_node = $("#jstree_instances").jstree(true).get_node(pas);
+              var new_id = Date.now();
+              $("#jstree_instances").jstree(true).set_id(pas_node, new_id);
+
+
+              //$("#jstree_instances").jstree(true).set_id(ref[ref.length - 1], new_id);
+
+              
               
                 
 
