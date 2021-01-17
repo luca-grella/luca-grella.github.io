@@ -131,7 +131,7 @@ createattribute.addEventListener( 'click', function() {
         { 
           sel_id = sel[i];
           var is_dimension = false;
-          if($('#jstree_instances').jstree(true).get_json(sel_id).type == 'dimension')
+          if($('#jstree_demo').jstree(true).get_json(sel_id).type == 'dimension')
           {
             is_dimension = true;
           }
