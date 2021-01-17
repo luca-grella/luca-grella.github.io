@@ -268,7 +268,7 @@ duplicateconcept_n.addEventListener( 'click', function() {
                 sel = ref.get_selected();
                 par_sel = ref.get_parent(sel);
               var cop = $('#jstree_instances').jstree('copy', sel);
-              var pas = $('#jstree_demo').jstree('paste', par_sel, 'last');
+              var pas = $('#jstree_instances').jstree('paste', par_sel, 'last');
 
               /*if($('#jstree_instances').jstree(true).get_json(sel[0]).type == 'concept_n')
               { 
