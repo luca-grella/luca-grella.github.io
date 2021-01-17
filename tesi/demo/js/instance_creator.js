@@ -49,10 +49,14 @@ document.getElementById('import2').onclick = function() {
     },
     "dimension" : {
       "icon" : "./styles/icons/dimension.png",
-      "valid_children" : ["concept","attribute"]
+      "valid_children" : ["concept","concept_n","attribute"]
     },
     "concept" : {
       "icon" : "./styles/icons/concept.png",
+      "valid_children" : ["dimension","attribute"]
+    },
+    "concept_n" : {
+      "icon" : "./styles/icons/concept_n.png",
       "valid_children" : ["dimension","attribute"]
     },
     "attribute" : {
@@ -267,8 +271,11 @@ duplicateconcept_n.addEventListener( 'click', function() {
               var ref = $('#jstree_instances').jstree(true),
                 sel = ref.get_selected();
                 par_sel = ref.get_parent(sel);
-              var cop = $('#jstree_instances').jstree('copy', sel);
+              $('#jstree_instances').jstree('copy', sel);
               var pas = $('#jstree_instances').jstree('paste', par_sel, 'last');
+              //$("#jstree_instances").jstree(true).set_id(pas, Date.now());
+              
+                
 
               /*if($('#jstree_instances').jstree(true).get_json(sel[0]).type == 'concept_n')
               { 
