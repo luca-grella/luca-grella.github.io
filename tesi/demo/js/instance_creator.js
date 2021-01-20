@@ -207,7 +207,6 @@ renamenode.addEventListener( 'click', function() {
                 }
               }
               if(!sel.length) { return false; }
-              //if(sel_id = 123456789) { return false; }
               sel = sel[sel_id];
               if(can_rename)
               {
