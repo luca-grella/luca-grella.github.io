@@ -49,7 +49,7 @@ document.getElementById('import2').onclick = function() {
     },
     "dimension" : {
       "icon" : "./styles/icons/dimension.png",
-      "valid_children" : ["concept","concept_n","attribute"]
+      "valid_children" : ["concept","concept_n","parameter"]
     },
     "concept" : {
       "icon" : "./styles/icons/concept.png",
@@ -58,6 +58,10 @@ document.getElementById('import2').onclick = function() {
     "concept_n" : {
       "icon" : "./styles/icons/concept_n.png",
       "valid_children" : ["dimension","attribute"]
+    },
+    "parameter" : {
+      "icon" : "./styles/icons/attribute_param.png",
+      "valid_children" : []
     },
     "attribute" : {
       "icon" : "./styles/icons/attribute.png",
@@ -184,25 +188,57 @@ duplicateroot.addEventListener( 'click', function() {
               }
             });
 
-//RENAME ATTIBUTE
+//RENAME ATTIBUTE-PARAMETER
 var renamenode = document.getElementById( 'renamenode2' );
 renamenode.addEventListener( 'click', function() {
 
               var ref = $('#jstree_instances').jstree(true),
               sel = ref.get_selected();
-              var sel_id = 0;
+              var sel_id = 123456789;
               var can_rename = false;
 
 
               for (i = 0; i < sel.length; i++) 
               { 
-                if($('#jstree_instances').jstree(true).get_json(sel[i]).type == 'attribute')
+                if($('#jstree_instances').jstree(true).get_json(sel[i]).type == 'attribute' || $('#jstree_instances').jstree(true).get_json(sel[i]).type == 'parameter')
                 {
                   can_rename = true;
                   if(i < sel_id){sel_id = i}
                 }
               }
               if(!sel.length) { return false; }
+              if(sel_id = 123456789) { return false; }
+              sel = sel[sel_id];
+              if(can_rename)
+              {
+                ref.edit(sel);
+              }
+              else 
+              {
+                //Do Nothing
+              }              
+            });
+
+//RENAME PARAMETER
+var renameparameter = document.getElementById( 'renameparameter' );
+renameparameter.addEventListener( 'click', function() {
+
+              var ref = $('#jstree_instances').jstree(true),
+              sel = ref.get_selected();
+              var sel_id = 123456789;
+              var can_rename = false;
+
+
+              for (i = 0; i < sel.length; i++) 
+              { 
+                if($('#jstree_instances').jstree(true).get_json(sel[i]).type == 'parameter')
+                {
+                  can_rename = true;
+                  if(i < sel_id){sel_id = i}
+                }
+              }
+              if(!sel.length) { return false; }
+              if(sel_id = 123456789) { return false; }
               sel = sel[sel_id];
               if(can_rename)
               {

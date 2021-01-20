@@ -50,7 +50,7 @@ document.getElementById('import3').onclick = function() {
     },
     "dimension" : {
       "icon" : "./styles/icons/dimension.png",
-      "valid_children" : ["concept","concept_n","attribute"]
+      "valid_children" : ["concept","concept_n","parameter"]
     },
     "concept" : {
       "icon" : "./styles/icons/concept.png",
@@ -59,6 +59,10 @@ document.getElementById('import3').onclick = function() {
     "concept_n" : {
       "icon" : "./styles/icons/concept_n.png",
       "valid_children" : ["dimension","attribute"]
+    },
+    "parameter" : {
+      "icon" : "./styles/icons/attribute_param.png",
+      "valid_children" : []
     },
     "attribute" : {
       "icon" : "./styles/icons/attribute.png",

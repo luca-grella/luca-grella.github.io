@@ -53,7 +53,7 @@ document.getElementById('import').onclick = function() {
     },
     "dimension" : {
       "icon" : "./styles/icons/dimension.png",
-      "valid_children" : ["concept","concept_n","attribute"]
+      "valid_children" : ["concept","concept_n","parameter"]
     },
     "concept" : {
       "icon" : "./styles/icons/concept.png",
@@ -63,8 +63,12 @@ document.getElementById('import').onclick = function() {
       "icon" : "./styles/icons/concept_n.png",
       "valid_children" : ["dimension","attribute"]
     },
+    "parameter" : {
+      "icon" : "./styles/icons/attribute_param.png",
+      "valid_children" : []
+    },
     "attribute" : {
-      "icon" : "./styles/icons/attribute.png",
+      "icon" : "./styles/icons/attribute_param.png",
       "valid_children" : []
     }
   },
@@ -122,6 +126,71 @@ savejson.addEventListener( 'click', function() {
 //ATTRIBUTE CREATION
 var createattribute = document.getElementById( 'createattribute' );
 createattribute.addEventListener( 'click', function() {
+
+        var ref = $('#jstree_demo').jstree(true),
+        sel = ref.get_selected();
+        if(!sel.length) { return false; }
+        var i;
+        for (i = 0; i < sel.length; i++) 
+        { 
+          sel_id = sel[i];
+          var is_dimension = false;
+          if($('#jstree_demo').jstree(true).get_json(sel_id).type == 'dimension')
+          {
+            is_dimension = true;
+          }
+          var v = $('#jstree_demo').jstree(true).get_json(sel_id);
+
+          var j;
+          var checkchild = false;
+          for (j = 0; j < v.children.length; j++)
+          {
+              checkchild = checkchild || 
+              //v.children[j].type == 'attribute' ||
+              v.children[j].type == 'concept' || 
+              v.children[j].type == 'concept_n' /*||
+              v.children[j].type == 'dimension'*/
+          }
+
+          if (JSON.stringify(v.children) != '[]') 
+          {
+            if (checkchild) 
+            {
+              //Do Nothing
+            }
+            else 
+            {
+              if (is_dimension)
+              {
+                //Do Nothing
+              }
+              else 
+              {
+              asd = ref.create_node(sel_id, {"type":"attribute"});
+              if(asd) 
+              {
+              ref.edit(asd);
+              }
+              ref.set_id(asd, Date.now());
+              }
+            }
+
+          }
+          else 
+          {
+            asd = ref.create_node(sel_id, {"type":"attribute"});
+            if(asd) 
+            {
+              ref.edit(asd);
+            }
+            ref.set_id(asd, Date.now());
+          }
+			  }
+            });
+
+//PARAMETER CREATION
+var createparameter = document.getElementById( 'createparameter' );
+createparameter.addEventListener( 'click', function() {
 
         var ref = $('#jstree_demo').jstree(true),
         sel = ref.get_selected();
@@ -290,8 +359,8 @@ createdimension.addEventListener( 'click', function() {
         var j;
         var checkchild = false;
         for (j = 0; j < v.children.length; j++){
-            checkchild = checkchild || 
-            v.children[j].type == 'attribute'
+            checkchild = checkchild /*|| 
+            v.children[j].type == 'attribute'*/
         }
 
         if (JSON.stringify(v.children) != '[]') {
