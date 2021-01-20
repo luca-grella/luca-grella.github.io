@@ -219,37 +219,6 @@ renamenode.addEventListener( 'click', function() {
               }              
             });
 
-//RENAME PARAMETER
-var renameparameter = document.getElementById( 'renameparameter' );
-renameparameter.addEventListener( 'click', function() {
-
-              var ref = $('#jstree_instances').jstree(true),
-              sel = ref.get_selected();
-              var sel_id = 123456789;
-              var can_rename = false;
-
-
-              for (i = 0; i < sel.length; i++) 
-              { 
-                if($('#jstree_instances').jstree(true).get_json(sel[i]).type == 'parameter')
-                {
-                  can_rename = true;
-                  if(i < sel_id){sel_id = i}
-                }
-              }
-              if(!sel.length) { return false; }
-              if(sel_id = 123456789) { return false; }
-              sel = sel[sel_id];
-              if(can_rename)
-              {
-                ref.edit(sel);
-              }
-              else 
-              {
-                //Do Nothing
-              }              
-            });
-
 /*RENAME SELECTED NODE FUNCTION
 var renamenode = document.getElementById( 'renamenode2' );
 renamenode.addEventListener( 'click', function() {
