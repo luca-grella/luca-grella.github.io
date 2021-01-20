@@ -231,7 +231,7 @@ createparameter.addEventListener( 'click', function() {
               }
               else 
               {
-              asd = ref.create_node(sel_id, {"type":"attribute"});
+              asd = ref.create_node(sel_id, {"type":"parameter"});
               if(asd) 
               {
               ref.edit(asd);
@@ -243,7 +243,7 @@ createparameter.addEventListener( 'click', function() {
           }
           else 
           {
-            asd = ref.create_node(sel_id, {"type":"attribute"});
+            asd = ref.create_node(sel_id, {"type":"parameter"});
             if(asd) 
             {
               ref.edit(asd);
