@@ -270,7 +270,8 @@ createconcept.addEventListener( 'click', function() {
         for (j = 0; j < v.children.length; j++){
             checkchild = checkchild || 
             v.children[j].type == 'concept_n' ||
-            v.children[j].type == 'attribute'
+            v.children[j].type == 'attribute' ||
+            v.children[j].type == 'parameter'
         }
 
         if (JSON.stringify(v.children) != '[]') {
@@ -314,7 +315,8 @@ createconcept_n.addEventListener( 'click', function() {
             checkchild = checkchild || 
             v.children[j].type == 'concept' ||
             v.children[j].type == 'concept_n' ||
-            v.children[j].type == 'attribute'
+            v.children[j].type == 'attribute' ||
+            v.children[j].type == 'parameter'
         }
 
         if (JSON.stringify(v.children) != '[]') {
