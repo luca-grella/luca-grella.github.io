@@ -456,3 +456,9 @@ refreshtree.addEventListener( 'click', function() {
               }
               $('#jstree_demo').jstree(true).refresh();
             });
+
+
+function Asganaway() {
+  var aaaaa = $('#jstree_demo').jstree(true).settings.core.data;
+  document.getElementById("pupazzo").innerHTML = aaaaa;
+}
