@@ -411,17 +411,6 @@ renamenode.addEventListener( 'click', function() {
               ref.edit(sel);
             });
 
-//REFRESH SELECTED NODE FUNCTION
-var refreshnode = document.getElementById( 'refreshnode' );
-refreshnode.addEventListener( 'click', function() {
-
-              var ref = $('#jstree_demo').jstree(true),
-                sel = ref.get_selected();
-              if(!sel.length) { return false; }
-              sel = sel[0];
-              ref.refresh_node(sel);
-            });
-
 //DELETE SELECTED NODE FUNCTION
 var deletenode = document.getElementById( 'deletenode' );
 deletenode.addEventListener( 'click', function() {
