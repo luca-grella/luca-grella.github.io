@@ -460,5 +460,5 @@ refreshtree.addEventListener( 'click', function() {
 
 function Asganaway() {
   var aaaaa = $('#jstree_demo').jstree(true).settings.core.data;
-  document.getElementById("pupazzo").innerHTML = aaaaa;
+  document.getElementById("pupazzo").innerHTML = JSON.stringify(aaaaa);
 }
