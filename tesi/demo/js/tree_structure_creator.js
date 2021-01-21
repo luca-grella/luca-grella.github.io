@@ -419,7 +419,7 @@ refreshnode.addEventListener( 'click', function() {
                 sel = ref.get_selected();
               if(!sel.length) { return false; }
               sel = sel[0];
-              ref.refresh_node(sel);
+              ref.redraw_node(sel);
             });
 
 //DELETE SELECTED NODE FUNCTION
