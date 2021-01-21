@@ -61,7 +61,7 @@ document.getElementById('import3').onclick = function() {
       "valid_children" : ["dimension","attribute"]
     },
     "parameter" : {
-      "icon" : "./styles/icons/attribute_param.png",
+      "icon" : "./styles/icons/parameter.png",
       "valid_children" : []
     },
     "attribute" : {

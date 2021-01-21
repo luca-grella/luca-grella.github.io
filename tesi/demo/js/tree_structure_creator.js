@@ -64,11 +64,11 @@ document.getElementById('import').onclick = function() {
       "valid_children" : ["dimension","attribute"]
     },
     "parameter" : {
-      "icon" : "./styles/icons/attribute_param.png",
+      "icon" : "./styles/icons/parameter.png",
       "valid_children" : []
     },
     "attribute" : {
-      "icon" : "./styles/icons/attribute_param.png",
+      "icon" : "./styles/icons/attribute.png",
       "valid_children" : []
     }
   },

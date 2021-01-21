@@ -112,10 +112,10 @@
                                     {
                                         "id": "1610903373137",
                                         "text": "Yes/no",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -129,10 +129,10 @@
                                     {
                                         "id": "1610903399202",
                                         "text": "Worker_ID",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -146,10 +146,10 @@
                                     {
                                         "id": "1610903427870",
                                         "text": "Role_ID",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -163,10 +163,10 @@
                                     {
                                         "id": "1610903444018",
                                         "text": "Board_ID",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -180,10 +180,10 @@
                                     {
                                         "id": "1610903496129",
                                         "text": "$NumberOfHours",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -197,10 +197,10 @@
                                     {
                                         "id": "1610903595663",
                                         "text": "$Meters_Altitude",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -409,10 +409,10 @@
                                     {
                                         "id": "1610904131668",
                                         "text": "Type",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -505,7 +505,7 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904712301",
-                                                        "text": "Description - AAAAAAA",
+                                                        "text": "Description",
                                                         "icon": "./styles/icons/attribute.png",
                                                         "data": {},
                                                         "children": [],
@@ -522,7 +522,7 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904742348",
-                                                        "text": "Yes/No - AAAAAAA",
+                                                        "text": "Yes/No",
                                                         "icon": "./styles/icons/attribute.png",
                                                         "data": {},
                                                         "children": [],
@@ -539,7 +539,7 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904782457",
-                                                        "text": "Type Of Accident - AAAAAAA",
+                                                        "text": "Type Of Accident",
                                                         "icon": "./styles/icons/attribute.png",
                                                         "data": {},
                                                         "children": [],
@@ -565,7 +565,7 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904853242",
-                                                        "text": "Value - AAAAAAA",
+                                                        "text": "Value",
                                                         "icon": "./styles/icons/attribute.png",
                                                         "data": {},
                                                         "children": [],
@@ -582,7 +582,7 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904872423",
-                                                        "text": "Risk Type - AAAAAAA",
+                                                        "text": "Risk Type",
                                                         "icon": "./styles/icons/attribute.png",
                                                         "data": {},
                                                         "children": [],
@@ -614,10 +614,10 @@
                                     {
                                         "id": "1610904937868",
                                         "text": "Particular_Action_Description",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -700,10 +700,10 @@
                                     {
                                         "id": "1610905135358",
                                         "text": "$dB",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
@@ -875,10 +875,10 @@
                                     {
                                         "id": "1610905420526",
                                         "text": "Department_ID",
-                                        "icon": "./styles/icons/parameter.png",
+                                        "icon": "./styles/icons/attribute.png",
                                         "data": {},
                                         "children": [],
-                                        "type": "parameter"
+                                        "type": "attribute"
                                     }
                                 ],
                                 "type": "dimension"
