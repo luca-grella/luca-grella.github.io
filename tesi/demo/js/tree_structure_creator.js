@@ -419,7 +419,7 @@ refreshnode.addEventListener( 'click', function() {
                 sel = ref.get_selected();
               if(!sel.length) { return false; }
               sel = sel[0];
-              ref.redraw(sel);
+              ref.refresh_node(sel);
             });
 
 //DELETE SELECTED NODE FUNCTION
@@ -456,9 +456,3 @@ refreshtree.addEventListener( 'click', function() {
               }
               $('#jstree_demo').jstree(true).refresh();
             });
-
-
-function Asganaway() {
-  var aaaaa = $('#jstree_demo').jstree(true).settings.core.data;
-  document.getElementById("pupazzo").innerHTML = JSON.stringify(aaaaa);
-}
