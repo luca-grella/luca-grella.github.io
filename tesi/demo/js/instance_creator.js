@@ -306,6 +306,7 @@ duplicateconcept_n.addEventListener( 'click', function() {
 var refreshnode2 = document.getElementById( 'refreshnode2' );
 refreshnode2.addEventListener( 'click', function() {
 
+              $('#jstree_instances').jstree(true).settings.core.data = resultsjson;
               var ref = $('#jstree_instances').jstree(true),
                 sel = ref.get_selected();
               if(!sel.length) { return false; }
