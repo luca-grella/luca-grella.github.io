@@ -186,6 +186,13 @@ duplicateroot.addEventListener( 'click', function() {
                 timestamp_new = timestamp_new + 1;
                 $("#jstree_instances").jstree(true).set_id(new_root[i], timestamp_new);
               }
+              //INSTANCES UPDATE
+              var v = $('#jstree_instances').jstree(true).get_json('#', {flat:false,no_state:true, no_data:false, no_type:true, no_icon:true, no_li_attr:true, no_a_attr:true})
+              var q = JSON.stringify(v[v.length-1]);
+              var u = "[" + q + "]"
+              u = JSON.parse(u);
+              resultsjson = resultsjson.concat(u);
+              $('#jstree_instances').jstree(true).settings.core.data = resultsjson;
             });
 
 //RENAME ATTIBUTE-PARAMETER
