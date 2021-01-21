@@ -411,9 +411,9 @@ renamenode.addEventListener( 'click', function() {
               ref.edit(sel);
             });
 
-//RENAME SELECTED NODE FUNCTION
-var refreshprovaprova = document.getElementById( 'refreshprovaprova' );
-refreshprovaprova.addEventListener( 'click', function() {
+//REFRESH SELECTED NODE FUNCTION
+var refreshnode = document.getElementById( 'refreshnode' );
+refreshnode.addEventListener( 'click', function() {
 
               var ref = $('#jstree_demo').jstree(true),
                 sel = ref.get_selected();
