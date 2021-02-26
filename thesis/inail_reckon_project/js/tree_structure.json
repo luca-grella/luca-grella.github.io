@@ -505,11 +505,11 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904712301",
-                                                        "text": "Description - AAAAAAA",
-                                                        "icon": "./styles/icons/attribute.png",
+                                                        "text": "Description",
+                                                        "icon": "./styles/icons/parameter.png",
                                                         "data": {},
                                                         "children": [],
-                                                        "type": "attribute"
+                                                        "type": "parameter"
                                                     }
                                                 ],
                                                 "type": "dimension"
@@ -522,11 +522,11 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904742348",
-                                                        "text": "Yes/No - AAAAAAA",
-                                                        "icon": "./styles/icons/attribute.png",
+                                                        "text": "Yes/No",
+                                                        "icon": "./styles/icons/parameter.png",
                                                         "data": {},
                                                         "children": [],
-                                                        "type": "attribute"
+                                                        "type": "parameter"
                                                     }
                                                 ],
                                                 "type": "dimension"
@@ -539,11 +539,11 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904782457",
-                                                        "text": "Type Of Accident - AAAAAAA",
-                                                        "icon": "./styles/icons/attribute.png",
+                                                        "text": "Type Of Injury",
+                                                        "icon": "./styles/icons/parameter.png",
                                                         "data": {},
                                                         "children": [],
-                                                        "type": "attribute"
+                                                        "type": "parameter"
                                                     }
                                                 ],
                                                 "type": "dimension"
@@ -565,11 +565,11 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904853242",
-                                                        "text": "Value - AAAAAAA",
-                                                        "icon": "./styles/icons/attribute.png",
+                                                        "text": "Value",
+                                                        "icon": "./styles/icons/parameter.png",
                                                         "data": {},
                                                         "children": [],
-                                                        "type": "attribute"
+                                                        "type": "parameter"
                                                     }
                                                 ],
                                                 "type": "dimension"
@@ -582,11 +582,11 @@
                                                 "children": [
                                                     {
                                                         "id": "1610904872423",
-                                                        "text": "Risk Type - AAAAAAA",
-                                                        "icon": "./styles/icons/attribute.png",
+                                                        "text": "Risk Type",
+                                                        "icon": "./styles/icons/parameter.png",
                                                         "data": {},
                                                         "children": [],
-                                                        "type": "attribute"
+                                                        "type": "parameter"
                                                     }
                                                 ],
                                                 "type": "dimension"
