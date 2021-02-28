@@ -150,7 +150,7 @@ appenddbandsave.addEventListener( 'click', function() {
         u = u.concat(v[i]);
       }
     }
-    var data_url = "https://luca-grella.github.io/tesi/demo/js/database.json";
+    var data_url = "https://luca-grella.github.io/thesis/inail_reckon_project/js/database.json";
     var new_data = JSON.parse(get_data_from_url(data_url));
     var appenddb = new_data.concat(u);
     var appenddb_string = encode( JSON.stringify(appenddb, null, 4) );
