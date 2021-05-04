@@ -6,9 +6,10 @@ projects: true
 
 ## My Projects
 
-##### Conceptual Representation of Context-Awareness. An XML Formalization and a Graphical Interface. - M.Sc. Thesis
+##### M.Sc. Thesis
 <span class="post-date">Jun 2020 – Apr 2021</span>
 
+**Title:** "Conceptual Representation of Context-Awareness. An XML Formalization and a Graphical Interface."
 The thesis retrace the studies made on the context and its modeling as a tree, starting from a practical use-case: the INAIL RECKON project, concerning injuries at work. Then it dwell in to my work on a graphical interface suitable for modeling context trees and the data input related to the modeled context tree.
 
 ##### I nuovi fattori di invisibilità
@@ -39,7 +40,7 @@ Interactive website and web application of a chain of fictitious hospital clinic
 
 * <a href="https://github.com/luca-grella/CentroDiciotto" target="_blank">Link to the project</a>
 
-##### Lorenzo il Magnifico - B.Sc. Project Thesis
+##### B.Sc. Project Thesis
 <span class="post-date">Mar 2017 – Jun 2017</span>
 
 Java Online Game Implementation: virtualization of the table game “Lorenzo il Magnifico” by Cranio Creations.
