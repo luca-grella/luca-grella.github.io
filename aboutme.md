@@ -12,8 +12,8 @@ aboutme: true
 <img src="/assets/img/lastminute.png" style="width:60%">
 
 ##### Education
-* Computer Engineer, graduate @ <a href="https://www.polimi.it" target="_blank">Politecnico di Milano</a>
-* M.Sc. of Computer Science and Engineering Student @ <a href="https://www.polimi.it" target="_blank">Politecnico di Milano</a>
+* B.Sc. Degree in Computer Engineering @ <a href="https://www.polimi.it" target="_blank">Politecnico di Milano</a>
+* M.Sc. Degree in Computer Science and Engineering @ <a href="https://www.polimi.it" target="_blank">Politecnico di Milano</a>
 
 <img src="/assets/img/polimi.png" style="width:60%">
 
