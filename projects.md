@@ -9,7 +9,7 @@ projects: true
 ##### M.Sc. Thesis
 <span class="post-date">Jun 2020 – Apr 2021</span>
 
-"Conceptual Representation of Context-Awareness. An XML Formalization and a Graphical Interface." <br>
+**Title:** "Conceptual Representation of Context-Awareness. An XML Formalization and a Graphical Interface." <br>
 The thesis retrace the studies made on the context and its modeling as a tree, starting from a practical use-case: the INAIL RECKON project, concerning injuries at work. Then it dwell in to my work on a graphical interface suitable for modeling context trees and the data input related to the modeled context tree.
 
 ##### I nuovi fattori di invisibilità
