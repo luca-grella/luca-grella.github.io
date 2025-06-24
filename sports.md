@@ -23,7 +23,7 @@ sports: true
 ## Interests
 * Music
 * Programming
-* AR Developing (Find out my Spark AR Instagram Filters <a href="https://luca-grella.github.io/igfilters" target="_blank">here</a>)
 * Cooking
 * Travelling
 * Photography & Photo/Image Editing
+* Technology & Gadget

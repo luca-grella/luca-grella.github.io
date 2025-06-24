@@ -7,6 +7,7 @@ aboutme: true
 ## About Me
 
 ##### Work Experience
+* Senior Data Engineer & Functional Lead @ <a href="https://www.lastminute.com" target="_blank">lastminute.com</a>
 * Data Engineer @ <a href="https://www.lastminute.com" target="_blank">lastminute.com</a>
 
 <img src="/assets/img/lastminute.png" style="width:60%">
