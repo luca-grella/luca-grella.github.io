@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 
-index: true
+title: Home
+home: true
 no_sidebar: true
 ---
 
