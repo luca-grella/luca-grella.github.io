@@ -6,4 +6,4 @@ no_sidebar: true
 ---
 
 ## <a href="https://luca-grella.github.io/contacts">👥 Contacts</a>
-## <a href="https://luca-grella.github.io/home">📁 My Portfolio</a>
+## <a href="https://luca-grella.github.io/myportfolio">📁 My Portfolio</a>
