@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Home
-home: true
+title: My Portfolio
+myportfolio: true
 ---
 
 ## Welcome to my portfolio website!
