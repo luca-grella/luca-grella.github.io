@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+home: true
+---
+
 ## Welcome to my portfolio website!
 
 Hi! I am Luca and here you can find information about me divided into various sections.<br>
