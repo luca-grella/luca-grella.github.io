@@ -2,7 +2,7 @@
 layout: default
 title: Home
 home: true
-no_sidebar: true
+no_sidebar: false
 ---
 
 ## <a href="https://luca-grella.github.io/contacts">👥 Contacts</a>
