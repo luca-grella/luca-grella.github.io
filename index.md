@@ -5,5 +5,6 @@ home: true
 no_sidebar: false
 ---
 
-## <a href="https://luca-grella.github.io/contacts">👥 Contacts</a>
-## <a href="https://luca-grella.github.io/myportfolio">📁 My Portfolio</a>
+## 🎯 Welcome to my digital space!  
+Get in touch with me on the <a href="https://luca-grella.github.io/contacts" target="_blank" rel="noopener noreferrer"><strong>Contacts</strong></a> page 👥  
+or dive into my creative world through [**My Portfolio**](https://luca-grella.github.io/myportfolio) 📁
