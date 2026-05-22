@@ -291,7 +291,7 @@ a.sidebar-nav-item:focus {
 /* Sidebar logo */
 .sidebar-logo {
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
   width: 60%;
   max-width: 200px;
 }
