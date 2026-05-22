@@ -1090,3 +1090,5 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+.wide-only-br { display: none; }
+@media (min-width: 1280px) { .wide-only-br { display: block; margin: 0.5em 0; } }
