@@ -23,6 +23,4 @@ aboutme: true
 I had been DJ for "Radio Passion Dance" web radio from 2011 to 2012. From 2009 to present, I produce and remix electronic music tracks and I work as a DJ for several Milan clubs. <br>
 Find out more [here](https://luca-grella.github.io/djteck).
 
-<script>
-document.write(myDjteck());
-</script>
+<img src="/assets/img/djteck.png" style="max-width:100%">
