@@ -3,15 +3,18 @@ highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: false
 
 # Setup
 title:            Luca Grella
 logo:             /assets/img/logo.png
 tagline:          'Welcome!'
-description:      'Welcome to my Portfolio Website!'
+description:      "Welcome to Luca Grella's portfolio website — Senior Data Engineer at lastminute.com, Computer Science Engineer from Politecnico di Milano, DJ and producer."
 url:              https://luca-grella.github.io
 baseurl:          /
+lang:             en
+timezone:         Europe/Rome
+
+# Social
 githublink:       https://github.com/luca-grella
 instagram:        https://www.instagram.com/lucke94
 twitter:          https://x.com/LucaTeckDj
@@ -21,14 +24,30 @@ soundcloud:       https://soundcloud.com/djteck
 linkedin:         https://www.linkedin.com/in/lucagrella/
 google_scholar:   https://scholar.google.com/citations?user=TSDAR7sAAAAJ
 
+# Author
 author:
   name:           'Luca Grella'
   url:            https://luca-grella.github.io
+  twitter:        LucaTeckDj
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          2.2.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/luca-grella/luca-grella.github.io
+
+# Plugins (whitelisted on GitHub Pages)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - thesis
