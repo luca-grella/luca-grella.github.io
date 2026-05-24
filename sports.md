@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Sports & Interests
+description: "Sports and personal interests of Luca Grella — karate black belt, ski, snowboard, music, photography and tech."
 sports: true
 ---
 
@@ -10,14 +11,14 @@ sports: true
 * Shito Ryu
 * Black belt
 * 1st dan
-* [Diploma](https://luca-grella.github.io/mykaratediploma/)
+* [Diploma]({{ '/mykaratediploma' | relative_url }})
 
 ##### Ski
-* Advanced gold 
+* Advanced gold
 * 1 golden star _(actual level 7)_
 
 ##### Snowboard
-* Advanced silver 
+* Advanced silver
 * 2 silver stars _(actual level 4)_
 
 ## Interests

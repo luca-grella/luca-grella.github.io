@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Home
+description: "Luca Grella — Senior Data Engineer at lastminute.com, Computer Science Engineer from Politecnico di Milano, DJ and music producer. Welcome to my portfolio."
 home: true
-no_sidebar: false
 ---
 
-## 🎯 Welcome to my digital space!  
-Get in touch with me on the <a href="https://luca-grella.github.io/contacts" target="_blank" rel="noopener noreferrer"><strong>Contacts</strong></a> page 👥  
-or dive into my creative world through [**My Portfolio**](https://luca-grella.github.io/myportfolio) 📁
+## 🎯 Welcome to my digital space!
+
+Get in touch with me on the [**Contacts**]({{ '/contacts' | relative_url }}) page 👥
+or dive into my creative world through [**My Portfolio**]({{ '/myportfolio' | relative_url }}) 📁
 
 ---
 
-> *"Any sufficiently advanced technology is indistinguishable from magic."*  
+> *"Any sufficiently advanced technology is indistinguishable from magic."*
 > — Arthur C. Clarke
-

@@ -1,124 +1,139 @@
-<!DOCTYPE HTML>
+---
+layout: null
+title: Instagram Filters
+description: "Spark AR filters created by Luca Grella — SteamPunk, Cocktail Predictor, Vintage Polaroid, Dalì Mask, Nemesis, Enigma and more."
+permalink: /igfilters/
+---
+<!DOCTYPE html>
 <!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Dimension by HTML5 UP — html5up.net | @ajlkn
+  Released under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
-	<head>
-		<title>Try My Instagram Filters</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="igfilters/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="igfilters/assets/css/noscript.css" /></noscript>
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/icon/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="assets/img/icon/favicon.ico">
-	</head>
-	<body class="is-preload">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <title>{{ site.title }} &middot; Instagram Filters</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta property="og:title" content="{{ site.title }} &middot; Instagram Filters">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/img/logo.png' | absolute_url }}">
+    <meta property="og:type" content="website">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="{{ '/igfilters/assets/css/main.css' | relative_url }}">
+    <noscript><link rel="stylesheet" href="{{ '/igfilters/assets/css/noscript.css' | relative_url }}"></noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/img/icon/favicon.ico' | relative_url }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/assets/img/icon/apple-touch-icon-144-precomposed.png' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <style>
+      /* Responsive grid for filter list (replaces 5 document.write breakpoints) */
+      #header > nav > ul.igf-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #header > nav > ul.igf-grid > li {
+        border: none;
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
+      }
+      #header > nav > ul.igf-grid > li a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: inherit;
+        text-decoration: none;
+      }
+      #header > nav > ul.igf-grid > li a img {
+        width: 50px;
+        height: auto;
+        flex-shrink: 0;
+      }
+      @media (min-width: 1680px) {
+        #header > nav > ul.igf-grid { grid-template-columns: repeat(4, minmax(325px, 1fr)); }
+      }
+    </style>
+  </head>
+  <body class="is-preload">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon solid fa-camera-retro"></span>
-							<!--<span class="fas fa-camera-retro"></span>
-							<span class="icon fa-camera-retro"></span>-->
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Try My Instagram Filters</h1>
+    <div id="wrapper">
 
-								<!--<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>-->
-							</div>
-						</div>
-						<!--<nav>
-							<ul style="border-bottom:0px">
-								<li><a href="#moreinfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info...</a></li>
-								<li><a href="https://instagram.com/ar/256974025707017/"><img src="igfilters/images/steampunk.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SteamPunk Filter</span></a></li>
-								<li style="border-left:0px"><a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D"><img src="igfilters/images/cocktailpredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Predictor</span></a></li>
-								<li><a href="https://instagram.com/ar/2501684443418989/"><img src="igfilters/images/countrypredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country Predictor</span></a></li></ul><ul style="border-bottom:0px">
-								<li><a href="https://instagram.com/ar/588723351711867/"><img src="igfilters/images/vintagepolaroid.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vintage Polaroid</span></a></li>
-								<li><a href="https://instagram.com/ar/2568232603450304/"><img src="igfilters/images/evileyes.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evil Eyes</span></a></li>
-								<li><a href="https://instagram.com/ar/876104086161030/"><img src="igfilters/images/dalimask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalì Mask</span></a></li>
-								<li><a href="https://instagram.com/ar/833919633771924/"><img src="igfilters/images/sushifilter.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sushi Filter</span></a></li></ul><ul>
-								<li><a href="https://instagram.com/ar/3111704388860941/"><img src="igfilters/images/ferragnez.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ferragnez Filter</span></a></li>
-								<li><a href="https://instagram.com/ar/174100047015120/"><img src="igfilters/images/vmask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V Mask</span></a></li>
-								<li style="border-left:0px"><a href="https://instagram.com/ar/159624725367060/"><img src="igfilters/images/nemesis.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nemesis</span></a></li>
-								<li><a href="https://instagram.com/ar/548545079133640/"><img src="igfilters/images/enigma.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enigma</span></a></li>
-							</ul>
-						</nav>-->
-						<script>
-							if (window.innerWidth < 650) {
-							document.write('<nav><ul style="border-bottom:0px"><li><a href="#moreinfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info...</a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/256974025707017/"><img src="igfilters/images/steampunk.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SteamPunk Filter</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D"><img src="igfilters/images/cocktailpredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Predictor</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/2501684443418989/"><img src="igfilters/images/countrypredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country Predictor</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/588723351711867/"><img src="igfilters/images/vintagepolaroid.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vintage Polaroid</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/2568232603450304/"><img src="igfilters/images/evileyes.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evil Eyes</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/876104086161030/"><img src="igfilters/images/dalimask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalì Mask</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/833919633771924/"><img src="igfilters/images/sushifilter.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sushi Filter</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/3111704388860941/"><img src="igfilters/images/ferragnez.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ferragnez Filter</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/174100047015120/"><img src="igfilters/images/vmask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V Mask</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/159624725367060/"><img src="igfilters/images/nemesis.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nemesis</span></a></li></ul><ul><li><a href="https://instagram.com/ar/548545079133640/"><img src="igfilters/images/enigma.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enigma</span></a></li></ul></nav>');
-							} 
-							else if (window.innerWidth < 950) {
-							document.write('<nav><ul style="border-bottom:0px"><li><a href="#moreinfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info...</a></li><li><a href="https://instagram.com/ar/256974025707017/"><img src="igfilters/images/steampunk.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SteamPunk Filter</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D"><img src="igfilters/images/cocktailpredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Predictor</span></a></li><li><a href="https://instagram.com/ar/2501684443418989/"><img src="igfilters/images/countrypredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country Predictor</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/588723351711867/"><img src="igfilters/images/vintagepolaroid.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vintage Polaroid</span></a></li><li><a href="https://instagram.com/ar/2568232603450304/"><img src="igfilters/images/evileyes.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evil Eyes</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/876104086161030/"><img src="igfilters/images/dalimask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalì Mask</span></a></li><li><a href="https://instagram.com/ar/833919633771924/"><img src="igfilters/images/sushifilter.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sushi Filter</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/3111704388860941/"><img src="igfilters/images/ferragnez.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ferragnez Filter</span></a></li><li><a href="https://instagram.com/ar/174100047015120/"><img src="igfilters/images/vmask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V Mask</span></a></li></ul><ul><li><a href="https://instagram.com/ar/159624725367060/"><img src="igfilters/images/nemesis.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nemesis</span></a></li><li><a href="https://instagram.com/ar/548545079133640/"><img src="igfilters/images/enigma.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enigma</span></a></li></ul></nav>');
-							} 
-							else if (window.innerWidth < 1250) {
-							document.write('<nav><ul style="border-bottom:0px"><li><a href="#moreinfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info...</a></li><li><a href="https://instagram.com/ar/256974025707017/"><img src="igfilters/images/steampunk.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SteamPunk Filter</span></a></li><li><a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D"><img src="igfilters/images/cocktailpredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Predictor</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/2501684443418989/"><img src="igfilters/images/countrypredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country Predictor</span></a></li><li><a href="https://instagram.com/ar/588723351711867/"><img src="igfilters/images/vintagepolaroid.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vintage Polaroid</span></a></li><li><a href="https://instagram.com/ar/2568232603450304/"><img src="igfilters/images/evileyes.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evil Eyes</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/876104086161030/"><img src="igfilters/images/dalimask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalì Mask</span></a></li><li><a href="https://instagram.com/ar/833919633771924/"><img src="igfilters/images/sushifilter.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sushi Filter</span></a></li><li><a href="https://instagram.com/ar/3111704388860941/"><img src="igfilters/images/ferragnez.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ferragnez Filter</span></a></li></ul><ul><li><a href="https://instagram.com/ar/174100047015120/"><img src="igfilters/images/vmask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V Mask</span></a></li><li><a href="https://instagram.com/ar/159624725367060/"><img src="igfilters/images/nemesis.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nemesis</span></a></li><li><a href="https://instagram.com/ar/548545079133640/"><img src="igfilters/images/enigma.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enigma</span></a></li></ul></nav>');
-							} 
-							else if (window.innerWidth < 1680) {
-							document.write('<nav><ul style="border-bottom:0px"><li><a href="#moreinfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info...</a></li><li><a href="https://instagram.com/ar/256974025707017/"><img src="igfilters/images/steampunk.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SteamPunk Filter</span></a></li><li><a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D"><img src="igfilters/images/cocktailpredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Predictor</span></a></li><li><a href="https://instagram.com/ar/2501684443418989/"><img src="igfilters/images/countrypredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country Predictor</span></a></li></ul><ul style="border-bottom:0px"><li><a href="https://instagram.com/ar/588723351711867/"><img src="igfilters/images/vintagepolaroid.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vintage Polaroid</span></a></li><li><a href="https://instagram.com/ar/2568232603450304/"><img src="igfilters/images/evileyes.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evil Eyes</span></a></li><li><a href="https://instagram.com/ar/876104086161030/"><img src="igfilters/images/dalimask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalì Mask</span></a></li><li><a href="https://instagram.com/ar/833919633771924/"><img src="igfilters/images/sushifilter.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sushi Filter</span></a></li></ul><ul><li><a href="https://instagram.com/ar/3111704388860941/"><img src="igfilters/images/ferragnez.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ferragnez Filter</span></a></li><li><a href="https://instagram.com/ar/174100047015120/"><img src="igfilters/images/vmask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V Mask</span></a></li><li><a href="https://instagram.com/ar/159624725367060/"><img src="igfilters/images/nemesis.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nemesis</span></a></li><li><a href="https://instagram.com/ar/548545079133640/"><img src="igfilters/images/enigma.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enigma</span></a></li></ul></nav>');
-							} 
-							else { 
-							document.write('<nav><ul style="border-bottom:0px"><li style="width:324.5px"><nobr><a href="#moreinfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info...</a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/256974025707017/"><img src="igfilters/images/steampunk.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SteamPunk Filter</span></a></nobr></li><li style="width:325px"><nobr><a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D"><img src="igfilters/images/cocktailpredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Predictor</span></a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/2501684443418989/"><img src="igfilters/images/countrypredictor.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country Predictor</span></a></nobr></li></ul><ul style="border-bottom:0px"><li style="width:324.5px"><nobr><a href="https://instagram.com/ar/588723351711867/"><img src="igfilters/images/vintagepolaroid.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vintage Polaroid</span></a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/2568232603450304/"><img src="igfilters/images/evileyes.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evil Eyes</span></a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/876104086161030/"><img src="igfilters/images/dalimask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalì Mask</span></a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/833919633771924/"><img src="igfilters/images/sushifilter.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sushi Filter</span></a></nobr></li></ul><ul><li style="width:324.5px"><nobr><a href="https://instagram.com/ar/3111704388860941/"><img src="igfilters/images/ferragnez.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ferragnez Filter</span></a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/174100047015120/"><img src="igfilters/images/vmask.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V Mask</span></a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/159624725367060/"><img src="igfilters/images/nemesis.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nemesis</span></a></nobr></li><li style="width:325px"><nobr><a href="https://instagram.com/ar/548545079133640/"><img src="igfilters/images/enigma.png" style="float:left; vertical-align: middle; width:50px"><span style="vertical-align: middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enigma</span></a></nobr></li></ul></nav>');
-							}
-						</script>
-					</header>
+      <header id="header">
+        <div class="logo">
+          <span class="icon solid fa-camera-retro" aria-hidden="true"></span>
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1>Try My Instagram Filters</h1>
+          </div>
+        </div>
+        <nav>
+          <ul class="igf-grid">
+            <li><a href="#moreinfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info...</a></li>
+            <li><a href="https://instagram.com/ar/256974025707017/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/steampunk.png' | relative_url }}" alt="SteamPunk Filter"><span>SteamPunk Filter</span></a></li>
+            <li><a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D" rel="noopener noreferrer"><img src="{{ '/igfilters/images/cocktailpredictor.png' | relative_url }}" alt="Cocktail Predictor"><span>Cocktail Predictor</span></a></li>
+            <li><a href="https://instagram.com/ar/2501684443418989/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/countrypredictor.png' | relative_url }}" alt="Country Predictor"><span>Country Predictor</span></a></li>
+            <li><a href="https://instagram.com/ar/588723351711867/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/vintagepolaroid.png' | relative_url }}" alt="Vintage Polaroid"><span>Vintage Polaroid</span></a></li>
+            <li><a href="https://instagram.com/ar/2568232603450304/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/evileyes.png' | relative_url }}" alt="Evil Eyes"><span>Evil Eyes</span></a></li>
+            <li><a href="https://instagram.com/ar/876104086161030/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/dalimask.png' | relative_url }}" alt="Dalì Mask"><span>Dalì Mask</span></a></li>
+            <li><a href="https://instagram.com/ar/833919633771924/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/sushifilter.png' | relative_url }}" alt="Sushi Filter"><span>Sushi Filter</span></a></li>
+            <li><a href="https://instagram.com/ar/3111704388860941/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/ferragnez.png' | relative_url }}" alt="Ferragnez Filter"><span>Ferragnez Filter</span></a></li>
+            <li><a href="https://instagram.com/ar/174100047015120/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/vmask.png' | relative_url }}" alt="V Mask"><span>V Mask</span></a></li>
+            <li><a href="https://instagram.com/ar/159624725367060/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/nemesis.png' | relative_url }}" alt="Nemesis"><span>Nemesis</span></a></li>
+            <li><a href="https://instagram.com/ar/548545079133640/" rel="noopener noreferrer"><img src="{{ '/igfilters/images/enigma.png' | relative_url }}" alt="Enigma"><span>Enigma</span></a></li>
+          </ul>
+        </nav>
+      </header>
 
-				<!-- Main -->
-					<div id="main">
+      <div id="main">
 
-						<!-- More Info... -->
-							<article id="moreinfo">
-								<h2 class="major" style="color:white">More Info...</h2>
-								<p>Hi all! Here you can find some information about my Spark AR filters.<br>
-								By clicking on each link on the first page, you will be redirected to Instagram which will open the camera of your smartphone to allow you to use the filter you clicked on.<br>
-								Have fun and share my filters with your friends!
+        <article id="moreinfo">
+          <h2 class="major" style="color:white">More Info...</h2>
+          <p>Hi all! Here you can find some information about my Spark AR filters.<br>
+            By clicking on each link on the first page, you will be redirected to Instagram which will open the camera of your smartphone to allow you to use the filter you clicked on.<br>
+            Have fun and share my filters with your friends!</p>
+          <p>If you post a photo or a video using them, don't forget to tag <a href="{{ site.instagram }}" style="color:#ffbb00" target="_blank" rel="noopener noreferrer">@lucke94</a> (Follow me!) so that I can repost you.</p>
+          <p><b style="color: white">NB:</b> <a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D" style="color:#ffbb00" target="_blank" rel="noopener noreferrer">Cocktail Predictor</a> filter can only be used in test mode as it is not accepted by the <a href="#policy" style="color:#ffbb00">Spark AR Policies</a>, however I made it available for you.<br>
+            If you like it and you are of legal age, share it and tag me*!</p>
+          <p style="font-size: 11px">*I do not take any responsibility for its incorrect use.</p>
+          <a href="#"><i class="fas fa-arrow-circle-left" style="color:#ffbb00" aria-hidden="true"></i>  <span style="color:#ffbb00">BACK</span></a>
+        </article>
 
-								<p>If you post a photo or a video using them, don't forget to tag <a href="https://www.instagram.com/lucke94" style="color:#ffbb00">@lucke94</a> (Follow me!) so that I can repost you.</p>
+        <article id="policy">
+          <h2 class="major" style="color:white">Spark AR Policies</h2>
+          <p><b style="color: white">4.3. Suitability for user base.</b> Content must be suitable for consumption by the Facebook and Instagram general user base (including those aged 13 and above):<br>
+            [...]<br>
+            <b style="color: white">4.3.c.</b> Content must not promote alcohol, tobacco, marijuana or pharmaceutical medical products, nor be published by brands associated with such products.</p>
+          <p><a href="https://sparkar.facebook.com/ar-studio/learn/documentation/before-you-start/policy/" style="color:#ffbb00" target="_blank" rel="noopener noreferrer">Here</a> the complete Spark AR Review Policies.</p>
+          <a href="#moreinfo"><i class="fas fa-arrow-circle-left" style="color:#ffbb00" aria-hidden="true"></i>  <span style="color:#ffbb00">BACK</span></a>
+        </article>
 
-								<p><b style="color: white">NB:</b> <a href="https://www.instagram.com/ar/2394408137517290/?ch=ZTk2YmE5YmM4Y2UyZjhhODcyZGVkNDMyMzBiYTM5MmU%3D" style="color:#ffbb00">Cocktail Predictor</a> filter can only be used in test mode as it is not accepted by the <a href="#policy" style="color:#ffbb00">Spark AR Policies</a>, however I made it available for you.<br>
-								If you like it and you are of legal age, share it and tag me*!</p>
+      </div>
 
-								<p style="font-size: 11px">*I do not take any responsibility for its incorrect use.</p>
+      <footer id="footer">
+        <p class="copyright">&copy; {{ site.time | date: "%Y" }}. Design: {{ site.author.name }}.</p>
+      </footer>
 
-								<a href="#"><i class="fas fa-arrow-circle-left" style="color:#ffbb00"></i>  <span style="color:#ffbb00">BACK</span></a>
-							</article>
+    </div>
 
-						<!-- Policy -->
-							<article id="policy">
-								<h2 class="major" style="color:white">Spark AR Policies</h2>
-								<p><b style="color: white">4.3. Suitability for user base.</b> Content must be suitable for consumption by the Facebook and Instagram general user base (including those aged 13 and above):<br>
-								[...]<br>
-								<b style="color: white">4.3.c.</b> Content must not promote alcohol, tobacco, marijuana or pharmaceutical medical products, nor be published by brands associated with such products.</p>
+    <div id="bg"></div>
 
-								<p><a href="https://sparkar.facebook.com/ar-studio/learn/documentation/before-you-start/policy/" style="color:#ffbb00">Here</a> the complete Spark AR Review Policies.</p>
+    <script src="{{ '/igfilters/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/igfilters/assets/js/browser.min.js' | relative_url }}"></script>
+    <script src="{{ '/igfilters/assets/js/breakpoints.min.js' | relative_url }}"></script>
+    <script src="{{ '/igfilters/assets/js/util.js' | relative_url }}"></script>
+    <script src="{{ '/igfilters/assets/js/main.js' | relative_url }}"></script>
 
-								<a href="#moreinfo"><i class="fas fa-arrow-circle-left" style="color:#ffbb00"></i>  <span style="color:#ffbb00">BACK</span></a>
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script>. Design: Luca Grella.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="igfilters/assets/js/jquery.min.js"></script>
-			<script src="igfilters/assets/js/browser.min.js"></script>
-			<script src="igfilters/assets/js/breakpoints.min.js"></script>
-			<script src="igfilters/assets/js/util.js"></script>
-			<script src="igfilters/assets/js/main.js"></script>
-
-	</body>
+  </body>
 </html>

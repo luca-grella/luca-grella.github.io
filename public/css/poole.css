@@ -230,10 +230,11 @@ blockquote p:last-child {
 }
 
 img {
-  display: run-in;
+  display: block;
   max-width: 100%;
-  margin: 0 0 0rem; /* margin: 0 0 1rem; */
-  border-radius: 0px; /* border-radius: 5px; */
+  height: auto;
+  margin: 0;
+  border-radius: 0;
 }
 
 /* Tables */

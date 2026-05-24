@@ -1,0 +1,16 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# Dependencies
+Gemfile.lock
+
+# macOS / Editor noise
+.DS_Store
+*.swp
+.idea/
+.vscode/

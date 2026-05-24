@@ -1,6 +1,7 @@
 ---
 layout: default
 title: DJing & Producing
+description: "Luca Grella (Teck DJ) — tracks, remixes, mashups and DJ sets on Spotify, SoundCloud, MixCloud and Facebook."
 djteck: true
 ---
 
@@ -8,11 +9,15 @@ djteck: true
 
 ##### Find out my tracks and Dj sets:
 
-<table>
-<tr><td><p align="center"><br><a href="https://www.facebook.com/LucaTeckDj" target="_blank"><img src="/assets/img/facebook4.png" style="width:60%"><br><span style="color:#3a559f">Fan Page</span></a></p></td><td><p align="center"><br><a href="https://open.spotify.com/artist/7zD0ULnp6PqhVHqsfJFsIv" target="_blank"><img src="/assets/img/spotify1.png" style="width:60%"><br><span style="color:green">Spotify</span></a></p></td><td><br><p align="center"><a href="https://soundcloud.com/djteck" target="_blank"><img src="/assets/img/soundcloud1.png" style="width:60%"><br><span style="color:orange">Soundcloud</span></a></p></td><td><br><p align="center"><a href="https://www.mixcloud.com/TeckDj" target="_blank"><img src="/assets/img/mixcloud.png" style="width:60%"><br><span style="color:black">Mixcloud</span></a></p></td></tr>
-</table>
-<p style="font-size:12px"><i>On Spotify and Soundcloud you will find my prods, remixes and mashups, while on Mixcloud you will find my dj sets (as well as the reloads of my radio broadcasts).</i></p>
+<ul class="dj-grid">
+  <li><a href="https://www.facebook.com/LucaTeckDj" target="_blank" rel="noopener noreferrer"><img src="/assets/img/facebook4.png" alt="Facebook fan page" loading="lazy"><span class="label" style="color:#3a559f">Fan Page</span></a></li>
+  <li><a href="{{ site.spotify }}" target="_blank" rel="noopener noreferrer"><img src="/assets/img/spotify1.png" alt="Spotify" loading="lazy"><span class="label" style="color:green">Spotify</span></a></li>
+  <li><a href="{{ site.soundcloud }}" target="_blank" rel="noopener noreferrer"><img src="/assets/img/soundcloud1.png" alt="SoundCloud" loading="lazy"><span class="label" style="color:orange">Soundcloud</span></a></li>
+  <li><a href="https://www.mixcloud.com/TeckDj" target="_blank" rel="noopener noreferrer"><img src="/assets/img/mixcloud.png" alt="MixCloud" loading="lazy"><span class="label" style="color:black">Mixcloud</span></a></li>
+</ul>
+
+<p style="font-size:12px"><em>On Spotify and Soundcloud you will find my prods, remixes and mashups, while on Mixcloud you will find my dj sets (as well as the reloads of my radio broadcasts).</em></p>
 
 ##### Here you can find my interview on Radio Cantù (F.M. 89.600):
 
-<a href="https://www.mixcloud.com/CrazyDance_RadioCantù/060319-puntata-14-all-stars-night-tech-and-simo" target="_blank"><img src="/assets/img/radio.jpg" style="width:30%"></a>
+<a href="https://www.mixcloud.com/CrazyDance_RadioCantù/060319-puntata-14-all-stars-night-tech-and-simo" target="_blank" rel="noopener noreferrer"><img src="/assets/img/radio.jpg" alt="Radio Cantù interview" style="width:30%" loading="lazy"></a>
