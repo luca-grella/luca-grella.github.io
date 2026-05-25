@@ -381,26 +381,49 @@ a.sidebar-nav-item:focus {
 
 
 /*
- * Dark mode — respect prefers-color-scheme.
+ * Dark mode — opt-in via .theme-dark class on <html>.
+ * Default is light. JS reads localStorage and applies the class on load.
  * Sidebar is already dark, so we only flip the content area.
  */
-@media (prefers-color-scheme: dark) {
-  body { background-color: #1a1a1a; color: #d8d8d8; }
-  .content a { color: #ffbb00; }
-  .content a:hover, .content a:focus { color: #ffd042; }
-  h1, h2, h3, h4, h5, h6,
-  .page-title, .post-title, .post-title a,
-  strong { color: #f0f0f0; }
-  blockquote { color: #b0b0b0; border-left-color: #444; }
-  hr { border-top-color: #333; border-bottom-color: #1a1a1a; }
-  code { background-color: #2a2a2a; color: #ff8a8a; }
-  pre { background-color: #2a2a2a; }
-  table { border-color: #333; }
-  td, th { border-color: #333; }
-  tbody tr:nth-child(odd) td,
-  tbody tr:nth-child(odd) th { background-color: #222; }
-  abbr[title] { border-bottom-color: #444; }
+html.theme-dark body { background-color: #1a1a1a; color: #d8d8d8; }
+html.theme-dark .content a { color: #ffbb00; }
+html.theme-dark .content a:hover, html.theme-dark .content a:focus { color: #ffd042; }
+html.theme-dark h1, html.theme-dark h2, html.theme-dark h3,
+html.theme-dark h4, html.theme-dark h5, html.theme-dark h6,
+html.theme-dark .page-title, html.theme-dark .post-title,
+html.theme-dark .post-title a,
+html.theme-dark strong { color: #f0f0f0; }
+html.theme-dark blockquote { color: #b0b0b0; border-left-color: #444; }
+html.theme-dark hr { border-top-color: #333; border-bottom-color: #1a1a1a; }
+html.theme-dark code { background-color: #2a2a2a; color: #ff8a8a; }
+html.theme-dark pre { background-color: #2a2a2a; }
+html.theme-dark table { border-color: #333; }
+html.theme-dark td, html.theme-dark th { border-color: #333; }
+html.theme-dark tbody tr:nth-child(odd) td,
+html.theme-dark tbody tr:nth-child(odd) th { background-color: #222; }
+html.theme-dark abbr[title] { border-bottom-color: #444; }
+
+/* Light/dark toggle button (sidebar) */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0.5rem auto;
+  border-radius: 50%;
+  border: 1px solid #808080;
+  background: transparent;
+  color: #ffbb00;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
+.theme-toggle:hover { background: rgba(255,187,0,0.15); }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: inline; }
+html.theme-dark .theme-toggle .icon-sun { display: inline; }
+html.theme-dark .theme-toggle .icon-moon { display: none; }
 
 
 /*

@@ -29,6 +29,16 @@
         <a class="sidebar-nav-item{% if page.djteck %} active{% endif %}" href="{{ '/djteck' | relative_url }}">DJing &amp; Producing</a>
       </nav>
 
+      <button type="button"
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
+              title="Toggle light/dark mode">
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+      </button>
+
       <div class="sidebar-footer">
         <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
       </div>

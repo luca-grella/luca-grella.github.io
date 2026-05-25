@@ -1,36 +1,25 @@
-// On mobile, replace social profile web URLs with native app URL schemes so
-// taps open the installed app instead of staying in the browser tab.
-// Profile URLs only (ignores Instagram AR filter and other non-profile paths).
+// On mobile, drop target="_blank" from social links so iOS Universal Links /
+// Android App Links can intercept the click and open the native app directly
+// (no confirmation popup). On desktop we leave target="_blank" intact so the
+// portfolio stays open in the original tab.
 (function () {
   var isMobile = /iPad|iPhone|iPod|Android/i.test(navigator.userAgent);
   if (!isMobile) return;
 
-  // [ regex on href, builder for the app URL ]
-  var rules = [
-    // Instagram profile: https://(www.)instagram.com/<user>(/)
-    [/^https?:\/\/(?:www\.)?instagram\.com\/([a-zA-Z0-9._]+)\/?(?:\?.*)?$/i,
-     function (m) { return 'instagram://user?username=' + m[1]; }],
-    // Facebook profile or page: https://(www.)facebook.com/<user>(/)
-    [/^https?:\/\/(?:www\.)?facebook\.com\/([a-zA-Z0-9.\-_]+)\/?(?:\?.*)?$/i,
-     function (m) { return 'fb://profile/' + m[1]; }],
-    // LinkedIn /in/<user>
-    [/^https?:\/\/(?:www\.)?linkedin\.com\/in\/([^\/?#]+)\/?(?:\?.*)?$/i,
-     function (m) { return 'linkedin://in/' + m[1]; }]
-  ];
+  var SOCIAL_HOSTS = /(?:^|\.)(instagram\.com|facebook\.com|linkedin\.com|x\.com|twitter\.com|spotify\.com|soundcloud\.com|mixcloud\.com|github\.com)$/i;
 
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('a');
-    if (!a || !a.href) return;
-    for (var i = 0; i < rules.length; i++) {
-      var match = a.href.match(rules[i][0]);
-      if (match) {
-        var appUrl = rules[i][1](match);
-        // Try the app; if it fails to handle, the browser will stay where it is
-        // and a hidden iframe trick is fragile, so we just attempt it.
-        window.location.href = appUrl;
-        e.preventDefault();
-        return;
-      }
-    }
-  }, true);
+  function rewrite() {
+    document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+      try {
+        var host = new URL(a.href).hostname;
+        if (SOCIAL_HOSTS.test(host)) a.removeAttribute('target');
+      } catch (e) { /* invalid URL, skip */ }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', rewrite);
+  } else {
+    rewrite();
+  }
 })();
