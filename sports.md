@@ -7,17 +7,17 @@ sports: true
 
 ## Sports
 
-##### Karate
+### Karate
 * Shito Ryu
 * Black belt
 * 1st dan
 * [Diploma]({{ '/mykaratediploma' | relative_url }})
 
-##### Ski
+### Ski
 * Advanced gold
 * 1 golden star _(actual level 7)_
 
-##### Snowboard
+### Snowboard
 * Advanced silver
 * 2 silver stars _(actual level 4)_
 
