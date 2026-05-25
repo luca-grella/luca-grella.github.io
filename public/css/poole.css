@@ -65,7 +65,7 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
-/* Links — brand yellow, bold (visual cue without underline) */
+/* Links, brand yellow, bold (visual cue without underline) */
 a {
   color: #ffbb00;
   text-decoration: none;
