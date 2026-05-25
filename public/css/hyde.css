@@ -316,13 +316,16 @@ a.sidebar-nav-item:focus {
   font-size: 0.8rem;
 }
 
-/* Sidebar logo */
+/* Sidebar logo (circular crop for profile photo) */
 .sidebar-logo {
   display: block;
   margin: 0 auto 20px;
   width: 60%;
   max-width: 200px;
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 @media (max-width: 767px) {
@@ -405,9 +408,9 @@ html.theme-dark tbody tr:nth-child(odd) td,
 html.theme-dark tbody tr:nth-child(odd) th { background-color: #222; }
 html.theme-dark abbr[title] { border-bottom-color: #444; }
 
-/* Light/dark toggle button (sidebar) */
+/* Light/dark toggle button (sidebar) — centered on every viewport */
 .theme-toggle {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 36px;
