@@ -9,8 +9,8 @@ certifications: true
 
 ### 2025
 * <a href="https://www.credly.com/badges/bdd0388a-3acf-4641-a881-9de7d7dfb6b6" target="_blank" rel="noopener noreferrer">**Astronomer**</a>, _Apache Airflow 3 Fundamentals_ <span class="post-date">Jun 2025</span>
-* <a href="{{ '/assets/certificates/qlik-private-data-modeling.png' | relative_url }}" target="_blank" rel="noopener noreferrer">**Qlik**</a>, _Private Data Modeling for Qlik Sense_ <span class="post-date">Jun 2025</span>
-* <a href="{{ '/assets/certificates/lastminute-pm-summercamp.png' | relative_url }}" target="_blank" rel="noopener noreferrer">**lastminute.com**</a>, _Introduction to Project Management, Summer Camp_ <span class="post-date">Sep 2025</span>
+* <a href="{{ '/assets/certificates/qlik-private-data-modeling.jpg' | relative_url }}" target="_blank" rel="noopener noreferrer">**Qlik**</a>, _Private Data Modeling for Qlik Sense_ <span class="post-date">Jun 2025</span>
+* <a href="{{ '/assets/certificates/lastminute-pm-summercamp.jpg' | relative_url }}" target="_blank" rel="noopener noreferrer">**lastminute.com**</a>, _Introduction to Project Management, Summer Camp_ <span class="post-date">Sep 2025</span>
 
 ### 2022
 * <a href="https://www.credly.com/badges/234e39dc-9a03-4816-9e9b-0d41decf699f/public_url" target="_blank" rel="noopener noreferrer">**TIBCO**</a>, Spotfire®, _TCP, Certified Professional_ <span class="post-date">Feb 2022</span>
