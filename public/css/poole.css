@@ -65,26 +65,18 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
-/* Links — match sidebar brand color, underline as accessibility cue */
+/* Links — brand yellow, bold (visual cue without underline) */
 a {
   color: #ffbb00;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  font-weight: bold;
 }
 a strong {
   color: inherit;
 }
-/* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
   color: #a37800;
-  text-decoration: underline;
-}
-/* Sidebar nav, social icons and navigation links don't need underline (clear UI affordance) */
-.sidebar a,
-.sidebar-nav-item,
-.social-icon {
   text-decoration: none;
 }
 
