@@ -65,20 +65,20 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
-/* Links — content links underlined for WCAG AA (contrast alone not enough cue) */
+/* Links — match sidebar brand color, underline as accessibility cue */
 a {
-  color: #8a6500;
+  color: #ffbb00;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 a strong {
-  color: #735200; /* darker for bold link text to meet WCAG AA 4.5:1 */
+  color: inherit;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  color: #735200;
+  color: #a37800;
   text-decoration: underline;
 }
 /* Sidebar nav, social icons and navigation links don't need underline (clear UI affordance) */
