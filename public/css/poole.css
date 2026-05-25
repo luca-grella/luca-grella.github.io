@@ -67,13 +67,13 @@ body {
 
 /* Links — content links underlined for WCAG AA (contrast alone not enough cue) */
 a {
-  color: #a37800;
+  color: #8a6500;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 a strong {
-  color: inherit;
+  color: #735200; /* darker for bold link text to meet WCAG AA 4.5:1 */
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
