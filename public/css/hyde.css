@@ -93,6 +93,8 @@ html {
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
+  min-height: 36px;
+  padding: 0.25rem 0.5rem;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -181,7 +183,7 @@ a.sidebar-nav-item:focus {
  * within blog posts. To use, add the class of your choosing to the `body`.
  */
 
-/* Base16 (http://chriskempson.github.io/base16/#default) */
+/* Base16 (https://chriskempson.github.io/base16/#default) */
 
 /* Red */
 .theme-base-08 .sidebar {

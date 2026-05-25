@@ -22,11 +22,13 @@ sitemap: false
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="{{ '/contacts/assets/css/facebook.css' | relative_url }}">
     <noscript><link rel="stylesheet" href="{{ '/contacts/assets/css/noscript.css' | relative_url }}"></noscript>
-    <link rel="stylesheet"
+    <link rel="preload" as="style"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
           integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
           crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+          referrerpolicy="no-referrer"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
     <link rel="icon" type="image/x-icon" href="{{ '/assets/img/icon/favicon.ico' | relative_url }}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/assets/img/icon/apple-touch-icon-144-precomposed.png' | relative_url }}">
   </head>

@@ -40,12 +40,21 @@
   <link rel="stylesheet" href="{{ '/public/css/syntax.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/public/css/hyde.css' | relative_url }}">
 
-  <!-- Font Awesome 6 (with Subresource Integrity) -->
-  <link rel="stylesheet"
+  <!-- Font Awesome 6 (with Subresource Integrity) — loaded asynchronously to avoid render-blocking -->
+  <link rel="preload"
+        as="style"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
         crossorigin="anonymous"
-        referrerpolicy="no-referrer">
+        referrerpolicy="no-referrer"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+  </noscript>
 
   <!-- Icons -->
   <link rel="icon" type="image/x-icon" href="{{ '/assets/img/icon/favicon.ico' | relative_url }}">

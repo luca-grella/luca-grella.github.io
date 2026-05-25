@@ -8,6 +8,6 @@ sitemap: false
 
 ## My Karate Diploma
 
-<img src="/assets/img/karate.jpg" alt="Karate Shito Ryu black belt 1st dan diploma" loading="lazy">
+<picture><source type="image/webp" srcset="/assets/img/karate.webp"><img src="/assets/img/karate.jpg" alt="Karate Shito Ryu black belt 1st dan diploma" loading="lazy"></picture>
 
 [back]({{ '/sports' | relative_url }})
