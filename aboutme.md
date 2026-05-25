@@ -1,26 +1,34 @@
 ---
 layout: default
 title: About Me
-description: "Luca Grella — Senior Data Engineer at lastminute.com, Computer Science Engineer from Politecnico di Milano, DJ and music producer."
+description: "Luca Grella — Senior Data Engineer & Functional Lead at lastminute.com (Chiasso, Switzerland), Computer Science Engineer from Politecnico di Milano, DJ and music producer."
 aboutme: true
 ---
 
 ## About Me
 
 ##### Work Experience
-* Senior Data Engineer & Functional Lead @ <a href="https://www.lastminute.com" target="_blank" rel="noopener noreferrer">lastminute.com</a>
-* Data Engineer @ <a href="https://www.lastminute.com" target="_blank" rel="noopener noreferrer">lastminute.com</a>
+* **Senior Data Engineer & Functional Lead** @ <a href="https://www.lastminute.com" target="_blank" rel="noopener noreferrer">lastminute.com</a> — Chiasso, Switzerland 🇨🇭
+* **Data Engineer** @ <a href="https://www.lastminute.com" target="_blank" rel="noopener noreferrer">lastminute.com</a>
 
 <picture><source type="image/webp" srcset="/assets/img/lastminute.webp"><img src="/assets/img/lastminute.png" alt="lastminute.com logo" style="width:60%" loading="lazy"></picture>
 
 ##### Education
-* B.Sc. Degree in Computer Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a>
-* M.Sc. Degree in Computer Science and Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a>
+* **M.Sc.** in Computer Science and Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a> <span class="post-date">— 2018 – 2020</span>
+* **B.Sc.** in Computer Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a> <span class="post-date">— 2014 – 2018</span>
 
 <picture><source type="image/webp" srcset="/assets/img/polimi.webp"><img src="/assets/img/polimi.png" alt="Politecnico di Milano logo" style="width:60%" loading="lazy"></picture>
 
+##### Notable Coursework
+Advanced Computer Architectures · Business Information Systems · Computer Security · Databases · Software Engineering · Operations Research · Formal Languages & Compilers
+
+##### Languages
+* 🇮🇹 **Italian** — native
+* 🇬🇧 **English** — professional working proficiency
+* 🇪🇸 **Spanish** — elementary
+
 ##### Musical Career
-* DJ & Producer.<br>
+* **DJ & Producer**.<br>
 I had been DJ for "Radio Passion Dance" web radio from 2011 to 2012. From 2009 to present, I produce and remix electronic music tracks and I work as a DJ for several Milan clubs.<br>
 Find out more [here]({{ '/djteck' | relative_url }}).
 

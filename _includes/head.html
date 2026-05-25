@@ -74,8 +74,14 @@
     "name": "{{ site.author.name }}",
     "url": "{{ site.url }}",
     "image": "{{ '/assets/img/logo.png' | absolute_url }}",
-    "jobTitle": "Senior Data Engineer",
-    "worksFor": { "@type": "Organization", "name": "lastminute.com", "url": "https://www.lastminute.com" },
+    "jobTitle": "Senior Data Engineer & Functional Lead",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "lastminute.com",
+      "url": "https://www.lastminute.com",
+      "location": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Chiasso", "addressCountry": "CH" } }
+    },
+    "knowsLanguage": ["it", "en", "es"],
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Politecnico di Milano", "url": "https://www.polimi.it" },
     "sameAs": [
       "{{ site.linkedin }}",
