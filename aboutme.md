@@ -30,6 +30,6 @@ Advanced Computer Architectures · Business Information Systems · Computer Secu
 ### Musical Career
 * **DJ & Producer**.<br>
 I had been DJ for "Radio Passion Dance" web radio from 2011 to 2012. From 2009 to present, I produce and remix electronic music tracks and I work as a DJ for several Milan clubs.<br>
-Find out more [here]({{ '/djteck' | relative_url }}).
+Read more on the [DJing & Producing page]({{ '/djteck' | relative_url }}).
 
 <picture><source type="image/webp" srcset="/assets/img/djteck.webp"><img src="/assets/img/djteck.png" alt="Teck DJ logo" style="max-width:100%" loading="lazy"></picture>
