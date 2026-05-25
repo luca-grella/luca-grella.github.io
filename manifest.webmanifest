@@ -1,0 +1,33 @@
+{
+  "name": "Luca Grella",
+  "short_name": "L. Grella",
+  "description": "Luca Grella — Senior Data Engineer at lastminute.com, Computer Science Engineer from Politecnico di Milano, DJ and music producer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#202020",
+  "theme_color": "#202020",
+  "lang": "en",
+  "orientation": "portrait-primary",
+  "categories": ["portfolio", "personal", "music"],
+  "icons": [
+    {
+      "src": "/assets/img/logo.png",
+      "sizes": "300x300",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/logo.webp",
+      "sizes": "300x300",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/icon/apple-touch-icon-144-precomposed.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -359,3 +359,76 @@ a.sidebar-nav-item:focus {
 /* Utility classes */
 .text-center { text-align: center; }
 .responsive-img { max-width: 100%; height: auto; }
+
+
+/*
+ * Reduced motion — respect user preference for less animation.
+ * Hits the HTML5UP Aerial intro on contacts/igfilters too (those keyframes
+ * live in vendor CSS but this overrides them via specificity tricks would
+ * be brittle; we add a stronger override below the vendor sheet on the
+ * pages that load it).
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/*
+ * Dark mode — respect prefers-color-scheme.
+ * Sidebar is already dark, so we only flip the content area.
+ */
+@media (prefers-color-scheme: dark) {
+  body { background-color: #1a1a1a; color: #d8d8d8; }
+  .content a { color: #ffbb00; }
+  .content a:hover, .content a:focus { color: #ffd042; }
+  h1, h2, h3, h4, h5, h6,
+  .page-title, .post-title, .post-title a,
+  strong { color: #f0f0f0; }
+  blockquote { color: #b0b0b0; border-left-color: #444; }
+  hr { border-top-color: #333; border-bottom-color: #1a1a1a; }
+  code { background-color: #2a2a2a; color: #ff8a8a; }
+  pre { background-color: #2a2a2a; }
+  table { border-color: #333; }
+  td, th { border-color: #333; }
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th { background-color: #222; }
+  abbr[title] { border-bottom-color: #444; }
+}
+
+
+/*
+ * Print stylesheet — show only the content, no sidebar/background colors,
+ * expand links so they appear as URLs in the printed page.
+ */
+@media print {
+  .sidebar { display: none !important; }
+  .content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #000 !important;
+  }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  a, a:visited { color: #000 !important; text-decoration: underline; }
+  /* Expand links to show full URL */
+  .content a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 80%;
+    font-style: italic;
+  }
+  /* Don't expand mailto, internal, fragment, or image-bearing links */
+  .content a[href^="mailto"]::after,
+  .content a[href^="#"]::after,
+  .content a[href^="/"]::after,
+  .content a:has(> img)::after { content: ""; }
+  blockquote { page-break-inside: avoid; }
+  h1, h2, h3 { page-break-after: avoid; }
+  img { max-width: 100% !important; page-break-inside: avoid; }
+}
