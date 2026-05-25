@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-description: "Luca Grella — Senior Data Engineer at lastminute.com, Computer Science Engineer from Politecnico di Milano, DJ and music producer. Welcome to my portfolio."
+description: "Luca Grella, Senior Data Engineer at lastminute.com, Computer Science Engineer from Politecnico di Milano, DJ and music producer. Welcome to my portfolio."
 home: true
 ---
 
@@ -13,4 +13,4 @@ or dive into my creative world through [**My Portfolio**]({{ '/myportfolio' | re
 ---
 
 > *"Any sufficiently advanced technology is indistinguishable from magic."*
-> — Arthur C. Clarke
+> Arthur C. Clarke

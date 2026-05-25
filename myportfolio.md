@@ -1,7 +1,7 @@
 ---
 layout: default
 title: My Portfolio
-description: "Welcome to Luca Grella's portfolio — career, projects, music, sports and certifications."
+description: "Welcome to Luca Grella's portfolio, career, projects, music, sports and certifications."
 myportfolio: true
 ---
 

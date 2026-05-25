@@ -1,7 +1,7 @@
 ---
 layout: default
 title: My Karate Diploma
-description: "Luca Grella — Shito Ryu Karate black belt 1st dan diploma."
+description: "Luca Grella, Shito Ryu Karate black belt 1st dan diploma."
 sports: true
 sitemap: false
 ---

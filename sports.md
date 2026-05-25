@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sports & Interests
-description: "Sports and personal interests of Luca Grella — karate black belt, ski, snowboard, music, photography and tech."
+description: "Sports and personal interests of Luca Grella, karate black belt, ski, snowboard, music, photography and tech."
 sports: true
 ---
 

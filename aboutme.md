@@ -1,21 +1,21 @@
 ---
 layout: default
 title: About Me
-description: "Luca Grella — Senior Data Engineer & Functional Lead at lastminute.com (Chiasso, Switzerland), Computer Science Engineer from Politecnico di Milano, DJ and music producer."
+description: "Luca Grella, Senior Data Engineer & Functional Lead at lastminute.com (Chiasso, Switzerland), Computer Science Engineer from Politecnico di Milano, DJ and music producer."
 aboutme: true
 ---
 
 ## About Me
 
 ### Work Experience
-* **Senior Data Engineer & Functional Lead** @ <a href="https://www.lastminute.com" target="_blank" rel="noopener noreferrer">lastminute.com</a> — Chiasso, Switzerland 🇨🇭
+* **Senior Data Engineer & Functional Lead** @ <a href="https://www.lastminute.com" target="_blank" rel="noopener noreferrer">lastminute.com</a>, Chiasso, Switzerland 🇨🇭
 * **Data Engineer** @ <a href="https://www.lastminute.com" target="_blank" rel="noopener noreferrer">lastminute.com</a>
 
 <picture><source type="image/webp" srcset="/assets/img/lastminute.webp"><img src="/assets/img/lastminute.png" alt="lastminute.com logo" style="width:60%" loading="lazy"></picture>
 
 ### Education
-* **M.Sc.** in Computer Science and Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a> <span class="post-date">— 2018 – 2020</span>
-* **B.Sc.** in Computer Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a> <span class="post-date">— 2014 – 2018</span>
+* **M.Sc.** in Computer Science and Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a> <span class="post-date">2018-2020</span>
+* **B.Sc.** in Computer Engineering @ <a href="https://www.polimi.it" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a> <span class="post-date">2014-2018</span>
 
 <picture><source type="image/webp" srcset="/assets/img/polimi.webp"><img src="/assets/img/polimi.png" alt="Politecnico di Milano logo" style="width:60%" loading="lazy"></picture>
 
@@ -23,9 +23,9 @@ aboutme: true
 Advanced Computer Architectures · Business Information Systems · Computer Security · Databases · Software Engineering · Operations Research · Formal Languages & Compilers
 
 ### Languages
-* 🇮🇹 **Italian** — native
-* 🇬🇧 **English** — professional working proficiency
-* 🇪🇸 **Spanish** — elementary
+* 🇮🇹 **Italian**, native
+* 🇬🇧 **English**, professional working proficiency
+* 🇪🇸 **Spanish**, elementary
 
 ### Musical Career
 * **DJ & Producer**.<br>
