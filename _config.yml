@@ -44,6 +44,13 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 
+# Front matter defaults
+defaults:
+  - scope:
+      path: "btc-tracker-fxnxqr55ekr1.html"
+    values:
+      sitemap: false
+
 # Exclude from build
 exclude:
   - README.md
