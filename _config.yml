@@ -47,7 +47,7 @@ plugins:
 # Front matter defaults
 defaults:
   - scope:
-      path: "btc-tracker-fxnxqr55ekr1.html"
+      path: "btc-tracker.html"
     values:
       sitemap: false
 
