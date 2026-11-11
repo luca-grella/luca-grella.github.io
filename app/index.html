@@ -143,7 +143,7 @@ body.s2 .stage>*{opacity:1;transition-delay:calc(var(--i)*60ms)}
 
   <div class="head stage" style="--i:1"><div><h1 id="hello"></h1><p id="lead"></p></div></div>
 
-  <div class="sec stage" style="--i:2"><span data-t="games">Giochi</span><a class="more" href="/giochi/"><span data-t="all">Tutti i giochi</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="sec stage" style="--i:2"><span data-t="games">Giochi</span><a class="more" href="/games/"><span data-t="all">Tutti i giochi</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   <div class="games" id="games"></div>
 
   <div class="sec stage" style="--i:5"><span data-t="site">Sito</span></div>
@@ -202,7 +202,7 @@ const ICON = {
   lock:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'
 };
 
-// Games: same list as /giochi/ (keep the two in sync when a game is added).
+// Games: same list as /games/ (keep the two in sync when a game is added).
 const GAMES = [
   {href:'/lenza-lenta/', icon:'/lenza-lenta/icons/icon-192.png', name:'Lenza Lenta', tint:'var(--teal)',
    desc:['Un gioco di pesca rilassante, senza fretta.','A cozy fishing game, no rush.']},

@@ -1,5 +1,5 @@
 // Hub service worker: network first, cache as offline fallback. Bump CACHE on every release.
-const CACHE = 'hub-v2';
+const CACHE = 'hub-v3';
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png', './icons/icon.svg',
   '/lenza-lenta/icons/icon-192.png', '/terrazza-padel/icons/icon-192.png'];
 self.addEventListener('install', e => {

@@ -58,6 +58,10 @@ defaults:
     values:
       sitemap: false
   - scope:
+      path: "giochi"
+    values:
+      sitemap: false
+  - scope:
       path: "app-t194d3"
     values:
       sitemap: false
