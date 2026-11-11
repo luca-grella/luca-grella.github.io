@@ -137,7 +137,7 @@ body.s2 .stage>*{opacity:1;transition-delay:calc(var(--i)*60ms)}
     <div class="crumbs"><span>luca-grella.github.io</span></div>
     <div class="sp"></div>
     <span class="when" id="when"></span>
-    <a class="unlock" id="unlock" href="/apps/" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></a>
+    <a class="unlock" id="unlock" href="/apps/?unlock" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></a>
   </header>
 
   <div class="head stage" style="--i:1"><div><h1 id="hello"></h1><p id="lead"></p></div></div>
@@ -181,7 +181,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 let PRIVATE = false;
 try { PRIVATE = !!localStorage.getItem('staticrypt_passphrase'); } catch (e) {}
 // Way in for a device (or an installed app, which has its own storage) that has not unlocked yet: a small lock that opens
-// the Apps page and its password prompt; with "Ricordami" the private cards then show here. Gone once unlocked.
+// the Apps page and its password prompt (?unlock: back here right after); with "Ricordami" the private cards then show. Gone once unlocked.
 const unlock = document.getElementById('unlock');
 unlock.hidden = PRIVATE;
 unlock.setAttribute('aria-label', /^en\b/i.test(navigator.language || 'it') ? 'Private area' : 'Area privata');
