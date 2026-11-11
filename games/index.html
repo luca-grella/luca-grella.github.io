@@ -107,6 +107,20 @@ body.standalone .install{display:none}
 body.s1 .stage{opacity:1;transform:none;transition:opacity .45s ease,transform .55s var(--ease);transition-delay:calc(var(--i)*60ms)}
 body.s2 .stage>*{opacity:1;transition-delay:calc(var(--i)*60ms)}
 
+/* Player: inside the installed app, games open full screen in a frame under a back bar (see the script). */
+.player{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;background:var(--bg)}
+.pbar{display:flex;align-items:center;gap:10px;flex-shrink:0;border-bottom:1px solid var(--line);
+  padding:calc(env(safe-area-inset-top,0px) + 6px) max(10px,env(safe-area-inset-right,0px)) 6px max(10px,env(safe-area-inset-left,0px))}
+.pbar .ttl{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.pbtn{height:34px;min-width:34px;padding:0 12px 0 7px;border-radius:11px;border:1px solid var(--line);background:var(--glass-2);color:var(--fg);
+  font:inherit;font-weight:600;font-size:13.5px;display:inline-flex;align-items:center;justify-content:center;gap:3px;cursor:pointer;flex-shrink:0}
+.pbtn.icon{padding:0}
+.pbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pframe{flex:1;min-height:0;padding:0 env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.pframe iframe{display:block;width:100%;height:100%;border:0;background:#000}
+body.playing{overflow:hidden}
+body.playing .wrap,body.playing .scene{display:none}
+
 @media (max-width:767px){
   .games{grid-template-columns:1fr;gap:12px}
   .head h1{font-size:28px}
@@ -153,6 +167,16 @@ body.s2 .stage>*{opacity:1;transition-delay:calc(var(--i)*60ms)}
   <div class="foot stage" style="--i:7"><span>© <span id="yr"></span> <a href="/">Luca Grella</a> · <a href="/contacts/">Contacts</a></span></div>
 </div>
 
+<div class="player" id="player" hidden>
+  <div class="pbar">
+    <button class="pbtn" id="pBack" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span></span></button>
+    <b class="ttl" id="pTitle"></b>
+    <div class="sp"></div>
+    <button class="pbtn icon" id="pReload" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></button>
+  </div>
+  <div class="pframe"><iframe id="pFrame" title="" allow="autoplay; fullscreen; gamepad; screen-wake-lock; web-share; clipboard-write" allowfullscreen></iframe></div>
+</div>
+
 <script>
 const EN = /^en\b/i.test(navigator.language || 'it');
 const L = EN ? 1 : 0;
@@ -188,7 +212,7 @@ document.getElementById('games').innerHTML = GAMES.map((g,i) => `
       <div class="title"><i></i><b>${g.name}</b></div>
       <p>${g.desc[L]}</p>
       <div class="tags">${g.tags.map(t => `<span class="tag">${t[L]}</span>`).join('')}</div>
-      <div class="actions"><a class="btn" href="${g.href}">${playIcon}${T.play[L]}</a></div>
+      <div class="actions"><a class="btn" href="${g.href}" data-play="${g.name}">${playIcon}${T.play[L]}</a></div>
     </div>
   </article>`).join('');
 
@@ -209,6 +233,53 @@ document.getElementById('installBtn').addEventListener('click', async () => {
   document.getElementById('installBtn').hidden = true;
 });
 addEventListener('appinstalled', () => document.body.classList.add('standalone'));
+
+// Player. An installed web app cannot launch another installed web app, and a link outside its scope opens in a
+// browser sheet, so inside the app the links marked data-play open full screen in a frame with a back bar.
+// In a normal browser tab they stay plain links. ?play=<href> reopens the same page after a reload.
+const player = document.getElementById('player'), frame = document.getElementById('pFrame');
+document.querySelector('#pBack span').textContent = EN ? 'Back' : 'Indietro';
+document.getElementById('pReload').setAttribute('aria-label', EN ? 'Reload' : 'Ricarica');
+const inApp = () => navigator.standalone === true || ['standalone', 'fullscreen'].some(m => matchMedia(`(display-mode: ${m})`).matches);
+const playable = href => [...document.querySelectorAll('a[data-play]')].find(a => a.getAttribute('href') === href);
+let listY = 0;
+function showPlayer(href) {
+  const a = playable(href);
+  if (!a) return false;
+  if (player.hidden) listY = scrollY;
+  document.getElementById('pTitle').textContent = frame.title = a.dataset.play;
+  if (frame.getAttribute('src') !== href) frame.src = href;
+  player.hidden = false;
+  document.body.classList.add('playing');
+  return true;
+}
+function hidePlayer() {
+  if (player.hidden) return;
+  player.hidden = true;
+  frame.src = 'about:blank';
+  document.body.classList.remove('playing');
+  scrollTo(0, listY);
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[data-play]');
+  if (!a || !inApp() || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  e.preventDefault();
+  const href = a.getAttribute('href');
+  if (showPlayer(href)) history.pushState({play: href}, '', '?play=' + encodeURIComponent(href));
+});
+document.getElementById('pBack').addEventListener('click', () => {
+  if (history.state && history.state.play) history.back();
+  else { hidePlayer(); history.replaceState(null, '', location.pathname); }
+});
+addEventListener('popstate', e => { if (e.state && e.state.play) showPlayer(e.state.play); else hidePlayer(); });
+document.getElementById('pReload').addEventListener('click', () => {
+  try { frame.contentWindow.location.reload(); } catch (err) { frame.src = frame.getAttribute('src'); }
+});
+const asked = new URLSearchParams(location.search).get('play');
+if (asked) {
+  if (inApp() && showPlayer(asked)) history.replaceState({play: asked}, '', location.href);
+  else history.replaceState(null, '', location.pathname);
+}
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', {scope:'./', updateViaCache:'none'}).catch(() => {});
 
