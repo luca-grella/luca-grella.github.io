@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d12">
+<meta name="description" content="I giochi di Luca Grella, da giocare nel browser. Luca Grella's browser games.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Giochi">
+<title>Giochi · Luca Grella</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Games hub for luca-grella.github.io in the dark glass style (dark orange). Installable PWA with scope /giochi/:
+   the games live outside that scope, so the installed app opens them in its own in-app browser view. */
+:root{
+  color-scheme:dark;
+  --accent:#f2894b; --accent-ink:#1d0f06;
+  --bg:#0b0d12; --scene-a:#1a2130; --scene-b:#3b2a20; --scene-c:#202a38; --scene-fog:rgba(190,200,215,.06);
+  --glass:rgba(20,23,31,.58); --glass-2:rgba(28,32,42,.66); --glass-hi:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.15);
+  --fg:#f2efea; --fg-2:rgba(236,231,224,.64); --fg-3:rgba(236,231,224,.4);
+  --teal:#5db3a5; --ochre:#c8a262; --dust:#7f9dc6; --plum:#a98bc9;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --font:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.2,.9,.25,1.15);
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.45;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+[hidden]{display:none!important}
+.num{font-variant-numeric:tabular-nums}
+
+.scene{position:fixed;inset:0;z-index:0;overflow:hidden;background:var(--scene-a)}
+.scene::before{content:"";position:absolute;inset:-20%;filter:blur(60px);
+  background:
+    radial-gradient(40% 30% at 22% 78%, var(--scene-b) 0%, transparent 70%),
+    radial-gradient(35% 28% at 78% 18%, var(--scene-c) 0%, transparent 70%),
+    radial-gradient(30% 45% at 60% 70%, color-mix(in srgb,var(--accent) 22%, transparent) 0%, transparent 70%),
+    linear-gradient(180deg, var(--scene-a), var(--bg));}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--scene-fog),transparent 40%,var(--scene-fog))}
+.notch{position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+
+.wrap{position:relative;z-index:1;max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:16px;
+  padding:max(16px,calc(env(safe-area-inset-top,0px) + 8px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:22px;
+  backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);
+  box-shadow:var(--shadow), inset 0 1px 0 var(--glass-hi)}
+
+.top{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:18px}
+.logo{width:36px;height:36px;border-radius:11px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;
+  flex-shrink:0;box-shadow:0 6px 18px color-mix(in srgb,var(--accent) 35%,transparent)}
+.crumbs{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--fg-3);min-width:0;white-space:nowrap;overflow:hidden}
+.crumbs b{color:var(--fg);font-weight:600}
+.sp{flex:1}
+.btn{height:38px;padding:0 16px;border-radius:12px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:600;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;font:inherit;font-weight:600;font-size:13.5px;
+  box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 30%,transparent);transition:transform .25s var(--ease)}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:var(--glass-2);color:var(--fg);border:1px solid var(--line);box-shadow:none}
+.btn:focus-visible,.game:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+
+.head{padding:6px 4px 0}
+.head h1{margin:0;font-size:34px;line-height:1.1;letter-spacing:-.8px;font-weight:600}
+.head p{margin:6px 0 0;color:var(--fg-2);max-width:62ch}
+
+.games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.game{--tint:var(--teal);position:relative;overflow:hidden;display:flex;flex-direction:column;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--tint) 20%,transparent),transparent 55%),var(--glass)}
+.cover{position:relative;height:150px;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(60% 90% at 50% 100%,color-mix(in srgb,var(--cover) 55%,transparent),transparent 70%)}
+.cover::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:var(--line)}
+.cover img{width:92px;height:92px;border-radius:24px;box-shadow:0 14px 34px rgba(0,0,0,.45),0 0 0 1px var(--line-2);transition:transform .45s var(--ease)}
+.game:hover .cover img{transform:translateY(-4px) rotate(-3deg) scale(1.04)}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.title{display:flex;align-items:center;gap:8px}
+.title b{font-size:19px;font-weight:600;letter-spacing:-.3px}
+.title i{width:8px;height:8px;border-radius:50%;background:var(--tint);display:inline-block}
+.body p{margin:0;color:var(--fg-2);font-size:13.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11.5px;padding:3px 9px;border-radius:20px;border:1px solid var(--line-2);color:var(--fg-2);white-space:nowrap}
+.actions{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.actions .btn{flex:1}
+
+.install{padding:18px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+.install img{width:52px;height:52px;border-radius:14px;box-shadow:0 0 0 1px var(--line-2)}
+.install b{font-size:15px;font-weight:600;display:block}
+.install p{margin:2px 0 0;color:var(--fg-2);font-size:13px}
+.steps{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.step{padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:var(--glass-2);font-size:12.5px;color:var(--fg-2)}
+.step strong{display:block;color:var(--fg);font-size:12.5px;margin-bottom:4px}
+body.standalone .install{display:none}
+.foot{text-align:center;font-size:11.5px;color:var(--fg-3);padding-top:4px}
+.foot a{color:var(--fg-2)}
+
+/* staged entrance: scene, then empty glass, then content */
+.stage{opacity:0;transform:scale(.96)}
+.stage>*{opacity:0;transition:opacity .4s ease}
+body.s1 .stage{opacity:1;transform:none;transition:opacity .45s ease,transform .55s var(--ease);transition-delay:calc(var(--i)*60ms)}
+body.s2 .stage>*{opacity:1;transition-delay:calc(var(--i)*60ms)}
+
+@media (max-width:767px){
+  .games{grid-template-columns:1fr;gap:12px}
+  .head h1{font-size:28px}
+  .crumbs span.host{display:none}
+  .cover{height:128px}
+  .install{grid-template-columns:auto 1fr}
+  .install .btn{grid-column:1/-1}
+  .steps{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .stage,.stage>*{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<div class="scene" aria-hidden="true"></div>
+<div class="notch" aria-hidden="true"></div>
+
+<div class="wrap">
+  <header class="top glass stage" style="--i:0">
+    <div class="logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".9" fill="currentColor"/><circle cx="18" cy="13.8" r=".9" fill="currentColor"/></svg></div>
+    <div class="crumbs"><span class="host">luca-grella.github.io</span><span class="host">›</span><b data-t="crumb">Giochi</b></div>
+    <div class="sp"></div>
+    <a class="btn ghost" href="/"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Home</a>
+  </header>
+
+  <div class="head stage" style="--i:1">
+    <div><h1 data-t="h1">Giochi</h1><p data-t="lead">Giochi da fare nel browser, su telefono o computer. Tocca Gioca e si apre subito.</p></div>
+  </div>
+
+  <main class="games" id="games"></main>
+
+  <section class="install glass stage" style="--i:6" id="install">
+    <img src="icons/icon-192.png" alt="">
+    <div><b data-t="instTitle">Tieni i giochi sulla Home</b><p data-t="instText">Installa Giochi come app: un'icona sola, tutti i giochi dentro.</p></div>
+    <button class="btn" id="installBtn" hidden data-t="instBtn">Installa</button>
+    <div class="steps" id="steps">
+      <div class="step"><strong>iPhone / iPad</strong><span data-t="ios">In Safari tocca Condividi, poi «Aggiungi alla schermata Home».</span></div>
+      <div class="step"><strong>Android</strong><span data-t="android">In Chrome apri il menu ⋮, poi «Installa app».</span></div>
+    </div>
+  </section>
+
+  <div class="foot stage" style="--i:7"><span>© <span id="yr"></span> <a href="/">Luca Grella</a> · <a href="/contacts/">Contacts</a></span></div>
+</div>
+
+<script>
+const EN = /^en\b/i.test(navigator.language || 'it');
+const L = EN ? 1 : 0;
+if (EN) document.documentElement.lang = 'en';
+const T = {
+  crumb:['Giochi','Games'], h1:['Giochi','Games'],
+  lead:['Giochi da fare nel browser, su telefono o computer. Tocca Gioca e si apre subito.',
+        'Games that run in the browser, on phone or computer. Tap Play and it starts right away.'],
+  instTitle:['Tieni i giochi sulla Home','Keep the games on your Home screen'],
+  instText:["Installa Giochi come app: un'icona sola, tutti i giochi dentro.",'Install Games as an app: one icon, every game inside.'],
+  instBtn:['Installa','Install'],
+  ios:['In Safari tocca Condividi, poi «Aggiungi alla schermata Home».','In Safari tap Share, then "Add to Home Screen".'],
+  android:['In Chrome apri il menu ⋮, poi «Installa app».','In Chrome open the ⋮ menu, then "Install app".'],
+  play:['Gioca','Play']
+};
+document.querySelectorAll('[data-t]').forEach(el => { el.textContent = T[el.dataset.t][L]; });
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// The list of games. To add one: a new entry here, plus its icon in sw.js SHELL.
+const GAMES = [
+  {href:'/lenza-lenta/', icon:'/lenza-lenta/icons/icon-192.png', name:'Lenza Lenta', tint:'var(--teal)', cover:'#5db3a5',
+   desc:['Un gioco di pesca rilassante, senza fretta.','A cozy fishing game, no rush.'],
+   tags:[['3D','3D'],['Rilassante','Cozy']]},
+  {href:'/terrazza-padel/', icon:'/terrazza-padel/icons/icon-192.png', name:'Terrazza Padel', tint:'var(--ochre)', cover:'#c8a262',
+   desc:['Padel 2 contro 2 in pixel art su otto terrazze nel mondo, con tornei.','2 vs 2 pixel-art padel on eight rooftops around the world, with tournaments.'],
+   tags:[['Pixel art','Pixel art'],['2 contro 2','2 vs 2'],['Tornei','Tournaments']]}
+];
+const playIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>';
+document.getElementById('games').innerHTML = GAMES.map((g,i) => `
+  <article class="game glass stage" style="--i:${2+i};--tint:${g.tint};--cover:${g.cover}">
+    <div class="cover"><img src="${g.icon}" alt="" width="92" height="92"></div>
+    <div class="body">
+      <div class="title"><i></i><b>${g.name}</b></div>
+      <p>${g.desc[L]}</p>
+      <div class="tags">${g.tags.map(t => `<span class="tag">${t[L]}</span>`).join('')}</div>
+      <div class="actions"><a class="btn" href="${g.href}">${playIcon}${T.play[L]}</a></div>
+    </div>
+  </article>`).join('');
+
+// Installed as an app: hide the install card.
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+if (standalone) document.body.classList.add('standalone');
+
+// Android/desktop Chrome: real install button instead of the manual steps.
+let deferred = null;
+addEventListener('beforeinstallprompt', e => {
+  e.preventDefault(); deferred = e;
+  document.getElementById('installBtn').hidden = false;
+  document.getElementById('steps').hidden = true;
+});
+document.getElementById('installBtn').addEventListener('click', async () => {
+  if (!deferred) return;
+  deferred.prompt(); await deferred.userChoice; deferred = null;
+  document.getElementById('installBtn').hidden = true;
+});
+addEventListener('appinstalled', () => document.body.classList.add('standalone'));
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', {scope:'./', updateViaCache:'none'}).catch(() => {});
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setTimeout(() => document.body.classList.add('s1'), reduce ? 0 : 120);
+setTimeout(() => document.body.classList.add('s2'), reduce ? 0 : 620);
+</script>
+</body>
+</html>

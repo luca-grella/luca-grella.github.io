@@ -54,6 +54,10 @@ defaults:
       path: "igfilters"
     values:
       sitemap: false
+  - scope:
+      path: "404.html"
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
