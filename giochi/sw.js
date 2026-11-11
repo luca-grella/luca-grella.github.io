@@ -1,6 +1,6 @@
 // Giochi hub service worker: network first, cache as offline fallback.
 // Bump CACHE on every release so old copies are dropped.
-const CACHE = 'giochi-v1';
+const CACHE = 'giochi-v2';
 const SHELL = [
   './',
   './manifest.webmanifest',
