@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d2638"/><stop offset=".55" stop-color="#121722"/><stop offset="1" stop-color="#0a0c11"/>
+    </linearGradient>
+    <radialGradient id="glowO" cx="50%" cy="80%" r="55%">
+      <stop offset="0" stop-color="#f2894b" stop-opacity=".5"/><stop offset=".45" stop-color="#f2894b" stop-opacity=".16"/><stop offset="1" stop-color="#f2894b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="18%" cy="14%" r="55%">
+      <stop offset="0" stop-color="#7f9dc6" stop-opacity=".42"/><stop offset="1" stop-color="#7f9dc6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="45%" r="75%">
+      <stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".24"/><stop offset="1" stop-color="#ffffff" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".5"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".1"/><stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc08f"/><stop offset=".5" stop-color="#f2894b"/><stop offset="1" stop-color="#c45a21"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".45"/><stop offset=".4" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="22"/><feOffset dy="26"/><feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="coin" cx="38%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#ffd0a3"/><stop offset=".45" stop-color="#f7931a"/><stop offset="1" stop-color="#b9561a"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glowB)"/>
+  <rect width="1024" height="1024" fill="url(#glowO)"/>
+  <circle cx="512" cy="540" r="250" fill="#f2894b" opacity=".5" filter="url(#blur40)"/>
+  <g filter="url(#shadow)">
+    <circle cx="512" cy="512" r="292" fill="#141924" fill-opacity=".55"/>
+  </g>
+  <circle cx="512" cy="512" r="292" fill="url(#glass)" stroke="url(#rim)" stroke-width="5"/>
+  <circle cx="512" cy="512" r="232" fill="url(#coin)"/>
+  <circle cx="512" cy="512" r="232" fill="url(#sheen)"/>
+  <circle cx="512" cy="512" r="232" fill="none" stroke="#ffd2b0" stroke-opacity=".6" stroke-width="5"/>
+  <circle cx="512" cy="512" r="200" fill="none" stroke="#1d0f06" stroke-opacity=".18" stroke-width="6"/>
+  <g fill="none" stroke="#1d0f06" stroke-linecap="round" stroke-linejoin="round" stroke-width="36" transform="rotate(-12 512 512)">
+    <path d="M462 392 V632"/>
+    <path d="M430 392 H548 a58 58 0 0 1 0 116 H462"/>
+    <path d="M462 508 H562 a62 62 0 0 1 0 124 H430"/>
+    <path d="M492 348 V392 M544 348 V392 M492 632 V676 M544 632 V676"/>
+  </g>
+  <path d="M840 190 l10 34 l34 10 l-34 10 l-10 34 l-10 -34 l-34 -10 l34 -10 z" fill="#ffe2c9" opacity=".85"/>
+  <rect width="1024" height="1024" fill="url(#vig)"/>
+</svg>

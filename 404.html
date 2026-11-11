@@ -194,25 +194,21 @@ const ICON = {
   pad:'<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".9" fill="currentColor"/><circle cx="18" cy="13.8" r=".9" fill="currentColor"/>',
   mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/>'
 };
-// Cards shown: everything public, in Luca's order (Home, then the main page's own order: Contacts, Portfolio, Games).
+// Cards shown: everything public, in Luca's order (Home, then the main page's own order: Contacts, Portfolio).
+// Games and Apps are private (password), so they are never shown or suggested here.
 const DEST = [
   {key:'home', href:'/', name:'Home', tint:'var(--dust)', icon:'home',
-   desc:['Contatti, portfolio e giochi','Contacts, portfolio and games'], meta:'/'},
+   desc:['Contatti e portfolio','Contacts and portfolio'], meta:'/'},
   {key:'contacts', href:'/contacts/', name:'Contacts', tint:'var(--plum)', icon:'mail',
    desc:['Tutti i profili in un posto','All profiles in one place'], meta:'/contacts'},
   {key:'portfolio', href:'/portfolio/', name:'Portfolio', tint:'var(--ochre)', icon:'brief',
-   desc:['Il portfolio di Luca Grella',"Luca Grella's portfolio"], meta:'/portfolio'},
-  {key:'games', href:'/games/', name:['Giochi','Games'], tint:'var(--teal)', icon:'pad',
-   desc:['Tutti i giochi, da giocare nel browser','All the games, playable in the browser'], meta:'/games'}
+   desc:['Il portfolio di Luca Grella',"Luca Grella's portfolio"], meta:'/portfolio'}
 ];
-// Possible "Did you mean" targets: the cards above plus each game.
+// Possible "Did you mean" targets: the cards above.
 const TARGETS = [
   {key:'home', alias:['index','main','start','app'], href:'/', name:'Home'},
-  {key:'lenza-lenta', alias:['pesca','fishing'], href:'/lenza-lenta/', name:'Lenza Lenta'},
-  {key:'terrazza-padel', alias:['padel','tennis'], href:'/terrazza-padel/', name:'Terrazza Padel'},
   {key:'contacts', alias:['contatti','links','link'], href:'/contacts/', name:'Contacts'},
-  {key:'portfolio', alias:['about','aboutme','works','cv'], href:'/portfolio/', name:'Portfolio'},
-  {key:'games', alias:['giochi','gioco','game'], href:'/games/', name:['Giochi','Games']}
+  {key:'portfolio', alias:['about','aboutme','works','cv'], href:'/portfolio/', name:'Portfolio'}
 ];
 const svg = d => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
 document.getElementById('cards').innerHTML = DEST.map((d,i) => `

@@ -74,6 +74,10 @@ defaults:
       path: "apps"
     values:
       sitemap: false
+  - scope:
+      path: "games"
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
@@ -82,3 +86,4 @@ exclude:
   - Gemfile.lock
   - vendor
   - thesis
+  - igfilters   # switched off on 11 Nov 2026 (custom Instagram filters were removed); the code stays in the repo

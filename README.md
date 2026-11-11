@@ -14,17 +14,16 @@ Portfolio personale di **Luca Grella** — Senior Data Engineer @ lastminute.com
 
 | Pagina | Indirizzo | Descrizione |
 |--------|-----------|-------------|
-| Pagina principale | `/` | Contacts, Portfolio e Giochi; è anche l'app installabile (`index.html`, `manifest.webmanifest`, `sw.js`, `icons/`) |
-| Home del portfolio | `/portfolio/` | Benvenuto e link principali |
-| My Portfolio | `/portfolio/works/` | Progetti software, accademici e creativi |
+| Pagina principale | `/` | Contacts e Portfolio (App e Giochi solo sui dispositivi sbloccati); è anche l'app installabile (`index.html`, `manifest.webmanifest`, `sw.js`, `icons/`) |
+| Home del portfolio | `/portfolio/` | Benvenuto, sezioni del portfolio e link a Contacts |
 | About Me | `/portfolio/about/` | Chi sono |
 | Certifications | `/portfolio/certifications/` | Certificazioni professionali |
 | Sports | `/portfolio/sports/` | Attività sportive (karate, ecc.) |
 | DJ Teck | `/portfolio/djteck/` | Produzione musicale, mix, Spotify/SoundCloud |
 | Contacts | `/contacts/` | Link social e contatti |
-| Giochi | `/games/` | I giochi, installabile come app |
+| Giochi | `/games/` | I giochi in sviluppo, sotto password, installabile come app |
 
-I vecchi indirizzi del portfolio (`/aboutme/`, `/myportfolio/`, `/sports/` ecc.) rimandano ai nuovi con `jekyll-redirect-from`.
+I vecchi indirizzi del portfolio (`/aboutme/`, `/myportfolio/`, `/portfolio/works/`, `/sports/` ecc.) rimandano ai nuovi con `jekyll-redirect-from`.
 
 ## Sviluppo locale
 
