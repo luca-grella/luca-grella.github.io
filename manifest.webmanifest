@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Luca Grella",
   "short_name": "Luca",
-  "description": "Contatti, portfolio e giochi di Luca Grella. Contacts, portfolio and games.",
+  "description": "Contatti e portfolio di Luca Grella. Contacts and portfolio.",
   "lang": "it",
   "start_url": "/",
   "scope": "/",
@@ -13,7 +13,7 @@
   "categories": [
     "portfolio",
     "personal",
-    "games"
+    "personal-tools"
   ],
   "icons": [
     {

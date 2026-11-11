@@ -1,6 +1,6 @@
 // Main page service worker: network first, cache as offline fallback, for the main page and its app files only.
 // Its scope is the whole site, so it leaves every other request alone. Bump CACHE on every release.
-const CACHE = 'main-v1';
+const CACHE = 'main-v2';
 const SHELL = ['/', '/manifest.webmanifest', '/icons/icon-180.png', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/icon.svg'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
