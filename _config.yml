@@ -50,6 +50,10 @@ defaults:
       path: "btc-tracker.html"
     values:
       sitemap: false
+  - scope:
+      path: "igfilters"
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
