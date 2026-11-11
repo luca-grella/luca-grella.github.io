@@ -1,16 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
   <defs>
-    <radialGradient id="a" cx="22%" cy="80%" r="60%"><stop offset="0" stop-color="#3b2a20"/><stop offset="1" stop-color="#3b2a20" stop-opacity="0"/></radialGradient>
-    <radialGradient id="b" cx="78%" cy="15%" r="55%"><stop offset="0" stop-color="#202a38"/><stop offset="1" stop-color="#202a38" stop-opacity="0"/></radialGradient>
-    <radialGradient id="c" cx="60%" cy="70%" r="55%"><stop offset="0" stop-color="#f2894b" stop-opacity=".28"/><stop offset="1" stop-color="#f2894b" stop-opacity="0"/></radialGradient>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2130"/><stop offset="1" stop-color="#0b0d12"/></linearGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".10"/><stop offset="1" stop-color="#ffffff" stop-opacity=".03"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d2638"/><stop offset=".55" stop-color="#121722"/><stop offset="1" stop-color="#0a0c11"/>
+    </linearGradient>
+    <radialGradient id="glowO" cx="50%" cy="78%" r="55%">
+      <stop offset="0" stop-color="#f2894b" stop-opacity=".55"/><stop offset=".45" stop-color="#f2894b" stop-opacity=".18"/><stop offset="1" stop-color="#f2894b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowT" cx="82%" cy="12%" r="50%">
+      <stop offset="0" stop-color="#5db3a5" stop-opacity=".38"/><stop offset="1" stop-color="#5db3a5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="45%" r="75%">
+      <stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".26"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".09"/><stop offset="1" stop-color="#ffffff" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".12"/><stop offset="1" stop-color="#ffffff" stop-opacity=".22"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffc08f"/><stop offset=".45" stop-color="#f2894b"/><stop offset="1" stop-color="#c45a21"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6ec"/><stop offset="1" stop-color="#e9d6c2"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a7eadf"/><stop offset="1" stop-color="#3f9a8c"/>
+    </linearGradient>
+    <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="blur14" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="26"/><feOffset dy="34"/><feComponentTransfer><feFuncA type="linear" slope=".55"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="pad" d="M330 330 h364 c112 0 176 66 196 178 l38 214 c14 82 -38 140 -104 140 c-50 0 -84 -30 -112 -76 l-44 -72 c-16 -26 -38 -38 -66 -38 h-180 c-28 0 -50 12 -66 38 l-44 72 c-28 46 -62 76 -112 76 c-66 0 -118 -58 -104 -140 l38 -214 c20 -112 84 -178 196 -178 z"/>
+    <clipPath id="padClip"><use href="#pad"/></clipPath>
   </defs>
-  <rect width="512" height="512" fill="url(#bg)"/>
-  <rect width="512" height="512" fill="url(#a)"/><rect width="512" height="512" fill="url(#b)"/><rect width="512" height="512" fill="url(#c)"/>
-  <rect x="96" y="176" width="320" height="176" rx="88" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".14" stroke-width="3"/>
-  <g fill="#f2894b">
-    <rect x="152" y="250" width="72" height="22" rx="8"/><rect x="177" y="225" width="22" height="72" rx="8"/>
-    <circle cx="330" cy="244" r="17"/><circle cx="366" cy="282" r="17"/>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glowT)"/>
+  <rect width="1024" height="1024" fill="url(#glowO)"/>
+
+  <ellipse cx="512" cy="600" rx="300" ry="170" fill="#f2894b" opacity=".35" filter="url(#blur40)"/>
+
+  <g transform="translate(0 -40)">
+    <g filter="url(#shadow)">
+      <use href="#pad" fill="#141924" fill-opacity=".72"/>
+      <use href="#pad" fill="url(#glass)"/>
+    </g>
+    <g clip-path="url(#padClip)">
+      <ellipse cx="512" cy="300" rx="420" ry="120" fill="#ffffff" opacity=".10"/>
+      <ellipse cx="512" cy="900" rx="360" ry="90" fill="#f2894b" opacity=".20" filter="url(#blur14)"/>
+    </g>
+    <use href="#pad" fill="none" stroke="url(#rim)" stroke-width="5"/>
+
+    <g filter="url(#blur14)" opacity=".75">
+      <rect x="318" y="490" width="140" height="44" rx="14" fill="#f2894b"/>
+      <rect x="366" y="442" width="44" height="140" rx="14" fill="#f2894b"/>
+    </g>
+    <rect x="318" y="490" width="140" height="44" rx="14" fill="url(#orange)"/>
+    <rect x="366" y="442" width="44" height="140" rx="14" fill="url(#orange)"/>
+    <rect x="374" y="450" width="28" height="16" rx="6" fill="#fff" opacity=".35"/>
+
+    <circle cx="640" cy="478" r="36" fill="url(#orange)"/>
+    <circle cx="716" cy="548" r="36" fill="url(#teal)"/>
+    <circle cx="632" cy="466" r="11" fill="#fff" opacity=".45"/>
+    <circle cx="708" cy="536" r="11" fill="#fff" opacity=".45"/>
+
+    <rect x="470" y="420" width="34" height="14" rx="7" fill="url(#cream)" opacity=".75"/>
+    <rect x="520" y="420" width="34" height="14" rx="7" fill="url(#cream)" opacity=".75"/>
   </g>
+
+  <g fill="#ffe2c9">
+    <path d="M790 200 l10 34 l34 10 l-34 10 l-10 34 l-10 -34 l-34 -10 l34 -10 z" opacity=".9"/>
+    <path d="M220 260 l6 20 l20 6 l-20 6 l-6 20 l-6 -20 l-20 -6 l20 -6 z" opacity=".6"/>
+    <path d="M860 380 l5 16 l16 5 l-16 5 l-5 16 l-5 -16 l-16 -5 l16 -5 z" opacity=".5"/>
+  </g>
+
+  <rect width="1024" height="1024" fill="url(#vig)"/>
 </svg>
