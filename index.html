@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d12">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Luca">
+<title>Luca Grella</title>
+<meta name="description" content="Luca Grella, Senior Data Engineer at lastminute.com, DJ and music producer: contacts, portfolio and games.">
+<link rel="canonical" href="https://luca-grella.github.io/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Main page of luca-grella.github.io (also the installable app) in the dark glass style (dark orange): Contacts, Portfolio and Games as glass
+   cards, plus the private pages (Apps, BTC tracker, IG filters) only on devices that already unlocked one of them. Installable PWA whose
+   scope is the whole site, so every page opens inside the app. */
+:root{
+  color-scheme:dark;
+  --accent:#f2894b; --accent-ink:#1d0f06;
+  --bg:#0b0d12; --scene-a:#1a2130; --scene-b:#3b2a20; --scene-c:#202a38; --scene-fog:rgba(190,200,215,.06);
+  --glass:rgba(20,23,31,.58); --glass-2:rgba(28,32,42,.66); --glass-hi:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.15);
+  --fg:#f2efea; --fg-2:rgba(236,231,224,.64); --fg-3:rgba(236,231,224,.4);
+  --teal:#5db3a5; --ochre:#c8a262; --dust:#7f9dc6; --plum:#a98bc9;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --font:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.2,.9,.25,1.15);
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.45;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+[hidden]{display:none!important}
+
+.scene{position:fixed;inset:0;z-index:0;overflow:hidden;background:var(--scene-a)}
+.scene::before{content:"";position:absolute;inset:-20%;filter:blur(60px);
+  background:
+    radial-gradient(40% 30% at 22% 78%, var(--scene-b) 0%, transparent 70%),
+    radial-gradient(35% 28% at 78% 18%, var(--scene-c) 0%, transparent 70%),
+    radial-gradient(30% 45% at 60% 70%, color-mix(in srgb,var(--accent) 22%, transparent) 0%, transparent 70%),
+    linear-gradient(180deg, var(--scene-a), var(--bg));}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--scene-fog),transparent 40%,var(--scene-fog))}
+.notch{position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+
+.wrap{position:relative;z-index:1;max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:16px;
+  padding:max(16px,calc(env(safe-area-inset-top,0px) + 8px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:22px;
+  backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);
+  box-shadow:var(--shadow), inset 0 1px 0 var(--glass-hi)}
+
+.top{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:18px}
+.logo{width:36px;height:36px;border-radius:11px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;
+  font-weight:700;font-size:16px;flex-shrink:0;box-shadow:0 6px 18px color-mix(in srgb,var(--accent) 35%,transparent)}
+.crumbs{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--fg-3);min-width:0;white-space:nowrap;overflow:hidden}
+.crumbs b{color:var(--fg);font-weight:600}
+.sp{flex:1}
+.when{font-size:12px;color:var(--fg-3);white-space:nowrap}
+.btn{height:38px;padding:0 16px;border-radius:12px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;font:inherit;font-weight:600;font-size:13.5px;
+  box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 30%,transparent);transition:transform .25s var(--ease)}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:var(--glass-2);color:var(--fg);border:1px solid var(--line);box-shadow:none}
+.btn:focus-visible,.tile:focus-visible,.more:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.head{padding:6px 4px 0}
+.head h1{margin:0;font-size:34px;line-height:1.1;letter-spacing:-.8px;font-weight:600}
+.head p{margin:6px 0 0;color:var(--fg-2);max-width:62ch}
+
+.sec{display:flex;align-items:center;gap:8px;padding:6px 6px 0}
+.sec span{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--fg-3)}
+.sec .more{margin-left:auto;font-size:12.5px;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:4px}
+
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+@media (min-width:768px){#priv{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{--tint:var(--dust);position:relative;padding:16px;display:flex;flex-direction:column;gap:10px;min-height:130px;overflow:hidden;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--tint) 22%,transparent),transparent 60%),var(--glass);
+  transition:transform .3s var(--ease),border-color .3s}
+.tile:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--tint) 45%,transparent)}
+.tile .ic{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:color-mix(in srgb,var(--tint) 22%,transparent);color:var(--tint)}
+.tile b{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.tile b i{width:7px;height:7px;border-radius:50%;background:var(--tint);display:inline-block}
+.tile p{margin:0;font-size:12.5px;color:var(--fg-2)}
+.tile .arrow{position:absolute;right:14px;top:14px;color:var(--fg-3);transition:transform .3s var(--ease),color .3s}
+.tile:hover .arrow{transform:translate(2px,-2px);color:var(--tint)}
+.tile.locked p{padding-right:104px}
+.tile .lock{position:absolute;right:14px;bottom:14px;font-size:11px;color:var(--fg-3);display:inline-flex;align-items:center;gap:4px}
+
+.install{padding:18px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+.install img{width:52px;height:52px;border-radius:14px;box-shadow:0 0 0 1px var(--line-2)}
+.install b{font-size:15px;font-weight:600;display:block}
+.install p{margin:2px 0 0;color:var(--fg-2);font-size:13px}
+.steps{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.step{padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:var(--glass-2);font-size:12.5px;color:var(--fg-2)}
+.step strong{display:block;color:var(--fg);font-size:12.5px;margin-bottom:4px}
+body.standalone .install{display:none}
+.foot{text-align:center;font-size:11.5px;color:var(--fg-3);padding-top:4px}
+
+.stage{opacity:0;transform:scale(.96)}
+.stage>*{opacity:0;transition:opacity .4s ease}
+body.s1 .stage{opacity:1;transform:none;transition:opacity .45s ease,transform .55s var(--ease);transition-delay:calc(var(--i)*60ms)}
+body.s2 .stage>*{opacity:1;transition-delay:calc(var(--i)*60ms)}
+
+@media (max-width:767px){
+  .tiles{grid-template-columns:1fr;gap:12px}
+  .tile{min-height:0;padding:14px}
+  .head h1{font-size:28px}
+  .when{display:none}
+  .install{grid-template-columns:auto 1fr}
+  .install .btn{grid-column:1/-1}
+  .steps{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .stage,.stage>*{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<div class="scene" aria-hidden="true"></div>
+<div class="notch" aria-hidden="true"></div>
+
+<div class="wrap">
+  <header class="top glass stage" style="--i:0">
+    <div class="logo">L</div>
+    <div class="crumbs"><b>Luca Grella</b></div>
+    <div class="sp"></div>
+    <span class="when" id="when"></span>
+  </header>
+
+  <div class="head stage" style="--i:1"><div><h1 id="hello"></h1><p id="lead"></p></div></div>
+
+  <div class="sec stage" style="--i:2"><span data-t="site">Sito</span></div>
+  <div class="tiles" id="site"></div>
+
+  <div class="sec stage" style="--i:6" id="privHead" hidden><span data-t="private">Privato</span></div>
+  <div class="tiles" id="priv" hidden></div>
+
+  <section class="install glass stage" style="--i:9" id="install">
+    <img src="icons/icon-192.png" alt="">
+    <div><b data-t="instTitle">Tienila sulla Home</b><p data-t="instText">Installala come app: giochi e pagine a un tocco.</p></div>
+    <button class="btn" id="installBtn" hidden data-t="instBtn">Installa</button>
+    <div class="steps" id="steps">
+      <div class="step"><strong>iPhone / iPad</strong><span data-t="ios">In Safari tocca Condividi, poi «Aggiungi alla schermata Home».</span></div>
+      <div class="step"><strong>Android</strong><span data-t="android">In Chrome apri il menu ⋮, poi «Installa app».</span></div>
+    </div>
+  </section>
+
+  <div class="foot stage" style="--i:10"><span>© <span id="yr"></span> Luca Grella</span></div>
+</div>
+
+<script>
+const EN = /^en\b/i.test(navigator.language || 'it');
+const L = EN ? 1 : 0;
+if (EN) document.documentElement.lang = 'en';
+const T = {
+  site:['Sito','Site'], private:['Privato','Private'],
+  instTitle:['Tienila sulla Home','Keep it on your Home screen'],
+  instText:['Installala come app: contatti, portfolio e giochi a un tocco.','Install it as an app: contacts, portfolio and games one tap away.'],
+  instBtn:['Installa','Install'],
+  ios:['In Safari tocca Condividi, poi «Aggiungi alla schermata Home».','In Safari tap Share, then "Add to Home Screen".'],
+  android:['In Chrome apri il menu ⋮, poi «Installa app».','In Chrome open the ⋮ menu, then "Install app".'],
+  leadPub:['Contatti, portfolio e giochi, tutto in un posto.','Contacts, portfolio and games, all in one place.'],
+  leadPriv:['Tutto il sito in un posto, comprese le pagine private.','The whole site in one place, private pages included.'],
+  locked:['con password','password']
+};
+document.querySelectorAll('[data-t]').forEach(el => { el.textContent = T[el.dataset.t][L]; });
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Private pages (StatiCrypt) show up only where one of them was already unlocked with "Ricordami": StatiCrypt keeps
+// the remembered key in localStorage under staticrypt_passphrase, the same for the whole site. That device is Luca's,
+// so it also greets him by name. This only hides the cards: the pages stay encrypted for everyone else.
+let PRIVATE = false;
+try { PRIVATE = !!localStorage.getItem('staticrypt_passphrase'); } catch (e) {}
+// Greeting by time of day.
+const h = new Date().getHours();
+const part = h < 5 ? 2 : h < 13 ? 0 : h < 18 ? 1 : 2;
+const HELLO = [['Buongiorno','Buon pomeriggio','Buonasera'],['Good morning','Good afternoon','Good evening']];
+document.getElementById('hello').textContent = PRIVATE ? `${HELLO[L][part]}, Luca` : 'Luca Grella';
+document.getElementById('lead').textContent = (PRIVATE ? T.leadPriv : T.leadPub)[L];
+document.getElementById('when').textContent = new Date().toLocaleDateString(EN ? 'en-GB' : 'it-IT', {weekday:'long', day:'numeric', month:'long'});
+
+const svg = (d,s=18) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const ICON = {
+  home:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>',
+  brief:'<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/><path d="M3 12.5h18"/>',
+  pad:'<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".9" fill="currentColor"/><circle cx="18" cy="13.8" r=".9" fill="currentColor"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/>',
+  btc:'<circle cx="12" cy="12" r="9"/><path d="M10 7.5v9M10 8h3.2a2 2 0 0 1 0 4H10h3.6a2 2 0 0 1 0 4H10M11.5 6v2M11.5 16v2"/>',
+  grid:'<rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/>',
+  cam:'<rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7l1.5-2.5h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/>',
+  arrow:'<path d="M7 17L17 7M8 7h9v9"/>',
+  lock:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'
+};
+
+
+const tile = (t,i,locked) => `
+  <a class="tile glass stage${locked ? ' locked' : ''}" style="--i:${i};--tint:${t.tint}" href="${t.href}">
+    <span class="ic">${svg(ICON[t.icon])}</span>
+    <span class="arrow">${svg(ICON.arrow)}</span>
+    <b><i></i>${Array.isArray(t.name) ? t.name[L] : t.name}</b>
+    <p>${t.desc[L]}</p>
+    ${locked ? `<span class="lock">${svg(ICON.lock,12)}${T.locked[L]}</span>` : ''}
+  </a>`;
+const SITE = [
+  {href:'/contacts/', name:'Contacts', tint:'var(--plum)', icon:'mail', desc:['Tutti i profili in un posto','All profiles in one place']},
+  {href:'/portfolio/', name:'Portfolio', tint:'var(--dust)', icon:'brief', desc:['Il portfolio di Luca Grella',"Luca Grella's portfolio"]},
+  {href:'/games/', name:['Giochi','Games'], tint:'var(--teal)', icon:'pad', desc:['Tutti i giochi, da giocare subito','All the games, ready to play']}
+];
+// On Luca's devices the private Apps page (Pecunia, Wanderlust) sits before Games, as Luca asked.
+if (PRIVATE) SITE.splice(2, 0, {href:'/apps/', name:['App','Apps'], tint:'var(--accent)', icon:'grid', lock:true,
+  desc:['Pecunia, Wanderlust e le altre app','Pecunia, Wanderlust and the other apps']});
+document.getElementById('site').innerHTML = SITE.map((t,i) => tile(t,3+i,!!t.lock)).join('');
+
+if (PRIVATE) {
+  const PRIV = [
+    {href:'/btc-tracker.html', name:'BTC Tracker', tint:'var(--ochre)', icon:'btc', desc:['Valore in euro dei bitcoin, con storico','Bitcoin value in euro, with history']},
+    {href:'/igfilters/', name:'IG Filters', tint:'var(--teal)', icon:'cam', desc:['I filtri Instagram di Spark AR','The Spark AR Instagram filters']}
+  ];
+  document.getElementById('priv').innerHTML = PRIV.map((t,i) => tile(t,7+i,true)).join('');
+  document.getElementById('priv').hidden = false;
+  document.getElementById('privHead').hidden = false;
+}
+
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+if (standalone) document.body.classList.add('standalone');
+// The install card is for phones and tablets only (Luca's choice): computers never see it.
+const phone = /iP(hone|ad|od)|Android/i.test(navigator.userAgent) || (/Mac/.test(navigator.platform) && navigator.maxTouchPoints > 1);
+if (!phone) document.getElementById('install').hidden = true;
+// Installed app: its scope is the whole site, so every page opens full screen inside it, with no browser bar and no
+// back button (Luca's choice: to get back to this page, close the app and reopen it).
+let deferred = null;
+addEventListener('beforeinstallprompt', e => {
+  e.preventDefault(); deferred = e;
+  document.getElementById('installBtn').hidden = false;
+  document.getElementById('steps').hidden = true;
+});
+document.getElementById('installBtn').addEventListener('click', async () => {
+  if (!deferred) return;
+  deferred.prompt(); await deferred.userChoice; deferred = null;
+  document.getElementById('installBtn').hidden = true;
+});
+addEventListener('appinstalled', () => document.body.classList.add('standalone'));
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', {scope:'./', updateViaCache:'none'}).catch(() => {});
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+setTimeout(() => document.body.classList.add('s1'), reduce ? 0 : 120);
+setTimeout(() => document.body.classList.add('s2'), reduce ? 0 : 620);
+</script>
+</body>
+</html>
