@@ -42,7 +42,6 @@ github:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-feed
 
 # Front matter defaults
 defaults:
