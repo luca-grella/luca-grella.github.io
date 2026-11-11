@@ -130,14 +130,13 @@ body.s2 .stage>*{opacity:1;transition-delay:calc(var(--i)*60ms)}
 <div class="wrap">
   <header class="top glass stage" style="--i:0">
     <div class="logo">L</div>
-    <div class="crumbs"><b>Luca Grella</b></div>
+    <div class="crumbs"><span>luca-grella.github.io</span></div>
     <div class="sp"></div>
     <span class="when" id="when"></span>
   </header>
 
   <div class="head stage" style="--i:1"><div><h1 id="hello"></h1><p id="lead"></p></div></div>
 
-  <div class="sec stage" style="--i:2"><span data-t="site">Sito</span></div>
   <div class="tiles" id="site"></div>
 
 
@@ -159,7 +158,6 @@ const EN = /^en\b/i.test(navigator.language || 'it');
 const L = EN ? 1 : 0;
 if (EN) document.documentElement.lang = 'en';
 const T = {
-  site:['Sito','Site'],
   instTitle:['Tienila sulla Home','Keep it on your Home screen'],
   instText:['Installala come app: contatti e portfolio a un tocco.','Install it as an app: contacts and portfolio one tap away.'],
   instBtn:['Installa','Install'],
