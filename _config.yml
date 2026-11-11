@@ -58,6 +58,10 @@ defaults:
       path: "404.html"
     values:
       sitemap: false
+  - scope:
+      path: "app-t194d3"
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
