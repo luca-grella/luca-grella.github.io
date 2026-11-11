@@ -17,7 +17,7 @@ You will find a brief [overview]({{ '/portfolio/about/' | relative_url }}) of my
 
 In the left sidebar on desktop view, or at the top of the page on mobile view, you can see the section you are currently browsing and navigate to the next one. Below the logo you will find shortcut links to all my social pages.
 
-To get in touch, everything is on the [**Contacts**]({{ '/contacts/' | relative_url }}) page 👥
+To get in touch, everything is on the [contacts]({{ '/contacts/' | relative_url }}) page.
 
 Happy surfing!
 
