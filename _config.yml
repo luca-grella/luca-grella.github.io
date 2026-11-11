@@ -42,6 +42,7 @@ github:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 # Front matter defaults
 defaults:
@@ -63,6 +64,14 @@ defaults:
       sitemap: false
   - scope:
       path: "app-t194d3"
+    values:
+      sitemap: false
+  - scope:
+      path: "app"
+    values:
+      sitemap: false
+  - scope:
+      path: "apps"
     values:
       sitemap: false
 

@@ -12,14 +12,19 @@ Portfolio personale di **Luca Grella** — Senior Data Engineer @ lastminute.com
 
 ## Sezioni
 
-| Pagina | Descrizione |
-|--------|-------------|
-| Home | Benvenuto e link principali |
-| My Portfolio | Progetti software, accademici e creativi |
-| Certifications | Certificazioni professionali |
-| Contacts | Link social e contatti |
-| Sports | Attività sportive (karate, ecc.) |
-| DJ Teck | Produzione musicale, mix, Spotify/SoundCloud |
+| Pagina | Indirizzo | Descrizione |
+|--------|-----------|-------------|
+| Pagina principale | `/` | Contacts, Portfolio e Giochi; è anche l'app installabile (`index.html`, `manifest.webmanifest`, `sw.js`, `icons/`) |
+| Home del portfolio | `/portfolio/` | Benvenuto e link principali |
+| My Portfolio | `/portfolio/works/` | Progetti software, accademici e creativi |
+| About Me | `/portfolio/about/` | Chi sono |
+| Certifications | `/portfolio/certifications/` | Certificazioni professionali |
+| Sports | `/portfolio/sports/` | Attività sportive (karate, ecc.) |
+| DJ Teck | `/portfolio/djteck/` | Produzione musicale, mix, Spotify/SoundCloud |
+| Contacts | `/contacts/` | Link social e contatti |
+| Giochi | `/games/` | I giochi, installabile come app |
+
+I vecchi indirizzi del portfolio (`/aboutme/`, `/myportfolio/`, `/sports/` ecc.) rimandano ai nuovi con `jekyll-redirect-from`.
 
 ## Sviluppo locale
 

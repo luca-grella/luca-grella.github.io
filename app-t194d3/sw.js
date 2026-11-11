@@ -1,22 +1,11 @@
-// Hub service worker: network first, cache as offline fallback. Bump CACHE on every release.
-const CACHE = 'hub-private-v4';
-const SHELL = ['./', './manifest.webmanifest', './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png', './icons/icon.svg',
-  '/lenza-lenta/icons/icon-192.png', '/terrazza-padel/icons/icon-192.png'];
-self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
-});
+// The private hub merged into the main page / on 11 Nov 2026. This worker replaces the old one, clears its caches and unregisters itself.
+self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => {
-  e.waitUntil(caches.keys()
-    .then(keys => Promise.all(keys.filter(k => k.startsWith('hub-private-') && k !== CACHE).map(k => caches.delete(k))))
-    .then(() => self.clients.claim()));
-});
-self.addEventListener('fetch', e => {
-  const req = e.request;
-  if (req.method !== 'GET') return;
-  const url = new URL(req.url);
-  const scope = new URL(self.registration.scope).pathname;
-  if (url.origin !== location.origin || !(url.pathname.startsWith(scope) || SHELL.includes(url.pathname))) return;
-  e.respondWith(fetch(req)
-    .then(res => { if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); } return res; })
-    .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('./'))));
+  e.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(k => k.startsWith('hub-private-')).map(k => caches.delete(k))))
+      .then(() => self.registration.unregister())
+      .then(() => self.clients.matchAll())
+      .then(clients => clients.forEach(c => c.navigate('/')))
+  );
 });

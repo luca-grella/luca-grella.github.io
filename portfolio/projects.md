@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /projects/
 layout: default
 title: My Projects
 description: "Software engineering and research projects by Luca Grella, M.Sc. thesis, LabVIEW, Java, Node.js and more."

@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /certifications/
 layout: default
 title: Licenses & Certifications
 description: "Professional licenses and certifications obtained by Luca Grella, Apache Airflow, Qlik, TIBCO Spotfire, ECDL, Trinity College, TOEIC."

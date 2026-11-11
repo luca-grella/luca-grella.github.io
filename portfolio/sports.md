@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /sports/
 layout: default
 title: Sports & Interests
 description: "Sports and personal interests of Luca Grella, karate black belt, ski, snowboard, music, photography and tech."
@@ -11,7 +13,7 @@ sports: true
 * Shito Ryu
 * Black belt
 * 1st dan
-* [Diploma]({{ '/mykaratediploma' | relative_url }})
+* [Diploma]({{ '/portfolio/mykaratediploma/' | relative_url }})
 
 ### Ski
 * Advanced gold

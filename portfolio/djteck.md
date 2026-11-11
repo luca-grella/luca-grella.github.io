@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /djteck/
 layout: default
 title: DJing & Producing
 description: "Luca Grella (Teck DJ), tracks, remixes, mashups and DJ sets on Spotify, SoundCloud, MixCloud and Facebook."
