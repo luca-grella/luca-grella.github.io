@@ -193,28 +193,28 @@ const ICON = {
   pad:'<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".9" fill="currentColor"/><circle cx="18" cy="13.8" r=".9" fill="currentColor"/>',
   mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/>'
 };
-// Cards shown, in Luca's order: Home, Contacts, Giochi.
+// Cards shown, in Luca's order: Home, Contacts, Games.
 const DEST = [
   {key:'home', href:'/', name:'Home', tint:'var(--dust)', icon:'home',
    desc:['Il portfolio di Luca Grella',"Luca Grella's portfolio"], meta:'/'},
   {key:'contacts', href:'/contacts/', name:'Contacts', tint:'var(--plum)', icon:'mail',
    desc:['Tutti i profili in un posto','All profiles in one place'], meta:'/contacts'},
-  {key:'giochi', href:'/giochi/', name:'Giochi', tint:'var(--teal)', icon:'pad',
-   desc:['Tutti i giochi, da giocare nel browser','All the games, playable in the browser'], meta:'/giochi'}
+  {key:'games', href:'/games/', name:['Giochi','Games'], tint:'var(--teal)', icon:'pad',
+   desc:['Tutti i giochi, da giocare nel browser','All the games, playable in the browser'], meta:'/games'}
 ];
 // Possible "Did you mean" targets: the cards above plus each game.
 const TARGETS = [
   {key:'lenza-lenta', alias:['pesca','fishing'], href:'/lenza-lenta/', name:'Lenza Lenta'},
   {key:'terrazza-padel', alias:['padel','tennis'], href:'/terrazza-padel/', name:'Terrazza Padel'},
   {key:'contacts', alias:['contatti','links','link'], href:'/contacts/', name:'Contacts'},
-  {key:'giochi', alias:['games','game','gioco','giochi'], href:'/giochi/', name:'Giochi'}
+  {key:'games', alias:['giochi','gioco','game'], href:'/games/', name:['Giochi','Games']}
 ];
 const svg = d => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
 document.getElementById('cards').innerHTML = DEST.map((d,i) => `
   <a class="card glass stage" style="--i:${4+i};--tint:${d.tint}" href="${d.href}">
     <span class="ic">${svg(ICON[d.icon])}</span>
     <span class="arrow">${svg('<path d="M7 17L17 7M8 7h9v9"/>')}</span>
-    <b><i></i>${d.name}</b>
+    <b><i></i>${Array.isArray(d.name) ? d.name[L] : d.name}</b>
     <p>${d.desc[L]}</p>
     <span class="meta">${d.meta}</span>
   </a>`).join('');
@@ -236,7 +236,7 @@ if (seg) {
   }
   if (best && bd <= Math.max(2, Math.floor(best.key.length/3))) {
     const a = document.getElementById('suggest');
-    a.href = best.href; a.hidden = false; document.getElementById('sugName').textContent = best.name;
+    a.href = best.href; a.hidden = false; document.getElementById('sugName').textContent = Array.isArray(best.name) ? best.name[L] : best.name;
   }
 }
 
