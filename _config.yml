@@ -78,6 +78,10 @@ defaults:
       path: "games"
     values:
       sitemap: false
+  - scope:
+      path: "onepiece"
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
