@@ -220,7 +220,7 @@ const SITE = [
 // On Luca's devices the private pages follow, in his order: Apps, then Games (games are private while in development).
 if (PRIVATE) SITE.push(
   {href:'/apps/', name:['App','Apps'], tint:'var(--accent)', icon:'grid', lock:true,
-   desc:['Pecunia, Wanderlust e BTC Tracker','Pecunia, Wanderlust and BTC Tracker']},
+   desc:['Le app che ho fatto','The apps I built']},
   {href:'/games/', name:['Giochi','Games'], tint:'var(--teal)', icon:'pad', lock:true,
    desc:['I giochi in sviluppo','The games in development']});
 document.getElementById('site').innerHTML = SITE.map((t,i) => tile(t,3+i,!!t.lock)).join('');
