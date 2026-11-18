@@ -1,6 +1,6 @@
 // Games hub service worker: network first, cache as offline fallback.
 // Bump CACHE on every release so old copies are dropped.
-const CACHE = 'games-v5';
+const CACHE = 'games-v6';
 const SHELL = [
   './',
   './manifest.webmanifest',
