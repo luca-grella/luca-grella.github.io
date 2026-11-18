@@ -94,8 +94,6 @@ a{color:inherit;text-decoration:none}
 .tile p{margin:0;font-size:12.5px;color:var(--fg-2)}
 .tile .arrow{position:absolute;right:14px;top:14px;color:var(--fg-3);transition:transform .3s var(--ease),color .3s}
 .tile:hover .arrow{transform:translate(2px,-2px);color:var(--tint)}
-.tile.locked p{padding-right:104px}
-.tile .lock{position:absolute;right:14px;bottom:14px;font-size:11px;color:var(--fg-3);display:inline-flex;align-items:center;gap:4px}
 
 .install{padding:18px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
 .install img{width:52px;height:52px;border-radius:14px;box-shadow:0 0 0 1px var(--line-2)}
@@ -169,8 +167,7 @@ const T = {
   ios:['In Safari tocca Condividi, poi «Aggiungi alla schermata Home».','In Safari tap Share, then "Add to Home Screen".'],
   android:['In Chrome apri il menu ⋮, poi «Installa app».','In Chrome open the ⋮ menu, then "Install app".'],
   leadPub:['Contatti e portfolio, tutto in un posto.','Contacts and portfolio, all in one place.'],
-  leadPriv:['Tutto il sito in un posto, comprese le pagine private.','The whole site in one place, private pages included.'],
-  locked:['con password','password']
+  leadPriv:['Tutto il sito in un posto, comprese le pagine private.','The whole site in one place, private pages included.']
 };
 document.querySelectorAll('[data-t]').forEach(el => { el.textContent = T[el.dataset.t][L]; });
 document.getElementById('yr').textContent = new Date().getFullYear();
@@ -200,30 +197,29 @@ const ICON = {
   pad:'<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".9" fill="currentColor"/><circle cx="18" cy="13.8" r=".9" fill="currentColor"/>',
   mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/>',
   grid:'<rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/>',
-  arrow:'<path d="M7 17L17 7M8 7h9v9"/>',
-  lock:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'
+  arrow:'<path d="M7 17L17 7M8 7h9v9"/>'
 };
 
 
-const tile = (t,i,locked) => `
-  <a class="tile glass stage${locked ? ' locked' : ''}" style="--i:${i};--tint:${t.tint}" href="${t.href}">
+const tile = (t,i) => `
+  <a class="tile glass stage" style="--i:${i};--tint:${t.tint}" href="${t.href}">
     <span class="ic">${svg(ICON[t.icon])}</span>
     <span class="arrow">${svg(ICON.arrow)}</span>
     <b><i></i>${Array.isArray(t.name) ? t.name[L] : t.name}</b>
     <p>${t.desc[L]}</p>
-    ${locked ? `<span class="lock">${svg(ICON.lock,12)}${T.locked[L]}</span>` : ''}
   </a>`;
 const SITE = [
-  {href:'/contacts/', name:'Contacts', tint:'var(--plum)', icon:'mail', desc:['Tutti i profili in un posto','All profiles in one place']},
-  {href:'/portfolio/', name:'Portfolio', tint:'var(--dust)', icon:'brief', desc:['Il portfolio di Luca Grella',"Luca Grella's portfolio"]}
+  {href:'/contacts/', name:'Contacts', tint:'var(--plum)', icon:'mail', desc:['Profili professionali e social in una sola pagina.','Professional and social profiles on one page.']},
+  {href:'/portfolio/', name:'Portfolio', tint:'var(--dust)', icon:'brief', desc:['Percorso professionale, progetti e certificazioni.','Career, projects and certifications.']}
 ];
-// On Luca's devices the private pages follow, in his order: Apps, then Games (games are private while in development).
+// On Luca's devices the private pages follow, in his order: Apps, then Games. No lock on these two section cards
+// (Luca, 18 Nov 2026): the lock belongs only on the single app or game cards inside, where a page really asks a password.
 if (PRIVATE) SITE.push(
-  {href:'/apps/', name:['App','Apps'], tint:'var(--accent)', icon:'grid', lock:true,
-   desc:['Le app che ho fatto','The apps I built']},
-  {href:'/games/', name:['Giochi','Games'], tint:'var(--teal)', icon:'pad', lock:true,
-   desc:['I giochi in sviluppo','The games in development']});
-document.getElementById('site').innerHTML = SITE.map((t,i) => tile(t,3+i,!!t.lock)).join('');
+  {href:'/apps/', name:['App','Apps'], tint:'var(--accent)', icon:'grid',
+   desc:['Applicazioni web sviluppate per uso personale.','Web apps built for personal use.']},
+  {href:'/games/', name:['Giochi','Games'], tint:'var(--teal)', icon:'pad',
+   desc:['Giochi per browser, da telefono e computer.','Browser games for phone and desktop.']});
+document.getElementById('site').innerHTML = SITE.map((t,i) => tile(t,3+i)).join('');
 
 
 const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
