@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d1013" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="robots" content="noindex">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Luca">
+<title>Luca Grella (prova tecnico)</title>
+<meta name="description" content="Luca Grella, Senior Data Engineer at lastminute.com, DJ and music producer: contacts and portfolio.">
+<link rel="icon" type="image/svg+xml" href="/icons/icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400&display=swap">
+<style>
+/* Hallmark · shape: Narrative Workflow (the record opens before the index, the page launches second) · genre: modern-minimal · theme: Console (deal 2/3, seed personal-home-data-engineer-dabc·ee617fc8·2026-11-20·r0) · redesign: full · job: hire (find and contact Luca, open his pages) · draw: 6b872d
+ * hero: Banner · nav: masthead · footer: letter close · imagery: none (type and the measured face) · signature: the site set as a directory listing, every page a row with its path in the measured face · console: graphite, paper in light
+ * axes: dark/grotesk-sans/chromatic-amber · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: P, the argument is a plain launcher; made it the paths themselves, an index a person can read like a directory instead of a card per page */
+/* Hallmark · waive 77 · four sections: a head beside a three-row record, an index of two to four rows, an install card · personal launcher, Luca's content is a name, a role and two to four destinations */
+/* Hallmark · dropped sw.js, icon-192.png · a preview of the technical tone has no service worker, and the install icon is now a CSS background so the page renders without its img */
+@import url("./tokens.css");
+@import url("./base.css");
+
+.measured { font-family: var(--font-outlier); font-size: var(--text-sm); font-weight: 400; font-variant-numeric: tabular-nums slashed-zero; }
+.container { padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px)); }
+
+/* masthead: the host as a wordmark over a rule, the private lock at the right edge */
+.mast { padding-top: env(safe-area-inset-top, 0px); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.mast__row { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; min-height: 64px; }
+.mast__mark { grid-column: 2; display: inline-flex; align-items: center; min-height: 44px; color: var(--color-ink-2); text-decoration: none; transition: color var(--dur-short) var(--ease-out); }
+.mast__mark:hover { color: var(--color-ink); }
+.mast__lock { grid-column: 3; justify-self: end; display: grid; place-items: center; width: 44px; height: 44px; border: var(--rule-hair) solid var(--color-rule-2); border-radius: var(--radius-pill); color: var(--color-muted); background: var(--color-paper-2); transition: color var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out); }
+.mast__lock:hover { color: var(--color-accent); background: var(--color-paper-3); }
+.mast__lock:active { background: var(--color-paper); }
+
+/* controls */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs); min-height: 48px; padding: 0 var(--space-lg); border: var(--rule-hair) solid var(--color-rule-2); border-radius: var(--radius-pill); background: var(--color-paper-2); color: var(--color-ink); font: 500 var(--text-md)/1 var(--font-body); white-space: nowrap; text-decoration: none; cursor: pointer; transition: background-color var(--dur-short) var(--ease-out), transform var(--dur-micro) var(--ease-out); }
+.btn:hover { background: var(--color-paper-3); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; transform: none; }
+.btn--primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.btn--primary:hover { background: color-mix(in oklab, var(--color-accent) 88%, var(--color-ink)); }
+
+/* hero: Banner, the name set large, one line, two ways in */
+.hero { padding-block: var(--space-3xl) var(--section-gap-s); }
+.hero h1 { max-width: none; font-size: clamp(3rem, 9vw, 8rem); line-height: 1.02; }
+.hero__row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: center; margin-top: var(--space-xl); }
+.hero .lead { grid-column: 1 / span 4; color: var(--color-ink-2); }
+.actions { grid-column: 5 / -1; display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* sections */
+.sec { padding-bottom: var(--space-3xl); }
+.sec + .sec { padding-top: var(--space-3xl); border-top: var(--rule-hair) solid var(--color-rule); }
+.cols { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: start; }
+.cols > h2 { grid-column: 1 / span 4; padding-top: var(--space-lg); }
+.cols > .panels { grid-column: 5 / -1; }
+.panels { display: grid; gap: var(--rule-hair); background: var(--color-rule); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-card); overflow: hidden; }
+.panels > * { background: var(--color-paper-2); }
+.sec .container > h2 { margin-bottom: var(--space-xl); }
+
+/* the record: who Luca is, one fact a row */
+.rec { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 5fr) minmax(0, 3fr); gap: var(--gap-columns); align-items: center; margin: 0; padding: var(--space-lg); }
+.rec dt { color: var(--color-muted); font-weight: 500; }
+.rec dd { margin: 0; font-size: var(--text-lead); line-height: 1.4; color: var(--color-ink); text-wrap: pretty; }
+.rec dd.rec__path { justify-self: end; font-size: var(--text-sm); line-height: 1.55; }
+.rec__path a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-cool); text-decoration-color: var(--color-rule-2); transition: color var(--dur-short) var(--ease-out); }
+.rec__path a:hover { color: var(--color-accent); }
+
+/* the index: every page a row, path in the measured face */
+.row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) minmax(0, 5fr) var(--space-lg); gap: var(--gap-columns); align-items: center; min-height: 96px; padding: var(--space-lg); color: inherit; text-decoration: none; transition: background-color var(--dur-short) var(--ease-out); }
+.panels > .row:hover { background: var(--color-paper-3); }
+.panels > .row:active { background: var(--color-paper); }
+.row__path { grid-area: path; color: var(--color-cool); overflow-wrap: anywhere; }
+.row__name { grid-area: name; font-size: var(--text-title); }
+.row__desc { grid-area: desc; color: var(--color-muted); }
+.row__go { grid-area: go; justify-self: end; color: var(--color-muted); transition: color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out); }
+.row:hover .row__go { color: var(--color-accent); transform: translate(2px, -2px); }
+.row { grid-template-areas: "path name desc go"; }
+
+/* install card: phones and tablets only */
+.install { margin: 0; }
+.install__head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--space-md); align-items: center; padding: var(--space-lg); }
+.appicon { width: 48px; height: 48px; border-radius: var(--radius-card); background: url("/icons/icon-192.png") center / cover no-repeat; outline: var(--rule-hair) solid var(--color-rule-2); outline-offset: -1px; }
+.install__head p { max-width: none; }
+.install__head .t { font-weight: 500; color: var(--color-ink); }
+.install__head .d { color: var(--color-muted); }
+.steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--rule-hair); background: var(--color-rule); }
+.step { padding: var(--space-lg); background: var(--color-paper-2); color: var(--color-muted); }
+.step strong { display: block; margin-bottom: var(--space-2xs); font-weight: 500; color: var(--color-ink); }
+body.standalone .install { display: none; }
+
+/* letter close: the date line and the signature */
+.foot { border-top: var(--rule-hair) solid var(--color-rule); }
+.foot__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-md); padding-block: var(--space-xl) calc(var(--space-xl) + env(safe-area-inset-bottom, 0px)); }
+.foot p { max-width: none; color: var(--color-muted); }
+.foot .measured { color: var(--color-cool); }
+#when:empty { display: none; }
+
+@media (max-width: 60rem) {
+  .hero .lead, .actions { grid-column: 1 / -1; }
+  .hero__row { margin-top: var(--space-lg); row-gap: var(--space-lg); }
+  .cols > h2, .cols > .panels { grid-column: 1 / -1; }
+  .cols > h2 { padding-top: 0; }
+  .row { grid-template-columns: minmax(0, 1fr) var(--space-lg); grid-template-areas: "path go" "name go" "desc desc"; gap: var(--space-2xs) var(--space-md); padding: var(--space-md); }
+  .row__desc { margin-top: var(--space-2xs); }
+  .rec { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); align-items: start; padding: var(--space-md); }
+  .rec__path { justify-self: start; }
+  .install__head { grid-template-columns: auto minmax(0, 1fr); padding: var(--space-md); }
+  .install__head .btn { grid-column: 1 / -1; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .step { padding: var(--space-md); }
+}
+@media (max-width: 40rem) {
+  .hero { padding-top: var(--space-2xl); }
+  .actions .btn { flex: 1 1 auto; }
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="container mast__row">
+    <a class="mast__mark measured" href="/" aria-label="Luca Grella">luca-grella.github.io</a>
+    <a class="mast__lock" id="unlock" href="/apps/?unlock" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero container" aria-labelledby="hello">
+    <h1 id="hello">Luca Grella</h1>
+    <div class="hero__row">
+      <p class="lead" id="lead">Contatti e portfolio, tutto in un posto.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="/contacts/" data-t="ctaContact">Contatti</a>
+        <a class="btn" href="/portfolio/">Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="who">
+   <div class="container">
+    <div class="cols">
+      <h2 id="who" data-t="whoTitle">Chi è Luca</h2>
+      <dl class="panels">
+        <div class="rec">
+          <dt data-t="kWork">Lavoro</dt>
+          <dd data-t="vWork">Senior Data Engineer e Functional Lead in lastminute.com</dd>
+          <dd class="rec__path measured"><a href="/portfolio/about/">/portfolio/about/</a></dd>
+        </div>
+        <div class="rec">
+          <dt data-t="kStudy">Studi</dt>
+          <dd data-t="vStudy">Ingegnere informatico, Politecnico di Milano</dd>
+          <dd class="rec__path measured"><a href="/portfolio/about/">/portfolio/about/</a></dd>
+        </div>
+        <div class="rec">
+          <dt data-t="kMusic">Musica</dt>
+          <dd data-t="vMusic">DJ e producer, come Teck DJ: tracce, remix, mashup e DJ set</dd>
+          <dd class="rec__path measured"><a href="/portfolio/djteck/">/portfolio/djteck/</a></dd>
+        </div>
+      </dl>
+    </div>
+   </div>
+  </section>
+
+  <section class="sec" aria-labelledby="pages">
+   <div class="container">
+    <h2 id="pages" data-t="pagesTitle">Le pagine</h2>
+    <div class="panels" id="site">
+      <a class="row" href="/contacts/"><h3 class="row__name">Contacts</h3><span class="row__path measured">/contacts/</span><p class="row__desc">Profili professionali e social in una sola pagina.</p></a>
+      <a class="row" href="/portfolio/"><h3 class="row__name">Portfolio</h3><span class="row__path measured">/portfolio/</span><p class="row__desc">Percorso professionale, progetti e certificazioni.</p></a>
+    </div>
+   </div>
+  </section>
+
+  <section class="sec" id="install" aria-label="Installa">
+   <div class="container">
+    <div class="panels install">
+      <div class="install__head">
+        <span class="appicon" aria-hidden="true"></span>
+        <div><p class="t" data-t="instTitle">Tienila sulla Home</p><p class="d" data-t="instText">Installala come app: contatti e portfolio a un tocco.</p></div>
+        <button class="btn btn--primary" id="installBtn" type="button" hidden data-t="instBtn">Installa</button>
+      </div>
+      <div class="steps" id="steps">
+        <div class="step"><strong>iPhone / iPad</strong><span data-t="ios">In Safari tocca Condividi, poi «Aggiungi alla schermata Home».</span></div>
+        <div class="step"><strong>Android</strong><span data-t="android">In Chrome apri il menu ⋮, poi «Installa app».</span></div>
+      </div>
+    </div>
+   </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container foot__row">
+    <p class="measured" id="when"></p>
+    <p>© <span id="yr">2026</span> Luca Grella</p>
+  </div>
+</footer>
+
+<script>
+const EN = /^en\b/i.test(navigator.language || 'it');
+const L = EN ? 1 : 0;
+if (EN) document.documentElement.lang = 'en';
+const T = {
+  instTitle:['Tienila sulla Home','Keep it on your Home screen'],
+  instText:['Installala come app: contatti e portfolio a un tocco.','Install it as an app: contacts and portfolio one tap away.'],
+  instBtn:['Installa','Install'],
+  ios:['In Safari tocca Condividi, poi «Aggiungi alla schermata Home».','In Safari tap Share, then "Add to Home Screen".'],
+  android:['In Chrome apri il menu ⋮, poi «Installa app».','In Chrome open the ⋮ menu, then "Install app".'],
+  leadPub:['Contatti e portfolio, tutto in un posto.','Contacts and portfolio, all in one place.'],
+  leadPriv:['Tutto il sito in un posto, comprese le pagine private.','The whole site in one place, private pages included.'],
+  ctaContact:['Contatti','Contacts'],
+  whoTitle:['Chi è Luca','Who Luca is'],
+  kWork:['Lavoro','Work'],
+  kStudy:['Studi','Studies'],
+  kMusic:['Musica','Music'],
+  vWork:['Senior Data Engineer e Functional Lead in lastminute.com','Senior Data Engineer & Functional Lead at lastminute.com'],
+  vStudy:['Ingegnere informatico, Politecnico di Milano','Computer Science Engineer, Politecnico di Milano'],
+  vMusic:['DJ e producer, come Teck DJ: tracce, remix, mashup e DJ set','DJ and music producer, as Teck DJ: tracks, remixes, mashups and DJ sets'],
+  pagesTitle:['Le pagine','The pages']
+};
+document.querySelectorAll('[data-t]').forEach(el => { el.textContent = T[el.dataset.t][L]; });
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Private pages (StatiCrypt) show up only where one of them was already unlocked with "Ricordami": StatiCrypt keeps
+// the remembered key in localStorage under staticrypt_passphrase, the same for the whole site. That device is Luca's,
+// so it also greets him by name. This only hides the cards: the pages stay encrypted for everyone else.
+let PRIVATE = false;
+try { PRIVATE = !!localStorage.getItem('staticrypt_passphrase'); } catch (e) {}
+// The lock link (to the private area) is for everyone else. Gone once unlocked.
+const unlock = document.getElementById('unlock');
+unlock.hidden = PRIVATE;
+unlock.setAttribute('aria-label', /^en\b/i.test(navigator.language || 'it') ? 'Private area' : 'Area privata');
+// Greeting by time of day.
+const h = new Date().getHours();
+const part = h < 5 ? 2 : h < 13 ? 0 : h < 18 ? 1 : 2;
+const HELLO = [['Buongiorno','Buon pomeriggio','Buonasera'],['Good morning','Good afternoon','Good evening']];
+document.getElementById('hello').textContent = PRIVATE ? `${HELLO[L][part]}, Luca` : 'Luca Grella';
+document.getElementById('lead').textContent = (PRIVATE ? T.leadPriv : T.leadPub)[L];
+document.getElementById('when').textContent = new Date().toLocaleDateString(EN ? 'en-GB' : 'it-IT', {weekday:'long', day:'numeric', month:'long'});
+
+const svg = (d,s=18) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const ARROW = '<path d="M7 17L17 7M8 7h9v9"/>';
+
+const tile = t => `
+  <a class="row" href="${t.href}">
+    <h3 class="row__name">${Array.isArray(t.name) ? t.name[L] : t.name}</h3>
+    <span class="row__path measured">${t.href}</span>
+    <p class="row__desc">${t.desc[L]}</p>
+    <span class="row__go">${svg(ARROW)}</span>
+  </a>`;
+const SITE = [
+  {href:'/contacts/', name:'Contacts', desc:['Profili professionali e social in una sola pagina.','Professional and social profiles on one page.']},
+  {href:'/portfolio/', name:'Portfolio', desc:['Percorso professionale, progetti e certificazioni.','Career, projects and certifications.']}
+];
+// On Luca's devices the private pages follow, in his order: Apps, then Games. No lock on these two section cards
+// (Luca, 18 Nov 2026): the lock belongs only on the single app or game cards inside, where a page really asks a password.
+if (PRIVATE) SITE.push(
+  {href:'/apps/', name:['App','Apps'],
+   desc:['Applicazioni web sviluppate per uso personale.','Web apps built for personal use.']},
+  {href:'/games/', name:['Giochi','Games'],
+   desc:['Giochi per browser, da telefono e computer.','Browser games for phone and desktop.']});
+document.getElementById('site').innerHTML = SITE.map(tile).join('');
+
+
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+if (standalone) document.body.classList.add('standalone');
+// The install card is for phones and tablets only (Luca's choice): computers never see it.
+const phone = /iP(hone|ad|od)|Android/i.test(navigator.userAgent) || (/Mac/.test(navigator.platform) && navigator.maxTouchPoints > 1);
+if (!phone) document.getElementById('install').hidden = true;
+// Installed app: its scope is the whole site, so every page opens full screen inside it, with no browser bar and no
+// back button (Luca's choice: to get back to this page, close the app and reopen it).
+let deferred = null;
+addEventListener('beforeinstallprompt', e => {
+  e.preventDefault(); deferred = e;
+  document.getElementById('installBtn').hidden = false;
+  document.getElementById('steps').hidden = true;
+});
+document.getElementById('installBtn').addEventListener('click', async () => {
+  if (!deferred) return;
+  deferred.prompt(); await deferred.userChoice; deferred = null;
+  document.getElementById('installBtn').hidden = true;
+});
+addEventListener('appinstalled', () => document.body.classList.add('standalone'));
+
+// Preview of the technical tone: no service worker here, the real home registers sw.js.
+</script>
+</body>
+</html>
