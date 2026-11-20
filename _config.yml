@@ -82,10 +82,6 @@ defaults:
       path: "onepiece"
     values:
       sitemap: false
-  - scope:
-      path: "home-v2"
-    values:
-      sitemap: false
 
 # Exclude from build
 exclude:
