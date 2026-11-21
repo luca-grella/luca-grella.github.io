@@ -86,6 +86,14 @@ defaults:
       path: "onepiece"
     values:
       sitemap: false
+  - scope:
+      path: "lenza-lenta"   # published by the private lenza-lenta repo (encrypted), since 21 Nov 2026
+    values:
+      sitemap: false
+  - scope:
+      path: "terrazza-padel"   # published by the private terrazza-padel repo (encrypted), since 21 Nov 2026
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
