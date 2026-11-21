@@ -4,6 +4,5 @@ permalink: /robots.txt
 ---
 User-agent: *
 Allow: /
-Disallow: /thesis/
 
 Sitemap: {{ '/sitemap.xml' | absolute_url }}
