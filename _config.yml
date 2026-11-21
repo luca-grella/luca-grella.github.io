@@ -98,6 +98,10 @@ defaults:
       path: "wanderlust"   # published by the private wanderlust repo (encrypted), since 21 Nov 2026
     values:
       sitemap: false
+  - scope:
+      path: "pecunia"   # published by the private pecunia repo (encrypted), since 21 Nov 2026
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
