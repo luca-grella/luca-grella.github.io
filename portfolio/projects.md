@@ -15,6 +15,8 @@ projects: true
 _"Conceptual Representation of Context-Awareness. An XML Formalization and a Graphical Interface."_<br>
 The thesis retraces the studies made on the context and its modeling as a tree, starting from a practical use-case: the INAIL RECKON project, concerning injuries at work. Then it dwells into my work on a graphical interface suitable for modeling context trees and the data input related to the modeled context tree.
 
+* <a href="https://github.com/luca-grella/ContextAwarenessMScThesis" target="_blank" rel="noopener noreferrer">Link to the project</a>
+
 ### I nuovi fattori di invisibilità
 <span class="post-date">Mar 2019 - Jun 2019</span>
 
