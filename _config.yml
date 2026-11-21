@@ -94,6 +94,10 @@ defaults:
       path: "terrazza-padel"   # published by the private terrazza-padel repo (encrypted), since 21 Nov 2026
     values:
       sitemap: false
+  - scope:
+      path: "wanderlust"   # published by the private wanderlust repo (encrypted), since 21 Nov 2026
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
