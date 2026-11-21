@@ -1,6 +1,6 @@
 // Lenza Lenta — service worker: offline precache, cache-first, update on reload.
 // Bump CACHE on every release (and run `node tools/sw-assets.mjs` if files were added/removed).
-const CACHE = 'lenza-lenta-v2-r53-b';
+const CACHE = 'lenza-lenta-v2-r54-b';
 // The cache name carries the folder (the /lenza-lenta-v2/ mirror, retired on 18 nov 2026, kept its own cache this way):
 // a release only deletes this folder's older caches.
 const HERE = new URL('./', location).pathname;
