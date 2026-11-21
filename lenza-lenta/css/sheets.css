@@ -456,6 +456,14 @@
 .catch-desc { position: relative; z-index: 1; font-size: 14px; color: var(--ink-2); line-height: 1.38; margin: 10px 2px 4px; }
 .catch-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; margin-top: 8px; }
 .catch-actions .keep { flex: 1 1 100%; }
+/* [r53] a gull diving at the fish in your hands: a bar on top of the card, one tap shoos it */
+.catch-gull { display: none; position: relative; z-index: 2; width: 100%; align-items: center; gap: 10px; justify-content: space-between;
+  padding: 8px 10px; margin-top: 6px; border-radius: 14px; background: color-mix(in srgb, var(--coral, #e8735a) 16%, transparent); animation: gullPulse .6s ease-in-out infinite alternate; }
+.catch-gull.on { display: flex; }
+.catch-gull .cg-txt { font-weight: 800; font-size: 14px; line-height: 1.2; }
+.catch-gull .btn { flex: none; }
+@keyframes gullPulse { from { transform: scale(1); } to { transform: scale(1.025); } }
+@media (prefers-reduced-motion: reduce) { .catch-gull { animation: none; } }
 .catch-actions .btn:not(.keep) { flex: 1 1 120px; }
 #ui.compact .sheet-catch .sheet-free, #ui.landscape .sheet-catch .sheet-free { width: min(760px, 100%); }
 #ui.landscape .catch-card { display: grid; grid-template-columns: minmax(0, 46%) minmax(0, 1fr); grid-auto-rows: min-content; column-gap: 16px; text-align: left; align-items: start; padding: 14px; }
