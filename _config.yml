@@ -102,6 +102,10 @@ defaults:
       path: "pecunia"   # published by the private pecunia repo (encrypted), since 21 Nov 2026
     values:
       sitemap: false
+  - scope:
+      path: "thailandia"   # Luca's encrypted offline copy of the trip app, since 22 Nov 2026 (vault thailandia-2026)
+    values:
+      sitemap: false
 
 # Exclude from build
 exclude:
