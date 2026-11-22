@@ -11,6 +11,7 @@
     <link rel="manifest" href="/btc/manifest.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="/btc/icons/icon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/btc/icons/icon-180.png" />
+    <script>/* offline copy: service worker, outside the encrypted part so the password page is kept too */if('serviceWorker' in navigator)navigator.serviceWorker.register('/btc-sw.js',{scope:'/btc-tracker.html',updateViaCache:'none'}).catch(function(){})</script>
     <script>/* keep the install prompt Chrome fires while the password page is open: the gate uses it after unlocking */addEventListener("beforeinstallprompt",function(e){if(!/Android/i.test(navigator.userAgent))return;e.preventDefault();window.__igPrompt=e;});</script>
         <title>BTC Tracker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
