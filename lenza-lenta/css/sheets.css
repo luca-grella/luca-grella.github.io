@@ -316,6 +316,7 @@
 .mk-zone span { left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font-weight: 900; font-size: 13px; color: #4b3221; letter-spacing: .3px; font-style: italic;
   text-shadow: 0 0 3px #fff6e4, 0 0 6px #fff6e4, 0 0 2px #fff6e4, 0 0 10px #fff6e4; }
 .mk-zone.here span { color: var(--coral-d); }
+.map-view.far .mk-zone span { font-size: 11px; }   /* [r55] zoomed out: smaller names */
 .mk-zone { z-index: 2; pointer-events: none; }   /* names read on top of the shop/POI icons; the goal and You stay above */
 .mk-goal, .mk-player { z-index: 3; }
 .mk-zone.pinned span { top: 17px; transform: translate(-50%, 0); }   /* a pin marks the zone centre: the name goes under it (the pin covered it) */
