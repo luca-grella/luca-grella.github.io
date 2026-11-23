@@ -12,7 +12,9 @@ permalink: /contacts/
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!-- Inside the installed app on iPhone the background now fills the status bar area too (before: a white band). -->
+    <style>@media (display-mode: standalone){html{min-height:min(100lvh,calc(100% + env(safe-area-inset-top,0px)))}}</style>
     <meta name="theme-color" content="#000000">
     <title>{{ site.title }} &middot; Contacts</title>
     <meta name="description" content="{{ page.description }}">

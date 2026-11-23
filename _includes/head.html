@@ -1,6 +1,13 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Inside the installed app on iPhone the page now runs under the status bar (viewport-fit=cover): the body moves
+       down by the status bar height and a strip in the sidebar colour fills it (before: a white band). -->
+  <style>
+    body{padding-top:env(safe-area-inset-top,0px)}
+    body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:#202020;z-index:1000}
+    @media (display-mode: standalone){html{min-height:min(100lvh,calc(100% + env(safe-area-inset-top,0px)))}}
+  </style>
   <meta name="theme-color" content="#202020">
   <link href="https://gmpg.org/xfn/11" rel="profile">
 
