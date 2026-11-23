@@ -1,5 +1,5 @@
 // Thailandia offline copy: network first, cache as fallback, only for /thailandia/. Bump CACHE on every release.
-const CACHE = 'thailandia-v7';
+const CACHE = 'thailandia-v8';
 const SHELL = ['/thailandia/', '/thailandia/manifest.webmanifest', '/thailandia/icon-180.png', '/thailandia/icon-192.png', '/thailandia/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

@@ -1,8 +1,8 @@
 {
   "id": "/onepiece/",
-  "name": "Mappa One Piece",
-  "short_name": "One Piece",
-  "description": "La mappa interattiva del mondo di One Piece.",
+  "name": "Grand Line",
+  "short_name": "Grand Line",
+  "description": "Grand Line: la mappa interattiva del mondo di One Piece.",
   "lang": "it",
   "start_url": "/onepiece/",
   "scope": "/onepiece/",

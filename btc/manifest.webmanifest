@@ -1,8 +1,8 @@
 {
   "id": "/btc-tracker.html",
-  "name": "BTC Tracker",
-  "short_name": "BTC",
-  "description": "Valore in euro dei bitcoin di Luca, con storico.",
+  "name": "Dad's BTC",
+  "short_name": "Dad's BTC",
+  "description": "Valore in euro dei bitcoin di papà, con storico.",
   "lang": "it",
   "start_url": "/btc-tracker.html",
   "scope": "/btc-tracker.html",
