@@ -14,7 +14,11 @@ permalink: /contacts/
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <!-- Inside the installed app on iPhone the background now fills the status bar area too (before: a white band). -->
-    <style>@media (display-mode: standalone){html{min-height:min(100lvh,calc(100% + env(safe-area-inset-top,0px)))}}</style>
+    <style>
+      @media (display-mode: standalone){html{min-height:min(100lvh,calc(100% + env(safe-area-inset-top,0px)))}}
+      /* the centred block stays where it was, below the status bar (body #main beats main.css, loaded after this) */
+      body #main{top:env(safe-area-inset-top,0px);height:calc(100% - env(safe-area-inset-top,0px))}
+    </style>
     <meta name="theme-color" content="#000000">
     <title>{{ site.title }} &middot; Contacts</title>
     <meta name="description" content="{{ page.description }}">

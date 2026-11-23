@@ -4,7 +4,8 @@
   <!-- Inside the installed app on iPhone the page now runs under the status bar (viewport-fit=cover): the body moves
        down by the status bar height and a strip in the sidebar colour fills it (before: a white band). -->
   <style>
-    body{padding-top:env(safe-area-inset-top,0px)}
+    /* html body: poole.css (loaded after this) resets body padding to 0 with a plain body selector */
+    html body{padding-top:env(safe-area-inset-top,0px)}
     body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:#202020;z-index:1000}
     @media (display-mode: standalone){html{min-height:min(100lvh,calc(100% + env(safe-area-inset-top,0px)))}}
   </style>

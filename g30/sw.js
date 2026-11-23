@@ -1,5 +1,5 @@
 // G30 offline copy: network first, cache as fallback, only for /g30/. Bump CACHE on every release.
-const CACHE = 'g30-v1';
+const CACHE = 'g30-v2';
 const SHELL = ['/g30/', '/g30/manifest.webmanifest', '/g30/icon-180.png', '/g30/icon-192.png', '/g30/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
