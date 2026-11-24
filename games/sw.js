@@ -1,6 +1,6 @@
 // Games hub service worker: network first, cache as offline fallback.
 // Bump CACHE on every release so old copies are dropped.
-const CACHE = 'games-v8';
+const CACHE = 'games-v9';
 const SHELL = [
   './',
   './manifest.webmanifest',
@@ -9,7 +9,8 @@ const SHELL = [
   './icons/icon-512.png',
   './icons/icon.svg',
   '/lenza-lenta/icons/icon-192.png',
-  '/terrazza-padel/icons/icon-192.png'
+  '/terrazza-padel/icons/icon-192.png',
+  '/lagoon/icons/icon-192.png'
 ];
 
 self.addEventListener('install', e => {
