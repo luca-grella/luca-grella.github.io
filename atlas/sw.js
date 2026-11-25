@@ -7,7 +7,7 @@
 //   are not intercepted.
 // The pinned files are also fetched at install: on the first visit the page loads them before this worker takes over.
 // Bump CACHE on every release.
-const CACHE = 'atlas-v1';
+const CACHE = 'atlas-v2';
 const LIBS = [
   'https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js',
   'https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js',
