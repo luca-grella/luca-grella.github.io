@@ -1,6 +1,6 @@
 // Apps hub service worker: network first, cache as offline fallback (same pattern as /games/sw.js).
 // Bump CACHE on every release so old copies are dropped.
-const CACHE = 'apps-v4';
+const CACHE = 'apps-v5';
 const SHELL = [
   './',
   './manifest.webmanifest',
