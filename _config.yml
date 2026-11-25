@@ -59,6 +59,10 @@ defaults:
     values:
       sitemap: false
   - scope:
+      path: "atlas"
+    values:
+      sitemap: false
+  - scope:
       path: "404.html"
     values:
       sitemap: false
